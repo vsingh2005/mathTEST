@@ -26,6 +26,7 @@ class KSS_Math_Portal_Plugin {
         add_shortcode('kss_math_instructions', array($this, 'render_instructions_shortcode'));
         add_shortcode('kss_math_exam', array($this, 'render_exam_shortcode'));
         add_shortcode('kss_math_results', array($this, 'render_results_shortcode'));
+        add_shortcode('kss_math_practice', array($this, 'render_practice_shortcode'));
 
         add_action('wp_enqueue_scripts', array($this, 'enqueue_frontend_assets'));
     }
@@ -117,6 +118,9 @@ class KSS_Math_Portal_Plugin {
                 </a>
                 <a href="?page=kss-math-portal&tab=settings" class="nav-tab <?php echo $active_tab === 'settings' ? 'nav-tab-active' : ''; ?>">
                     <span class="dashicons dashicons-color-picker" style="vertical-align:text-top; margin-right:4px;"></span> Color Customizer & Exam Settings
+                </a>
+                <a href="?page=kss-math-portal&tab=progress" class="nav-tab <?php echo $active_tab === 'progress' ? 'nav-tab-active' : ''; ?>">
+                    <span class="dashicons dashicons-awards" style="vertical-align:text-top; margin-right:4px;"></span> Student Progress & Mastery Reports
                 </a>
             </h2>
 
@@ -251,7 +255,7 @@ class KSS_Math_Portal_Plugin {
                     </div>
                 </div>
 
-            <?php else: ?>
+            <?php elseif ($active_tab === 'settings'): ?>
                 <!-- TAB 2: COLOR SCHEME CUSTOMIZER & EXAM SETTINGS -->
                 <div style="max-w: 900px; background: #fff; border: 1px solid #ccd0d4; padding: 25px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); margin-top: 20px;">
                     <form method="post">
@@ -347,6 +351,65 @@ class KSS_Math_Portal_Plugin {
                         </p>
                     </form>
                 </div>
+
+            <?php elseif ($active_tab === 'progress'): ?>
+                <!-- TAB 3: STUDENT PROGRESS & MASTERY REPORTS -->
+                <div style="background: #fff; border: 1px solid #ccd0d4; padding: 25px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); margin-top: 20px;">
+                    <h2>🏆 Student Progress & Digital Worksheet Mastery Reports</h2>
+                    <p class="description">Review persistent student learning progress, placement exam diagnoses, unlocked lesson levels, completed worksheets, and stars earned.</p>
+
+                    <?php
+                    $progress_records = get_option('kss_math_student_progress_records', array());
+                    $saved_attempts = get_option('kss_math_saved_attempts', array());
+                    ?>
+
+                    <table class="wp-list-table widefat fixed striped" style="margin-top: 20px;">
+                        <thead>
+                            <tr>
+                                <th style="width: 160px;">Student Name</th>
+                                <th style="width: 110px;">Placed Grade</th>
+                                <th style="width: 140px;">Highest Unlocked</th>
+                                <th style="width: 130px;">Worksheets Solved</th>
+                                <th style="width: 110px;">Stars Earned</th>
+                                <th style="width: 110px;">Max Streak</th>
+                                <th>Last Active Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php if (empty($progress_records) && empty($saved_attempts)): ?>
+                                <tr>
+                                    <td colspan="7" style="text-align:center; padding: 25px; color:#64748b;">
+                                        No student progress records recorded yet. Once students take placement exams or complete worksheets, their real-time diagnostics will appear here.
+                                    </td>
+                                </tr>
+                            <?php else: ?>
+                                <?php 
+                                // Merge and display progress records
+                                foreach ($progress_records as $rec): 
+                                    $uname = esc_html($rec['user_name'] ?? 'Student');
+                                    $p = $rec['progress'] ?? array();
+                                    $placed = esc_html($p['testedGrade'] ? 'Grade ' . $p['testedGrade'] : 'In Progress');
+                                    $unlocked = isset($p['unlockedLessonIndex']) ? 'G' . ($p['testedGrade'] ?? 3) . ' L' . ($p['unlockedLessonIndex'][strval($p['testedGrade'] ?? 3)] ?? 1) : 'G3 L1';
+                                    $completedCount = isset($p['completedLessons']) ? count($p['completedLessons']) : 0;
+                                    $stars = intval($p['totalStars'] ?? 0);
+                                    $streak = intval($p['highestStreak'] ?? 0);
+                                    $date = esc_html(isset($rec['updated_at']) ? date('M j, Y g:ia', strtotime($rec['updated_at'])) : 'Recent');
+                                ?>
+                                <tr>
+                                    <td><strong><?php echo $uname; ?></strong></td>
+                                    <td><span class="dashicons dashicons-yes-alt" style="color:#059669;"></span> <?php echo $placed; ?></td>
+                                    <td><code><?php echo esc_html($unlocked); ?></code></td>
+                                    <td><?php echo $completedCount; ?> Worksheets</td>
+                                    <td><span style="color:#f59e0b; font-weight:bold;">⭐ <?php echo $stars; ?></span></td>
+                                    <td><span style="color:#ea580c; font-weight:bold;">🔥 <?php echo $streak; ?></span></td>
+                                    <td><?php echo $date; ?></td>
+                                </tr>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+                        </tbody>
+                    </table>
+                </div>
+
             <?php endif; ?>
         </div>
 
@@ -495,6 +558,18 @@ class KSS_Math_Portal_Plugin {
             'callback' => array($this, 'rest_save_attempt'),
             'permission_callback' => '__return_true'
         ));
+
+        register_rest_route('kss-math/v1', '/student-progress', array(
+            'methods' => 'POST',
+            'callback' => array($this, 'rest_save_student_progress'),
+            'permission_callback' => '__return_true'
+        ));
+
+        register_rest_route('kss-math/v1', '/student-progress', array(
+            'methods' => 'GET',
+            'callback' => array($this, 'rest_get_student_progress'),
+            'permission_callback' => '__return_true'
+        ));
     }
 
     public function rest_get_questions() {
@@ -519,7 +594,56 @@ class KSS_Math_Portal_Plugin {
         $attempts[] = $params;
         update_option('kss_math_saved_attempts', $attempts);
 
+        $user_id = intval($params['user_id'] ?? 0);
+        if ($user_id > 0) {
+            $existing_meta = get_user_meta($user_id, 'kss_math_attempts', true) ?: array();
+            $existing_meta[] = $params;
+            update_user_meta($user_id, 'kss_math_attempts', $existing_meta);
+            if (!empty($params['recommendedGrade'])) {
+                update_user_meta($user_id, 'kss_math_placed_grade', sanitize_text_field($params['recommendedGrade']));
+            }
+        }
+
         return rest_ensure_response(array('success' => true, 'message' => 'Attempt saved successfully'));
+    }
+
+    public function rest_save_student_progress($request) {
+        $params = $request->get_json_params();
+        if (empty($params)) {
+            return new WP_Error('invalid_data', 'No data provided', array('status' => 400));
+        }
+
+        $user_id = intval($params['user_id'] ?? 0);
+        $progress = $params['progress'] ?? array();
+        $user_name = sanitize_text_field($params['user_name'] ?? 'Student');
+
+        // Persist to user meta if user is registered
+        if ($user_id > 0) {
+            update_user_meta($user_id, 'kss_math_progress', $progress);
+        }
+
+        // Update centralized records option for teacher/admin dashboard
+        $records = get_option('kss_math_student_progress_records', array());
+        $record_key = ($user_id > 0) ? 'user_' . $user_id : 'guest_' . substr(md5($user_name), 0, 8);
+        $records[$record_key] = array(
+            'user_id' => $user_id,
+            'user_name' => $user_name,
+            'progress' => $progress,
+            'updated_at' => current_time('mysql')
+        );
+        update_option('kss_math_student_progress_records', $records);
+
+        return rest_ensure_response(array('success' => true, 'message' => 'Student progress synchronized successfully'));
+    }
+
+    public function rest_get_student_progress($request) {
+        $user_id = intval($request->get_param('user_id') ?: get_current_user_id());
+        if ($user_id <= 0) {
+            return new WP_Error('invalid_user', 'Valid student user ID required', array('status' => 400));
+        }
+
+        $progress = get_user_meta($user_id, 'kss_math_progress', true);
+        return rest_ensure_response(array('success' => true, 'progress' => $progress ?: null));
     }
 
     // SHORTCODE RENDERS FOR ELEMENTOR
@@ -541,6 +665,10 @@ class KSS_Math_Portal_Plugin {
 
     public function render_results_shortcode() {
         return '<div class="kss-embed-wrapper"><iframe src="' . plugin_dir_url(__FILE__) . 'assets/results.html" style="width:100%; height:1100px; border:none; border-radius:16px;"></iframe></div>';
+    }
+
+    public function render_practice_shortcode() {
+        return '<div class="kss-embed-wrapper"><iframe src="' . plugin_dir_url(__FILE__) . 'assets/practice.html" style="width:100%; height:950px; border:none; border-radius:16px;"></iframe></div>';
     }
 
     private function get_default_settings() {

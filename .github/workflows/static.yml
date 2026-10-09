@@ -28,19 +28,8 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Build Web App (Exclude Tex/PDF)
         run: |
-          mkdir dist
-          cp website/index.html dist/
-          cp website/login.html dist/
-          cp website/portal.html dist/
-          cp website/instructions.html dist/
-          cp website/exam.html dist/
-          cp website/results.html dist/
-          cp website/auth.js dist/
-          cp website/app.js dist/
-          cp website/index.css dist/
-          cp website/hero_kids_math_classroom_1783004330739.png dist/
-          cp website/kss.png dist/
-          cp website/success_celebration_illustration_1782954288674.png dist/
+          mkdir -p dist
+          cp -r website/* dist/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

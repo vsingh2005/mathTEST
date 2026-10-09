@@ -1,6 +1,4 @@
-<script type="text/javascript">
-/* <![CDATA[ */
-const questions = [
+let questions = [
   // --- GRADE 3 (ELEMENTARY EASY) ---
   {
     id: 101,
@@ -1634,7 +1632,23 @@ function selectTrack(track) {
   updateStepView();
 }
 
-function startExam() {
+async function loadQuestionBankFromWordPress() {
+  try {
+    const res = await fetch('/wp-json/kss-math/v1/questions');
+    if (res.ok) {
+      const data = await res.json();
+      if (Array.isArray(data) && data.length > 0) {
+        questions = data;
+        console.log('Successfully loaded custom question bank from WordPress admin panel:', questions.length);
+      }
+    }
+  } catch (e) {
+    console.log('Using default local question bank.');
+  }
+}
+
+async function startExam() {
+  await loadQuestionBankFromWordPress();
   state.currentStep = 3;
   state.currentQuestionIndex = 0;
   state.userAnswers = {};
@@ -1745,6 +1759,7 @@ function renderQuestion() {
 
 function selectOption(idx) {
   state.userAnswers[state.currentQuestionIndex] = idx;
+  if (window.soundManager) window.soundManager.playPop();
   renderQuestion();
 }
 
@@ -1808,6 +1823,24 @@ function nextQuestion() {
     isCorrect = String(userAns).trim().toLowerCase() === currentQ.correctAnswer.toLowerCase();
   }
 
+  if (isCorrect) {
+    if (window.soundManager) window.soundManager.playCorrect();
+    state.streak = (state.streak || 0) + 1;
+    if (state.streak > (state.maxStreak || 0)) state.maxStreak = state.streak;
+  } else {
+    if (window.soundManager) window.soundManager.playTryAgain();
+    state.streak = 0;
+  }
+
+  const streakCountEl = document.getElementById('exam-streak-count');
+  if (streakCountEl) streakCountEl.innerText = state.streak;
+  const streakBadgeEl = document.getElementById('exam-streak-badge');
+  if (streakBadgeEl) {
+    streakBadgeEl.classList.remove('flame-active');
+    void streakBadgeEl.offsetWidth;
+    streakBadgeEl.classList.add('flame-active');
+  }
+
   let minGrade = 7;
   let maxGrade = 8;
   if (state.selectedTrack === '3-4') {
@@ -1823,6 +1856,21 @@ function nextQuestion() {
   } else {
     if (state.activeDifficulty > minGrade) state.activeDifficulty--;
   }
+
+  // Crash recovery / state auto-save
+  try {
+    sessionStorage.setItem('kss_active_exam_state', JSON.stringify({
+      currentQuestionIndex: state.currentQuestionIndex,
+      userAnswers: state.userAnswers,
+      questionsServed: state.questionsServed,
+      secondsElapsed: state.secondsElapsed,
+      selectedTrack: state.selectedTrack,
+      streak: state.streak,
+      maxStreak: state.maxStreak,
+      activeDifficulty: state.activeDifficulty,
+      savedAt: Date.now()
+    }));
+  } catch(e) {}
 
   if (state.currentQuestionIndex === 14) {
     finishExam();
@@ -1970,15 +2018,75 @@ function finishExam() {
 
   state.recommendedLevel = recommendedLevel;
 
+  // Derive diagnosed grade number (3 to 8)
+  let placedGradeNum = 7;
+  const match = recommendedLevel.match(/(\d+)/);
+  if (match) placedGradeNum = parseInt(match[1]);
+
+  // Update persistent student progress & unlock threshold
+  let progress = {
+    testedGrade: placedGradeNum,
+    testedScore: `${state.score}/15`,
+    unlockedLessonIndex: { "3": 25, "4": 1, "5": 0, "6": 0, "7": 0, "8": 0 },
+    completedLessons: {},
+    totalStars: 0,
+    highestStreak: state.maxStreak || 0
+  };
+
+  try {
+    const rawP = localStorage.getItem('kss_student_progress');
+    if (rawP) {
+      const existingP = JSON.parse(rawP);
+      progress = { ...existingP, ...progress };
+      progress.highestStreak = Math.max(existingP.highestStreak || 0, state.maxStreak || 0);
+    }
+  } catch(e) {}
+
+  for (let g = 3; g < placedGradeNum; g++) {
+    progress.unlockedLessonIndex[String(g)] = 25;
+  }
+  if (!progress.unlockedLessonIndex[String(placedGradeNum)] || progress.unlockedLessonIndex[String(placedGradeNum)] < 1) {
+    progress.unlockedLessonIndex[String(placedGradeNum)] = 1;
+  }
+
+  localStorage.setItem('kss_student_progress', JSON.stringify(progress));
+
   AuthManager.saveExamAttempt({
     score: state.score,
     timeElapsed: state.timeElapsed,
     recommendedLevel: recommendedLevel,
+    maxStreak: state.maxStreak || 0,
     answers: answerBreakdown
   });
 
-  updateStepView();
-  triggerConfetti();
+  sessionStorage.setItem('lastExamResult', JSON.stringify({
+    score: state.score,
+    timeElapsed: state.timeElapsed,
+    recommendedLevel: recommendedLevel,
+    maxStreak: state.maxStreak || 0,
+    answerBreakdown: answerBreakdown
+  }));
+
+  // Clear in-progress exam recovery state
+  try {
+    sessionStorage.removeItem('kss_active_exam_state');
+  } catch(e) {}
+
+  // Persist progress to WordPress REST API
+  try {
+    const sess = JSON.parse(localStorage.getItem('kss_session') || '{}');
+    fetch('/wp-json/kss-math/v1/student-progress', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        user_id: sess?.user?.id || 0,
+        user_name: sess?.user?.display_name || 'Guest Student',
+        progress: progress
+      })
+    }).catch(() => {});
+  } catch(e) {}
+
+  window.location.href = 'results.html';
 }
 
 function triggerConfetti() {
@@ -2315,5 +2423,3 @@ try {
   // Ignore if read-only in strict contexts
 }
 
-/* ]]> */
-</script>

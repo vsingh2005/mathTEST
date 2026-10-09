@@ -1,0 +1,16 @@
+/* =========================================================
+   Kids STEM Studio - Modular Results CSS
+   ========================================================= */
+
+@import url('../../shared/css/variables.css');
+@import url('../../shared/css/base.css');
+@import url('../../shared/css/components.css');
+
+.results-hero-card {
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+}
+
+.review-item {
+  transition: all var(--transition-fast);
+}

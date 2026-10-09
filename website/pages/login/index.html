@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=1,user-scalable=no,width=device-width">
+  <title>Log In &lsaquo; Kids STEM Studio Math Assessment Portal</title>
+  <meta name="description" content="Sign in to the Kids STEM Studio Math Assessment & Practice Portal.">
+
+  <!-- Pre-render check -->
+  <script>
+    const sess = localStorage.getItem('kss_session') || sessionStorage.getItem('kss_session');
+    if (sess) {
+      window.location.href = '../portal/index.html';
+    }
+  </script>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="login.css">
+</head>
+<body class="bg-slate-900 min-h-screen flex items-center justify-center p-4">
+
+  <div class="max-w-4xl w-full bg-white rounded-3xl shadow-2xl overflow-hidden border border-slate-700 my-8">
+    <div class="ml-container">
+      
+      <!-- Left Hero Banner -->
+      <div class="ml-extra-div p-8 md:p-12 flex flex-col justify-between text-white space-y-6">
+        <div class="space-y-4">
+          <span class="px-3.5 py-1.5 bg-amber-400 text-slate-900 font-extrabold text-xs uppercase tracking-wider rounded-full inline-block">
+            📐 Kids STEM Studio Math Center
+          </span>
+          <h2 class="text-3xl md:text-4xl font-black leading-tight">
+            Math Assessment & Practice Portal
+          </h2>
+          <p class="text-slate-300 text-sm font-medium leading-relaxed max-w-sm">
+            Access your adaptive Grade 3–8 placement exams, track unlocked worksheet quests, and earn stars for mastery!
+          </p>
+        </div>
+        <div class="text-xs text-slate-400 font-semibold border-t border-slate-700 pt-4">
+          © 2026 Kids STEM Studio • Empowering Young Creators
+        </div>
+      </div>
+
+      <!-- Right Login Form -->
+      <div class="ml-form-container">
+        <div class="wp-login-logo">
+          <a href="#"></a>
+        </div>
+
+        <div class="text-center mb-6">
+          <h3 class="text-xl font-extrabold text-slate-800">Sign In to Student Portal</h3>
+          <p class="text-xs text-slate-500 font-semibold mt-1">Enter your credentials or continue as guest</p>
+        </div>
+
+        <div id="auth-alert" class="hidden mb-4 p-3 rounded-lg text-xs font-bold text-center"></div>
+
+        <form id="loginform" onsubmit="window.LoginController.handleSubmit(event)" class="space-y-4">
+          <div>
+            <label for="user_login" class="block text-xs font-bold text-slate-700 uppercase mb-1">Username or Email</label>
+            <input type="text" id="user_login" class="form-input" required placeholder="e.g. student1" autocomplete="username">
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between mb-1">
+              <label for="user_pass" class="block text-xs font-bold text-slate-700 uppercase">Password</label>
+              <button type="button" onclick="window.LoginController.togglePassword()" class="text-xs text-sky-600 font-bold hover:underline">
+                Show/Hide
+              </button>
+            </div>
+            <input type="password" id="user_pass" class="form-input" required placeholder="••••••••" autocomplete="current-password">
+          </div>
+
+          <div class="pt-2">
+            <button type="submit" id="wp-submit" class="w-full py-3.5 rounded-xl btn-blue-gradient text-sm font-bold shadow-md">
+              Sign In to Portal
+            </button>
+          </div>
+
+          <div class="relative py-2 flex items-center justify-center">
+            <div class="border-t border-slate-200 w-full absolute"></div>
+            <span class="bg-white px-3 text-xs text-slate-400 font-bold relative">OR</span>
+          </div>
+
+          <button type="button" onclick="window.LoginController.startGuestSession()"
+                  class="w-full py-3 rounded-xl border-2 border-slate-200 text-slate-700 hover:bg-slate-50 font-bold text-xs transition-colors">
+            🚀 Continue as Guest Student
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="module" src="login.js"></script>
+</body>
+</html>

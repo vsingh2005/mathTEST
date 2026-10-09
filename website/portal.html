@@ -48,6 +48,8 @@
     </div>
 
     <nav class="hidden md:flex items-center space-x-8 text-slate-500 font-semibold">
+      <a href="portal.html" class="text-sky-500 font-bold">Dashboard</a>
+      <a href="practice.html" class="hover:!text-sky-blue transition-colors">Worksheets</a>
       <button onclick="openModal('faq-modal')" class="hover:!text-sky-blue hover:!bg-transparent hover:!shadow-none transition-colors">FAQ</button>
       <button onclick="openModal('contact-modal')" class="hover:!text-sky-blue hover:!bg-transparent hover:!shadow-none transition-colors">Contact</button>
     </nav>
@@ -83,7 +85,10 @@
   </section>
 
   <!-- MAIN BODY CONTAINER -->
-  <main class="flex-1 max-w-6xl w-full mx-auto px-6 py-12 flex flex-col justify-center">
+  <main class="flex-1 max-w-6xl w-full mx-auto px-6 py-12 flex flex-col justify-center space-y-10">
+
+    <!-- RECOMMENDED PRACTICE WIDGET -->
+    <div id="portal-recommended-practice"></div>
 
     <!-- LANDING & HERO SECTION -->
     <div id="landing-screen" class="space-y-16">
@@ -102,12 +107,15 @@
             <p class="text-lg md:text-xl text-slate-500 font-medium max-w-xl leading-relaxed">
               Complete a short 45–60 minute adaptive math placement assessment developed by Kids STEM Studio to evaluate baseline skills across Grade 3–8 math standards. <strong>Before starting, please make sure you have scratch paper and a pencil ready!</strong>
             </p>
-            <div class="pt-4 flex items-center space-x-4">
+            <div class="pt-4 flex flex-wrap items-center gap-4">
               <button onclick="showTrackSelection()" class="px-8 py-4 rounded-2xl btn-blue-gradient text-lg">
                 Begin Math Assessment
               </button>
               <button onclick="AuthManager.renderHistoryModal()" class="px-6 py-4 rounded-2xl border-2 border-slate-200 text-slate-700 font-extrabold hover:bg-slate-100 transition-colors text-base">
                 📜 View Past Results
+              </button>
+              <button onclick="window.location.href='practice.html'" class="px-6 py-4 rounded-2xl bg-emerald-50 text-emerald-700 border-2 border-emerald-200 font-extrabold hover:bg-emerald-100 transition-colors text-base">
+                📚 Practice Worksheets
               </button>
             </div>
           </div>
@@ -296,7 +304,62 @@
     window.addEventListener('DOMContentLoaded', () => {
       AuthManager.requireAuth();
       AuthManager.updateHeaderUI();
+      renderPortalRecommendedPractice();
     });
+
+    function renderPortalRecommendedPractice() {
+      const container = document.getElementById('portal-recommended-practice');
+      if (!container) return;
+      const progressRaw = localStorage.getItem('kss_student_progress');
+      const progress = progressRaw ? JSON.parse(progressRaw) : {};
+      const placedGrade = progress.testedGrade;
+      const totalStars = progress.totalStars || 0;
+      const completedCount = Object.keys(progress.completedLessons || {}).length;
+
+      if (!placedGrade) {
+        container.innerHTML = `
+          <div class="bg-gradient-to-r from-emerald-50 to-sky-50 p-6 rounded-3xl border border-emerald-100 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+            <div class="space-y-2">
+              <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full font-extrabold text-xs uppercase">Step 1: Calibrate Level</span>
+              <h3 class="text-2xl font-black text-navy-dark">Take Placement Assessment First</h3>
+              <p class="text-slate-600 text-sm max-w-xl font-medium">
+                Take your diagnostic placement test to discover your baseline math level and unlock your personalized worksheet path!
+              </p>
+            </div>
+            <button onclick="showTrackSelection()" class="px-6 py-3.5 rounded-xl btn-blue-gradient text-sm font-extrabold whitespace-nowrap shadow-md">
+              Begin Assessment 🚀
+            </button>
+          </div>
+        `;
+      } else {
+        const highestUnlocked = progress.unlockedLessonIndex ? (progress.unlockedLessonIndex[String(placedGrade)] || 1) : 1;
+        container.innerHTML = `
+          <div class="bg-gradient-to-r from-emerald-50 to-sky-50 p-6 rounded-3xl border border-emerald-100 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+            <div class="space-y-3">
+              <div class="flex items-center space-x-2">
+                <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full font-extrabold text-xs uppercase">🎯 Recommended Practice</span>
+                <span class="text-xs text-slate-500 font-bold">• Placed in Grade ${placedGrade}</span>
+              </div>
+              <h3 class="text-2xl font-black text-navy-dark">Grade ${placedGrade} Worksheet Path: Lesson ${highestUnlocked}</h3>
+              <p class="text-slate-600 text-sm max-w-xl font-medium">
+                You have completed <strong>${completedCount}</strong> worksheets and earned <strong>${totalStars}</strong> stars! Keep up consecutive practice to unlock subsequent standards.
+              </p>
+              <div class="w-full bg-slate-200 h-2.5 rounded-full overflow-hidden max-w-md">
+                <div class="bg-emerald-500 h-full" style="width: ${Math.min(100, (highestUnlocked / 25) * 100)}%"></div>
+              </div>
+            </div>
+            <div class="flex flex-col sm:flex-row items-center gap-3">
+              <button onclick="window.location.href='practice.html'" class="px-8 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm whitespace-nowrap shadow-md transition-all">
+                Jump into Worksheets 🚀
+              </button>
+              <button onclick="showTrackSelection()" class="px-5 py-4 rounded-xl border border-slate-300 text-slate-700 hover:bg-slate-100 font-extrabold text-sm whitespace-nowrap transition-colors">
+                Retake Placement
+              </button>
+            </div>
+          </div>
+        `;
+      }
+    }
 
     function showTrackSelection() {
       const main = document.getElementById('landing-main-content');

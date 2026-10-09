@@ -1,0 +1,29 @@
+/* =========================================================
+   Kids STEM Studio - Practice Page Styles
+   ========================================================= */
+
+@import url('../../shared/css/variables.css');
+@import url('../../shared/css/base.css');
+@import url('../../shared/css/components.css');
+
+.practice-hero {
+  background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem 2rem;
+  border: 1px solid #dcfce7;
+  position: relative;
+  overflow: hidden;
+}
+
+.lesson-pill {
+  transition: all var(--transition-fast);
+}
+
+.lesson-pill:hover {
+  transform: translateY(-2px);
+}
+
+.katex-formula {
+  font-size: 1.15em;
+  padding: 0 0.2em;
+}

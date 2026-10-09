@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=1,user-scalable=no,width=device-width">
+  <title>Digital Worksheet Practice &lsaquo; Kids STEM Studio</title>
+
+  <!-- Pre-render authentication guard -->
+  <script>
+    const sess = localStorage.getItem('kss_session') || sessionStorage.getItem('kss_session');
+    if (!sess) {
+      window.location.href = '../login/index.html';
+    }
+  </script>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- KaTeX for formula rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <!-- Confetti library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="practice.css">
+</head>
+<body class="bg-slate-50 min-h-screen flex flex-col justify-between">
+
+  <!-- REUSABLE HEADER -->
+  <kss-header></kss-header>
+
+  <!-- MAIN PRACTICE WORKSPACE -->
+  <main class="flex-1 max-w-6xl w-full mx-auto px-6 py-10 flex flex-col justify-center">
+    <div id="practice-main-view">
+      <!-- Dynamically populated via practice.js -->
+      <div class="text-center py-20 text-slate-400 font-bold">
+        Loading Digital Worksheets...
+      </div>
+    </div>
+  </main>
+
+  <!-- REUSABLE FOOTER -->
+  <kss-footer></kss-footer>
+
+  <!-- MODALS -->
+  <div id="faq-modal" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+    <div class="bg-white max-w-lg w-full rounded-2xl p-6 space-y-4 shadow-2xl relative">
+      <button onclick="closeGlobalModal('faq-modal')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 font-bold text-xl">×</button>
+      <h3 class="text-xl font-black text-slate-800">About Practice Worksheets</h3>
+      <p class="text-sm text-slate-600 leading-relaxed">
+        Worksheet lessons adapt to your student's placement test performance. Subsequent lessons unlock consecutively as students achieve ≥80% mastery!
+      </p>
+    </div>
+  </div>
+
+  <div id="contact-modal" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+    <div class="bg-white max-w-lg w-full rounded-2xl p-6 space-y-4 shadow-2xl relative">
+      <button onclick="closeGlobalModal('contact-modal')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 font-bold text-xl">×</button>
+      <h3 class="text-xl font-black text-slate-800">Need Help?</h3>
+      <p class="text-sm text-slate-600 leading-relaxed">
+        Contact Kids STEM Studio at <span class="font-bold text-sky-600">info@kidsstemstudio.com</span> for classroom questions and enrichment pods.
+      </p>
+    </div>
+  </div>
+
+  <!-- Main Practice Controller -->
+  <script type="module" src="practice.js"></script>
+</body>
+</html>

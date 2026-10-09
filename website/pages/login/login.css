@@ -1,0 +1,61 @@
+/* =========================================================
+   Kids STEM Studio - Modular Login CSS
+   ========================================================= */
+
+@import url('../../shared/css/variables.css');
+@import url('../../shared/css/base.css');
+@import url('../../shared/css/components.css');
+
+.ml-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .ml-container {
+    flex-direction: row;
+  }
+}
+
+.ml-extra-div {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  flex: 1;
+  min-height: 480px;
+}
+
+.ml-form-container {
+  flex: 1;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #ffffff;
+}
+
+.wp-login-logo a {
+  background-image: url('https://kidsstemstudio.com/wp-content/uploads/2020/05/KSS_Logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50px;
+  width: 100%;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--border-subtle);
+  font-family: var(--font-family-base);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.form-input:focus {
+  border-color: var(--sky-blue);
+  box-shadow: 0 0 0 3px rgba(77, 168, 255, 0.15);
+}

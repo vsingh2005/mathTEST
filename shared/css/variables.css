@@ -1,0 +1,44 @@
+/* =========================================================
+   Kids STEM Studio - CSS Variables & Design Tokens
+   ========================================================= */
+
+:root {
+  /* Brand Palette */
+  --sky-blue: #4DA8FF;
+  --sky-blue-hover: #357ABD;
+  --soft-green: #5ECF7A;
+  --warm-yellow: #FFD75E;
+  --coral-orange: #FF8B6A;
+  --navy-dark: #263238;
+  --navy-darker: #1e293b;
+  --kss-teal: #2fbdb9;
+  --kss-teal-dark: #048c8a;
+
+  /* Neutral Surface Colors */
+  --bg-slate: #f8fafc;
+  --card-bg: #ffffff;
+  --border-subtle: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --text-primary: #1e293b;
+  --text-muted: #64748b;
+
+  /* Typography */
+  --font-family-base: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Radius & Elevation */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.04);
+  --shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.08);
+  --shadow-glow: 0 0 20px rgba(77, 168, 255, 0.35);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-bounce: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}

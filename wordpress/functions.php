@@ -285,6 +285,18 @@ add_action('rest_api_init', function () {
         'callback'            => 'kss_get_math_attempts',
         'permission_callback' => 'is_user_logged_in', // Restricts to logged-in sessions/JWT
     ));
+
+    register_rest_route('kss-math/v1', '/student-progress', array(
+        'methods'             => 'POST',
+        'callback'            => 'kss_save_student_progress_theme',
+        'permission_callback' => '__return_true',
+    ));
+
+    register_rest_route('kss-math/v1', '/student-progress', array(
+        'methods'             => 'GET',
+        'callback'            => 'kss_get_student_progress_theme',
+        'permission_callback' => '__return_true',
+    ));
 });
 
 function kss_get_math_attempts(WP_REST_Request $request) {
@@ -329,6 +341,43 @@ function kss_save_math_attempt(WP_REST_Request $request) {
 
     update_user_meta($user_id, 'kss_math_attempts', $attempts);
     return new WP_REST_Response(array('success' => true, 'attempt' => $new_attempt), 200);
+}
+
+function kss_save_student_progress_theme(WP_REST_Request $request) {
+    $params = $request->get_json_params();
+    if (empty($params)) {
+        return new WP_Error('invalid_data', 'No data provided', array('status' => 400));
+    }
+
+    $user_id = intval($params['user_id'] ?? get_current_user_id());
+    $progress = $params['progress'] ?? array();
+    $user_name = sanitize_text_field($params['user_name'] ?? 'Student');
+
+    if ($user_id > 0) {
+        update_user_meta($user_id, 'kss_math_progress', $progress);
+    }
+
+    $records = get_option('kss_math_student_progress_records', array());
+    $record_key = ($user_id > 0) ? 'user_' . $user_id : 'guest_' . substr(md5($user_name), 0, 8);
+    $records[$record_key] = array(
+        'user_id' => $user_id,
+        'user_name' => $user_name,
+        'progress' => $progress,
+        'updated_at' => current_time('mysql')
+    );
+    update_option('kss_math_student_progress_records', $records);
+
+    return new WP_REST_Response(array('success' => true, 'message' => 'Progress saved successfully'), 200);
+}
+
+function kss_get_student_progress_theme(WP_REST_Request $request) {
+    $user_id = intval($request->get_param('user_id') ?: get_current_user_id());
+    if ($user_id <= 0) {
+        return new WP_Error('invalid_user', 'Valid student user ID required', array('status' => 400));
+    }
+
+    $progress = get_user_meta($user_id, 'kss_math_progress', true);
+    return new WP_REST_Response(array('success' => true, 'progress' => $progress ?: null), 200);
 }
 
 // 2. DISPLAY LOGS ON THE USER PROFILE SCREEN IN THE ADMIN PANEL

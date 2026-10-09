@@ -472,3 +472,90 @@ footer img[src*="logo"] {
     width: 180px !important;
   }
 }
+
+/* =========================================================
+   GAMIFICATION & INTERACTIVE LEARNING STYLES (PHASE 1)
+   ========================================================= */
+
+@keyframes flamePulse {
+  0% { transform: scale(1); filter: drop-shadow(0 0 0 rgba(249, 115, 22, 0)); }
+  50% { transform: scale(1.18); filter: drop-shadow(0 0 10px rgba(249, 115, 22, 0.7)); }
+  100% { transform: scale(1); filter: drop-shadow(0 0 2px rgba(249, 115, 22, 0.2)); }
+}
+
+@keyframes starPop {
+  0% { transform: scale(0.6) rotate(-15deg); opacity: 0; }
+  70% { transform: scale(1.25) rotate(5deg); }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+@keyframes badgeEntrance {
+  0% { transform: translateY(12px) scale(0.9); opacity: 0; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.streak-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.85rem;
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  border: 1.5px solid #fdba74;
+  border-radius: 9999px;
+  color: #c2410c;
+  font-weight: 800;
+  font-size: 0.85rem;
+  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.12);
+  transition: all 0.2s ease;
+}
+
+.streak-badge.flame-active {
+  animation: flamePulse 0.45s ease-out;
+}
+
+.sound-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.75rem;
+  background-color: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.sound-toggle-btn:hover {
+  background-color: #f8fafc;
+  border-color: #38bdf8;
+  transform: translateY(-1px);
+}
+
+.star-pop-anim {
+  display: inline-block;
+  animation: starPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Practice Mode Hint Drawer & Scaffolding */
+.hint-container {
+  border-radius: 1rem;
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.hint-step-card {
+  animation: badgeEntrance 0.3s ease-out;
+}
+
+/* Gated Lesson Locks */
+.lesson-card-locked {
+  filter: grayscale(0.85);
+  opacity: 0.65;
+  cursor: not-allowed !important;
+  pointer-events: none;
+  position: relative;
+}

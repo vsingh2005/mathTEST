@@ -21,12 +21,16 @@ Step 2: Upload Web App Assets
    - instructions.html
    - exam.html
    - results.html
+   - practice.html
+   - sound.js
    - auth.js
    - app.js
    - index.css
    - hero_kids_math_classroom_1783004330739.png
    - success_celebration_illustration_1782954288674.png
    - kss.png
+   - pages/ (modular multi-page application subfolders: login, portal, exam, results, practice)
+   - shared/ (shared css, js, and curriculum data files)
 
 Step 3: Activate Plugin in WordPress Dashboard
 ----------------------------------------------
@@ -42,6 +46,7 @@ Create or edit your pages in Elementor and use the shortcodes:
 - Instructions Page:              [kss_math_instructions]
 - Exam Engine Page:               [kss_math_exam]
 - Results & Breakdown Page:       [kss_math_results]
+- Digital Practice Worksheets:    [kss_math_practice]
 
 (Alternatively, embed via an Elementor HTML iframe widget:
 <iframe src="/wp-content/plugins/kss-math-portal/assets/login.html" style="width:100%; height:850px; border:none;"></iframe>)
@@ -77,6 +82,13 @@ Tab 2: Question Bank Manager
 - Edit Questions: Edit any existing question's text, options, grade, or explanation.
 - Delete Questions: Remove questions from the question pool.
 - Reset to Default Bank: Restore the baseline question pool with a single click.
+
+Tab 3: Student Progress & Mastery Reports
+-----------------------------------------
+- View student diagnostic placement results, placed grade levels, and completed worksheets.
+- Real-time stars earned (⭐⭐⭐), current and max streaks (🔥), and unlocked curriculum lessons.
+- Individual student breakdown by user ID, student name, and last activity timestamp.
+- Synchronized with POST /wp-json/kss-math/v1/student-progress.
 
 ================================================================================
 Note: Whenever an administrator saves changes in the WordPress Dashboard, the REST API

@@ -1,0 +1,265 @@
+/* =========================================================
+   Kids STEM Studio - Reusable UI Components CSS
+   ========================================================= */
+
+@import url('./variables.css');
+
+.rounded-card {
+  border-radius: var(--radius-lg);
+}
+
+.card-shadow {
+  box-shadow: var(--shadow-card);
+}
+
+.hover-lift {
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.timeline-step {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.85rem;
+  transition: all var(--transition-normal);
+}
+
+.btn-blue-gradient {
+  background: linear-gradient(135deg, var(--sky-blue) 0%, var(--sky-blue-hover) 100%);
+  color: #FFFFFF;
+  font-weight: 800;
+  box-shadow: 0 4px 15px rgba(77, 168, 255, 0.35);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  cursor: pointer;
+  border: none;
+}
+
+.btn-blue-gradient:hover,
+.btn-blue-gradient:active,
+.btn-blue-gradient:focus {
+  background: linear-gradient(135deg, var(--sky-blue) 0%, var(--sky-blue-hover) 100%) !important;
+  color: #FFFFFF !important;
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(77, 168, 255, 0.45);
+}
+
+/* Gamified Streak Badge */
+.streak-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  border: 1.5px solid #fdba74;
+  border-radius: var(--radius-full);
+  color: #c2410c;
+  font-weight: 800;
+  font-size: 0.85rem;
+  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.12);
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.streak-badge.flame-active {
+  animation: flamePulse 0.45s ease-out;
+}
+
+/* Classroom Sound Toggle Button */
+.sound-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.8rem;
+  background-color: #ffffff;
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  user-select: none;
+}
+
+.sound-toggle-btn:hover {
+  background-color: #f8fafc;
+  border-color: var(--sky-blue);
+  transform: translateY(-1px);
+}
+
+/* Star Rating Animation */
+.star-pop-anim {
+  display: inline-block;
+  animation: starPop var(--transition-bounce) forwards;
+}
+
+/* Practice Mode Hint Drawer */
+.hint-container {
+  border-radius: var(--radius-lg);
+  background: #f8fafc;
+  border: 1.5px solid var(--border-subtle);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.hint-step-card {
+  animation: badgeEntrance 0.3s ease-out;
+  border-left: 4px solid var(--kss-teal);
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  margin-top: 0.75rem;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Locked Lessons Gating */
+.lesson-card-locked {
+  filter: grayscale(0.85);
+  opacity: 0.65;
+  cursor: not-allowed !important;
+  pointer-events: none;
+  position: relative;
+}
+
+.lesson-card-unlocked {
+  cursor: pointer;
+  border-color: #e2e8f0;
+  transition: all var(--transition-normal);
+}
+
+.lesson-card-unlocked:hover {
+  border-color: var(--sky-blue);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Digital Scratchpad Modal & Canvas */
+.scratchpad-modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.scratchpad-box {
+  background: #ffffff;
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 900px;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.scratchpad-canvas {
+  flex: 1;
+  background: #ffffff;
+  cursor: crosshair;
+  touch-action: none;
+  width: 100%;
+  height: 100%;
+}
+
+/* Visual Manipulatives (Fractions, Number Line, Grids) */
+.manipulative-box {
+  background: #ffffff;
+  border: 2px dashed #cbd5e1;
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  margin: 1rem 0;
+}
+
+.fraction-slice {
+  cursor: pointer;
+  transition: fill 0.2s, transform 0.15s;
+}
+
+.fraction-slice:hover {
+  filter: brightness(1.1);
+}
+
+/* Drag-and-drop Equation Tile Builder */
+.tile-drop-slot {
+  min-width: 48px;
+  height: 48px;
+  border: 2px dashed #94a3b8;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 4px;
+  background: #f8fafc;
+  transition: all 0.2s;
+}
+
+.tile-drop-slot.slot-hover {
+  border-color: var(--sky-blue);
+  background: #e0f2fe;
+}
+
+.math-tile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.9rem;
+  background: #ffffff;
+  border: 2px solid #cbd5e1;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--navy-dark);
+  cursor: grab;
+  user-select: none;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.math-tile:active {
+  cursor: grabbing;
+  transform: scale(1.05);
+  box-shadow: var(--shadow-hover);
+}
+
+/* On-Screen Child-Friendly Touch Keypad */
+.math-touch-keypad {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  margin-top: 0.75rem;
+}
+
+.keypad-btn {
+  padding: 0.6rem 0.2rem;
+  background: #f1f5f9;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: #1e293b;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.keypad-btn:hover {
+  background: #e2e8f0;
+  border-color: var(--sky-blue);
+  transform: translateY(-1px);
+}
+
+.keypad-btn:active {
+  transform: translateY(1px);
+}

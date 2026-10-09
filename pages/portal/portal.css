@@ -1,0 +1,19 @@
+/* =========================================================
+   Kids STEM Studio - Modular Portal CSS
+   ========================================================= */
+
+@import url('../../shared/css/variables.css');
+@import url('../../shared/css/base.css');
+@import url('../../shared/css/components.css');
+
+.portal-hero {
+  background: radial-gradient(circle at 80% 20%, #f0f9ff 0%, #ffffff 70%);
+}
+
+.recommended-practice-banner {
+  background: linear-gradient(135deg, #ecfdf5 0%, #eff6ff 100%);
+  border: 1.5px solid #a7f3d0;
+  border-radius: var(--radius-xl);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-card);
+}
