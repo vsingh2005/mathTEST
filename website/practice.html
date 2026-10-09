@@ -562,9 +562,13 @@
     }
 
     window.practiceEngine = new RootPracticeEngine();
-    window.addEventListener('DOMContentLoaded', () => {
+    if (document.readyState === 'loading') {
+      window.addEventListener('DOMContentLoaded', () => {
+        window.practiceEngine.init();
+      });
+    } else {
       window.practiceEngine.init();
-    });
+    }
   </script>
 </body>
 </html>

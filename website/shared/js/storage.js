@@ -15,12 +15,22 @@ export class StorageManager {
   };
 
   /**
-   * Safe getter for localStorage with fallback
+   * Safe getter for localStorage / sessionStorage with fallback
    */
   static getItem(key, defaultValue = null) {
     try {
-      const val = localStorage.getItem(key);
-      return val ? JSON.parse(val) : defaultValue;
+      let val = null;
+      try { val = localStorage.getItem(key); } catch (e) {}
+      if (val === null || val === undefined) {
+        try { val = sessionStorage.getItem(key); } catch (e) {}
+      }
+      if (val === null || val === undefined) return defaultValue;
+      try {
+        return JSON.parse(val);
+      } catch (e) {
+        // Return raw string if not JSON format
+        return val;
+      }
     } catch (e) {
       return defaultValue;
     }

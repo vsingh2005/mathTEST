@@ -7,17 +7,21 @@
 
 export class KSSHeader extends HTMLElement {
   connectedCallback() {
+    const isPagesSubdir = window.location.pathname.includes('/pages/');
+    const portalUrl = isPagesSubdir ? '../portal/index.html' : 'portal.html';
+    const practiceUrl = isPagesSubdir ? '../practice/index.html' : 'practice.html';
+
     this.innerHTML = `
       <header class="w-full bg-white border-b border-slate-100 py-4 px-6 md:px-12 flex items-center justify-between sticky top-0 z-50">
-        <div class="flex items-center space-x-3 cursor-pointer" onclick="window.location.href='portal.html'">
+        <div class="flex items-center space-x-3 cursor-pointer" onclick="window.location.href='${portalUrl}'">
           <img src="https://kidsstemstudio.com/wp-content/uploads/2020/05/KSS_Logo.png" alt="Kids STEM Studio Logo"
             class="h-10 w-auto kss-header-logo">
           <span class="text-xl font-extrabold text-[#263238] tracking-tight">Math Placement Portal</span>
         </div>
 
         <nav class="hidden md:flex items-center space-x-8 text-slate-500 font-semibold">
-          <a href="portal.html" class="hover:text-sky-500 transition-colors">Dashboard</a>
-          <a href="practice.html" class="hover:text-sky-500 transition-colors">Worksheets</a>
+          <a href="${portalUrl}" class="hover:text-sky-500 transition-colors">Dashboard</a>
+          <a href="${practiceUrl}" class="hover:text-sky-500 transition-colors">Worksheets</a>
           <button onclick="openGlobalModal('faq-modal')" class="hover:text-sky-500 transition-colors">FAQ</button>
           <button onclick="openGlobalModal('contact-modal')" class="hover:text-sky-500 transition-colors">Contact</button>
         </nav>

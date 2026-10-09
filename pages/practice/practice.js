@@ -35,7 +35,7 @@ class PracticeEngine {
   }
 
   async init() {
-    AuthManager.requireAuth('../../login.html');
+    AuthManager.requireAuth('../login/index.html');
     AuthManager.updateHeaderUI();
 
     const progress = StorageManager.getProgress();
@@ -487,7 +487,11 @@ class PracticeEngine {
 // Global initialization
 if (typeof window !== 'undefined') {
   window.practiceEngine = new PracticeEngine();
-  window.addEventListener('DOMContentLoaded', () => {
+  if (document.readyState === 'loading') {
+    window.addEventListener('DOMContentLoaded', () => {
+      window.practiceEngine.init();
+    });
+  } else {
     window.practiceEngine.init();
-  });
+  }
 }

@@ -23,7 +23,23 @@ export class AuthManager {
   }
 
   static getSession() {
-    return StorageManager.getItem(StorageManager.KEYS.SESSION);
+    const raw = StorageManager.getItem(StorageManager.KEYS.SESSION);
+    if (!raw) return null;
+    if (typeof raw === 'object' && raw !== null) return raw;
+    
+    // When session is stored as a username string (e.g. 'student1', 'guest')
+    const username = String(raw);
+    let token = null;
+    try {
+      token = localStorage.getItem('kss_jwt_token') || sessionStorage.getItem('kss_jwt_token');
+    } catch (e) {}
+
+    return {
+      username: username,
+      user: { display_name: username, username: username },
+      token: token || null,
+      guest: username.toLowerCase() === 'guest' || !token
+    };
   }
 
   static setSession(sessionData) {
@@ -31,8 +47,11 @@ export class AuthManager {
   }
 
   static isAuthenticated() {
-    const session = this.getSession();
-    return !!(session && (session.token || session.guest));
+    let raw = null;
+    try {
+      raw = localStorage.getItem(StorageManager.KEYS.SESSION) || sessionStorage.getItem(StorageManager.KEYS.SESSION);
+    } catch (e) {}
+    return !!(raw && raw !== 'null' && raw !== 'undefined');
   }
 
   /**
