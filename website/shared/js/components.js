@@ -12,22 +12,48 @@ export class KSSHeader extends HTMLElement {
     const practiceUrl = isPagesSubdir ? '../practice/index.html' : 'practice.html';
 
     this.innerHTML = `
-      <header class="w-full bg-white border-b border-slate-100 py-4 px-6 md:px-12 flex items-center justify-between sticky top-0 z-50">
-        <div class="flex items-center space-x-3 cursor-pointer" onclick="window.location.href='${portalUrl}'">
+      <header class="w-full bg-white border-b border-slate-100 py-3 px-4 md:px-6 lg:px-8 flex items-center justify-between sticky top-0 z-50 shadow-sm">
+        <div class="flex items-center space-x-2.5 cursor-pointer shrink-0" onclick="window.location.href='${portalUrl}'">
           <img src="https://kidsstemstudio.com/wp-content/uploads/2020/05/KSS_Logo.png" alt="Kids STEM Studio Logo"
-            class="h-10 w-auto kss-header-logo">
-          <span class="text-xl font-extrabold text-[#263238] tracking-tight">Math Placement Portal</span>
+            class="h-9 w-auto kss-header-logo">
+          <div class="flex flex-col">
+            <span class="text-lg font-black text-[#253238] tracking-tight leading-none">Math Adventure Portal</span>
+            <span class="text-[10px] font-bold text-[#2fbdb9] uppercase tracking-wider mt-0.5">Kids STEM Studio</span>
+          </div>
         </div>
 
-        <nav class="hidden md:flex items-center space-x-8 text-slate-500 font-semibold">
-          <a href="${portalUrl}" class="hover:text-sky-500 transition-colors">Dashboard</a>
-          <a href="${practiceUrl}" class="hover:text-sky-500 transition-colors">Worksheets</a>
-          <button onclick="openGlobalModal('faq-modal')" class="hover:text-sky-500 transition-colors">FAQ</button>
-          <button onclick="openGlobalModal('contact-modal')" class="hover:text-sky-500 transition-colors">Contact</button>
+        <nav class="hidden lg:flex items-center gap-3.5 xl:gap-5 text-[#647176] font-bold text-xs xl:text-sm whitespace-nowrap">
+          <a href="${portalUrl}" class="hover:text-[#2fbdb9] transition-colors flex items-center gap-1 pb-0.5">
+            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            <span>Dashboard</span>
+          </a>
+          <a href="${practiceUrl}" class="hover:text-[#2fbdb9] transition-colors flex items-center gap-1 pb-0.5">
+            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+            <span>Worksheets</span>
+          </a>
+          <a href="${portalUrl}#progress-section" class="hover:text-[#2fbdb9] transition-colors flex items-center gap-1 pb-0.5">
+            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            <span>My Progress</span>
+          </a>
+          <a href="${portalUrl}" class="hover:text-[#2fbdb9] transition-colors flex items-center gap-1 pb-0.5">
+            <svg class="w-4 h-4 text-amber-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <span>Achievements</span>
+          </a>
+          <button id="nav-placement-btn" onclick="window.handlePlacementAction ? window.handlePlacementAction() : window.location.href='${portalUrl}'" class="hover:text-[#2fbdb9] transition-colors flex items-center gap-1 pb-0.5">
+            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            <span id="nav-placement-label">Placement Exam</span>
+          </button>
         </nav>
 
-        <div id="user-header-widget" class="flex items-center space-x-4">
-          <!-- Populated by AuthManager.updateHeaderUI() -->
+        <div class="flex items-center gap-2.5 shrink-0">
+          <div class="hidden sm:flex items-center gap-1.5 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full shadow-xs">
+            <svg class="w-3.5 h-3.5 text-amber-500 fill-amber-400 shrink-0" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <span id="header-stars-display" class="text-xs font-black text-amber-900">0 Stars</span>
+          </div>
+
+          <div id="user-header-widget" class="flex items-center">
+            <!-- Populated by AuthManager.updateHeaderUI() -->
+          </div>
         </div>
       </header>
     `;

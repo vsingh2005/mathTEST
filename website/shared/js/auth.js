@@ -22,16 +22,72 @@ export class AuthManager {
       .replace(/\//g, '&#x2F;');
   }
 
+  static sanitizeUsername(input) {
+    if (!input) return 'student1';
+    if (typeof input === 'object' && input !== null) {
+      input = input.username || input.name || input.studentName || input.user_nicename || input.display_name || 'student1';
+    }
+    let str = String(input).trim();
+    str = str.replace(/\\"/g, '"').replace(/\\'/g, "'");
+
+    for (let i = 0; i < 5; i++) {
+      if ((str.startsWith('{') && str.endsWith('}')) || (str.startsWith('"') && str.endsWith('"')) || (str.startsWith("'") && str.endsWith("'"))) {
+        try {
+          const parsed = JSON.parse(str);
+          if (parsed && typeof parsed === 'object') {
+            str = parsed.username || parsed.name || parsed.studentName || parsed.user_nicename || parsed.display_name || 'student1';
+          } else if (typeof parsed === 'string') {
+            str = parsed;
+          } else {
+            break;
+          }
+        } catch (e) {
+          const match = str.match(/(?:username|name|studentName|user_nicename|display_name)["']?\s*:\s*["']?([^"',}\s]+)/i);
+          if (match && match[1]) {
+            str = match[1];
+          }
+          break;
+        }
+        str = String(str).trim();
+        str = str.replace(/\\"/g, '"').replace(/\\'/g, "'");
+      } else {
+        break;
+      }
+    }
+
+    if (str.includes('{') || str.includes('}')) {
+      const match = str.match(/(?:username|name|studentName|user_nicename|display_name)["']?\s*:\s*["']?([^"',}\s]+)/i);
+      if (match && match[1]) {
+        str = match[1];
+      } else {
+        str = 'student1';
+      }
+    }
+
+    str = str.replace(/[{}\"']/g, '').trim();
+    return str || 'student1';
+  }
+
   static getSession() {
     const raw = StorageManager.getItem(StorageManager.KEYS.SESSION);
     if (!raw) return null;
-    if (typeof raw === 'object' && raw !== null) return raw;
+    if (typeof raw === 'object' && raw !== null) {
+      if (raw.username) raw.username = this.sanitizeUsername(raw.username);
+      return raw;
+    }
     
     // When session is stored as a username string (e.g. 'student1', 'guest')
-    const username = String(raw);
+    const username = this.sanitizeUsername(raw);
     let token = null;
     try {
       token = localStorage.getItem('kss_jwt_token') || sessionStorage.getItem('kss_jwt_token');
+    } catch (e) {}
+
+    // Self-heal storage
+    try {
+      if (raw && typeof raw === 'string' && (raw.includes('{') || raw.includes('"'))) {
+        StorageManager.setItem(StorageManager.KEYS.SESSION, { username: username, guest: false });
+      }
     } catch (e) {}
 
     return {
@@ -106,21 +162,51 @@ export class AuthManager {
       return;
     }
 
-    const displayName = this.sanitizeInput(session.user?.display_name || session.user?.user_nicename || 'Student');
-    const isGuest = !!session.guest;
+    const rawName = session.username || session.user?.display_name || session.user?.username || session.studentName || 'Student';
+    const cleanName = this.sanitizeUsername(rawName);
+    const displayName = this.sanitizeInput(cleanName);
+    const initial = displayName.substring(0, 1).toUpperCase();
 
     container.innerHTML = `
-      <div class="flex items-center space-x-3">
-        <button onclick="window.soundManager && window.soundManager.toggleMute()" class="sound-toggle-btn" title="Toggle Sound FX"></button>
-        <div class="flex items-center space-x-2 bg-slate-100 py-1.5 px-3 rounded-full border border-slate-200">
-          <span class="w-2.5 h-2.5 rounded-full ${isGuest ? 'bg-amber-400' : 'bg-emerald-500'}"></span>
-          <span class="text-xs md:text-sm font-bold text-slate-700 max-w-[120px] truncate">${displayName}</span>
-        </div>
-        <button onclick="AuthManager.logout()" class="text-xs font-bold text-rose-500 hover:text-rose-700 transition-colors">
-          Logout
-        </button>
+      <div class="flex items-center gap-2 bg-slate-100/90 py-1 pl-1.5 pr-2.5 rounded-full border border-slate-200 text-xs shadow-xs">
+        <span class="w-6 h-6 rounded-full bg-[#287F78] text-white flex items-center justify-center font-black text-xs">
+          ${initial}
+        </span>
+        <span class="font-extrabold text-[#253238]">${displayName}</span>
+        <div class="h-3 w-px bg-slate-300 mx-0.5"></div>
+        <button onclick="window.location.href='portal.html'" class="text-[11px] font-bold text-sky-600 hover:underline">Dashboard</button>
+        <button onclick="AuthManager.logout()" class="text-[11px] font-bold text-rose-500 hover:underline">Logout</button>
       </div>
     `;
+
+    // Sync stars display if present
+    const headerStars = document.getElementById('header-stars-display');
+    if (headerStars) {
+      try {
+        const p = StorageManager.getProgress ? StorageManager.getProgress() : JSON.parse(localStorage.getItem('kss_student_progress') || '{}');
+        headerStars.textContent = `${p.totalStars || 0} Stars`;
+      } catch (e) {}
+    }
+
+    // Sync nav placement button if present
+    const navLabel = document.getElementById('nav-placement-label');
+    if (navLabel) {
+      try {
+        const p = StorageManager.getProgress ? StorageManager.getProgress() : JSON.parse(localStorage.getItem('kss_student_progress') || '{}');
+        const placed = p.testedGrade;
+        if (placed) {
+          const placedNum = parseInt(placed, 10);
+          const nextGrade = placedNum + 1;
+          if (nextGrade <= 8) {
+            navLabel.textContent = `Test into Grade ${nextGrade}`;
+          } else {
+            navLabel.textContent = `Placement Complete`;
+          }
+        } else {
+          navLabel.textContent = `Placement Exam`;
+        }
+      } catch (e) {}
+    }
 
     if (window.soundManager) {
       window.soundManager.updateSoundButtons();
@@ -192,4 +278,26 @@ export class AuthManager {
 // Global setup
 if (typeof window !== 'undefined') {
   window.AuthManager = AuthManager;
+  window.handlePlacementAction = function() {
+    try {
+      const p = StorageManager.getProgress ? StorageManager.getProgress() : JSON.parse(localStorage.getItem('kss_student_progress') || '{}');
+      const placed = p.testedGrade;
+      if (!placed) {
+        sessionStorage.removeItem('targetLevelUpGrade');
+        window.location.href = 'portal.html';
+      } else if (placed < 8) {
+        const targetGrade = parseInt(placed, 10) + 1;
+        let track = '3-4';
+        if (targetGrade >= 7) track = '7-8';
+        else if (targetGrade >= 5) track = '5-6';
+        sessionStorage.setItem('selectedTrack', track);
+        sessionStorage.setItem('targetLevelUpGrade', String(targetGrade));
+        window.location.href = 'instructions.html';
+      } else {
+        window.location.href = 'practice.html?grade=8';
+      }
+    } catch (e) {
+      window.location.href = 'portal.html';
+    }
+  };
 }

@@ -40,6 +40,15 @@ class PortalController {
     const totalStars = progress.totalStars || 0;
     const completedCount = Object.keys(progress.completedLessons || {}).length;
 
+    const timelineBar = document.getElementById('diagnostic-timeline-bar');
+    if (timelineBar) {
+      if (placedGrade) {
+        timelineBar.classList.add('hidden');
+      } else {
+        timelineBar.classList.remove('hidden');
+      }
+    }
+
     if (placedGrade) {
       document.body.setAttribute('data-grade', String(placedGrade));
     }
@@ -80,13 +89,26 @@ class PortalController {
             <button onclick="window.location.href='../practice/index.html'" class="px-8 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm whitespace-nowrap shadow-md transition-all">
               Jump into Worksheets
             </button>
-            <button onclick="PortalController.showTrackSelection()" class="px-5 py-4 rounded-xl border border-slate-300 text-slate-700 hover:bg-slate-100 font-extrabold text-sm whitespace-nowrap transition-colors">
-              Retake Placement
-            </button>
+            ${placedGrade < 8 ? `
+            <button onclick="PortalController.testIntoNextLevel(${placedGrade + 1})" class="px-5 py-4 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-extrabold text-sm whitespace-nowrap shadow-sm transition-all">
+              Test into Grade ${placedGrade + 1}
+            </button>` : ''}
           </div>
         </div>
       `;
     }
+  }
+
+  static testIntoNextLevel(targetGrade) {
+    let track = '3-4';
+    if (targetGrade >= 7) {
+      track = '7-8';
+    } else if (targetGrade >= 5) {
+      track = '5-6';
+    }
+    sessionStorage.setItem('selectedTrack', track);
+    sessionStorage.setItem('targetLevelUpGrade', String(targetGrade));
+    window.location.href = '../exam/index.html';
   }
 }
 

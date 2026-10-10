@@ -1,0 +1,178 @@
+/* =========================================================
+   Kids STEM Studio - Cozy Math Adventure Dashboard Theme
+   Serving Grades 3-8 (Ages 8-14)
+   ========================================================= */
+
+:root {
+  --primary-teal: #287F78;
+  --primary-teal-hover: #1F6862;
+  --pale-mint: #DDF3EE;
+  --pale-mint-border: #B2E2D7;
+  --light-blue: #DDE8FF;
+  --light-blue-border: #B8CEFF;
+  --soft-yellow: #FFF0C7;
+  --soft-yellow-border: #FFE08F;
+  --lavender: #EAE1FF;
+  --lavender-border: #D1C2FF;
+  --warm-offwhite: #FAFAF7;
+  --text-main: #253238;
+  --text-secondary: #647176;
+}
+
+body.adventure-dashboard-body {
+  background-color: var(--warm-offwhite) !important;
+  color: var(--text-main);
+  font-family: 'Nunito', sans-serif;
+  min-height: 100vh;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(40, 127, 120, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(221, 232, 255, 0.05) 0%, transparent 40%),
+    var(--bg-90s-geometric) !important;
+  background-size: auto, auto, 320px 320px !important;
+  background-attachment: fixed !important;
+}
+
+/* Primary Action Buttons */
+.btn-teal-primary {
+  background-color: var(--primary-teal);
+  color: #FFFFFF !important;
+  font-weight: 800;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(40, 127, 120, 0.28);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-teal-primary:hover,
+.btn-teal-primary:focus {
+  background-color: var(--primary-teal-hover) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(40, 127, 120, 0.38);
+}
+
+.btn-secondary-pastel {
+  background-color: #FFFFFF;
+  color: var(--text-main);
+  border: 1.5px solid #E2E8F0;
+  font-weight: 700;
+  border-radius: 16px;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-secondary-pastel:hover {
+  background-color: #F8FAFC;
+  border-color: #CBD5E1;
+  transform: translateY(-1px);
+}
+
+/* Math Worlds Adventure Cards */
+.world-card {
+  border-radius: 24px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  background-color: #FFFFFF;
+}
+
+.world-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -8px rgba(40, 127, 120, 0.12);
+}
+
+.world-card-mint {
+  border: 1.5px solid var(--pale-mint-border);
+  background: linear-gradient(180deg, #F2FAF8 0%, #FFFFFF 100%);
+}
+
+.world-card-blue {
+  border: 1.5px solid var(--light-blue-border);
+  background: linear-gradient(180deg, #F2F6FF 0%, #FFFFFF 100%);
+}
+
+.world-card-yellow {
+  border: 1.5px solid var(--soft-yellow-border);
+  background: linear-gradient(180deg, #FFFDF5 0%, #FFFFFF 100%);
+}
+
+.world-card-lavender {
+  border: 1.5px solid var(--lavender-border);
+  background: linear-gradient(180deg, #F8F5FF 0%, #FFFFFF 100%);
+}
+
+/* Primary Focus Card (Continue Learning) */
+.hero-focus-card {
+  border-radius: 28px;
+  border: 1.5px solid #BCE6DC;
+  background: linear-gradient(135deg, #F2FAF8 0%, #FFFFFF 65%, #F4F8FE 100%);
+  box-shadow: 0 12px 36px -6px rgba(40, 127, 120, 0.12);
+}
+
+/* Daily Challenge Card */
+.daily-quest-card {
+  border-radius: 24px;
+  border: 1.5px solid var(--soft-yellow-border);
+  background: linear-gradient(135deg, #FFFDF2 0%, #FFFFFF 100%);
+  box-shadow: 0 8px 24px -4px rgba(234, 179, 8, 0.12);
+}
+
+/* Progress Stat Cards */
+.stat-card-pill {
+  border-radius: 20px;
+  border: 1px solid #E2E8F0;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.04);
+}
+
+/* Badge Cards */
+.achievement-badge-card {
+  border-radius: 20px;
+  border: 1.5px solid #E2E8F0;
+  background-color: #FFFFFF;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.achievement-badge-card.unlocked {
+  border-color: #FACC15;
+  background: linear-gradient(180deg, #FEFCE8 0%, #FFFFFF 100%);
+}
+
+.achievement-badge-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Text Readability Enhancements */
+.text-main-color {
+  color: var(--text-main);
+}
+
+.text-secondary-color {
+  color: var(--text-secondary);
+}
+
+/* High Contrast Header */
+.dashboard-header {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #EAEFEF;
+}
+
+/* Accessible Focus Indicators */
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #287F78 !important;
+  outline-offset: 2px !important;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

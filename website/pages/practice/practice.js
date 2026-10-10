@@ -39,13 +39,23 @@ class PracticeEngine {
     AuthManager.updateHeaderUI();
 
     const progress = StorageManager.getProgress();
-    // Default to student's placed grade if available
-    if (progress.testedGrade) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const paramGrade = parseInt(urlParams.get('grade'));
+    if (paramGrade >= 3 && paramGrade <= 8) {
+      this.activeGrade = paramGrade;
+    } else if (progress.testedGrade) {
       this.activeGrade = progress.testedGrade;
     }
 
     await this.loadCurriculum();
-    this.renderCurriculumBrowser();
+
+    const lessonIdParam = urlParams.get('lesson');
+    const lessonNumParam = parseInt(urlParams.get('lessonNum'));
+    if (lessonIdParam && lessonNumParam && StorageManager.isLessonUnlocked(this.activeGrade, lessonNumParam)) {
+      await this.startLesson(lessonIdParam, lessonNumParam);
+    } else {
+      this.renderCurriculumBrowser();
+    }
   }
 
   async loadCurriculum() {
@@ -99,7 +109,7 @@ class PracticeEngine {
     let cardsHtml = '';
     gradeLessons.forEach((lesson, idx) => {
       const isUnlocked = StorageManager.isLessonUnlocked(this.activeGrade, lesson.lessonNumber);
-      const completion = progress.completedLessons[lesson.lessonId];
+      const completion = (progress.completedLessons && progress.completedLessons[lesson.lessonId]) || null;
       const starsEarned = completion ? completion.stars : 0;
 
       const starsText = starsEarned > 0 ? `${starsEarned} / 3 Stars` : 'Not Started';
@@ -123,8 +133,12 @@ class PracticeEngine {
           </div>
         `;
       } else {
+        const prereqNotice = lesson.lessonNumber === 1
+          ? `Prerequisite: Complete Diagnostic Placement Test to place into Grade ${this.activeGrade}, or pass Grade ${this.activeGrade - 1} Lesson 25`
+          : `Prerequisite: Complete Lesson ${lesson.lessonNumber - 1} with at least 80%`;
+
         cardsHtml += `
-          <div class="bg-slate-50 p-6 rounded-card border border-slate-200 lesson-card-locked flex flex-col justify-between space-y-4 opacity-70">
+          <div class="bg-slate-50 p-6 rounded-card border border-slate-200 lesson-card-locked flex flex-col justify-between space-y-4 opacity-75">
             <div class="space-y-2">
               <div class="flex items-center justify-between">
                 <span class="px-3 py-1 bg-slate-200 text-slate-500 rounded-full font-bold text-xs">Lesson ${lesson.lessonNumber}</span>
@@ -135,7 +149,7 @@ class PracticeEngine {
             </div>
             <div class="p-2.5 bg-amber-50 border border-amber-200 rounded-xl text-center">
               <span class="text-xs font-bold text-amber-800">
-                Prerequisite: Complete Lesson ${lesson.lessonNumber - 1} with at least 80%
+                ${prereqNotice}
               </span>
             </div>
           </div>

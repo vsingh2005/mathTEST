@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+@import url('./shared/css/memphis_90s.css');
 
 :root {
   --sky-blue: #4DA8FF;
@@ -9,12 +10,24 @@
   --dark-navy: #263238;
   --kss-teal: #2fbdb9;
   --kss-teal-hover: #048c8a;
+  --primary-teal: #2fbdb9;
+  --text-main: #253238;
+  --text-secondary: #647176;
 }
+
+.text-primary-teal { color: #2fbdb9 !important; }
+.border-primary-teal { border-color: #2fbdb9 !important; }
+.text-text-main { color: #253238 !important; }
+.text-text-secondary { color: #647176 !important; }
 
 body {
   font-family: 'Nunito', sans-serif;
   color: var(--dark-navy);
-  background-color: #FFFFFF;
+  background-color: #F8FAFC;
+  background-image: var(--bg-90s-geometric);
+  background-size: 320px 320px;
+  background-repeat: repeat;
+  background-attachment: fixed;
 }
 
 .rounded-card {
@@ -94,7 +107,8 @@ body {
 }
 
 .ml-container .ml-extra-div {
-  background-color: #1e293b;
+  background-color: #1e293b !important;
+  background-image: none !important;
   position: relative;
   width: 50%;
   min-height: 480px;

@@ -22,11 +22,84 @@ const DEMO_USERS = [
   }
 ];
 
+function sanitizeUsername(input) {
+  if (!input) return 'student1';
+  if (typeof input === 'object' && input !== null) {
+    input = input.username || input.name || input.studentName || input.user_nicename || input.display_name || 'student1';
+  }
+  let str = String(input).trim();
+  str = str.replace(/\\"/g, '"').replace(/\\'/g, "'");
+
+  for (let i = 0; i < 5; i++) {
+    if ((str.startsWith('{') && str.endsWith('}')) || (str.startsWith('"') && str.endsWith('"')) || (str.startsWith("'") && str.endsWith("'"))) {
+      try {
+        const parsed = JSON.parse(str);
+        if (parsed && typeof parsed === 'object') {
+          str = parsed.username || parsed.name || parsed.studentName || parsed.user_nicename || parsed.display_name || 'student1';
+        } else if (typeof parsed === 'string') {
+          str = parsed;
+        } else {
+          break;
+        }
+      } catch (e) {
+        const match = str.match(/(?:username|name|studentName|user_nicename|display_name)["']?\s*:\s*["']?([^"',}\s]+)/i);
+        if (match && match[1]) {
+          str = match[1];
+        }
+        break;
+      }
+      str = String(str).trim();
+      str = str.replace(/\\"/g, '"').replace(/\\'/g, "'");
+    } else {
+      break;
+    }
+  }
+
+  if (str.includes('{') || str.includes('}')) {
+    const match = str.match(/(?:username|name|studentName|user_nicename|display_name)["']?\s*:\s*["']?([^"',}\s]+)/i);
+    if (match && match[1]) {
+      str = match[1];
+    } else {
+      str = 'student1';
+    }
+  }
+
+  str = str.replace(/[{}\"']/g, '').trim();
+  return str || 'student1';
+}
+window.sanitizeUsername = sanitizeUsername;
+
 class AuthenticationManager {
   constructor() {
     this.users = [];
     try {
+      // Self-heal corrupted localStorage session if present
+      const rawSess = localStorage.getItem('kss_session');
+      if (rawSess && (rawSess.includes('{') || rawSess.includes('"'))) {
+        const clean = sanitizeUsername(rawSess);
+        if (clean && !clean.includes('{')) {
+          localStorage.setItem('kss_session', JSON.stringify({ username: clean, guest: false }));
+        }
+      }
+    } catch (e) {}
+
+    try {
       this.users = JSON.parse(localStorage.getItem('kss_users')) || [];
+      if (!Array.isArray(this.users)) this.users = [];
+      this.users = this.users.map(u => {
+        if (u && u.username) {
+          u.username = sanitizeUsername(u.username);
+        }
+        return u;
+      });
+      const uniqueMap = new Map();
+      this.users.forEach(u => {
+        if (u && u.username && !uniqueMap.has(u.username.toLowerCase())) {
+          uniqueMap.set(u.username.toLowerCase(), u);
+        }
+      });
+      this.users = Array.from(uniqueMap.values());
+      localStorage.setItem('kss_users', JSON.stringify(this.users));
     } catch (e) {
       this.users = [];
     }
@@ -130,17 +203,25 @@ class AuthenticationManager {
     }
 
     if (typeof raw === 'string') {
-      const trimmed = raw.trim();
+      let trimmed = raw.trim();
       if (!trimmed || trimmed === 'null' || trimmed === 'undefined') return null;
-      if (trimmed.startsWith('{') || trimmed.startsWith('[')) {
+      while ((trimmed.startsWith('{') && trimmed.endsWith('}')) || (trimmed.startsWith('"') && trimmed.endsWith('"'))) {
         try {
           const parsed = JSON.parse(trimmed);
           if (parsed && typeof parsed === 'object') {
+            if (parsed.username) parsed.username = sanitizeUsername(parsed.username);
             return parsed;
           }
-        } catch (e) {}
+          if (typeof parsed === 'string') {
+            trimmed = parsed.trim();
+          } else {
+            break;
+          }
+        } catch (e) {
+          break;
+        }
       }
-      return trimmed;
+      return sanitizeUsername(trimmed);
     }
 
     return raw;
@@ -153,67 +234,74 @@ class AuthenticationManager {
       return null;
     }
 
+    let uname = 'Student';
+    let email = '';
+    let isGuest = false;
+
     if (typeof session === 'object' && session !== null) {
-      const uname = session.username ||
-                    (session.user && (session.user.display_name || session.user.username)) ||
-                    session.studentName ||
-                    'Student';
-
-      let matched = this.users.find(u => u.username && u.username.toLowerCase() === String(uname).toLowerCase());
-      if (matched) {
-        this.currentUser = matched;
-      } else {
-        this.currentUser = {
-          username: String(uname),
-          displayName: String(uname),
-          email: session.email || (session.user && session.user.email) || '',
-          isGuest: !!session.guest,
-          attempts: []
-        };
-      }
-      this.currentUser.token = session.token || localStorage.getItem('kss_jwt_token') || sessionStorage.getItem('kss_jwt_token') || null;
-      this.ensureStudentUnlocked();
-      return this.currentUser;
+      uname = session.username ||
+              (session.user && (session.user.display_name || session.user.username)) ||
+              session.studentName ||
+              'Student';
+      email = session.email || (session.user && session.user.email) || '';
+      isGuest = !!session.guest;
+    } else {
+      uname = String(session).trim();
+      isGuest = uname.toLowerCase().includes('guest');
     }
 
-    const sessionStr = String(session).trim();
-    if (!sessionStr) {
-      this.currentUser = null;
-      return null;
-    }
+    uname = sanitizeUsername(uname);
 
-    const matched = this.users.find(u => u.username && u.username.toLowerCase() === sessionStr.toLowerCase());
+    let matched = this.users.find(u => u.username && sanitizeUsername(u.username).toLowerCase() === uname.toLowerCase());
     if (matched) {
+      matched.username = sanitizeUsername(matched.username);
       this.currentUser = matched;
-      this.currentUser.token = localStorage.getItem('kss_jwt_token') || sessionStorage.getItem('kss_jwt_token') || null;
-      this.ensureStudentUnlocked();
-      return this.currentUser;
+    } else {
+      this.currentUser = {
+        username: uname,
+        displayName: uname,
+        email: email,
+        isGuest: isGuest,
+        attempts: []
+      };
     }
-
-    this.currentUser = {
-      username: sessionStr,
-      displayName: sessionStr,
-      email: '',
-      isGuest: sessionStr.toLowerCase().includes('guest'),
-      attempts: []
-    };
-    this.currentUser.token = localStorage.getItem('kss_jwt_token') || sessionStorage.getItem('kss_jwt_token') || null;
+    this.currentUser.username = sanitizeUsername(this.currentUser.username);
+    this.currentUser.displayName = sanitizeUsername(this.currentUser.displayName || this.currentUser.username);
+    this.currentUser.token = (session && session.token) || localStorage.getItem('kss_jwt_token') || sessionStorage.getItem('kss_jwt_token') || null;
     this.ensureStudentUnlocked();
     return this.currentUser;
   }
 
   ensureStudentUnlocked() {
-    if (this.currentUser && this.currentUser.username && this.currentUser.username.toLowerCase() === 'student1') {
-      try {
-        let p = JSON.parse(localStorage.getItem('kss_student_progress')) || {};
-        if (!p.unlockedLessonIndex) p.unlockedLessonIndex = {};
-        for (let g = 3; g <= 8; g++) {
-          p.unlockedLessonIndex[String(g)] = 25;
+    try {
+      const raw = localStorage.getItem('kss_student_progress');
+      if (!raw) {
+        const defaultProgress = {
+          testedGrade: null,
+          testedScore: null,
+          unlockedLessonIndex: { "3": 1, "4": 0, "5": 0, "6": 0, "7": 0, "8": 0 },
+          completedLessons: {},
+          totalStars: 0,
+          highestStreak: 0,
+          badges: []
+        };
+        localStorage.setItem('kss_student_progress', JSON.stringify(defaultProgress));
+      } else {
+        const p = JSON.parse(raw);
+        let modified = false;
+        if (!p.completedLessons || typeof p.completedLessons !== 'object') {
+          p.completedLessons = {};
+          modified = true;
         }
-        if (!p.testedGrade) p.testedGrade = 6;
-        localStorage.setItem('kss_student_progress', JSON.stringify(p));
-      } catch (e) {}
-    }
+        if (!p.unlockedLessonIndex || typeof p.unlockedLessonIndex !== 'object') {
+          p.unlockedLessonIndex = { "3": 1, "4": 0, "5": 0, "6": 0, "7": 0, "8": 0 };
+          modified = true;
+        }
+        if (modified) {
+          localStorage.setItem('kss_student_progress', JSON.stringify(p));
+        }
+      }
+    } catch (e) {}
   }
 
   isAuthenticated() {
@@ -511,24 +599,55 @@ class AuthenticationManager {
 
   updateHeaderUI() {
     const headerWidget = document.getElementById('user-header-widget');
-    if (!headerWidget) return;
+    if (headerWidget) {
+      if (this.currentUser) {
+        const cleanName = sanitizeUsername(this.currentUser.username);
+        const initial = cleanName.charAt(0).toUpperCase() || 'S';
+        headerWidget.innerHTML = `
+          <div class="flex items-center gap-2 bg-slate-100/90 py-1 pl-1.5 pr-2.5 rounded-full border border-slate-200 text-xs shadow-xs">
+            <span class="w-6 h-6 rounded-full bg-[#287F78] text-white flex items-center justify-center font-black text-xs">
+              ${initial}
+            </span>
+            <span class="font-extrabold text-[#253238]">${cleanName}</span>
+            <div class="h-3 w-px bg-slate-300 mx-0.5"></div>
+            <button onclick="AuthManager.renderHistoryModal()" class="text-[11px] font-bold text-sky-600 hover:underline">History</button>
+            <button onclick="AuthManager.logoutUser()" class="text-[11px] font-bold text-rose-500 hover:underline">Logout</button>
+          </div>
+        `;
+      } else {
+        headerWidget.innerHTML = `
+          <a href="login.html" class="px-3 py-1.5 text-xs font-bold text-white bg-sky-500 hover:bg-sky-600 rounded-lg transition-colors">Log In</a>
+        `;
+      }
+    }
 
-    if (this.currentUser) {
-      const initial = (this.currentUser.username || 'S').substring(0, 1).toUpperCase();
-      headerWidget.innerHTML = `
-        <div class="flex items-center space-x-3 bg-slate-100 px-3.5 py-1.5 rounded-full border border-slate-200">
-          <span class="w-7 h-7 rounded-full bg-teal-600 text-white flex items-center justify-center font-bold text-xs">
-            ${initial}
-          </span>
-          <span class="text-xs font-extrabold text-[#263238]">${this.currentUser.username}</span>
-          <button onclick="AuthManager.renderHistoryModal()" class="text-xs font-bold text-sky-600 hover:underline">History</button>
-          <button onclick="AuthManager.logoutUser()" class="text-xs font-bold text-rose-500 hover:underline">Logout</button>
-        </div>
-      `;
-    } else {
-      headerWidget.innerHTML = `
-        <a href="login.html" class="px-4 py-2 text-xs font-bold text-white bg-sky-500 hover:bg-sky-600 rounded-lg transition-colors">Log In</a>
-      `;
+    // Sync stars display if present in header
+    const headerStars = document.getElementById('header-stars-display');
+    if (headerStars) {
+      try {
+        const rawP = localStorage.getItem('kss_student_progress');
+        if (rawP) {
+          const p = JSON.parse(rawP);
+          headerStars.textContent = `${p.totalStars || 0} Stars`;
+        }
+      } catch (e) {}
+    }
+
+    // Sync nav placement button if present in header
+    const navLabel = document.getElementById('nav-placement-label');
+    if (navLabel) {
+      try {
+        const rawP = localStorage.getItem('kss_student_progress');
+        const p = rawP ? JSON.parse(rawP) : {};
+        const placed = p.testedGrade;
+        if (!placed) {
+          navLabel.textContent = 'Placement Exam';
+        } else if (placed < 8) {
+          navLabel.textContent = `Test into Grade ${placed + 1}`;
+        } else {
+          navLabel.textContent = 'Curriculum Mastered';
+        }
+      } catch (e) {}
     }
   }
 
@@ -588,3 +707,28 @@ class AuthenticationManager {
 
 const AuthManager = new AuthenticationManager();
 window.AuthManager = AuthManager;
+
+function handlePlacementAction() {
+  try {
+    const rawP = localStorage.getItem('kss_student_progress');
+    const p = rawP ? JSON.parse(rawP) : {};
+    const placed = p.testedGrade;
+    if (!placed) {
+      sessionStorage.removeItem('targetLevelUpGrade');
+      window.location.href = 'portal.html';
+    } else if (placed < 8) {
+      const targetGrade = placed + 1;
+      let track = '3-4';
+      if (targetGrade >= 7) track = '7-8';
+      else if (targetGrade >= 5) track = '5-6';
+      sessionStorage.setItem('selectedTrack', track);
+      sessionStorage.setItem('targetLevelUpGrade', String(targetGrade));
+      window.location.href = 'instructions.html';
+    } else {
+      window.location.href = 'practice.html?grade=8';
+    }
+  } catch (e) {
+    window.location.href = 'portal.html';
+  }
+}
+window.handlePlacementAction = handlePlacementAction;

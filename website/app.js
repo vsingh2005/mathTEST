@@ -1191,11 +1191,16 @@ class AuthenticationManager {
       this.allAttempts = JSON.parse(storedAttempts);
     }
 
-    const session = localStorage.getItem('kss_session') || sessionStorage.getItem('kss_session');
-    if (session) {
-      const found = this.users.find(u => u.username.toLowerCase() === session.toLowerCase());
+    const rawSession = localStorage.getItem('kss_session') || sessionStorage.getItem('kss_session');
+    if (rawSession) {
+      const cleanSession = (typeof sanitizeUsername === 'function') ? sanitizeUsername(rawSession) : rawSession;
+      const found = this.users.find(u => {
+        const uClean = (typeof sanitizeUsername === 'function') ? sanitizeUsername(u.username) : u.username;
+        return uClean.toLowerCase() === cleanSession.toLowerCase();
+      });
       if (found) {
         this.currentUser = found;
+        this.currentUser.username = (typeof sanitizeUsername === 'function') ? sanitizeUsername(this.currentUser.username) : this.currentUser.username;
         this.currentUser.token = localStorage.getItem('kss_jwt_token') || sessionStorage.getItem('kss_jwt_token');
         if (this.currentUser.token) {
           this.syncAttemptsFromServer();
@@ -1459,14 +1464,22 @@ class AuthenticationManager {
       if (appContent) appContent.classList.remove('hidden');
 
       if (headerWidget) {
+        let cleanUName = this.currentUser.username || 'student1';
+        if (typeof sanitizeUsername === 'function') {
+          cleanUName = sanitizeUsername(cleanUName);
+        } else {
+          cleanUName = String(cleanUName).replace(/[{}\"']/g, '').trim() || 'student1';
+        }
+        const initial = cleanUName.charAt(0).toUpperCase() || 'S';
         headerWidget.innerHTML = `
-          <div class="flex items-center space-x-3 bg-slate-100 px-3.5 py-1.5 rounded-full border border-slate-200">
-            <span class="w-7 h-7 rounded-full bg-kss-teal text-white flex items-center justify-center font-bold text-xs">
-              ${this.currentUser.username.substring(0, 1).toUpperCase()}
+          <div class="flex items-center gap-2 bg-slate-100/90 py-1 pl-1.5 pr-2.5 rounded-full border border-slate-200 text-xs shadow-xs">
+            <span class="w-6 h-6 rounded-full bg-[#287F78] text-white flex items-center justify-center font-black text-xs">
+              ${initial}
             </span>
-            <span class="text-xs font-extrabold text-navy-dark">${this.currentUser.username}</span>
-            <button onclick="AuthManager.renderHistoryModal()" class="text-xs font-bold text-sky-600 hover:underline">History</button>
-            <button onclick="AuthManager.logoutUser()" class="text-xs font-bold text-rose-500 hover:underline">Logout</button>
+            <span class="font-extrabold text-[#253238]">${cleanUName}</span>
+            <div class="h-3 w-px bg-slate-300 mx-0.5"></div>
+            <button onclick="AuthManager.renderHistoryModal()" class="text-[11px] font-bold text-sky-600 hover:underline">History</button>
+            <button onclick="AuthManager.logoutUser()" class="text-[11px] font-bold text-rose-500 hover:underline">Logout</button>
           </div>
         `;
       }
@@ -2023,6 +2036,19 @@ function finishExam() {
   const match = recommendedLevel.match(/(\d+)/);
   if (match) placedGradeNum = parseInt(match[1]);
 
+  // Handle Level-Up Challenge assessment
+  const targetLevelUp = sessionStorage.getItem('targetLevelUpGrade');
+  if (targetLevelUp) {
+    const targetGradeNum = parseInt(targetLevelUp);
+    // If student achieved 80% (score >= 12) or algorithmic placement reached/exceeded target
+    if (placedGradeNum >= targetGradeNum || state.score >= 12) {
+      placedGradeNum = Math.max(placedGradeNum, targetGradeNum);
+      recommendedLevel = `Grade ${placedGradeNum} Standard Math`;
+    }
+  }
+
+  state.recommendedLevel = recommendedLevel;
+
   // Update persistent student progress & unlock threshold
   let progress = {
     testedGrade: placedGradeNum,
@@ -2039,8 +2065,12 @@ function finishExam() {
       const existingP = JSON.parse(rawP);
       progress = { ...existingP, ...progress };
       progress.highestStreak = Math.max(existingP.highestStreak || 0, state.maxStreak || 0);
+      progress.completedLessons = existingP.completedLessons || {};
+      progress.unlockedLessonIndex = existingP.unlockedLessonIndex || progress.unlockedLessonIndex;
     }
   } catch(e) {}
+
+  progress.testedGrade = Math.max(progress.testedGrade || 0, placedGradeNum);
 
   for (let g = 3; g < placedGradeNum; g++) {
     progress.unlockedLessonIndex[String(g)] = 25;

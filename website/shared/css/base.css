@@ -4,6 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
 @import url('./variables.css');
+@import url('./memphis_90s.css');
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -13,66 +14,69 @@ body {
   font-family: var(--font-family-base);
   color: var(--text-primary);
   background-color: var(--bg-slate);
+  background-image: var(--bg-90s-geometric);
+  background-size: 320px 320px;
+  background-repeat: repeat;
+  background-attachment: fixed;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-attachment: fixed;
   transition: background-color 0.3s ease;
 }
 
-/* Grade 3: Canopy Forest (Pine / Sage Contours) */
+/* Grade 3: 90s Geometric Canopy Forest */
 body[data-grade="3"], [data-grade="3"] {
   background-color: #f7fbf8;
-  background-image: radial-gradient(#107846 0.75px, transparent 0.75px), 
-    radial-gradient(#107846 0.75px, #f7fbf8 0.75px);
-  background-size: 36px 36px;
-  background-position: 0 0, 18px 18px;
+  background-image: var(--bg-90s-geometric);
+  background-size: 320px 320px;
+  background-repeat: repeat;
+  background-attachment: fixed;
 }
 
-/* Grade 4: Coastal Archipelago (Aqua / Coastal Contours) */
+/* Grade 4: 90s Geometric Coastal Archipelago */
 body[data-grade="4"], [data-grade="4"] {
   background-color: #f6fafc;
-  background-image: radial-gradient(#0284c7 0.75px, transparent 0.75px), 
-    radial-gradient(#0284c7 0.75px, #f6fafc 0.75px);
-  background-size: 32px 32px;
-  background-position: 0 0, 16px 16px;
+  background-image: var(--bg-90s-geometric);
+  background-size: 300px 300px;
+  background-repeat: repeat;
+  background-attachment: fixed;
 }
 
-/* Grade 5: Canyon Plateau (Sandstone / Terracotta Strata) */
+/* Grade 5: 90s Geometric Canyon Plateau */
 body[data-grade="5"], [data-grade="5"] {
   background-color: #fdfbf7;
-  background-image: radial-gradient(#b45309 0.75px, transparent 0.75px), 
-    radial-gradient(#b45309 0.75px, #fdfbf7 0.75px);
-  background-size: 36px 36px;
-  background-position: 0 0, 18px 18px;
+  background-image: var(--bg-90s-geometric);
+  background-size: 340px 340px;
+  background-repeat: repeat;
+  background-attachment: fixed;
 }
 
-/* Grade 6: Alpine Summit (Glacial Slate / Deep Teal Ridges) */
+/* Grade 6: 90s Geometric Alpine Summit */
 body[data-grade="6"], [data-grade="6"] {
   background-color: #f7fafc;
-  background-image: radial-gradient(#0d9488 0.85px, transparent 0.85px), 
-    radial-gradient(#0d9488 0.85px, #f7fafc 0.85px);
-  background-size: 30px 30px;
-  background-position: 0 0, 15px 15px;
+  background-image: var(--bg-90s-geometric);
+  background-size: 320px 320px;
+  background-repeat: repeat;
+  background-attachment: fixed;
 }
 
-/* Grade 7: Volcanic Basin (Graphite / Fault Contours) */
+/* Grade 7: 90s Geometric Volcanic Basin */
 body[data-grade="7"], [data-grade="7"] {
   background-color: #faf8f8;
-  background-image: radial-gradient(#64748b 0.85px, transparent 0.85px), 
-    radial-gradient(#64748b 0.85px, #faf8f8 0.85px);
-  background-size: 28px 28px;
-  background-position: 0 0, 14px 14px;
+  background-image: var(--bg-90s-geometric);
+  background-size: 290px 290px;
+  background-repeat: repeat;
+  background-attachment: fixed;
 }
 
-/* Grade 8: Celestial Observatory (Midnight / Coordinate Radar Grid) */
+/* Grade 8: 90s Geometric Celestial Observatory */
 body[data-grade="8"], [data-grade="8"] {
   background-color: #f8fafc;
-  background-image: radial-gradient(#4338ca 0.85px, transparent 0.85px), 
-    radial-gradient(#4338ca 0.85px, #f8fafc 0.85px);
-  background-size: 32px 32px;
-  background-position: 0 0, 16px 16px;
+  background-image: var(--bg-90s-geometric);
+  background-size: 320px 320px;
+  background-repeat: repeat;
+  background-attachment: fixed;
 }
 
 /* Custom Smooth Scrollbar */

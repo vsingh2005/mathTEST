@@ -101,8 +101,8 @@ export class StorageManager {
       testedGrade: null,          // e.g. 4
       testedScore: null,          // e.g. 11/15
       unlockedLessonIndex: {      // Highest unlocked lesson number per grade
-        "3": 25,                  // All Grade 3 unlocked if tested Grade 4+
-        "4": 1,
+        "3": 1,                   // Default baseline: Grade 3 Lesson 1
+        "4": 0,
         "5": 0,
         "6": 0,
         "7": 0,
@@ -113,28 +113,32 @@ export class StorageManager {
       highestStreak: 0,
       badges: []
     };
-    const progress = this.getItem(this.KEYS.STUDENT_PROGRESS, defaultProgress);
+    let progress = this.getItem(this.KEYS.STUDENT_PROGRESS, defaultProgress);
+    if (!progress || typeof progress !== 'object') {
+      progress = defaultProgress;
+    }
 
-    // If active user is student1, automatically unlock all modules/lessons across all grades
-    let sessionUser = '';
-    try {
-      const rawSession = localStorage.getItem(this.KEYS.SESSION) || sessionStorage.getItem(this.KEYS.SESSION);
-      if (rawSession) {
-        if (rawSession.startsWith('{')) {
-          const parsed = JSON.parse(rawSession);
-          sessionUser = parsed.username || (parsed.user && (parsed.user.username || parsed.user.display_name)) || parsed.studentName || '';
-        } else {
-          sessionUser = rawSession;
+    // Defensively ensure nested properties always exist
+    if (!progress.completedLessons || typeof progress.completedLessons !== 'object') {
+      progress.completedLessons = {};
+    }
+    if (!progress.unlockedLessonIndex || typeof progress.unlockedLessonIndex !== 'object') {
+      progress.unlockedLessonIndex = {
+        "3": 1,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0
+      };
+    } else {
+      // Ensure all grades 3-8 have an entry
+      for (let g = 3; g <= 8; g++) {
+        const gKey = String(g);
+        if (typeof progress.unlockedLessonIndex[gKey] !== 'number') {
+          progress.unlockedLessonIndex[gKey] = (g === 3 ? 1 : 0);
         }
       }
-    } catch (e) {}
-
-    if (String(sessionUser).toLowerCase() === 'student1') {
-      if (!progress.unlockedLessonIndex) progress.unlockedLessonIndex = {};
-      for (let g = 3; g <= 8; g++) {
-        progress.unlockedLessonIndex[String(g)] = 25;
-      }
-      if (!progress.testedGrade) progress.testedGrade = 6;
     }
 
     return progress;
@@ -150,32 +154,14 @@ export class StorageManager {
    * OR unlocked consecutively by completing previous lesson with >= 80%.
    */
   static isLessonUnlocked(grade, lessonNumber) {
-    let sessionUser = '';
-    try {
-      const rawSession = localStorage.getItem(this.KEYS.SESSION) || sessionStorage.getItem(this.KEYS.SESSION);
-      if (rawSession) {
-        if (rawSession.startsWith('{')) {
-          const parsed = JSON.parse(rawSession);
-          sessionUser = parsed.username || (parsed.user && (parsed.user.username || parsed.user.display_name)) || parsed.studentName || '';
-        } else {
-          sessionUser = rawSession;
-        }
-      }
-    } catch (e) {}
-
-    if (String(sessionUser).toLowerCase() === 'student1') {
-      return true; // All modules are unlocked for student1
-    }
-
     const progress = this.getProgress();
     const gradeStr = String(grade);
-    const maxUnlocked = progress.unlockedLessonIndex[gradeStr] || 0;
+    const maxUnlocked = (progress.unlockedLessonIndex && typeof progress.unlockedLessonIndex[gradeStr] === 'number')
+      ? progress.unlockedLessonIndex[gradeStr]
+      : 0;
     
-    // First lesson of a tested grade is always unlocked once placed
-    if (lessonNumber <= maxUnlocked) {
-      return true;
-    }
-    return false;
+    // Lessons up to maxUnlocked are accessible
+    return lessonNumber <= maxUnlocked && maxUnlocked > 0;
   }
 
   /**
@@ -210,6 +196,13 @@ export class StorageManager {
     const currentMax = progress.unlockedLessonIndex[gradeStr] || 1;
     if ((scorePercent >= 80 || starsEarned >= 2) && lessonNumber >= currentMax) {
       progress.unlockedLessonIndex[gradeStr] = lessonNumber + 1;
+      // If completed lesson 25, unlock lesson 1 of next grade
+      if (lessonNumber >= 25 && grade < 8) {
+        const nextGradeStr = String(grade + 1);
+        if (!progress.unlockedLessonIndex[nextGradeStr] || progress.unlockedLessonIndex[nextGradeStr] < 1) {
+          progress.unlockedLessonIndex[nextGradeStr] = 1;
+        }
+      }
     }
 
     this.saveProgress(progress);

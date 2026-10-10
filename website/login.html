@@ -21,6 +21,7 @@
   <!-- Dashicons CSS for WordPress fidelity -->
   <link rel="stylesheet" id="dashicons-css" href="https://learn.kidsstemstudio.com/wp-includes/css/dashicons.min.css?ver=7.0.2" media="all" />
   <!-- Custom CSS for font design systems and WP Login scheme -->
+  <link rel="stylesheet" href="shared/css/memphis_90s.css">
   <link rel="stylesheet" href="index.css">
   <script>
     tailwind.config = {
@@ -33,7 +34,10 @@
             'coral-orange': '#FF8B6A',
             'navy-dark': '#263238',
             'kss-teal': '#2fbdb9',
-            'kss-teal-dark': '#048c8a'
+            'kss-teal-dark': '#048c8a',
+            'primary-teal': '#2fbdb9',
+            'text-main': '#253238',
+            'text-secondary': '#647176'
           }
         }
       }
@@ -42,18 +46,18 @@
   <script src="auth.js"></script>
 </head>
 
-<body class="bg-slate-50 min-h-screen flex flex-col justify-between overflow-x-hidden relative">
+<body class="dashboard-90s-bg min-h-screen flex flex-col justify-between overflow-x-hidden relative" style="background-color: #f8fafc; background-image: var(--bg-90s-geometric) !important; background-size: 360px 360px !important; background-repeat: repeat !important;">
 
   <!-- =========================================================
        SECTION 1: MANDATORY FULL-PAGE MATH LOGIN GATE SCREEN
        ========================================================= -->
-  <div id="mandatory-login-screen" class="min-h-screen w-full flex items-center justify-center p-4 bg-[#0f172a]">
+  <div id="mandatory-login-screen" class="min-h-screen w-full flex items-center justify-center p-4 dashboard-90s-bg" style="background-color: #f8fafc; background-image: var(--bg-90s-geometric) !important; background-size: 360px 360px !important; background-repeat: repeat !important;">
     <div class="max-w-4xl w-full bg-white rounded-3xl shadow-2xl overflow-hidden border border-slate-200 my-8">
 
       <!-- WP Login Container Structure matching provided source HTML -->
       <div class="ml-container login wp-core-ui">
         <!-- Left Side Cover / Math Info Section -->
-        <div class="ml-extra-div relative p-8 flex flex-col justify-between text-white">
+        <div class="ml-extra-div relative p-8 flex flex-col justify-between text-white" style="background-color: #1e293b !important; background-image: none !important;">
           <div class="space-y-4 relative z-10">
             <span class="px-3.5 py-1.5 bg-amber-400 text-slate-900 font-extrabold text-xs uppercase tracking-wider rounded-full inline-block">
               Kids STEM Studio Math Center

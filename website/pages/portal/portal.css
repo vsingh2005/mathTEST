@@ -5,6 +5,7 @@
 @import url('../../shared/css/variables.css');
 @import url('../../shared/css/base.css');
 @import url('../../shared/css/components.css');
+@import url('../../shared/css/dashboard.css');
 
 .portal-hero {
   background: radial-gradient(circle at 80% 20%, #f0f9ff 0%, #ffffff 70%);

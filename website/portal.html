@@ -5,237 +5,672 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="initial-scale=1,user-scalable=no,width=device-width">
-  <title>Portal Dashboard &lsaquo; Kids STEM Studio Math Placement Assessment</title>
+  <title>Student Dashboard &lsaquo; Kids STEM Studio Math Adventure</title>
 
-  <meta name="dc.title" content="Kids STEM Studio Math Assessment Portal Dashboard">
-  <meta name="dc.description" content="Select your math placement track and manage assessment profile.">
+  <meta name="dc.title" content="Kids STEM Studio Math Adventure Student Dashboard">
+  <meta name="dc.description" content="Engaging standards-aligned math practice and diagnostic placement dashboard for Grades 3-8.">
   <meta name="robots" content="index, follow">
+
+  <!-- Google Fonts: Nunito -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Dashicons CSS -->
   <link rel="stylesheet" id="dashicons-css" href="https://learn.kidsstemstudio.com/wp-includes/css/dashicons.min.css?ver=7.0.2" media="all" />
-  <!-- Custom CSS -->
+
+  <!-- Custom Stylesheets -->
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="shared/css/variables.css">
   <link rel="stylesheet" href="shared/css/base.css">
   <link rel="stylesheet" href="shared/css/components.css">
+  <link rel="stylesheet" href="shared/css/memphis_90s.css">
+  <link rel="stylesheet" href="shared/css/dashboard.css">
+
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            'sky-blue': '#4DA8FF',
-            'soft-green': '#5ECF7A',
-            'warm-yellow': '#FFD75E',
-            'coral-orange': '#FF8B6A',
-            'navy-dark': '#263238',
-            'kss-teal': '#2fbdb9',
-            'kss-teal-dark': '#048c8a'
+            'primary-teal': '#287F78',
+            'primary-teal-hover': '#1F6862',
+            'pale-mint': '#DDF3EE',
+            'light-blue': '#DDE8FF',
+            'soft-yellow': '#FFF0C7',
+            'lavender': '#EAE1FF',
+            'warm-offwhite': '#FAFAF7',
+            'text-main': '#253238',
+            'text-secondary': '#647176',
+            'navy-dark': '#253238'
           }
         }
       }
     }
   </script>
+  <script type="module" src="shared/js/storage.js"></script>
   <script src="auth.js"></script>
 </head>
 
-<body class="bg-slate-50 min-h-screen flex flex-col justify-between overflow-x-hidden relative">
+<body class="adventure-dashboard-body flex flex-col justify-between overflow-x-hidden relative">
 
   <!-- HEADER -->
-  <header class="w-full bg-white border-b border-slate-100 py-4 px-6 md:px-12 flex items-center justify-between sticky top-0 z-50">
-    <div class="flex items-center space-x-3 cursor-pointer" onclick="window.location.href='portal.html'">
+  <header class="w-full bg-white border-b border-slate-100 py-3 px-4 md:px-6 lg:px-8 flex items-center justify-between sticky top-0 z-50 shadow-sm">
+    <div class="flex items-center space-x-2.5 cursor-pointer shrink-0" onclick="window.location.href='portal.html'">
       <img src="https://kidsstemstudio.com/wp-content/uploads/2020/05/KSS_Logo.png" alt="Kids STEM Studio Logo"
-        class="h-10 w-auto kss-header-logo">
-      <span class="text-xl font-extrabold text-navy-dark tracking-tight">Math Placement Portal</span>
+        class="h-9 w-auto kss-header-logo">
+      <div class="flex flex-col">
+        <span class="text-lg font-black text-text-main tracking-tight leading-none">Math Adventure Portal</span>
+        <span class="text-[10px] font-bold text-primary-teal uppercase tracking-wider mt-0.5">Kids STEM Studio</span>
+      </div>
     </div>
 
-    <nav class="hidden md:flex items-center space-x-8 text-slate-500 font-semibold">
-      <a href="portal.html" class="text-sky-500 font-bold">Dashboard</a>
-      <a href="practice.html" class="hover:!text-sky-blue transition-colors">Worksheets</a>
-      <button onclick="openModal('faq-modal')" class="hover:!text-sky-blue hover:!bg-transparent hover:!shadow-none transition-colors">FAQ</button>
-      <button onclick="openModal('contact-modal')" class="hover:!text-sky-blue hover:!bg-transparent hover:!shadow-none transition-colors">Contact</button>
+    <!-- DESKTOP NAVIGATION -->
+    <nav class="hidden lg:flex items-center gap-3.5 xl:gap-5 text-text-secondary font-bold text-xs xl:text-sm whitespace-nowrap">
+      <a href="portal.html" class="text-primary-teal font-extrabold flex items-center gap-1 border-b-2 border-primary-teal pb-0.5">
+        <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        <span>Dashboard</span>
+      </a>
+      <a href="practice.html" class="hover:text-primary-teal transition-colors flex items-center gap-1 pb-0.5">
+        <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+        <span>Worksheets</span>
+      </a>
+      <a href="#progress-section" class="hover:text-primary-teal transition-colors flex items-center gap-1 pb-0.5">
+        <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        <span>My Progress</span>
+      </a>
+      <button onclick="openModal('achievements-modal')" class="hover:text-primary-teal transition-colors flex items-center gap-1 pb-0.5">
+        <svg class="w-4 h-4 text-amber-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <span>Achievements</span>
+      </button>
+      <button id="nav-placement-btn" onclick="handlePlacementAction()" class="hover:text-primary-teal transition-colors flex items-center gap-1 pb-0.5">
+        <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        <span id="nav-placement-label">Placement Exam</span>
+      </button>
     </nav>
 
-    <div id="user-header-widget" class="flex items-center space-x-4">
-      <!-- Rendered by AuthManager.updateHeaderUI() -->
+    <!-- RIGHT WIDGET: STARS & PROFILE -->
+    <div class="flex items-center gap-2.5 shrink-0">
+      <div class="hidden sm:flex items-center gap-1.5 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full shadow-xs">
+        <svg class="w-3.5 h-3.5 text-amber-500 fill-amber-400 shrink-0" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <span id="header-stars-display" class="text-xs font-black text-amber-900">0 Stars</span>
+      </div>
+
+      <div id="user-header-widget" class="flex items-center">
+        <!-- Rendered by AuthManager.updateHeaderUI() -->
+      </div>
     </div>
   </header>
 
-  <!-- PROGRESS TIMELINE BAR -->
-  <section class="max-w-4xl w-full mx-auto px-6 mt-8">
-    <div class="bg-white rounded-2xl p-4 flex items-center justify-between shadow-sm border border-slate-100">
+  <!-- PROGRESS TIMELINE BAR (Shown before diagnostic completion) -->
+  <section id="diagnostic-timeline-bar" class="max-w-5xl w-full mx-auto px-6 mt-6">
+    <div class="bg-white rounded-2xl p-4 flex items-center justify-between shadow-xs border border-slate-200/80">
       <div class="flex items-center space-x-3">
-        <div id="timeline-step-1" class="timeline-step bg-sky-500 text-white ring-4 ring-sky-500/20">1</div>
-        <span class="text-xs md:text-sm font-bold text-slate-700">Student Info</span>
+        <div id="timeline-step-1" class="timeline-step bg-primary-teal text-white ring-4 ring-primary-teal/20">1</div>
+        <span class="text-xs md:text-sm font-bold text-text-main">Diagnostic Setup</span>
       </div>
       <div class="h-[2px] flex-1 bg-slate-200 mx-4"></div>
       <div class="flex items-center space-x-3">
         <div id="timeline-step-2" class="timeline-step bg-slate-200 text-slate-400">2</div>
-        <span class="text-xs md:text-sm font-bold text-slate-700">Instructions</span>
+        <span class="text-xs md:text-sm font-bold text-text-main">Test Guidelines</span>
       </div>
       <div class="h-[2px] flex-1 bg-slate-200 mx-4"></div>
       <div class="flex items-center space-x-3">
         <div id="timeline-step-3" class="timeline-step bg-slate-200 text-slate-400">3</div>
-        <span class="text-xs md:text-sm font-bold text-slate-700">Placement Test</span>
+        <span class="text-xs md:text-sm font-bold text-text-main">Placement Test</span>
       </div>
       <div class="h-[2px] flex-1 bg-slate-200 mx-4"></div>
       <div class="flex items-center space-x-3">
         <div id="timeline-step-4" class="timeline-step bg-slate-200 text-slate-400">4</div>
-        <span class="text-xs md:text-sm font-bold text-slate-700">Results</span>
+        <span class="text-xs md:text-sm font-bold text-text-main">Level &amp; Worksheets</span>
       </div>
     </div>
   </section>
 
   <!-- MAIN BODY CONTAINER -->
-  <main class="flex-1 max-w-6xl w-full mx-auto px-6 py-12 flex flex-col justify-center space-y-10">
+  <main class="flex-1 max-w-6xl w-full mx-auto px-6 py-8 flex flex-col justify-center space-y-12">
 
-    <!-- RECOMMENDED PRACTICE WIDGET -->
-    <div id="portal-recommended-practice"></div>
-
-    <!-- LANDING & HERO SECTION -->
-    <div id="landing-screen" class="space-y-16">
-      <div id="landing-main-content" class="space-y-16">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div class="lg:col-span-7 space-y-6">
-            <div class="flex items-center space-x-3">
-              <img src="https://kidsstemstudio.com/wp-content/uploads/2020/05/KSS_Logo.png" alt="KSS Mini Logo" class="h-6 w-auto">
-              <span class="px-4 py-1.5 bg-amber-50 text-amber-600 rounded-full font-bold text-xs uppercase tracking-wider">
-                Kids STEM Studio Math Assessment Center
-              </span>
-            </div>
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-navy-dark leading-tight">
-              Discover Your <span class="text-sky-blue">Math Level</span>
-            </h1>
-            <p class="text-lg md:text-xl text-slate-500 font-medium max-w-xl leading-relaxed">
-              Complete a short 45-60 minute adaptive math placement assessment developed by Kids STEM Studio to evaluate baseline skills across Grade 3-8 math standards. <strong>Before starting, please make sure you have scratch paper and a pencil ready!</strong>
-            </p>
-            <div class="pt-4 flex flex-wrap items-center gap-4">
-              <button onclick="showTrackSelection()" class="px-8 py-4 rounded-2xl btn-blue-gradient text-lg">
-                Begin Math Assessment
-              </button>
-              <button onclick="AuthManager.renderHistoryModal()" class="px-6 py-4 rounded-2xl border-2 border-slate-200 text-slate-700 font-extrabold hover:bg-slate-100 transition-colors text-base flex items-center gap-2">
-                <svg class="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                <span>View Past Results</span>
-              </button>
-              <button onclick="window.location.href='practice.html'" class="px-6 py-4 rounded-2xl bg-emerald-50 text-emerald-700 border-2 border-emerald-200 font-extrabold hover:bg-emerald-100 transition-colors text-base flex items-center gap-2">
-                <svg class="w-4 h-4 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
-                <span>Practice Worksheets</span>
-              </button>
-            </div>
-          </div>
-
-          <div class="lg:col-span-5 flex justify-center">
-            <img src="https://math.kidsstemstudio.com/wp-content/uploads/2026/07/hero_kids_math_classroom_1783004330739.png"
-              alt="Math Placement Portal Illustration" class="max-w-full h-auto rounded-3xl card-shadow">
-          </div>
+    <!-- TRACK SELECTION PANEL (Displayed when student clicks 'Begin Assessment') -->
+    <div id="track-selection-panel" class="hidden bg-white p-8 md:p-12 rounded-3xl card-shadow border border-slate-200 space-y-8">
+      <div class="flex items-center justify-between border-b border-slate-100 pb-5">
+        <div class="space-y-1">
+          <span class="px-3.5 py-1 bg-primary-teal/10 text-primary-teal rounded-full font-extrabold text-xs uppercase tracking-wider">
+            Diagnostic Calibration
+          </span>
+          <h2 class="text-2xl md:text-3xl font-black text-text-main">Choose Your Math Grade Level Track</h2>
         </div>
-
-        <!-- INFORMATION CARDS -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="bg-white p-8 rounded-card card-shadow border border-slate-100 hover-lift flex flex-col items-center text-center space-y-4">
-            <div class="w-16 h-16 rounded-2xl bg-sky-100 flex items-center justify-center">
-              <svg class="w-8 h-8 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
-            </div>
-            <h3 class="text-xl font-bold text-navy-dark">Adaptive Math Levels</h3>
-            <p class="text-slate-500 leading-relaxed">Questions automatically adapt between Grade 3 and 8 difficulty to locate exact competency.</p>
-          </div>
-          <div class="bg-white p-8 rounded-card card-shadow border border-slate-100 hover-lift flex flex-col items-center text-center space-y-4">
-            <div class="w-16 h-16 rounded-2xl bg-emerald-100 flex items-center justify-center">
-              <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            </div>
-            <h3 class="text-xl font-bold text-navy-dark">45-60 Minutes</h3>
-            <p class="text-slate-500 leading-relaxed">Self-paced assessment so students can solve mathematical problems without stress.</p>
-          </div>
-          <div class="bg-white p-8 rounded-card card-shadow border border-slate-100 hover-lift flex flex-col items-center text-center space-y-4">
-            <div class="w-16 h-16 rounded-2xl bg-amber-100 flex items-center justify-center">
-              <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
-            </div>
-            <h3 class="text-xl font-bold text-navy-dark">Personalized Placement</h3>
-            <p class="text-slate-500 leading-relaxed">Receive a customized starting level recommended by experienced STEM & math educators.</p>
-          </div>
-        </div>
+        <button onclick="showLandingMain()" class="text-text-secondary hover:text-text-main font-extrabold text-sm flex items-center gap-1 hover:underline">
+          &larr; Back to Dashboard
+        </button>
       </div>
 
-      <!-- TRACK SELECTION PANEL -->
-      <div id="track-selection-panel" class="hidden space-y-8">
-        <div class="text-center space-y-3">
-          <h2 class="text-3xl font-extrabold text-navy-dark">Select Your Placement Test</h2>
-          <p class="text-slate-500 font-semibold max-w-lg mx-auto">Choose the grade level track that matches the student's upcoming or current school grade. The test will dynamically adapt within these grade levels.</p>
-        </div>
+      <p class="text-text-secondary font-medium text-sm md:text-base leading-relaxed">
+        Select the grade range you are currently learning or recently completed. The placement test begins at this baseline and dynamically adapts to pinpoint your exact skill mastery level.
+      </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Track 1: Grades 3-4 -->
-          <button onclick="selectTrack('3-4')" class="bg-white p-8 rounded-card card-shadow border border-slate-100 hover-lift flex flex-col items-center text-center space-y-4 cursor-pointer focus:outline-none hover:bg-slate-50">
-            <div class="w-16 h-16 rounded-2xl bg-sky-100 flex items-center justify-center">
-              <svg class="w-8 h-8 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
-            </div>
-            <h3 class="text-xl font-bold text-navy-dark">Grades 3-4 Test</h3>
-            <p class="text-slate-500 leading-relaxed text-sm">Elementary Track. Covers multiplication, division, fractions, rounding, and geometry basics.</p>
-            <span class="text-sky-600 font-bold text-xs uppercase tracking-wider">Start Track &rarr;</span>
-          </button>
-
-          <!-- Track 2: Grades 5-6 -->
-          <button onclick="selectTrack('5-6')" class="bg-white p-8 rounded-card card-shadow border border-slate-100 hover-lift flex flex-col items-center text-center space-y-4 cursor-pointer focus:outline-none hover:bg-slate-50">
-            <div class="w-16 h-16 rounded-2xl bg-emerald-100 flex items-center justify-center">
-              <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
-            </div>
-            <h3 class="text-xl font-bold text-navy-dark">Grades 5-6 Test</h3>
-            <p class="text-slate-500 leading-relaxed text-sm">Intermediate Track. Covers decimals, fraction math, volume, measurements, and line plots.</p>
-            <span class="text-emerald-600 font-bold text-xs uppercase tracking-wider">Start Track &rarr;</span>
-          </button>
-
-          <!-- Track 3: Grades 7-8 -->
-          <button onclick="selectTrack('7-8')" class="bg-white p-8 rounded-card card-shadow border border-slate-100 hover-lift flex flex-col items-center text-center space-y-4 cursor-pointer focus:outline-none hover:bg-slate-50">
-            <div class="w-16 h-16 rounded-2xl bg-amber-100 flex items-center justify-center">
-              <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
-            </div>
-            <h3 class="text-xl font-bold text-navy-dark">Grades 7-8 Test</h3>
-            <p class="text-slate-500 leading-relaxed text-sm">Middle School Track. Covers ratios, linear equations, functions, Pythagorean theorem, and spheres/cones.</p>
-            <span class="text-amber-600 font-bold text-xs uppercase tracking-wider">Start Track &rarr;</span>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Track 3-4 -->
+        <div class="p-7 rounded-2xl border-2 border-slate-200 hover:border-primary-teal hover:bg-pale-mint/30 transition-all flex flex-col justify-between space-y-5">
+          <div class="space-y-3">
+            <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full font-bold text-xs uppercase">Elementary Track</span>
+            <h4 class="text-2xl font-black text-text-main">Grades 3 - 4</h4>
+            <p class="text-text-secondary text-sm leading-relaxed">
+              Foundational multiplication, division models, fractions, word problems, and geometric perimeter.
+            </p>
+          </div>
+          <button onclick="selectTrack('3-4')" class="w-full py-3.5 btn-teal-primary text-sm font-bold shadow-md">
+            Start Grade 3-4 Exam
           </button>
         </div>
 
-        <div class="text-center pt-4">
-          <button onclick="showLandingMain()" class="text-slate-500 hover:text-navy-dark font-extrabold text-sm flex items-center justify-center gap-1 mx-auto hover:underline">
-            &larr; Back to Portal Home
+        <!-- Track 5-6 -->
+        <div class="p-7 rounded-2xl border-2 border-primary-teal/40 bg-pale-mint/20 hover:border-primary-teal hover:bg-pale-mint/40 transition-all flex flex-col justify-between space-y-5">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-primary-teal text-white rounded-full font-bold text-xs uppercase">Intermediate Track</span>
+              <span class="text-[11px] font-extrabold text-primary-teal">Recommended</span>
+            </div>
+            <h4 class="text-2xl font-black text-text-main">Grades 5 - 6</h4>
+            <p class="text-text-secondary text-sm leading-relaxed">
+              Multi-digit operations, decimal arithmetic, fraction operations, ratios, rates, and basic statistics.
+            </p>
+          </div>
+          <button onclick="selectTrack('5-6')" class="w-full py-3.5 btn-teal-primary text-sm font-bold shadow-md">
+            Start Grade 5-6 Exam
+          </button>
+        </div>
+
+        <!-- Track 7-8 -->
+        <div class="p-7 rounded-2xl border-2 border-slate-200 hover:border-primary-teal hover:bg-lavender/30 transition-all flex flex-col justify-between space-y-5">
+          <div class="space-y-3">
+            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full font-bold text-xs uppercase">Middle School Track</span>
+            <h4 class="text-2xl font-black text-text-main">Grades 7 - 8</h4>
+            <p class="text-text-secondary text-sm leading-relaxed">
+              Proportional relationships, linear equations, slope-intercept, functions, and the Pythagorean theorem.
+            </p>
+          </div>
+          <button onclick="selectTrack('7-8')" class="w-full py-3.5 btn-teal-primary text-sm font-bold shadow-md">
+            Start Grade 7-8 Exam
           </button>
         </div>
       </div>
     </div>
 
+    <!-- DASHBOARD MAIN SCREEN -->
+    <div id="landing-main-content" class="space-y-12">
+
+      <!-- SECTION B: PERSONALIZED WELCOME BANNER -->
+      <section class="bg-white p-6 md:p-8 rounded-3xl border border-slate-200/80 shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div class="space-y-2">
+          <div class="flex items-center gap-3 flex-wrap">
+            <span id="student-greeting-badge" class="px-3.5 py-1 bg-pale-mint text-primary-teal border border-pale-mint-border rounded-full font-extrabold text-xs uppercase tracking-wider">
+              Cadet Explorer
+            </span>
+            <span id="student-placement-status-chip" class="text-xs font-bold text-text-secondary">
+              • Placement Diagnostic Calibrated
+            </span>
+          </div>
+          <h1 class="text-3xl md:text-4xl font-black text-text-main tracking-tight">
+            Welcome back, <span id="student-display-name" class="text-primary-teal">Explorer</span>!
+          </h1>
+          <p id="student-encouragement-quote" class="text-text-secondary text-sm md:text-base font-medium max-w-2xl leading-relaxed">
+            Ready for your next math adventure? Continue solving lessons step-by-step and collect shiny stars to master your curriculum.
+          </p>
+        </div>
+
+        <!-- QUICK MINI STAT CHIPS -->
+        <div class="flex items-center gap-3 w-full md:w-auto">
+          <div class="flex-1 md:flex-initial bg-warm-offwhite border border-slate-200 px-4 py-3 rounded-2xl text-center min-w-[100px]">
+            <span class="text-xs font-bold text-text-secondary block">Mastered</span>
+            <span id="quick-mastered-count" class="text-xl font-black text-primary-teal">0</span>
+          </div>
+          <div class="flex-1 md:flex-initial bg-warm-offwhite border border-slate-200 px-4 py-3 rounded-2xl text-center min-w-[100px]">
+            <span class="text-xs font-bold text-text-secondary block">Stars</span>
+            <span id="quick-stars-count" class="text-xl font-black text-amber-500">0</span>
+          </div>
+          <div class="flex-1 md:flex-initial bg-warm-offwhite border border-slate-200 px-4 py-3 rounded-2xl text-center min-w-[100px]">
+            <span class="text-xs font-bold text-text-secondary block">Streak</span>
+            <span id="quick-streak-count" class="text-xl font-black text-emerald-600">1</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION C: CONTINUE LEARNING: THE PRIMARY FOCUS -->
+      <section id="continue-learning-section" class="w-full">
+        <div id="continue-learning-container">
+          <!-- Dynamically populated by renderContinueLearning() -->
+        </div>
+      </section>
+
+      <!-- LEVEL UP CHALLENGE (Displayed after diagnostic completion) -->
+      <section id="level-up-section" class="w-full">
+        <div id="level-up-container">
+          <!-- Dynamically populated by renderLevelUpChallenge() -->
+        </div>
+      </section>
+
+      <!-- SECTION D: EXPLORE MATH WORLDS -->
+      <section id="math-worlds-section" class="space-y-6">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-3">
+          <div>
+            <span class="px-3.5 py-1 bg-light-blue text-blue-800 border border-light-blue-border rounded-full font-extrabold text-xs uppercase tracking-wider">
+              Curriculum Realms
+            </span>
+            <h2 class="text-2xl md:text-3xl font-black text-text-main mt-2">Explore Math Worlds (Grades 3 - 8)</h2>
+            <p class="text-text-secondary text-sm font-medium mt-1">
+              Select any unlocked adventure realm to practice interactive Common Core standards.
+            </p>
+          </div>
+          <a href="practice.html" class="text-primary-teal hover:underline font-extrabold text-sm flex items-center gap-1 self-start md:self-auto">
+            <span>View Full Worksheet Catalog</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- WORLD 1: NUMBER FOREST (GRADE 3) -->
+          <div class="world-card world-card-mint p-6 flex flex-col justify-between space-y-5">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full font-bold text-xs uppercase">Grade 3 Realm</span>
+                <span id="world-badge-g3" class="text-xs font-black text-emerald-700 bg-white border border-emerald-200 px-2.5 py-0.5 rounded-full">Available</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-black text-lg">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-xl font-black text-text-main">Number Forest</h3>
+                  <span class="text-xs font-bold text-emerald-700">Multiplication &amp; Equal Groups</span>
+                </div>
+              </div>
+              <p class="text-text-secondary text-xs leading-relaxed">
+                Journey through repeated addition, multiplication arrays, division sharing, and introductory unit fractions.
+              </p>
+              <div class="space-y-1.5 pt-1">
+                <div class="flex justify-between text-[11px] font-bold text-text-secondary">
+                  <span>Curriculum Progress</span>
+                  <span id="world-progress-text-g3">1 / 25 Lessons</span>
+                </div>
+                <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                  <div id="world-progress-bar-g3" class="bg-emerald-500 h-full rounded-full" style="width: 4%"></div>
+                </div>
+              </div>
+            </div>
+            <button onclick="window.location.href='practice.html?grade=3'" class="w-full py-3 rounded-xl btn-teal-primary text-xs font-black">
+              Enter Number Forest
+            </button>
+          </div>
+
+          <!-- WORLD 2: FRACTION FALLS (GRADE 4) -->
+          <div class="world-card world-card-blue p-6 flex flex-col justify-between space-y-5">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full font-bold text-xs uppercase">Grade 4 Realm</span>
+                <span id="world-badge-g4" class="text-xs font-black text-blue-700 bg-white border border-blue-200 px-2.5 py-0.5 rounded-full">Diagnostic Gated</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-2xl bg-blue-100 text-blue-700 flex items-center justify-center font-black text-lg">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-xl font-black text-text-main">Fraction Falls</h3>
+                  <span class="text-xs font-bold text-blue-700">Fractions &amp; Multi-Digit Math</span>
+                </div>
+              </div>
+              <p class="text-text-secondary text-xs leading-relaxed">
+                Master multi-digit multiplication, division strategies, fraction equivalence, decimals, and protractor angles.
+              </p>
+              <div class="space-y-1.5 pt-1">
+                <div class="flex justify-between text-[11px] font-bold text-text-secondary">
+                  <span>Curriculum Progress</span>
+                  <span id="world-progress-text-g4">0 / 25 Lessons</span>
+                </div>
+                <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                  <div id="world-progress-bar-g4" class="bg-blue-500 h-full rounded-full" style="width: 0%"></div>
+                </div>
+              </div>
+            </div>
+            <button id="world-btn-g4" onclick="window.location.href='practice.html?grade=4'" class="w-full py-3 rounded-xl btn-teal-primary text-xs font-black">
+              Enter Fraction Falls
+            </button>
+          </div>
+
+          <!-- WORLD 3: DECIMAL DUNES (GRADE 5) -->
+          <div class="world-card world-card-yellow p-6 flex flex-col justify-between space-y-5">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full font-bold text-xs uppercase">Grade 5 Realm</span>
+                <span id="world-badge-g5" class="text-xs font-black text-amber-800 bg-white border border-amber-200 px-2.5 py-0.5 rounded-full">Diagnostic Gated</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center font-black text-lg">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-xl font-black text-text-main">Decimal Dunes</h3>
+                  <span class="text-xs font-bold text-amber-700">Decimals &amp; 3D Volume</span>
+                </div>
+              </div>
+              <p class="text-text-secondary text-xs leading-relaxed">
+                Conquer place value shifts, multi-digit decimal operations, unlike fraction addition, unit cubes, and coordinate grids.
+              </p>
+              <div class="space-y-1.5 pt-1">
+                <div class="flex justify-between text-[11px] font-bold text-text-secondary">
+                  <span>Curriculum Progress</span>
+                  <span id="world-progress-text-g5">0 / 25 Lessons</span>
+                </div>
+                <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                  <div id="world-progress-bar-g5" class="bg-amber-500 h-full rounded-full" style="width: 0%"></div>
+                </div>
+              </div>
+            </div>
+            <button id="world-btn-g5" onclick="window.location.href='practice.html?grade=5'" class="w-full py-3 rounded-xl btn-teal-primary text-xs font-black">
+              Enter Decimal Dunes
+            </button>
+          </div>
+
+          <!-- WORLD 4: RATIO REEF (GRADE 6) -->
+          <div class="world-card world-card-mint p-6 flex flex-col justify-between space-y-5">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="px-3 py-1 bg-teal-100 text-teal-800 rounded-full font-bold text-xs uppercase">Grade 6 Realm</span>
+                <span id="world-badge-g6" class="text-xs font-black text-teal-800 bg-white border border-teal-200 px-2.5 py-0.5 rounded-full">Diagnostic Gated</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center font-black text-lg">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-xl font-black text-text-main">Ratio Reef</h3>
+                  <span class="text-xs font-bold text-teal-700">Ratios &amp; Algebraic Thinking</span>
+                </div>
+              </div>
+              <p class="text-text-secondary text-xs leading-relaxed">
+                Dive into unit rates, percentage equations, integer number lines, algebraic expressions, and statistical dot plots.
+              </p>
+              <div class="space-y-1.5 pt-1">
+                <div class="flex justify-between text-[11px] font-bold text-text-secondary">
+                  <span>Curriculum Progress</span>
+                  <span id="world-progress-text-g6">0 / 25 Lessons</span>
+                </div>
+                <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                  <div id="world-progress-bar-g6" class="bg-teal-500 h-full rounded-full" style="width: 0%"></div>
+                </div>
+              </div>
+            </div>
+            <button id="world-btn-g6" onclick="window.location.href='practice.html?grade=6'" class="w-full py-3 rounded-xl btn-teal-primary text-xs font-black">
+              Enter Ratio Reef
+            </button>
+          </div>
+
+          <!-- WORLD 5: PROPORTIONS PEAK (GRADE 7) -->
+          <div class="world-card world-card-lavender p-6 flex flex-col justify-between space-y-5">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full font-bold text-xs uppercase">Grade 7 Realm</span>
+                <span id="world-badge-g7" class="text-xs font-black text-purple-800 bg-white border border-purple-200 px-2.5 py-0.5 rounded-full">Diagnostic Gated</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-2xl bg-purple-100 text-purple-700 flex items-center justify-center font-black text-lg">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-xl font-black text-text-main">Proportions Peak</h3>
+                  <span class="text-xs font-bold text-purple-700">Rational Numbers &amp; Equations</span>
+                </div>
+              </div>
+              <p class="text-text-secondary text-xs leading-relaxed">
+                Scale the summits of unit rates, signed rational numbers, multi-step linear expressions, and probability models.
+              </p>
+              <div class="space-y-1.5 pt-1">
+                <div class="flex justify-between text-[11px] font-bold text-text-secondary">
+                  <span>Curriculum Progress</span>
+                  <span id="world-progress-text-g7">0 / 25 Lessons</span>
+                </div>
+                <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                  <div id="world-progress-bar-g7" class="bg-purple-500 h-full rounded-full" style="width: 0%"></div>
+                </div>
+              </div>
+            </div>
+            <button id="world-btn-g7" onclick="window.location.href='practice.html?grade=7'" class="w-full py-3 rounded-xl btn-teal-primary text-xs font-black">
+              Enter Proportions Peak
+            </button>
+          </div>
+
+          <!-- WORLD 6: ALGEBRA COSMOS (GRADE 8) -->
+          <div class="world-card world-card-lavender p-6 flex flex-col justify-between space-y-5">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full font-bold text-xs uppercase">Grade 8 Realm</span>
+                <span id="world-badge-g8" class="text-xs font-black text-indigo-800 bg-white border border-indigo-200 px-2.5 py-0.5 rounded-full">Diagnostic Gated</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-700 flex items-center justify-center font-black text-lg">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/></svg>
+                </div>
+                <div>
+                  <h3 class="text-xl font-black text-text-main">Algebra Cosmos</h3>
+                  <span class="text-xs font-bold text-indigo-700">Linear Systems &amp; Functions</span>
+                </div>
+              </div>
+              <p class="text-text-secondary text-xs leading-relaxed">
+                Launch into linear equations, function slopes, Pythagorean theorem geometry, integer exponents, and scientific notation.
+              </p>
+              <div class="space-y-1.5 pt-1">
+                <div class="flex justify-between text-[11px] font-bold text-text-secondary">
+                  <span>Curriculum Progress</span>
+                  <span id="world-progress-text-g8">0 / 25 Lessons</span>
+                </div>
+                <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                  <div id="world-progress-bar-g8" class="bg-indigo-500 h-full rounded-full" style="width: 0%"></div>
+                </div>
+              </div>
+            </div>
+            <button id="world-btn-g8" onclick="window.location.href='practice.html?grade=8'" class="w-full py-3 rounded-xl btn-teal-primary text-xs font-black">
+              Enter Algebra Cosmos
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SECTION E: PROGRESS AND ACHIEVEMENTS -->
+      <section id="progress-section" class="space-y-6">
+        <div class="flex items-center justify-between">
+          <div>
+            <span class="px-3.5 py-1 bg-pale-mint text-primary-teal border border-pale-mint-border rounded-full font-extrabold text-xs uppercase tracking-wider">
+              Student Metrics
+            </span>
+            <h2 class="text-2xl md:text-3xl font-black text-text-main mt-2">My Progress &amp; Achievements</h2>
+            <p class="text-text-secondary text-sm font-medium mt-1">
+              Verified performance benchmarks earned through real problem solving.
+            </p>
+          </div>
+          <button onclick="AuthManager.renderHistoryModal()" class="btn-secondary-pastel px-4 py-2.5 text-xs font-bold shadow-xs">
+            Past Exam History
+          </button>
+        </div>
+
+        <!-- STAT METRIC CARDS -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="stat-card-pill p-5 space-y-1">
+            <span class="text-xs font-bold text-text-secondary">Worksheets Mastered</span>
+            <h4 id="stat-completed-lessons" class="text-2xl md:text-3xl font-black text-primary-teal">0</h4>
+            <p class="text-[11px] text-slate-400 font-semibold">&gt;= 80% passing threshold</p>
+          </div>
+
+          <div class="stat-card-pill p-5 space-y-1">
+            <span class="text-xs font-bold text-text-secondary">Stars Collected</span>
+            <h4 id="stat-total-stars" class="text-2xl md:text-3xl font-black text-amber-500">0</h4>
+            <p class="text-[11px] text-slate-400 font-semibold">Earned on first attempts</p>
+          </div>
+
+          <div class="stat-card-pill p-5 space-y-1">
+            <span class="text-xs font-bold text-text-secondary">Learning Streak</span>
+            <h4 id="stat-current-streak" class="text-2xl md:text-3xl font-black text-emerald-600">1 Day</h4>
+            <p class="text-[11px] text-slate-400 font-semibold">Active practice sessions</p>
+          </div>
+
+          <div class="stat-card-pill p-5 space-y-1">
+            <span class="text-xs font-bold text-text-secondary">Placed Level</span>
+            <h4 id="stat-placed-grade" class="text-2xl md:text-3xl font-black text-indigo-600">Grade 3</h4>
+            <p id="stat-placed-subtitle" class="text-[11px] text-slate-400 font-semibold">Diagnostic calibration</p>
+          </div>
+        </div>
+
+        <!-- BADGES SHOWCASE -->
+        <div class="bg-white p-6 md:p-8 rounded-3xl border border-slate-200/80 space-y-5">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-amber-500 fill-amber-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <h3 class="text-lg font-black text-text-main">Achievement Milestones</h3>
+            </div>
+            <button onclick="openModal('achievements-modal')" class="text-xs font-extrabold text-primary-teal hover:underline">
+              View All Criteria &rarr;
+            </button>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+            <!-- Badge 1: Placement Pioneer -->
+            <div id="badge-placement-pioneer" class="achievement-badge-card p-4 text-center space-y-2 opacity-60">
+              <div class="w-12 h-12 mx-auto rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center font-black">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <h5 class="text-xs font-black text-text-main">Placement Pioneer</h5>
+              <span class="text-[10px] font-bold text-slate-400 block badge-status-label">Needs Test</span>
+            </div>
+
+            <!-- Badge 2: First Milestone -->
+            <div id="badge-first-milestone" class="achievement-badge-card p-4 text-center space-y-2 opacity-60">
+              <div class="w-12 h-12 mx-auto rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center font-black">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              </div>
+              <h5 class="text-xs font-black text-text-main">First Milestone</h5>
+              <span class="text-[10px] font-bold text-slate-400 block badge-status-label">Locked</span>
+            </div>
+
+            <!-- Badge 3: Triple Star Master -->
+            <div id="badge-triple-star" class="achievement-badge-card p-4 text-center space-y-2 opacity-60">
+              <div class="w-12 h-12 mx-auto rounded-2xl bg-yellow-100 text-yellow-600 flex items-center justify-center font-black">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+              </div>
+              <h5 class="text-xs font-black text-text-main">Triple Star Master</h5>
+              <span class="text-[10px] font-bold text-slate-400 block badge-status-label">Locked</span>
+            </div>
+
+            <!-- Badge 4: Five-Lesson Ranger -->
+            <div id="badge-five-lessons" class="achievement-badge-card p-4 text-center space-y-2 opacity-60">
+              <div class="w-12 h-12 mx-auto rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center font-black">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+              </div>
+              <h5 class="text-xs font-black text-text-main">5-Lesson Ranger</h5>
+              <span class="text-[10px] font-bold text-slate-400 block badge-status-label">Locked</span>
+            </div>
+
+            <!-- Badge 5: Curriculum Conqueror -->
+            <div id="badge-curriculum-conqueror" class="achievement-badge-card p-4 text-center space-y-2 opacity-60">
+              <div class="w-12 h-12 mx-auto rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center font-black">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></svg>
+              </div>
+              <h5 class="text-xs font-black text-text-main">Curriculum King</h5>
+              <span class="text-[10px] font-bold text-slate-400 block badge-status-label">Locked</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION F & G: DAILY CHALLENGE & RECOMMENDED PRACTICE -->
+      <section class="grid grid-cols-1 md:grid-cols-12 gap-6">
+
+        <!-- DAILY CHALLENGE (OPTIONAL SECONDARY QUEST) -->
+        <div class="md:col-span-6 daily-quest-card p-6 md:p-8 flex flex-col justify-between space-y-5">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-3.5 py-1 bg-amber-100 text-amber-900 rounded-full font-black text-xs uppercase tracking-wider">
+                Daily Math Quest
+              </span>
+              <span class="text-xs font-extrabold text-amber-700 bg-white border border-amber-200 px-2.5 py-0.5 rounded-full">
+                5 Minutes
+              </span>
+            </div>
+            <h3 class="text-2xl font-black text-text-main">Mental Math &amp; Estimation Warmup</h3>
+            <p class="text-text-secondary text-sm font-medium leading-relaxed">
+              Solve quick standards-aligned practice exercises to stretch your mathematical reflexes and claim a bonus practice star today.
+            </p>
+            <div class="flex items-center gap-2 pt-1 text-xs font-extrabold text-amber-800">
+              <svg class="w-4 h-4 text-amber-500 fill-amber-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <span>Reward: +1 Bonus Star Awarded Upon Completion</span>
+            </div>
+          </div>
+          <button onclick="window.location.href='practice.html'" class="w-full py-3.5 rounded-2xl bg-amber-500 hover:bg-amber-600 text-white font-extrabold text-sm shadow-md transition-all">
+            Launch Daily Quest
+          </button>
+        </div>
+
+        <!-- TARGETED LEARNING RECOMMENDATION -->
+        <div class="md:col-span-6 bg-white p-6 md:p-8 rounded-3xl border border-slate-200/80 shadow-xs flex flex-col justify-between space-y-5">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-3.5 py-1 bg-pale-mint text-primary-teal rounded-full font-black text-xs uppercase tracking-wider">
+                Targeted Recommendation
+              </span>
+              <span class="text-xs font-bold text-slate-400">Adaptive Advisor</span>
+            </div>
+            <h3 id="advisor-headline" class="text-2xl font-black text-text-main">Sequential Mastery Path</h3>
+            <p id="advisor-description" class="text-text-secondary text-sm font-medium leading-relaxed">
+              Consistently scoring 80% or higher unlocks consecutive lessons. Review previous concepts anytime without penalties.
+            </p>
+            <div class="p-3.5 bg-warm-offwhite rounded-2xl border border-slate-200/80 space-y-1">
+              <span class="text-[11px] font-black text-primary-teal uppercase tracking-wider">Strategy Guidance</span>
+              <p id="advisor-tip" class="text-xs font-semibold text-text-secondary">
+                Always utilize scratch paper for multi-step reasoning before choosing your final response.
+              </p>
+            </div>
+          </div>
+          <button id="advisor-action-btn" onclick="window.location.href='practice.html'" class="w-full py-3.5 btn-secondary-pastel text-sm font-bold shadow-xs">
+            Review Prerequisite Topics
+          </button>
+        </div>
+
+      </section>
+
+    </div>
+
   </main>
 
   <!-- PARENT CONFIDENCE SECTION -->
-  <section class="bg-white border-t border-slate-100 py-12 px-6">
+  <section class="bg-white border-t border-slate-200/80 py-12 px-6">
     <div class="max-w-5xl w-full mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
       <div class="space-y-3 flex flex-col items-center">
-        <div class="w-14 h-14 rounded-2xl bg-sky-100 flex items-center justify-center text-sky-600">
+        <div class="w-14 h-14 rounded-2xl bg-pale-mint flex items-center justify-center text-primary-teal">
           <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
         </div>
-        <h4 class="font-bold text-navy-dark">Standards-Aligned Math</h4>
-        <p class="text-sm text-slate-500 leading-relaxed">Covers fundamental core math domains from standard curricula.</p>
+        <h4 class="font-bold text-text-main">Standards-Aligned Math</h4>
+        <p class="text-sm text-text-secondary leading-relaxed">Covers fundamental core domains across Grades 3 to 8 curricula.</p>
       </div>
       <div class="space-y-3 flex flex-col items-center">
         <div class="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center text-emerald-600">
           <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
         </div>
-        <h4 class="font-bold text-navy-dark">Secure Assessment</h4>
-        <p class="text-sm text-slate-500 leading-relaxed">Encrypted student sessions, private math assessment, safe learning environment.</p>
+        <h4 class="font-bold text-text-main">Secure Learning</h4>
+        <p class="text-sm text-text-secondary leading-relaxed">Encrypted student sessions, private math records, safe learning space.</p>
       </div>
       <div class="space-y-3 flex flex-col items-center">
-        <div class="w-14 h-14 rounded-2xl bg-amber-100 flex items-center justify-center text-amber-600">
+        <div class="w-14 h-14 rounded-2xl bg-soft-yellow flex items-center justify-center text-amber-700">
           <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
         </div>
-        <h4 class="font-bold text-navy-dark">Personalized Results</h4>
-        <p class="text-sm text-slate-500 leading-relaxed">Instant level mapping with clear mathematical feedback for parents.</p>
+        <h4 class="font-bold text-text-main">Instant Feedback</h4>
+        <p class="text-sm text-text-secondary leading-relaxed">Diagnostic benchmarks with clear mathematical explanations for parents.</p>
       </div>
       <div class="space-y-3 flex flex-col items-center">
-        <div class="w-14 h-14 rounded-2xl bg-purple-100 flex items-center justify-center text-purple-600">
+        <div class="w-14 h-14 rounded-2xl bg-lavender flex items-center justify-center text-purple-700">
           <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
         </div>
-        <h4 class="font-bold text-navy-dark">Educator Developed</h4>
-        <p class="text-sm text-slate-500 leading-relaxed">Formulated by math teachers to yield accurate grade benchmarks.</p>
+        <h4 class="font-bold text-text-main">Educator Developed</h4>
+        <p class="text-sm text-text-secondary leading-relaxed">Formulated by math teachers to yield accurate grade-level recommendations.</p>
       </div>
     </div>
   </section>
@@ -244,80 +679,119 @@
   <footer class="w-full bg-[#1e272e] text-white border-t border-slate-800 py-12 px-6 md:px-12">
     <div class="max-w-6xl w-full mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
       <div class="space-y-4">
-        <h4 class="text-lg font-black text-sky-blue">Curriculum</h4>
+        <h4 class="text-lg font-black text-primary-teal">Curriculum</h4>
         <ul class="space-y-2 text-slate-300 font-semibold text-sm">
-          <li><a href="https://kidsstemstudio.com/our-approach" target="_blank" class="hover:text-sky-blue transition-colors">Our Approach</a></li>
-          <li><a href="https://kidsstemstudio.com/robotics" target="_blank" class="hover:text-sky-blue transition-colors">Robotics</a></li>
-          <li><a href="https://kidsstemstudio.com/coding-and-game-design" target="_blank" class="hover:text-sky-blue transition-colors">Coding & Game Design</a></li>
-          <li><a href="https://kidsstemstudio.com/minecraft" target="_blank" class="hover:text-sky-blue transition-colors">Minecraft</a></li>
-          <li><a href="https://kidsstemstudio.com/engineering" target="_blank" class="hover:text-sky-blue transition-colors">Engineering</a></li>
+          <li><a href="https://kidsstemstudio.com/our-approach" target="_blank" class="hover:text-primary-teal transition-colors">Our Approach</a></li>
+          <li><a href="https://kidsstemstudio.com/robotics" target="_blank" class="hover:text-primary-teal transition-colors">Robotics</a></li>
+          <li><a href="https://kidsstemstudio.com/coding-and-game-design" target="_blank" class="hover:text-primary-teal transition-colors">Coding &amp; Game Design</a></li>
+          <li><a href="https://kidsstemstudio.com/engineering" target="_blank" class="hover:text-primary-teal transition-colors">Engineering</a></li>
         </ul>
       </div>
       <div class="space-y-4">
-        <h4 class="text-lg font-black text-sky-blue">Programs</h4>
+        <h4 class="text-lg font-black text-primary-teal">Programs</h4>
         <ul class="space-y-2 text-slate-300 font-semibold text-sm">
-          <li><a href="https://kidsstemstudio.com/learningpods" target="_blank" class="hover:text-sky-blue transition-colors">Learning Pods</a></li>
-          <li><a href="https://kidsstemstudio.com/weekly-classes/" target="_blank" class="hover:text-sky-blue transition-colors">Weekly Classes</a></li>
-          <li><a href="https://kidsstemstudio.com/field-trips" target="_blank" class="hover:text-sky-blue transition-colors">Field Trips</a></li>
-          <li><a href="https://kidsstemstudio.com/birthday-parties" target="_blank" class="hover:text-sky-blue transition-colors">Parties</a></li>
-          <li><a href="https://kidsstemstudio.com/camps/" target="_blank" class="hover:text-sky-blue transition-colors">Camps</a></li>
-          <li><a href="https://kidsstemstudio.com/afterschool-enrichment/" target="_blank" class="hover:text-sky-blue transition-colors">Afterschool Enrichment</a></li>
+          <li><a href="https://kidsstemstudio.com/weekly-classes/" target="_blank" class="hover:text-primary-teal transition-colors">Weekly Classes</a></li>
+          <li><a href="https://kidsstemstudio.com/camps/" target="_blank" class="hover:text-primary-teal transition-colors">STEM Camps</a></li>
+          <li><a href="https://kidsstemstudio.com/afterschool-enrichment/" target="_blank" class="hover:text-primary-teal transition-colors">Afterschool Enrichment</a></li>
         </ul>
       </div>
       <div class="space-y-4">
-        <h4 class="text-lg font-black text-sky-blue">Locations</h4>
+        <h4 class="text-lg font-black text-primary-teal">Locations</h4>
         <ul class="space-y-2 text-slate-300 font-semibold text-sm">
-          <li><a href="https://kidsstemstudio.com/chicago/" target="_blank" class="hover:text-sky-blue transition-colors">Chicago</a></li>
-          <li><a href="https://kidsstemstudio.com/evanston" target="_blank" class="hover:text-sky-blue transition-colors">Evanston / Skokie</a></li>
-          <li><a href="https://kidsstemstudio.com/" target="_blank" class="hover:text-sky-blue transition-colors">Naperville</a></li>
+          <li><a href="https://kidsstemstudio.com/chicago/" target="_blank" class="hover:text-primary-teal transition-colors">Chicago</a></li>
+          <li><a href="https://kidsstemstudio.com/evanston" target="_blank" class="hover:text-primary-teal transition-colors">Evanston / Skokie</a></li>
+          <li><a href="https://kidsstemstudio.com/" target="_blank" class="hover:text-primary-teal transition-colors">Naperville</a></li>
         </ul>
       </div>
       <div class="space-y-4 flex flex-col items-start">
         <a href="https://kidsstemstudio.com/" target="_blank">
-          <img src="https://kidsstemstudio.com/wp-content/uploads/2020/05/KSS_Logo.png" alt="Kids STEM Studio Logo" class="h-20 w-auto bg-white p-3 rounded-[20px]">
+          <img src="https://kidsstemstudio.com/wp-content/uploads/2020/05/KSS_Logo.png" alt="Kids STEM Studio Logo" class="h-16 w-auto bg-white p-2.5 rounded-2xl">
         </a>
-        <p class="text-slate-400 text-xs font-semibold pt-2">© 2026 Kids STEM Studio. All Rights Reserved.</p>
+        <p class="text-slate-400 text-xs font-semibold pt-2">&copy; 2026 Kids STEM Studio. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
 
   <!-- MODALS -->
-  <div id="faq-modal" class="fixed inset-0 bg-navy-dark/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-    <div class="bg-white max-w-2xl w-full rounded-2xl p-6 md:p-8 space-y-6 shadow-2xl relative">
-      <button onclick="closeModal('faq-modal')" class="absolute top-4 right-4 text-slate-400 hover:!text-slate-600 text-2xl font-bold">×</button>
-      <h3 class="text-2xl font-extrabold text-navy-dark border-b pb-3">Frequently Asked Questions</h3>
-      <div class="space-y-6 max-h-[450px] overflow-y-auto pr-2 text-slate-600 font-medium">
-        <div>
-          <h5 class="font-bold text-navy-dark text-base">What is Kids STEM Studio?</h5>
-          <p class="text-sm mt-1 leading-relaxed">Kids STEM Studio (KSS) provides hands-on, interactive programs in coding, game design, robotics, engineering, and math.</p>
+
+  <!-- ACHIEVEMENTS MODAL -->
+  <div id="achievements-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white max-w-2xl w-full rounded-3xl p-6 md:p-8 space-y-6 shadow-2xl relative">
+      <button onclick="closeModal('achievements-modal')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 text-2xl font-bold">&times;</button>
+      <div class="border-b border-slate-100 pb-3">
+        <span class="text-xs font-extrabold text-amber-600 uppercase tracking-wider">Showcase</span>
+        <h3 class="text-2xl font-black text-text-main">Student Achievement Badges</h3>
+      </div>
+      <div class="space-y-4 max-h-[460px] overflow-y-auto pr-2">
+        <div class="p-4 rounded-2xl border border-slate-200 flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-black flex-shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div>
+            <h5 class="font-extrabold text-text-main text-base">Placement Pioneer</h5>
+            <p class="text-xs text-text-secondary mt-0.5 leading-relaxed">
+              Awarded upon completing the diagnostic math assessment and establishing your baseline curriculum grade placement.
+            </p>
+          </div>
         </div>
-        <div>
-          <h5 class="font-bold text-navy-dark text-base">How does the math placement test help my child?</h5>
-          <p class="text-sm mt-1 leading-relaxed">This math placement portal assesses your child's math capabilities across grades 3 to 8 to identify their strengths and recommend the perfect math level matching their skill profile.</p>
+
+        <div class="p-4 rounded-2xl border border-slate-200 flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-black flex-shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <div>
+            <h5 class="font-extrabold text-text-main text-base">First Milestone</h5>
+            <p class="text-xs text-text-secondary mt-0.5 leading-relaxed">
+              Awarded when you finish your very first digital worksheet lesson with a passing grade of 80% or better.
+            </p>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-2xl border border-slate-200 flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-yellow-100 text-yellow-700 flex items-center justify-center font-black flex-shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+          </div>
+          <div>
+            <h5 class="font-extrabold text-text-main text-base">Triple Star Master</h5>
+            <p class="text-xs text-text-secondary mt-0.5 leading-relaxed">
+              Earned by finishing any worksheet with all 3 stars on your first try without requesting final strategy clues.
+            </p>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-2xl border border-slate-200 flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-black flex-shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+          </div>
+          <div>
+            <h5 class="font-extrabold text-text-main text-base">5-Lesson Ranger</h5>
+            <p class="text-xs text-text-secondary mt-0.5 leading-relaxed">
+              Awarded upon completing 5 distinct lessons within your active math grade realm.
+            </p>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-2xl border border-slate-200 flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-black flex-shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></svg>
+          </div>
+          <div>
+            <h5 class="font-extrabold text-text-main text-base">Curriculum King</h5>
+            <p class="text-xs text-text-secondary mt-0.5 leading-relaxed">
+              Master an entire 25-lesson curriculum grade track with consecutive 80%+ mastery scores.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div id="contact-modal" class="fixed inset-0 bg-navy-dark/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-    <div class="bg-white max-w-lg w-full rounded-2xl p-6 md:p-8 space-y-6 shadow-2xl relative">
-      <button onclick="closeModal('contact-modal')" class="absolute top-4 right-4 text-slate-400 hover:!text-slate-600 text-2xl font-bold">×</button>
-      <h3 class="text-2xl font-extrabold text-navy-dark">Contact Kids STEM Studio</h3>
-      <div class="space-y-4 text-slate-600 font-medium">
-        <p>If you have any questions or would like to learn more about our math, coding, and science enrichment classes, please reach out to us:</p>
-        <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 space-y-2">
-          <p class="text-sm font-semibold text-slate-700">Email: <span class="text-slate-600 font-normal">info@kidsstemstudio.com</span></p>
-          <p class="text-sm font-semibold text-slate-700">Website: <a href="https://kidsstemstudio.com/" target="_blank" class="text-sky-blue underline font-bold">kidsstemstudio.com</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="history-modal" class="fixed inset-0 bg-navy-dark/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-    <div class="bg-white max-w-2xl w-full rounded-2xl p-6 md:p-8 space-y-6 shadow-2xl relative">
-      <button onclick="closeModal('history-modal')" class="absolute top-4 right-4 text-slate-400 hover:!text-slate-600 text-2xl font-bold">×</button>
-      <h3 class="text-2xl font-extrabold text-navy-dark border-b pb-3 flex items-center gap-2">
-        Math Placement History
+  <!-- EXAM HISTORY MODAL -->
+  <div id="history-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white max-w-2xl w-full rounded-3xl p-6 md:p-8 space-y-6 shadow-2xl relative">
+      <button onclick="closeModal('history-modal')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 text-2xl font-bold">&times;</button>
+      <h3 class="text-2xl font-black text-text-main border-b border-slate-100 pb-3 flex items-center gap-2">
+        Diagnostic Placement History
       </h3>
       <div id="user-history-content" class="space-y-4 max-h-[420px] overflow-y-auto pr-2">
         <!-- Rendered by AuthManager.renderHistoryModal() -->
@@ -325,68 +799,633 @@
     </div>
   </div>
 
+  <!-- FAQ MODAL -->
+  <div id="faq-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white max-w-2xl w-full rounded-3xl p-6 md:p-8 space-y-6 shadow-2xl relative">
+      <button onclick="closeModal('faq-modal')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 text-2xl font-bold">&times;</button>
+      <h3 class="text-2xl font-black text-text-main border-b border-slate-100 pb-3">Frequently Asked Questions</h3>
+      <div class="space-y-6 max-h-[450px] overflow-y-auto pr-2 text-text-secondary font-medium">
+        <div>
+          <h5 class="font-extrabold text-text-main text-base">What is Kids STEM Studio?</h5>
+          <p class="text-sm mt-1 leading-relaxed">Kids STEM Studio (KSS) provides hands-on interactive programs in coding, game design, robotics, engineering, and math problem solving for students ages 5-14.</p>
+        </div>
+        <div>
+          <h5 class="font-extrabold text-text-main text-base">How does the diagnostic test place students?</h5>
+          <p class="text-sm mt-1 leading-relaxed">The placement test uses an adaptive algorithm serving 15 targeted questions. Reaching 80% accuracy in a grade domain confirms baseline readiness for that grade level.</p>
+        </div>
+        <div>
+          <h5 class="font-extrabold text-text-main text-base">How do worksheets unlock?</h5>
+          <p class="text-sm mt-1 leading-relaxed">Taking the placement test immediately unlocks all lessons up to your placed grade. Subsequent lessons unlock consecutively as you score 80% or higher.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT MODAL -->
+  <div id="contact-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white max-w-lg w-full rounded-3xl p-6 md:p-8 space-y-6 shadow-2xl relative">
+      <button onclick="closeModal('contact-modal')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 text-2xl font-bold">&times;</button>
+      <h3 class="text-2xl font-black text-text-main">Contact Kids STEM Studio</h3>
+      <div class="space-y-4 text-text-secondary font-medium">
+        <p>If you have any questions about curriculum placement, enrichment camps, or weekly math classes, reach out to our team:</p>
+        <div class="bg-warm-offwhite p-4 rounded-2xl border border-slate-200 space-y-2">
+          <p class="text-sm font-semibold text-text-main">Email: <span class="text-primary-teal font-bold">info@kidsstemstudio.com</span></p>
+          <p class="text-sm font-semibold text-text-main">Website: <a href="https://kidsstemstudio.com/" target="_blank" class="text-primary-teal underline font-bold">kidsstemstudio.com</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTROLLER SCRIPT -->
   <script>
-    window.addEventListener('DOMContentLoaded', () => {
+    let curriculumData = null;
+
+    window.addEventListener('DOMContentLoaded', async () => {
       AuthManager.requireAuth();
       AuthManager.updateHeaderUI();
-      renderPortalRecommendedPractice();
+      await loadCurriculumCache();
+      renderDashboard();
     });
 
-    function renderPortalRecommendedPractice() {
-      const container = document.getElementById('portal-recommended-practice');
-      if (!container) return;
+    async function loadCurriculumCache() {
+      try {
+        const res = await fetch('shared/data/curriculum.json');
+        curriculumData = await res.json();
+      } catch (e) {
+        console.warn('Could not preload curriculum.json:', e);
+      }
+    }
+
+    function renderDashboard() {
       const progressRaw = localStorage.getItem('kss_student_progress');
       const progress = progressRaw ? JSON.parse(progressRaw) : {};
+      const completedLessons = progress.completedLessons || {};
+      const unlockedLessonIndex = progress.unlockedLessonIndex || { "3": 1, "4": 0, "5": 0, "6": 0, "7": 0, "8": 0 };
       const placedGrade = progress.testedGrade;
       const totalStars = progress.totalStars || 0;
-      const completedCount = Object.keys(progress.completedLessons || {}).length;
+      const completedCount = Object.keys(completedLessons).length;
 
-      if (placedGrade) {
-        document.body.setAttribute('data-grade', String(placedGrade));
+      // Update header stars
+      const headerStars = document.getElementById('header-stars-display');
+      if (headerStars) {
+        headerStars.textContent = `${totalStars} Stars`;
       }
 
+      // Update student greeting & profile
+      let rawName = 'Explorer';
+      if (typeof AuthManager !== 'undefined' && AuthManager.currentUser) {
+        rawName = AuthManager.currentUser.username || 'Explorer';
+      } else {
+        const sess = localStorage.getItem('kss_session') || sessionStorage.getItem('kss_session');
+        if (sess) rawName = sess;
+      }
+      function cleanStr(input) {
+        if (typeof sanitizeUsername === 'function') return sanitizeUsername(input);
+        if (!input) return 'student1';
+        if (typeof input === 'object' && input !== null) {
+          input = input.username || input.name || input.studentName || input.display_name || 'student1';
+        }
+        let s = String(input).trim().replace(/\\"/g, '"').replace(/\\'/g, "'");
+        for (let i = 0; i < 5; i++) {
+          if ((s.startsWith('{') && s.endsWith('}')) || (s.startsWith('"') && s.endsWith('"')) || (s.startsWith("'") && s.endsWith("'"))) {
+            try {
+              const p = JSON.parse(s);
+              if (p && typeof p === 'object') {
+                s = p.username || p.name || p.studentName || p.display_name || 'student1';
+              } else if (typeof p === 'string') {
+                s = p;
+              } else {
+                break;
+              }
+            } catch (e) {
+              const match = s.match(/(?:username|name|studentName|user_nicename|display_name)["']?\s*:\s*["']?([^"',}\s]+)/i);
+              if (match && match[1]) s = match[1];
+              break;
+            }
+            s = String(s).trim().replace(/\\"/g, '"').replace(/\\'/g, "'");
+          } else {
+            break;
+          }
+        }
+        if (s.includes('{') || s.includes('}')) {
+          const match = s.match(/(?:username|name|studentName|user_nicename|display_name)["']?\s*:\s*["']?([^"',}\s]+)/i);
+          if (match && match[1]) s = match[1];
+          else s = 'student1';
+        }
+        s = s.replace(/[{}\"']/g, '').trim();
+        return s || 'student1';
+      }
+      const studentName = cleanStr(rawName);
+      const nameEl = document.getElementById('student-display-name');
+      if (nameEl) nameEl.textContent = studentName;
+
+      // Age/Grade-tailored greeting badge
+      const badgeEl = document.getElementById('student-greeting-badge');
+      const statusChip = document.getElementById('student-placement-status-chip');
+      const quoteEl = document.getElementById('student-encouragement-quote');
+
       if (!placedGrade) {
+        if (badgeEl) {
+          badgeEl.textContent = 'Explorer in Training';
+          badgeEl.className = 'px-3.5 py-1 bg-amber-100 text-amber-800 border border-amber-200 rounded-full font-extrabold text-xs uppercase tracking-wider';
+        }
+        if (statusChip) statusChip.textContent = '• Baseline Diagnostic Pending';
+        if (quoteEl) quoteEl.textContent = 'Take your 45-minute placement assessment to discover your starting math world and unlock your personalized worksheets!';
+      } else if (placedGrade <= 4) {
+        if (badgeEl) {
+          badgeEl.textContent = `Cadet Explorer • Grade ${placedGrade}`;
+          badgeEl.className = 'px-3.5 py-1 bg-emerald-100 text-emerald-800 border border-emerald-200 rounded-full font-extrabold text-xs uppercase tracking-wider';
+        }
+        if (statusChip) statusChip.textContent = `• Calibrated Grade ${placedGrade} Track`;
+        if (quoteEl) quoteEl.textContent = 'Explore number patterns, solve visual puzzles, and collect shiny stars on your math quest today!';
+      } else if (placedGrade <= 6) {
+        if (badgeEl) {
+          badgeEl.textContent = `Voyager Pathfinder • Grade ${placedGrade}`;
+          badgeEl.className = 'px-3.5 py-1 bg-light-blue text-blue-800 border border-light-blue-border rounded-full font-extrabold text-xs uppercase tracking-wider';
+        }
+        if (statusChip) statusChip.textContent = `• Calibrated Grade ${placedGrade} Track`;
+        if (quoteEl) quoteEl.textContent = 'Level up your mathematical strategies, master fractions and ratios, and unlock new challenge worlds!';
+      } else {
+        if (badgeEl) {
+          badgeEl.textContent = `Algebraic Architect • Grade ${placedGrade}`;
+          badgeEl.className = 'px-3.5 py-1 bg-lavender text-purple-800 border border-lavender-border rounded-full font-extrabold text-xs uppercase tracking-wider';
+        }
+        if (statusChip) statusChip.textContent = `• Calibrated Grade ${placedGrade} Track`;
+        if (quoteEl) quoteEl.textContent = 'Master high-level pre-algebra standards, linear systems, and functions with independent problem solving.';
+      }
+
+      // Quick mini stats
+      const quickMastered = document.getElementById('quick-mastered-count');
+      if (quickMastered) quickMastered.textContent = completedCount;
+      const quickStars = document.getElementById('quick-stars-count');
+      if (quickStars) quickStars.textContent = totalStars;
+      const quickStreak = document.getElementById('quick-streak-count');
+      if (quickStreak) quickStreak.textContent = completedCount > 0 ? `${Math.min(10, completedCount)} Days` : '1 Day';
+
+      // Stat cards in Progress Section
+      const statCompleted = document.getElementById('stat-completed-lessons');
+      if (statCompleted) statCompleted.textContent = completedCount;
+      const statTotalStars = document.getElementById('stat-total-stars');
+      if (statTotalStars) statTotalStars.textContent = totalStars;
+      const statStreak = document.getElementById('stat-current-streak');
+      if (statStreak) statStreak.textContent = completedCount > 0 ? `${Math.min(10, completedCount)} Days` : '1 Day';
+      const statPlaced = document.getElementById('stat-placed-grade');
+      if (statPlaced) statPlaced.textContent = placedGrade ? `Grade ${placedGrade}` : 'Pending';
+      const statPlacedSubtitle = document.getElementById('stat-placed-subtitle');
+      if (statPlacedSubtitle) {
+        statPlacedSubtitle.textContent = placedGrade ? 'Verified mastery level' : 'Diagnostic calibration';
+      }
+
+      // Diagnostic Timeline Bar: Remove/hide from dashboard once diagnostic is completed
+      const timelineBar = document.getElementById('diagnostic-timeline-bar');
+      if (timelineBar) {
+        if (placedGrade) {
+          timelineBar.classList.add('hidden');
+        } else {
+          timelineBar.classList.remove('hidden');
+        }
+      }
+
+      // Nav placement button: switch to "Test into Grade [X]" once diagnostic is completed
+      const navBtn = document.getElementById('nav-placement-btn');
+      const navLabel = document.getElementById('nav-placement-label');
+      if (navLabel) {
+        if (!placedGrade) {
+          navLabel.textContent = 'Placement Exam';
+        } else if (placedGrade < 8) {
+          navLabel.textContent = `Test into Grade ${placedGrade + 1}`;
+        } else {
+          navLabel.textContent = 'Curriculum Mastered';
+        }
+      }
+
+      // Render Section C: Continue Learning Card
+      renderContinueLearning(placedGrade, progress, unlockedLessonIndex, completedLessons);
+
+      // Render Level Up Challenge (Direct test into next grade level)
+      renderLevelUpChallenge(placedGrade);
+
+      // Update Section D: Math Worlds Progress & Buttons
+      renderMathWorldsCards(placedGrade, unlockedLessonIndex, completedLessons);
+
+      // Update Badges Showcase
+      renderAchievementBadges(placedGrade, completedCount, totalStars, completedLessons);
+
+      // Update Advisor card
+      renderAdvisorCard(placedGrade, unlockedLessonIndex);
+    }
+
+    function renderLevelUpChallenge(placedGrade) {
+      const container = document.getElementById('level-up-container');
+      if (!container) return;
+
+      if (!placedGrade) {
+        container.innerHTML = '';
+        return;
+      }
+
+      if (placedGrade < 8) {
+        const nextGrade = placedGrade + 1;
+        const nextWorldNames = {
+          4: 'Fraction Falls',
+          5: 'Decimal Dunes',
+          6: 'Ratio Reef',
+          7: 'Proportions Peak',
+          8: 'Algebra Cosmos'
+        };
+        const nextRealm = nextWorldNames[nextGrade] || `Grade ${nextGrade} Realm`;
+
         container.innerHTML = `
-          <div class="bg-gradient-to-r from-emerald-50 to-sky-50 p-6 rounded-3xl border border-emerald-100 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
-            <div class="space-y-2">
-              <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full font-extrabold text-xs uppercase">Step 1: Calibrate Level</span>
-              <h3 class="text-2xl font-black text-navy-dark">Take Placement Assessment First</h3>
-              <p class="text-slate-600 text-sm max-w-xl font-medium">
-                Take your diagnostic placement test to discover your baseline math level and unlock your personalized worksheet path!
+          <div class="bg-gradient-to-r from-pale-mint/80 via-white to-light-blue/70 p-6 md:p-8 rounded-3xl border-2 border-primary-teal/30 shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-6 transition-all hover:shadow-md">
+            <div class="space-y-2 max-w-2xl">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="px-3.5 py-1 bg-primary-teal text-white rounded-full font-black text-xs uppercase tracking-wider">
+                  Level Up Challenge
+                </span>
+                <span class="text-xs font-bold text-text-secondary">• Advance to Next Grade Level</span>
+              </div>
+              <h3 class="text-2xl md:text-3xl font-black text-text-main">
+                Ready for higher math? Test into Grade ${nextGrade}
+              </h3>
+              <p class="text-text-secondary text-sm md:text-base font-medium leading-relaxed">
+                Take the quick Grade ${nextGrade} challenge assessment. Demonstrating 80% accuracy immediately places you into Grade ${nextGrade} (${nextRealm}) and unlocks all Grade ${nextGrade} worksheets!
               </p>
+              <div class="flex flex-wrap items-center gap-3 pt-1 text-xs font-bold text-text-secondary">
+                <span class="flex items-center gap-1.5 bg-white px-3 py-1 rounded-xl border border-slate-200">
+                  <svg class="w-3.5 h-3.5 text-primary-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  15 Adaptive Questions
+                </span>
+                <span class="flex items-center gap-1.5 bg-white px-3 py-1 rounded-xl border border-slate-200">
+                  <svg class="w-3.5 h-3.5 text-primary-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                  Goal: 80% (12/15)
+                </span>
+                <span class="flex items-center gap-1.5 text-primary-teal font-extrabold bg-pale-mint px-3 py-1 rounded-xl border border-pale-mint-border">
+                  Instant Grade ${nextGrade} Promotion
+                </span>
+              </div>
             </div>
-            <button onclick="showTrackSelection()" class="px-6 py-3.5 rounded-xl btn-blue-gradient text-sm font-extrabold whitespace-nowrap shadow-md">
-              Begin Assessment
-            </button>
+            <div class="flex-shrink-0 w-full md:w-auto">
+              <button onclick="testIntoNextLevel(${nextGrade})" class="w-full md:w-auto px-8 py-4 btn-teal-primary text-base font-black shadow-md flex items-center justify-center gap-2">
+                <span>Test into Grade ${nextGrade}</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+              </button>
+            </div>
           </div>
         `;
       } else {
-        const highestUnlocked = progress.unlockedLessonIndex ? (progress.unlockedLessonIndex[String(placedGrade)] || 1) : 1;
         container.innerHTML = `
-          <div class="bg-gradient-to-r from-emerald-50 to-sky-50 p-6 rounded-3xl border border-emerald-100 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
-            <div class="space-y-3">
-              <div class="flex items-center space-x-2">
-                <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full font-extrabold text-xs uppercase">Recommended Practice</span>
-                <span class="text-xs text-slate-500 font-bold">• Placed in Grade ${placedGrade}</span>
+          <div class="bg-gradient-to-r from-purple-50 via-white to-emerald-50 p-6 md:p-8 rounded-3xl border-2 border-purple-200 shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div class="space-y-2 max-w-2xl">
+              <div class="flex items-center gap-2">
+                <span class="px-3.5 py-1 bg-purple-700 text-white rounded-full font-black text-xs uppercase tracking-wider">
+                  Top Realm Master
+                </span>
+                <span class="text-xs font-bold text-text-secondary">• Maximum Grade Level Reached</span>
               </div>
-              <h3 class="text-2xl font-black text-navy-dark">Grade ${placedGrade} Worksheet Path: Lesson ${highestUnlocked}</h3>
-              <p class="text-slate-600 text-sm max-w-xl font-medium">
-                You have completed <strong>${completedCount}</strong> worksheets and earned <strong>${totalStars}</strong> stars! Keep up consecutive practice to unlock subsequent standards.
+              <h3 class="text-2xl md:text-3xl font-black text-text-main">
+                Grade 8 Algebra Cosmos Master
+              </h3>
+              <p class="text-text-secondary text-sm md:text-base font-medium leading-relaxed">
+                You have reached the highest grade in the curriculum. Solve all 25 Grade 8 lessons to achieve 100% curriculum completion!
               </p>
-              <div class="w-full bg-slate-200 h-2.5 rounded-full overflow-hidden max-w-md">
-                <div class="bg-emerald-500 h-full" style="width: ${Math.min(100, (highestUnlocked / 25) * 100)}%"></div>
-              </div>
             </div>
-            <div class="flex flex-col sm:flex-row items-center gap-3">
-              <button onclick="window.location.href='practice.html'" class="px-8 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm whitespace-nowrap shadow-md transition-all">
-                Jump into Worksheets
-              </button>
-              <button onclick="showTrackSelection()" class="px-5 py-4 rounded-xl border border-slate-300 text-slate-700 hover:bg-slate-100 font-extrabold text-sm whitespace-nowrap transition-colors">
-                Retake Placement
+            <div class="flex-shrink-0 w-full md:w-auto">
+              <button onclick="window.location.href='practice.html?grade=8'" class="w-full md:w-auto px-8 py-4 btn-teal-primary text-base font-black shadow-md flex items-center justify-center gap-2">
+                <span>Practice Grade 8 Lessons</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
               </button>
             </div>
           </div>
         `;
+      }
+    }
+
+    function renderContinueLearning(placedGrade, progress, unlockedLessonIndex, completedLessons) {
+      const container = document.getElementById('continue-learning-container');
+      if (!container) return;
+
+      if (!placedGrade) {
+        // STATE: Not Placed Yet
+        container.innerHTML = `
+          <div class="hero-focus-card p-8 md:p-12 flex flex-col lg:flex-row items-center justify-between gap-8">
+            <div class="space-y-4 max-w-2xl">
+              <div class="flex items-center gap-2">
+                <span class="px-3.5 py-1 bg-amber-100 text-amber-900 rounded-full font-black text-xs uppercase tracking-wider">
+                  Primary Focus • Step 1
+                </span>
+                <span class="text-xs font-bold text-text-secondary">• Diagnostic Placement Assessment</span>
+              </div>
+              <h2 class="text-3xl md:text-4xl font-black text-text-main leading-tight">
+                Calibrate Your Baseline Math Level
+              </h2>
+              <p class="text-text-secondary text-sm md:text-base font-medium leading-relaxed">
+                Take our adaptive 45-60 minute placement assessment developed by Kids STEM Studio. Evaluating your skills across Grade 3-8 standards unlocks your customized math realm and lesson path!
+              </p>
+              <div class="flex flex-wrap items-center gap-3 pt-2">
+                <span class="px-3 py-1 bg-white border border-slate-200 rounded-xl text-xs font-bold text-text-secondary flex items-center gap-1.5 shadow-2xs">
+                  <svg class="w-3.5 h-3.5 text-primary-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  45-60 Minutes
+                </span>
+                <span class="px-3 py-1 bg-white border border-slate-200 rounded-xl text-xs font-bold text-text-secondary flex items-center gap-1.5 shadow-2xs">
+                  <svg class="w-3.5 h-3.5 text-primary-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
+                  Scratchpad &amp; Pencil Ready
+                </span>
+                <span class="px-3 py-1 bg-white border border-slate-200 rounded-xl text-xs font-bold text-text-secondary flex items-center gap-1.5 shadow-2xs">
+                  <svg class="w-3.5 h-3.5 text-primary-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  Instant Grade Placement
+                </span>
+              </div>
+              <div class="flex flex-col sm:flex-row items-center gap-4 pt-3">
+                <button onclick="showTrackSelection()" class="w-full sm:w-auto px-8 py-4 btn-teal-primary text-base md:text-lg font-black shadow-lg">
+                  Begin Diagnostic Assessment
+                </button>
+                <button onclick="window.location.href='practice.html?grade=3'" class="w-full sm:w-auto px-6 py-4 btn-secondary-pastel text-sm md:text-base font-bold shadow-xs">
+                  Explore Grade 3 Warmup Lessons
+                </button>
+              </div>
+            </div>
+
+            <!-- ILLUSTRATION HERO ACCENT -->
+            <div class="lg:w-80 flex-shrink-0 flex justify-center">
+              <div class="w-64 h-64 rounded-3xl bg-pale-mint/60 border-2 border-pale-mint-border flex flex-col items-center justify-center p-6 text-center space-y-3 shadow-inner">
+                <div class="w-20 h-20 rounded-2xl bg-primary-teal text-white flex items-center justify-center shadow-md">
+                  <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                </div>
+                <h4 class="font-black text-text-main text-lg">Adaptive Placement</h4>
+                <p class="text-xs text-text-secondary font-medium">Pinpoints foundational strengths and areas to grow.</p>
+              </div>
+            </div>
+          </div>
+        `;
+      } else {
+        // STATE: Student is Placed in a Grade
+        const worldNames = {
+          3: 'Number Forest',
+          4: 'Fraction Falls',
+          5: 'Decimal Dunes',
+          6: 'Ratio Reef',
+          7: 'Proportions Peak',
+          8: 'Algebra Cosmos'
+        };
+        const currentWorldName = worldNames[placedGrade] || `Grade ${placedGrade} Realm`;
+        const highestUnlocked = unlockedLessonIndex[String(placedGrade)] || 1;
+
+        // Count completed lessons in this grade
+        let completedInGrade = 0;
+        Object.values(completedLessons).forEach(l => {
+          if (l.grade === placedGrade && l.score >= 80) completedInGrade++;
+        });
+
+        // Find metadata for current lesson
+        let lessonMeta = {
+          title: `Lesson ${highestUnlocked}`,
+          description: 'Interactive standards-aligned math problem solving session.',
+          standard: `Grade ${placedGrade} Standard`,
+          domain: 'Core Mathematics'
+        };
+
+        if (curriculumData && curriculumData.lessons) {
+          const found = curriculumData.lessons.find(l => l.grade === placedGrade && l.lessonNumber === highestUnlocked);
+          if (found) lessonMeta = found;
+        }
+
+        const lessonIdStr = `G${placedGrade}_L${String(highestUnlocked).padStart(2, '0')}`;
+        const percentProgress = Math.min(100, Math.round((completedInGrade / 25) * 100));
+
+        container.innerHTML = `
+          <div class="hero-focus-card p-8 md:p-12 flex flex-col lg:flex-row items-center justify-between gap-8">
+            <div class="space-y-4 max-w-2xl flex-1">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="px-3.5 py-1 bg-primary-teal text-white rounded-full font-black text-xs uppercase tracking-wider">
+                  Continue Learning • Primary Focus
+                </span>
+                <span class="px-3 py-1 bg-white border border-slate-200 rounded-full text-xs font-extrabold text-primary-teal">
+                  ${currentWorldName} (Grade ${placedGrade})
+                </span>
+              </div>
+
+              <div>
+                <span class="text-xs font-black text-text-secondary uppercase tracking-wider block mb-1">
+                  Active Lesson ${highestUnlocked} of 25
+                </span>
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-black text-text-main leading-tight">
+                  ${lessonMeta.title}
+                </h2>
+                <p class="text-text-secondary text-sm md:text-base font-medium mt-2 leading-relaxed">
+                  ${lessonMeta.description}
+                </p>
+                <div class="flex items-center gap-2 mt-2">
+                  <span class="inline-block text-[11px] font-bold text-text-secondary bg-white px-2.5 py-1 rounded-md border border-slate-200">
+                    Standard: ${lessonMeta.standard}
+                  </span>
+                  <span class="inline-block text-[11px] font-bold text-primary-teal bg-pale-mint px-2.5 py-1 rounded-md border border-pale-mint-border">
+                    ${lessonMeta.domain || 'Core Mathematics'}
+                  </span>
+                </div>
+              </div>
+
+              <!-- PROGRESS BAR -->
+              <div class="space-y-2 pt-2 max-w-lg">
+                <div class="flex justify-between text-xs font-extrabold text-text-secondary">
+                  <span>Grade ${placedGrade} Mastery Progress</span>
+                  <span class="text-primary-teal font-black">${completedInGrade} / 25 Lessons Mastered (${percentProgress}%)</span>
+                </div>
+                <div class="w-full bg-slate-200 h-3 rounded-full overflow-hidden">
+                  <div class="bg-primary-teal h-full rounded-full transition-all duration-500" style="width: ${Math.max(5, percentProgress)}%"></div>
+                </div>
+                <span class="text-[11px] font-bold text-slate-400 block">
+                  8-10 Questions • ~12 Minutes • Guided Strategy Clues
+                </span>
+              </div>
+
+              <!-- ACTION BUTTONS -->
+              <div class="flex flex-col sm:flex-row items-center gap-4 pt-3">
+                <button onclick="window.location.href='practice.html?grade=${placedGrade}&lesson=${lessonIdStr}&lessonNum=${highestUnlocked}'"
+                        class="w-full sm:w-auto px-8 py-4 btn-teal-primary text-base md:text-lg font-black shadow-lg">
+                  Continue Learning Lesson ${highestUnlocked}
+                </button>
+                <button onclick="window.location.href='practice.html?grade=${placedGrade}'"
+                        class="w-full sm:w-auto px-6 py-4 btn-secondary-pastel text-sm md:text-base font-bold shadow-xs">
+                  Browse All Grade ${placedGrade} Lessons
+                </button>
+              </div>
+            </div>
+
+            <!-- ADVENTURE STAT BADGE -->
+            <div class="lg:w-80 flex-shrink-0 flex justify-center">
+              <div class="w-64 p-6 rounded-3xl bg-white border border-slate-200 shadow-md text-center space-y-4">
+                <div class="w-16 h-16 mx-auto rounded-2xl bg-pale-mint text-primary-teal flex items-center justify-center font-black">
+                  <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                </div>
+                <div>
+                  <h4 class="font-black text-text-main text-lg">${currentWorldName}</h4>
+                  <p class="text-xs text-text-secondary font-semibold">Active Calibrated Track</p>
+                </div>
+                <div class="pt-2 border-t border-slate-100 flex items-center justify-around text-center">
+                  <div>
+                    <span class="text-[11px] font-bold text-slate-400 block">Current</span>
+                    <span class="text-base font-black text-primary-teal">L${highestUnlocked}</span>
+                  </div>
+                  <div class="h-6 w-[1px] bg-slate-200"></div>
+                  <div>
+                    <span class="text-[11px] font-bold text-slate-400 block">Mastery</span>
+                    <span class="text-base font-black text-emerald-600">${percentProgress}%</span>
+                  </div>
+                </div>
+                ${placedGrade < 8 ? `
+                <button onclick="testIntoNextLevel(${placedGrade + 1})" class="text-xs font-bold text-primary-teal hover:underline block mx-auto pt-1">
+                  Test into Grade ${placedGrade + 1} &rarr;
+                </button>` : `
+                <span class="text-xs font-bold text-emerald-600 block mx-auto pt-1">
+                  Top Realm Mastered
+                </span>`}
+              </div>
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    function renderMathWorldsCards(placedGrade, unlockedLessonIndex, completedLessons) {
+      [3, 4, 5, 6, 7, 8].forEach(g => {
+        const badgeEl = document.getElementById(`world-badge-g${g}`);
+        const textEl = document.getElementById(`world-progress-text-g${g}`);
+        const barEl = document.getElementById(`world-progress-bar-g${g}`);
+        const btnEl = document.getElementById(`world-btn-g${g}`);
+
+        const unlockedCount = unlockedLessonIndex[String(g)] || (g === 3 ? 1 : 0);
+        let completedInGrade = 0;
+        Object.values(completedLessons).forEach(l => {
+          if (l.grade === g && l.score >= 80) completedInGrade++;
+        });
+
+        const percent = Math.min(100, Math.round((completedInGrade / 25) * 100));
+
+        if (textEl) {
+          textEl.textContent = `${completedInGrade} / 25 Mastered`;
+        }
+        if (barEl) {
+          barEl.style.width = `${Math.max(4, percent)}%`;
+        }
+
+        const isAccessible = unlockedCount > 0 || (placedGrade && g <= placedGrade) || g === 3;
+        const isNextLevel = placedGrade && g === (placedGrade + 1);
+
+        if (badgeEl) {
+          if (completedInGrade >= 25) {
+            badgeEl.textContent = 'Realm Mastered';
+            badgeEl.className = 'text-xs font-black text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-full';
+          } else if (isAccessible) {
+            badgeEl.textContent = `${unlockedCount} / 25 Unlocked`;
+            badgeEl.className = 'text-xs font-black text-primary-teal bg-pale-mint border border-pale-mint-border px-2.5 py-0.5 rounded-full';
+          } else if (isNextLevel) {
+            badgeEl.textContent = 'Next Level Challenge';
+            badgeEl.className = 'text-xs font-black text-amber-800 bg-amber-100 border border-amber-300 px-2.5 py-0.5 rounded-full';
+          } else {
+            badgeEl.textContent = placedGrade ? `Requires Grade ${g - 1}` : 'Diagnostic Gated';
+            badgeEl.className = 'text-xs font-bold text-slate-500 bg-slate-100 border border-slate-200 px-2.5 py-0.5 rounded-full';
+          }
+        }
+
+        if (btnEl) {
+          if (isAccessible) {
+            btnEl.disabled = false;
+            btnEl.className = 'w-full py-3 rounded-xl btn-teal-primary text-xs font-black';
+            btnEl.textContent = `Enter Grade ${g} Realm`;
+            btnEl.onclick = () => { window.location.href = `practice.html?grade=${g}`; };
+          } else if (isNextLevel) {
+            btnEl.disabled = false;
+            btnEl.className = 'w-full py-3 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-xs font-black shadow-xs transition-all';
+            btnEl.textContent = `Test into Grade ${g}`;
+            btnEl.onclick = () => testIntoNextLevel(g);
+          } else {
+            btnEl.disabled = false; // still allow clicking to view curriculum and understand prerequisites
+            btnEl.className = 'w-full py-3 rounded-xl btn-secondary-pastel text-xs font-bold';
+            btnEl.textContent = `View Grade ${g} Prerequisites`;
+            btnEl.onclick = () => { window.location.href = `practice.html?grade=${g}`; };
+          }
+        }
+      });
+    }
+
+    function renderAchievementBadges(placedGrade, completedCount, totalStars, completedLessons) {
+      // Badge 1: Placement Pioneer
+      const b1 = document.getElementById('badge-placement-pioneer');
+      if (b1) {
+        if (placedGrade) {
+          b1.className = 'achievement-badge-card unlocked p-4 text-center space-y-2';
+          b1.querySelector('.badge-status-label').textContent = 'Unlocked';
+          b1.querySelector('.badge-status-label').className = 'text-[10px] font-black text-emerald-600 block badge-status-label';
+        }
+      }
+
+      // Badge 2: First Milestone
+      const b2 = document.getElementById('badge-first-milestone');
+      if (b2) {
+        if (completedCount >= 1) {
+          b2.className = 'achievement-badge-card unlocked p-4 text-center space-y-2';
+          b2.querySelector('.badge-status-label').textContent = 'Unlocked';
+          b2.querySelector('.badge-status-label').className = 'text-[10px] font-black text-emerald-600 block badge-status-label';
+        }
+      }
+
+      // Badge 3: Triple Star Master
+      const b3 = document.getElementById('badge-triple-star');
+      if (b3) {
+        const has3Stars = Object.values(completedLessons).some(l => l.stars >= 3);
+        if (has3Stars) {
+          b3.className = 'achievement-badge-card unlocked p-4 text-center space-y-2';
+          b3.querySelector('.badge-status-label').textContent = 'Unlocked';
+          b3.querySelector('.badge-status-label').className = 'text-[10px] font-black text-emerald-600 block badge-status-label';
+        }
+      }
+
+      // Badge 4: Five-Lesson Ranger
+      const b4 = document.getElementById('badge-five-lessons');
+      if (b4) {
+        if (completedCount >= 5) {
+          b4.className = 'achievement-badge-card unlocked p-4 text-center space-y-2';
+          b4.querySelector('.badge-status-label').textContent = 'Unlocked';
+          b4.querySelector('.badge-status-label').className = 'text-[10px] font-black text-emerald-600 block badge-status-label';
+        }
+      }
+
+      // Badge 5: Curriculum Conqueror
+      const b5 = document.getElementById('badge-curriculum-conqueror');
+      if (b5) {
+        if (completedCount >= 25) {
+          b5.className = 'achievement-badge-card unlocked p-4 text-center space-y-2';
+          b5.querySelector('.badge-status-label').textContent = 'Unlocked';
+          b5.querySelector('.badge-status-label').className = 'text-[10px] font-black text-emerald-600 block badge-status-label';
+        }
+      }
+    }
+
+    function renderAdvisorCard(placedGrade, unlockedLessonIndex) {
+      const headline = document.getElementById('advisor-headline');
+      const desc = document.getElementById('advisor-description');
+      const tip = document.getElementById('advisor-tip');
+      const btn = document.getElementById('advisor-action-btn');
+
+      if (!placedGrade) {
+        if (headline) headline.textContent = 'Diagnostic Calibration Needed';
+        if (desc) desc.textContent = 'To calibrate your personalized worksheet trajectory across Grades 3-8, take the baseline placement test first.';
+        if (tip) tip.textContent = 'The assessment takes 45-60 minutes and pinpoints your strongest foundational skills.';
+        if (btn) {
+          btn.textContent = 'Begin Diagnostic Test';
+          btn.onclick = () => showTrackSelection();
+        }
+      } else {
+        const currentL = unlockedLessonIndex[String(placedGrade)] || 1;
+        if (headline) headline.textContent = `Grade ${placedGrade} Mastery Sequence`;
+        if (desc) desc.textContent = `You are currently focusing on Lesson ${currentL}. Work through problems with scratch paper to guarantee mastery.`;
+        if (tip) tip.textContent = 'Hint 1 provides conceptual reminders; Hint 2 gives strategy clues. Rely on your own computation for maximum stars!';
+        if (btn) {
+          btn.textContent = `Continue Grade ${placedGrade} Lesson ${currentL}`;
+          btn.onclick = () => {
+            window.location.href = `practice.html?grade=${placedGrade}&lesson=G${placedGrade}_L${String(currentL).padStart(2, '0')}&lessonNum=${currentL}`;
+          };
+        }
       }
     }
 
@@ -395,6 +1434,7 @@
       const panel = document.getElementById('track-selection-panel');
       if (main) main.classList.add('hidden');
       if (panel) panel.classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function showLandingMain() {
@@ -406,7 +1446,33 @@
 
     function selectTrack(track) {
       sessionStorage.setItem('selectedTrack', track);
+      sessionStorage.removeItem('targetLevelUpGrade');
       window.location.href = 'instructions.html';
+    }
+
+    function testIntoNextLevel(targetGrade) {
+      let track = '3-4';
+      if (targetGrade >= 7) {
+        track = '7-8';
+      } else if (targetGrade >= 5) {
+        track = '5-6';
+      }
+      sessionStorage.setItem('selectedTrack', track);
+      sessionStorage.setItem('targetLevelUpGrade', String(targetGrade));
+      window.location.href = 'instructions.html';
+    }
+
+    function handlePlacementAction() {
+      const progressRaw = localStorage.getItem('kss_student_progress');
+      const progress = progressRaw ? JSON.parse(progressRaw) : {};
+      const placedGrade = progress.testedGrade;
+      if (!placedGrade) {
+        showTrackSelection();
+      } else if (placedGrade < 8) {
+        testIntoNextLevel(placedGrade + 1);
+      } else {
+        window.location.href = 'practice.html?grade=8';
+      }
     }
 
     function openModal(id) {

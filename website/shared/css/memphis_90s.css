@@ -1,0 +1,83 @@
+/* =========================================================
+   COOL 90S MATH SYMBOLS BACKGROUND THEME
+   Math Symbols: +, -, x, /, =, %, radical, pi, sigma, inf
+   Punchy Clashing Colors: Electric Blue, Primary Red, Sunny Yellow
+   ========================================================= */
+
+:root {
+  --bg-90s-geometric: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%27360%27%20height%3D%27360%27%20viewBox%3D%270%200%20360%20360%27%3E%0A%20%20%3C%21--%20Punchy%20Math%20Symbols%20Background%3A%20Clashing%20Red%2C%20Blue%2C%20Yellow%2C%20Dark%20Accent%20--%3E%0A%20%20%3C%21--%201.%20Division%20%28Punchy%20Red%29%20--%3E%0A%20%20%3Cg%20transform%3D%27translate%2835%2C%2030%29%27%20stroke%3D%27%23EF4444%27%20fill%3D%27%23EF4444%27%20opacity%3D%270.30%27%3E%0A%20%20%20%20%3Cline%20x1%3D%270%27%20y1%3D%2715%27%20x2%3D%2730%27%20y2%3D%2715%27%20stroke-width%3D%274.5%27%20stroke-linecap%3D%27round%27/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2715%27%20cy%3D%276%27%20r%3D%273.2%27/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2715%27%20cy%3D%2724%27%20r%3D%273.2%27/%3E%0A%20%20%3C/g%3E%0A%0A%20%20%3C%21--%202.%20Multiplication%20%28Sunny%20Yellow%29%20--%3E%0A%20%20%3Cg%20transform%3D%27translate%28145%2C%2035%29%20rotate%2815%2015%2015%29%27%20stroke%3D%27%23FACC15%27%20stroke-width%3D%275%27%20stroke-linecap%3D%27round%27%20opacity%3D%270.45%27%3E%0A%20%20%20%20%3Cline%20x1%3D%274%27%20y1%3D%274%27%20x2%3D%2726%27%20y2%3D%2726%27/%3E%0A%20%20%20%20%3Cline%20x1%3D%2726%27%20y1%3D%274%27%20x2%3D%274%27%20y2%3D%2726%27/%3E%0A%20%20%3C/g%3E%0A%0A%20%20%3C%21--%203.%20Less%20Than%20%28Sunny%20Yellow%29%20--%3E%0A%20%20%3Cg%20transform%3D%27translate%28210%2C%2040%29%20rotate%288%2010%2015%29%27%20stroke%3D%27%23FACC15%27%20stroke-width%3D%274.5%27%20fill%3D%27none%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%20opacity%3D%270.42%27%3E%0A%20%20%20%20%3Cpolyline%20points%3D%2718%2C5%204%2C15%2018%2C25%27/%3E%0A%20%20%3C/g%3E%0A%0A%20%20%3C%21--%204.%20Square%20Root%20Radical%20%28Electric%20Blue%29%20--%3E%0A%20%20%3Cg%20transform%3D%27translate%28280%2C%2028%29%27%20stroke%3D%27%232563EB%27%20stroke-width%3D%274%27%20fill%3D%27none%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%20opacity%3D%270.36%27%3E%0A%20%20%20%20%3Cpath%20d%3D%27M0%2C20%20L6%2C20%20L13%2C32%20L22%2C8%20L38%2C8%27/%3E%0A%20%20%3C/g%3E%0A%0A%20%20%3C%21--%205.%20Equals%20%28Retro%20Charcoal%29%20--%3E%0A%20%20%3Cg%20transform%3D%27translate%2885%2C%20115%29%20rotate%28-10%2014%2010%29%27%20stroke%3D%27%230F172A%27%20stroke-width%3D%274.5%27%20stroke-linecap%3D%27round%27%20opacity%3D%270.25%27%3E%0A%20%20%20%20%3Cline%20x1%3D%270%27%20y1%3D%276%27%20x2%3D%2728%27%20y2%3D%276%27/%3E%0A%20%20%20%20%3Cline%20x1%3D%270%27%20y1%3D%2716%27%20x2%3D%2728%27%20y2%3D%2716%27/%3E%0A%20%20%3C/g%3E%0A%0A%20%20%3C%21--%206.%20Pi%20%28Punchy%20Red%29%20--%3E%0A%20%20%3Cg%20transform%3D%27translate%28195%2C%20115%29%20rotate%288%2015%2015%29%27%20stroke%3D%27%23EF4444%27%20stroke-width%3D%274.2%27%20stroke-linecap%3D%27round%27%20opacity%3D%270.32%27%3E%0A%20%20%20%20%3Cline%20x1%3D%272%27%20y1%3D%276%27%20x2%3D%2728%27%20y2%3D%276%27/%3E%0A%20%20%20%20%3Cline%20x1%3D%279%27%20y1%3D%276%27%20x2%3D%279%27%20y2%3D%2726%27/%3E%0A%20%20%20%20%3Cline%20x1%3D%2721%27%20y1%3D%276%27%20x2%3D%2721%27%20y2%3D%2726%27/%3E%0A%20%20%3C/g%3E%0A%0A%20%20%3C%21--%207.%20Plus%20%28Electric%20Blue%29%20--%3E%0A%20%20%3Cg%20transform%3D%27translate%28305%2C%20115%29%20rotate%285%2015%2015%29%27%20stroke%3D%27%232563EB%27%20stroke-width%3D%275%27%20stroke-linecap%3D%27round%27%20opacity%3D%270.36%27%3E%0A%20%20%20%20%3Cline%20x1%3D%274%27%20y1%3D%2715%27%20x2%3D%2726%27%20y2%3D%2715%27/%3E%0A%20%20%20%20%3Cline%20x1%3D%2715%27%20y1%3D%274%27%20x2%3D%2715%27%20y2%3D%2726%27/%3E%0A%20%20%3C/g%3E%0A%0A%20%20%3C%21--%208.%20Greater%20Than%20%28Sunny%20Yellow%29%20--%3E%0A%20%20%3Cg%20transform%3D%27translate%2830%2C%20195%29%20rotate%28-12%2012%2015%29%27%20stroke%3D%27%23FACC15%27%20stroke-width%3D%275%27%20fill%3D%27none%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%20opacity%3D%270.45%27%3E%0A%20%20%20%20%3Cpolyline%20points%3D%276%2C5%2022%2C15%206%2C25%27/%3E%0A%20%20%3C/g%3E%0A%0A%20%20%3C%21--%209.%20Percent%20%28Electric%20Blue%29%20--%3E%0A%20%20%3Cg%20transform%3D%27translate%28135%2C%20195%29%20rotate%2810%2016%2016%29%27%20stroke%3D%27%232563EB%27%20opacity%3D%270.34%27%3E%0A%20%20%20%20%3Cline%20x1%3D%2726%27%20y1%3D%276%27%20x2%3D%276%27%20y2%3D%2726%27%20stroke-width%3D%274%27%20stroke-linecap%3D%27round%27/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%279%27%20cy%3D%279%27%20r%3D%273.5%27%20fill%3D%27none%27%20stroke-width%3D%272.5%27/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2723%27%20cy%3D%2723%27%20r%3D%273.5%27%20fill%3D%27none%27%20stroke-width%3D%272.5%27/%3E%0A%20%20%3C/g%3E%0A%0A%20%20%3C%21--%2010.%20Not%20Equal%20%28Punchy%20Red%29%20--%3E%0A%20%20%3Cg%20transform%3D%27translate%28250%2C%20195%29%20rotate%285%2015%2012%29%27%20stroke%3D%27%23EF4444%27%20stroke-width%3D%274%27%20stroke-linecap%3D%27round%27%20opacity%3D%270.32%27%3E%0A%20%20%20%20%3Cline%20x1%3D%273%27%20y1%3D%278%27%20x2%3D%2727%27%20y2%3D%278%27/%3E%0A%20%20%20%20%3Cline%20x1%3D%273%27%20y1%3D%2718%27%20x2%3D%2727%27%20y2%3D%2718%27/%3E%0A%20%20%20%20%3Cline%20x1%3D%2723%27%20y1%3D%272%27%20x2%3D%277%27%20y2%3D%2724%27/%3E%0A%20%20%3C/g%3E%0A%0A%20%20%3C%21--%2011.%20Infinity%20%28Electric%20Blue%29%20--%3E%0A%20%20%3Cg%20transform%3D%27translate%28315%2C%20205%29%20rotate%28-15%2015%2010%29%27%20stroke%3D%27%232563EB%27%20stroke-width%3D%273.5%27%20fill%3D%27none%27%20stroke-linecap%3D%27round%27%20opacity%3D%270.32%27%3E%0A%20%20%20%20%3Cpath%20d%3D%27M4%2C10%20C4%2C4%2012%2C4%2015%2C10%20C18%2C16%2026%2C16%2026%2C10%20C26%2C4%2018%2C4%2015%2C10%20C12%2C16%204%2C16%204%2C10%20Z%27/%3E%0A%20%20%3C/g%3E%0A%0A%20%20%3C%21--%2012.%20Minus%20%28Sunny%20Yellow%29%20--%3E%0A%20%20%3Cg%20transform%3D%27translate%2845%2C%20285%29%20rotate%2815%2015%205%29%27%20stroke%3D%27%23FACC15%27%20stroke-width%3D%275%27%20stroke-linecap%3D%27round%27%20opacity%3D%270.45%27%3E%0A%20%20%20%20%3Cline%20x1%3D%272%27%20y1%3D%2710%27%20x2%3D%2728%27%20y2%3D%2710%27/%3E%0A%20%20%3C/g%3E%0A%0A%20%20%3C%21--%2013.%20Summation%20Sigma%20%28Electric%20Blue%29%20--%3E%0A%20%20%3Cg%20transform%3D%27translate%28165%2C%20275%29%20rotate%28-5%2014%2014%29%27%20stroke%3D%27%232563EB%27%20stroke-width%3D%274%27%20fill%3D%27none%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%20opacity%3D%270.35%27%3E%0A%20%20%20%20%3Cpolyline%20points%3D%2726%2C4%206%2C4%2016%2C15%206%2C26%2026%2C26%27/%3E%0A%20%20%3C/g%3E%0A%0A%20%20%3C%21--%2014.%20Plus%20%28Punchy%20Red%29%20--%3E%0A%20%20%3Cg%20transform%3D%27translate%28285%2C%20275%29%20rotate%2820%2015%2015%29%27%20stroke%3D%27%23EF4444%27%20stroke-width%3D%275%27%20stroke-linecap%3D%27round%27%20opacity%3D%270.32%27%3E%0A%20%20%20%20%3Cline%20x1%3D%274%27%20y1%3D%2715%27%20x2%3D%2726%27%20y2%3D%2715%27/%3E%0A%20%20%20%20%3Cline%20x1%3D%2715%27%20y1%3D%274%27%20x2%3D%2715%27%20y2%3D%2726%27/%3E%0A%20%20%3C/g%3E%0A%0A%20%20%3C%21--%20Small%20floating%20accent%20math%20dots%20--%3E%0A%20%20%3Ccircle%20cx%3D%27105%27%20cy%3D%2765%27%20r%3D%273.5%27%20fill%3D%27%232563EB%27%20opacity%3D%270.32%27/%3E%0A%20%20%3Ccircle%20cx%3D%27255%27%20cy%3D%2775%27%20r%3D%273.5%27%20fill%3D%27%23EF4444%27%20opacity%3D%270.30%27/%3E%0A%20%20%3Ccircle%20cx%3D%2760%27%20cy%3D%27145%27%20r%3D%274%27%20fill%3D%27%23FACC15%27%20opacity%3D%270.45%27/%3E%0A%20%20%3Ccircle%20cx%3D%27180%27%20cy%3D%27170%27%20r%3D%273%27%20fill%3D%27%230F172A%27%20opacity%3D%270.22%27/%3E%0A%20%20%3Ccircle%20cx%3D%27105%27%20cy%3D%27255%27%20r%3D%273.5%27%20fill%3D%27%23FACC15%27%20opacity%3D%270.45%27/%3E%0A%20%20%3Ccircle%20cx%3D%27235%27%20cy%3D%27245%27%20r%3D%273.5%27%20fill%3D%27%232563EB%27%20opacity%3D%270.32%27/%3E%0A%20%20%3Ccircle%20cx%3D%27125%27%20cy%3D%27335%27%20r%3D%273%27%20fill%3D%27%230F172A%27%20opacity%3D%270.22%27/%3E%0A%20%20%3Ccircle%20cx%3D%27345%27%20cy%3D%2745%27%20r%3D%273.5%27%20fill%3D%27%23FACC15%27%20opacity%3D%270.40%27/%3E%0A%20%20%3Ccircle%20cx%3D%27230%27%20cy%3D%27330%27%20r%3D%273.5%27%20fill%3D%27%23EF4444%27%20opacity%3D%270.30%27/%3E%0A%3C/svg%3E");
+}
+
+/* Global and Dashboard Math Symbols Background */
+body,
+.dashboard-90s-bg,
+body.dashboard-bg {
+  background-color: #f8fafc;
+  background-image: var(--bg-90s-geometric) !important;
+  background-size: 360px 360px !important;
+  background-repeat: repeat !important;
+  background-attachment: fixed !important;
+}
+
+/* Grade-specific math symbols backgrounds */
+body[data-grade="3"], [data-grade="3"] {
+  background-color: #f7fbf8;
+  background-image: var(--bg-90s-geometric);
+  background-size: 360px 360px;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+body[data-grade="4"], [data-grade="4"] {
+  background-color: #f6fafc;
+  background-image: var(--bg-90s-geometric);
+  background-size: 340px 340px;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+body[data-grade="5"], [data-grade="5"] {
+  background-color: #fdfbf7;
+  background-image: var(--bg-90s-geometric);
+  background-size: 380px 380px;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+body[data-grade="6"], [data-grade="6"] {
+  background-color: #f7fafc;
+  background-image: var(--bg-90s-geometric);
+  background-size: 360px 360px;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+body[data-grade="7"], [data-grade="7"] {
+  background-color: #faf8f8;
+  background-image: var(--bg-90s-geometric);
+  background-size: 330px 330px;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+body[data-grade="8"], [data-grade="8"] {
+  background-color: #f8fafc;
+  background-image: var(--bg-90s-geometric);
+  background-size: 360px 360px;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+/* Text Readability Guarantee: All cards, banners, and modals sit on opaque white backgrounds */
+.bg-white,
+.rounded-card,
+.card-shadow,
+[class*="bg-white"] {
+  background-color: #ffffff !important;
+}
+
+/* Header & Theme color utility classes */
+.text-primary-teal { color: #2fbdb9 !important; }
+.border-primary-teal { border-color: #2fbdb9 !important; }
+.text-text-main { color: #253238 !important; }
+.text-text-secondary { color: #647176 !important; }
