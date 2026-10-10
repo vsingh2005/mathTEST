@@ -17,6 +17,62 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-attachment: fixed;
+  transition: background-color 0.3s ease;
+}
+
+/* Grade 3: Canopy Forest (Pine / Sage Contours) */
+body[data-grade="3"], [data-grade="3"] {
+  background-color: #f7fbf8;
+  background-image: radial-gradient(#107846 0.75px, transparent 0.75px), 
+    radial-gradient(#107846 0.75px, #f7fbf8 0.75px);
+  background-size: 36px 36px;
+  background-position: 0 0, 18px 18px;
+}
+
+/* Grade 4: Coastal Archipelago (Aqua / Coastal Contours) */
+body[data-grade="4"], [data-grade="4"] {
+  background-color: #f6fafc;
+  background-image: radial-gradient(#0284c7 0.75px, transparent 0.75px), 
+    radial-gradient(#0284c7 0.75px, #f6fafc 0.75px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+}
+
+/* Grade 5: Canyon Plateau (Sandstone / Terracotta Strata) */
+body[data-grade="5"], [data-grade="5"] {
+  background-color: #fdfbf7;
+  background-image: radial-gradient(#b45309 0.75px, transparent 0.75px), 
+    radial-gradient(#b45309 0.75px, #fdfbf7 0.75px);
+  background-size: 36px 36px;
+  background-position: 0 0, 18px 18px;
+}
+
+/* Grade 6: Alpine Summit (Glacial Slate / Deep Teal Ridges) */
+body[data-grade="6"], [data-grade="6"] {
+  background-color: #f7fafc;
+  background-image: radial-gradient(#0d9488 0.85px, transparent 0.85px), 
+    radial-gradient(#0d9488 0.85px, #f7fafc 0.85px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+/* Grade 7: Volcanic Basin (Graphite / Fault Contours) */
+body[data-grade="7"], [data-grade="7"] {
+  background-color: #faf8f8;
+  background-image: radial-gradient(#64748b 0.85px, transparent 0.85px), 
+    radial-gradient(#64748b 0.85px, #faf8f8 0.85px);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
+}
+
+/* Grade 8: Celestial Observatory (Midnight / Coordinate Radar Grid) */
+body[data-grade="8"], [data-grade="8"] {
+  background-color: #f8fafc;
+  background-image: radial-gradient(#4338ca 0.85px, transparent 0.85px), 
+    radial-gradient(#4338ca 0.85px, #f8fafc 0.85px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
 }
 
 /* Custom Smooth Scrollbar */

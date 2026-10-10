@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="initial-scale=1,user-scalable=no,width=device-width">
-  <title>Log In &lsaquo; Kids STEM Studio Math Placement Assessment — WordPress</title>
+  <title>Log In &lsaquo; Kids STEM Studio Math Placement Assessment - WordPress</title>
 
   <meta name="dc.title" content="Kids STEM Studio Math Assessment Portal Login">
-  <meta name="dc.description" content="Log in to Kids STEM Studio Math Placement Portal to access adaptive Grade 3–8 math placement exams.">
+  <meta name="dc.description" content="Log in to Kids STEM Studio Math Placement Portal to access adaptive Grade 3-8 math placement exams.">
   <meta name="dc.relation" content="https://kidsstemstudio.com/">
   <meta name="dc.source" content="https://kidsstemstudio.com/">
   <meta name="dc.language" content="en_US">
-  <meta name="description" content="Log in to Kids STEM Studio Math Placement Portal to access adaptive Grade 3–8 math placement exams.">
+  <meta name="description" content="Log in to Kids STEM Studio Math Placement Portal to access adaptive Grade 3-8 math placement exams.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://kidsstemstudio.com/">
 
@@ -56,13 +56,13 @@
         <div class="ml-extra-div relative p-8 flex flex-col justify-between text-white">
           <div class="space-y-4 relative z-10">
             <span class="px-3.5 py-1.5 bg-amber-400 text-slate-900 font-extrabold text-xs uppercase tracking-wider rounded-full inline-block">
-              📐 Kids STEM Studio Math Center
+              Kids STEM Studio Math Center
             </span>
             <h2 class="text-3xl md:text-4xl font-extrabold leading-tight">
               Math Placement <br>Assessment Portal
             </h2>
             <p class="text-slate-200 text-sm font-medium leading-relaxed max-w-sm">
-              Log in to access your adaptive Grade 3–8 Math Assessments, track completed placement tests, and receive detailed step-by-step solution breakdowns.
+              Log in to access your adaptive Grade 3-8 Math Assessments, track completed placement tests, and receive detailed step-by-step solution breakdowns.
             </p>
           </div>
         </div>
@@ -75,7 +75,7 @@
             </h1>
 
             <div class="text-center mb-4">
-              <h3 class="text-lg font-extrabold text-navy-dark">Sign In to Math Portal</h3>
+              <h3 class="text-lg font-extrabold text-[#263238]">Sign In to Math Portal</h3>
               <p class="text-xs text-slate-500 font-semibold">Enter your Kids STEM Studio credentials to begin</p>
             </div>
 
@@ -111,6 +111,15 @@
                 <input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large"
                   value="Log In to Math Portal" />
               </p>
+
+              <div class="relative my-4 flex items-center justify-center">
+                <div class="border-t border-slate-200 w-full"></div>
+                <span class="bg-white px-3 text-xs text-slate-400 font-semibold uppercase absolute">or</span>
+              </div>
+
+              <button type="button" onclick="handleGuestLogin()" class="w-full py-2.5 px-4 rounded-xl border border-slate-300 text-slate-700 bg-slate-50 hover:bg-slate-100 font-bold text-xs transition-colors flex items-center justify-center gap-2">
+                Continue as Guest Student
+              </button>
             </form>
 
             <!-- LOST PASSWORD FORM (HIDDEN BY DEFAULT) -->
@@ -134,7 +143,7 @@
                 <a class="wp-login-lost-password" href="javascript:void(0)" onclick="switchAuthTab('lostpassword')">Lost your password?</a>
               </span>
               <span id="nav-back-to-login" class="hidden">
-                <a href="javascript:void(0)" onclick="switchAuthTab('login')">← Back to Log In</a>
+                <a href="javascript:void(0)" onclick="switchAuthTab('login')">&larr; Back to Log In</a>
               </span>
             </p>
 
@@ -148,10 +157,9 @@
   </div>
 
   <script>
-    // Auto-redirect if already authenticated
+    // Safe auto-redirect only when genuine authenticated session exists
     window.addEventListener('DOMContentLoaded', () => {
-      const session = localStorage.getItem('kss_session') || sessionStorage.getItem('kss_session');
-      if (session) {
+      if (window.AuthManager && AuthManager.isAuthenticated()) {
         window.location.href = 'portal.html';
       }
     });
@@ -233,6 +241,16 @@
           submitBtn.value = 'Log In to Math Portal';
         }
       }
+    }
+
+    function handleGuestLogin() {
+      const guestSession = {
+        username: 'Guest Student',
+        studentName: 'Guest Student',
+        guest: true
+      };
+      localStorage.setItem('kss_session', JSON.stringify(guestSession));
+      window.location.href = 'portal.html';
     }
 
     function handleLostPasswordSubmit(e) {

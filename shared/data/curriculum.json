@@ -38,7 +38,7 @@
       "domain": "Operations & Algebraic Thinking",
       "unit": "Unit 1: Multiplication Concepts",
       "title": "Commutative & Associative Properties",
-      "description": "Understand commutative (a \u00d7 b = b \u00d7 a) and associative properties of multiplication to multiply single-digit numbers.",
+      "description": "Understand commutative (a × b = b × a) and associative properties of multiplication to multiply single-digit numbers.",
       "standard": "3.OA.B.5",
       "questionCount": 8
     },
@@ -148,7 +148,7 @@
       "domain": "Number & Operations in Base Ten",
       "unit": "Unit 5: Multi-Digit Arithmetic",
       "title": "Multiplying by Multiples of 10",
-      "description": "Multiply one-digit whole numbers by multiples of 10 (e.g., 9 \u00d7 80) using place value understanding and patterns.",
+      "description": "Multiply one-digit whole numbers by multiples of 10 (e.g., 9 × 80) using place value understanding and patterns.",
       "standard": "3.NBT.A.3",
       "questionCount": 8
     },
@@ -291,7 +291,7 @@
       "domain": "Operations & Algebraic Thinking",
       "unit": "Unit 1: Multiplicative Comparison",
       "title": "Comparison Word Problems",
-      "description": "Interpret a multiplication equation as a comparison (e.g., 35 = 5 \u00d7 7 means 35 is 5 times as many as 7). Solve word problems using multiplicative comparisons.",
+      "description": "Interpret a multiplication equation as a comparison (e.g., 35 = 5 × 7 means 35 is 5 times as many as 7). Solve word problems using multiplicative comparisons.",
       "standard": "4.OA.A.1 / 4.OA.A.2",
       "questionCount": 8
     },
@@ -445,7 +445,7 @@
       "domain": "Fractions & Decimals",
       "unit": "Unit 6: Fraction Arithmetic",
       "title": "Multiplying Fractions by Whole Numbers",
-      "description": "Understand a fraction as a multiple of a unit fraction (e.g., 5/4 = 5 \u00d7 1/4). Multiply a fraction by a whole number in word problems.",
+      "description": "Understand a fraction as a multiple of a unit fraction (e.g., 5/4 = 5 × 1/4). Multiply a fraction by a whole number in word problems.",
       "standard": "4.NF.B.4",
       "questionCount": 8
     },
@@ -676,7 +676,7 @@
       "domain": "Fractions",
       "unit": "Unit 5: Multiplication & Division",
       "title": "Fractions as Division Word Problems",
-      "description": "Interpret a fraction as division of the numerator by the denominator (a/b = a \u00f7 b). Solve word problems involving sharing whole items.",
+      "description": "Interpret a fraction as division of the numerator by the denominator (a/b = a ÷ b). Solve word problems involving sharing whole items.",
       "standard": "5.NF.B.3",
       "questionCount": 8
     },
@@ -709,7 +709,7 @@
       "domain": "Fractions",
       "unit": "Unit 5: Multiplication & Division",
       "title": "Dividing Unit Fractions by Wholes",
-      "description": "Apply and extend previous understandings of division to divide unit fractions by non-zero whole numbers (e.g., 1/3 \u00f7 4).",
+      "description": "Apply and extend previous understandings of division to divide unit fractions by non-zero whole numbers (e.g., 1/3 ÷ 4).",
       "standard": "5.NF.B.7a / 5.NF.B.7c",
       "questionCount": 8
     },
@@ -720,7 +720,7 @@
       "domain": "Fractions",
       "unit": "Unit 5: Multiplication & Division",
       "title": "Dividing Wholes by Unit Fractions",
-      "description": "Apply and extend division understandings to divide whole numbers by unit fractions (e.g., 4 \u00f7 1/3). Solve real-world fraction problems.",
+      "description": "Apply and extend division understandings to divide whole numbers by unit fractions (e.g., 4 ÷ 1/3). Solve real-world fraction problems.",
       "standard": "5.NF.B.7b / 5.NF.B.7c",
       "questionCount": 8
     },
@@ -843,7 +843,7 @@
       "title": "Unit 1: Ratios",
       "description": "Rates",
       "standard": "Introduction to Ratios",
-      "questionCount": 9
+      "questionCount": 8
     },
     {
       "lessonNumber": 2,
@@ -854,7 +854,7 @@
       "title": "Unit 1: Ratios",
       "description": "Rates",
       "standard": "Unit Rates",
-      "questionCount": 11
+      "questionCount": 8
     },
     {
       "lessonNumber": 3,
@@ -865,7 +865,7 @@
       "title": "Unit 1: Ratios",
       "description": "Rates",
       "standard": "Equivalent Ratios",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 4,
@@ -876,7 +876,7 @@
       "title": "Unit 2: Percents",
       "description": "Proportions",
       "standard": "Percents as Rates per 100",
-      "questionCount": 9
+      "questionCount": 8
     },
     {
       "lessonNumber": 5,
@@ -887,7 +887,7 @@
       "title": "Unit 2: Percents",
       "description": "Proportions",
       "standard": "Converting Measurement Units",
-      "questionCount": 11
+      "questionCount": 8
     },
     {
       "lessonNumber": 6,
@@ -898,7 +898,7 @@
       "title": "Unit 3: Fractions",
       "description": "Decimals",
       "standard": "Dividing Fractions by Fractions",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 7,
@@ -909,7 +909,7 @@
       "title": "Unit 3: Fractions",
       "description": "Decimals",
       "standard": "Multi-Digit Decimals",
-      "questionCount": 11
+      "questionCount": 8
     },
     {
       "lessonNumber": 8,
@@ -920,7 +920,7 @@
       "title": "Unit 4: Rational Numbers",
       "description": "Positive",
       "standard": "Negative Numbers",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 9,
@@ -931,7 +931,7 @@
       "title": "Unit 4: Rational Numbers",
       "description": "Number Lines",
       "standard": "Coordinate Plane",
-      "questionCount": 11
+      "questionCount": 8
     },
     {
       "lessonNumber": 10,
@@ -942,7 +942,7 @@
       "title": "Unit 4: Rational Numbers",
       "description": "Ordering",
       "standard": "Absolute Value",
-      "questionCount": 9
+      "questionCount": 8
     },
     {
       "lessonNumber": 11,
@@ -953,7 +953,7 @@
       "title": "Unit 5: Algebraic Expressions",
       "description": "Numerical Expressions",
       "standard": "Exponents",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 12,
@@ -964,7 +964,7 @@
       "title": "Unit 5: Algebraic Expressions",
       "description": "Writing",
       "standard": "Evaluating Algebraic Expressions",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 13,
@@ -975,7 +975,7 @@
       "title": "Unit 5: Algebraic Expressions",
       "description": "Equivalent Expressions",
       "standard": "Properties",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 14,
@@ -986,7 +986,7 @@
       "title": "Unit 6: Equations",
       "description": "Inequalities",
       "standard": "Solving One-Variable Equations",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 15,
@@ -997,7 +997,7 @@
       "title": "Unit 6: Equations",
       "description": "Inequalities",
       "standard": "Inequalities",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 16,
@@ -1008,7 +1008,7 @@
       "title": "Unit 7: Area",
       "description": "Polygons",
       "standard": "Area of Triangles",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 17,
@@ -1019,7 +1019,7 @@
       "title": "Unit 7: Area",
       "description": "Polygons",
       "standard": "Area of Irregular Polygons",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 18,
@@ -1030,7 +1030,7 @@
       "title": "Unit 8: Surface Area",
       "description": "Volume",
       "standard": "Volume of Rectangular Prisms",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 19,
@@ -1041,7 +1041,7 @@
       "title": "Unit 8: Surface Area",
       "description": "Volume",
       "standard": "Nets",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 20,
@@ -1052,7 +1052,7 @@
       "title": "Unit 8: Surface Area",
       "description": "Volume",
       "standard": "Coordinate Geometry",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 21,
@@ -1063,7 +1063,7 @@
       "title": "Unit 9: Statistics",
       "description": "Data",
       "standard": "Statistical Questions",
-      "questionCount": 11
+      "questionCount": 8
     },
     {
       "lessonNumber": 22,
@@ -1074,7 +1074,7 @@
       "title": "Unit 9: Statistics",
       "description": "Data",
       "standard": "Measures of Center: Mean, Median",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 23,
@@ -1085,7 +1085,7 @@
       "title": "Unit 9: Statistics",
       "description": "Data",
       "standard": "Displaying Data: Histograms",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 24,
@@ -1096,7 +1096,7 @@
       "title": "Unit 10: Financial Literacy",
       "description": "Money",
       "standard": "Managing Money: Budgets, Percents",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 25,
@@ -1107,7 +1107,7 @@
       "title": "Unit 10: Financial Literacy",
       "description": "Money",
       "standard": "Cumulative Word Problems",
-      "questionCount": 11
+      "questionCount": 8
     },
     {
       "lessonNumber": 1,
@@ -1118,7 +1118,7 @@
       "title": "Unit 1: Rates",
       "description": "Proportions",
       "standard": "Unit Rates with Fractions",
-      "questionCount": 9
+      "questionCount": 8
     },
     {
       "lessonNumber": 2,
@@ -1129,7 +1129,7 @@
       "title": "Unit 1: Rates",
       "description": "Proportions",
       "standard": "Proportional Relationships",
-      "questionCount": 11
+      "questionCount": 8
     },
     {
       "lessonNumber": 3,
@@ -1140,7 +1140,7 @@
       "title": "Unit 1: Rates",
       "description": "Proportions",
       "standard": "Equations of Proportional Relationships",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 4,
@@ -1151,7 +1151,7 @@
       "title": "Unit 2: Percents",
       "description": "Applications",
       "standard": "Percents: Increase, Decrease",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 5,
@@ -1162,7 +1162,7 @@
       "title": "Unit 2: Percents",
       "description": "Applications",
       "standard": "Financial Literacy: Tax, Tip",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 6,
@@ -1173,7 +1173,7 @@
       "title": "Adding",
       "description": "Subtracting Rational Numbers",
       "standard": "Apply and extend understanding of addition and subtraction to rational numbers. Represent on a number line; interpret sums and differences in real-world contexts (temperature, elevation, debt).",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 7,
@@ -1184,7 +1184,7 @@
       "title": "Multiplying",
       "description": "Dividing Rational Numbers",
       "standard": "Apply and extend understanding of multiplication and division to rational numbers. Understand products and quotients of signed numbers; interpret rules for multiplying and dividing integers.",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 8,
@@ -1195,7 +1195,7 @@
       "title": "Four Operations with Rational Numbers",
       "description": "Solve real-world and mathematical problems involving all four operations with rational numbers, including complex fractions and multi-step situations.",
       "standard": "7.NS.A.3",
-      "questionCount": 9
+      "questionCount": 8
     },
     {
       "lessonNumber": 9,
@@ -1272,7 +1272,7 @@
       "title": "Angles",
       "description": "Circles: Circumference",
       "standard": "Area",
-      "questionCount": 9
+      "questionCount": 8
     },
     {
       "lessonNumber": 16,
@@ -1294,7 +1294,7 @@
       "title": "Angles",
       "description": "Area",
       "standard": "Surface Area of Composite Figures",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 18,
@@ -1305,7 +1305,7 @@
       "title": "Angles",
       "description": "Volume of Prisms",
       "standard": "Find volume of right prisms with triangular, trapezoidal, and other polygonal bases. Connect to decomposing 3D figures and apply to real-world packing and capacity problems.",
-      "questionCount": 9
+      "questionCount": 8
     },
     {
       "lessonNumber": 19,
@@ -1316,7 +1316,7 @@
       "title": "Unit 8: Sampling",
       "description": "Inference",
       "standard": "Statistical Sampling",
-      "questionCount": 9
+      "questionCount": 8
     },
     {
       "lessonNumber": 20,
@@ -1327,7 +1327,7 @@
       "title": "Unit 8: Sampling",
       "description": "Inference",
       "standard": "Comparing Two Populations",
-      "questionCount": 9
+      "questionCount": 8
     },
     {
       "lessonNumber": 21,
@@ -1338,7 +1338,7 @@
       "title": "Unit 9: Probability",
       "description": "Introduction to Probability",
       "standard": "Understand that the probability of a chance event is a number between 0 and 1. Approximate probability through experiments; compare experimental to theoretical probability.",
-      "questionCount": 9
+      "questionCount": 8
     },
     {
       "lessonNumber": 22,
@@ -1371,7 +1371,7 @@
       "title": "Unit 10: Capstone",
       "description": "Multi-Step Ratio",
       "standard": "Geometry Word Problems",
-      "questionCount": 9
+      "questionCount": 8
     },
     {
       "lessonNumber": 25,
@@ -1393,7 +1393,7 @@
       "title": "Translations, Reflections & Rotations",
       "description": "Understand and apply translations, reflections, and rotations on the coordinate plane. Describe the effect of each rigid motion on coordinates and identify preserved properties (distance, angle measure).",
       "standard": "8.G.A.1",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 2,
@@ -1404,7 +1404,7 @@
       "title": "Sequences of Transformations",
       "description": "Apply sequences of rigid motions to map one figure onto another. Understand that two figures are congruent if one can be obtained from the other by a sequence of rigid transformations; use this to identify congruent figures.",
       "standard": "8.G.A.2",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 3,
@@ -1415,7 +1415,7 @@
       "title": "Angle Relationships & Parallel Lines",
       "description": "Use informal arguments and transformation reasoning to establish facts about angles formed when parallel lines are cut by a transversal (alternate interior, corresponding angles) and the angle-sum of triangles.",
       "standard": "8.G.A.5",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 4,
@@ -1426,7 +1426,7 @@
       "title": "Dilations & Scale Factor",
       "description": "Understand dilations as transformations that scale figures from a center point by a scale factor. Identify the effect on coordinates and determine whether the image is larger, smaller, or congruent.",
       "standard": "8.G.A.3 / 8.G.A.4",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 5,
@@ -1437,7 +1437,7 @@
       "title": "Similar Figures",
       "description": "Understand that two figures are similar if one can be obtained from the other by a sequence of rigid motions and a dilation. Use similarity to set up and solve proportions for unknown side lengths and angles.",
       "standard": "8.G.A.4",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 6,
@@ -1448,7 +1448,7 @@
       "title": "Introducing Slope via Similar Triangles",
       "description": "Use similar triangles to explain why the slope m is the same between any two distinct points on a non-vertical line in the coordinate plane. Derive the equation y = mx for lines through the origin.",
       "standard": "8.EE.B.6",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 7,
@@ -1459,7 +1459,7 @@
       "title": "Slope",
       "description": "Graph proportional relationships; interpret the unit rate as the slope of the graph. Compare two proportional relationships represented in different ways (table, graph, equation, verbal).",
       "standard": "8.EE.B.5",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 8,
@@ -1470,7 +1470,7 @@
       "title": "Slope-Intercept Form y = mx + b",
       "description": "Derive y = mx + b as defining a linear function with slope m and y-intercept b. Interpret slope and intercept in real-world contexts; graph and write equations given two points or a point and slope.",
       "standard": "8.EE.B.6 / 8.F.A.3",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 9,
@@ -1481,7 +1481,7 @@
       "title": "Interpreting Linear Models",
       "description": "Construct a function to model a linear relationship between two quantities. Determine rate of change and initial value from descriptions, tables, graphs, and equations; interpret in context.",
       "standard": "8.F.B.4",
-      "questionCount": 9
+      "questionCount": 8
     },
     {
       "lessonNumber": 10,
@@ -1492,7 +1492,7 @@
       "title": "Solving Linear Equations in One Variable",
       "description": "Solve linear equations in one variable including cases with one solution, infinitely many solutions, or no solution. Recognize when an equation has each type of solution set; justify reasoning.",
       "standard": "8.EE.C.7",
-      "questionCount": 11
+      "questionCount": 8
     },
     {
       "lessonNumber": 11,
@@ -1503,7 +1503,7 @@
       "title": "Systems of Equations: Graphing",
       "description": "Understand that a solution to a system of two linear equations is the point of intersection of their graphs. Solve systems graphically; interpret solutions in real-world contexts including no-solution and infinite-solution cases.",
       "standard": "8.EE.C.8a / 8.EE.C.8c",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 12,
@@ -1514,7 +1514,7 @@
       "title": "Systems of Equations: Substitution & Elimination",
       "description": "Solve systems of two linear equations algebraically using substitution and elimination (linear combinations). Estimate solutions by graphing and verify algebraically.",
       "standard": "8.EE.C.8b / 8.EE.C.8c",
-      "questionCount": 9
+      "questionCount": 8
     },
     {
       "lessonNumber": 13,
@@ -1525,7 +1525,7 @@
       "title": "Understanding Functions",
       "description": "Understand that a function assigns exactly one output to each input. Represent functions using tables, graphs, and equations; determine whether a relation is a function. Distinguish linear from nonlinear functions.",
       "standard": "8.F.A.1 / 8.F.A.2 / 8.F.A.3",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 14,
@@ -1536,7 +1536,7 @@
       "title": "Qualitative Graphs & Functional Relationships",
       "description": "Describe qualitatively the functional relationship between two quantities by analyzing a graph (e.g., where it is increasing, decreasing, linear, or nonlinear). Sketch a graph from a verbal description.",
       "standard": "8.F.B.5",
-      "questionCount": 9
+      "questionCount": 8
     },
     {
       "lessonNumber": 15,
@@ -1545,9 +1545,9 @@
       "domain": "Functions & Volume",
       "unit": "Unit 5: Functions & Volume",
       "title": "Volume of Cylinders, Cones & Spheres",
-      "description": "Know and apply the formulas for volumes of cylinders (V{=}\u03c0 r^2 h), cones (V{=}{3}\u03c0 r^2 h), and spheres (V{=}{3}\u03c0 r^3). Solve real-world and mathematical problems.",
+      "description": "Know and apply the formulas for volumes of cylinders (V{=}π r^2 h), cones (V{=}{3}π r^2 h), and spheres (V{=}{3}π r^3). Solve real-world and mathematical problems.",
       "standard": "8.G.C.9",
-      "questionCount": 9
+      "questionCount": 8
     },
     {
       "lessonNumber": 16,
@@ -1558,7 +1558,7 @@
       "title": "Patterns of Association",
       "description": "Construct and interpret scatter plots for bivariate measurement data. Describe patterns of association including clustering, outliers, positive/negative correlation, and linear vs.\\ nonlinear trends.",
       "standard": "8.SP.A.1",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 17,
@@ -1569,7 +1569,7 @@
       "title": "Predictions",
       "description": "Informally fit a straight line to data suggesting a linear association. Interpret slope and intercept in context; use the line of best fit to make predictions and assess model fit.",
       "standard": "8.SP.A.2 / 8.SP.A.3",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 18,
@@ -1580,7 +1580,7 @@
       "title": "Two-Way Frequency Tables",
       "description": "Construct and interpret two-way tables summarizing bivariate categorical data from a sample. Use relative frequencies to investigate possible associations between two categorical variables.",
       "standard": "8.SP.A.4",
-      "questionCount": 9
+      "questionCount": 8
     },
     {
       "lessonNumber": 19,
@@ -1591,7 +1591,7 @@
       "title": "Properties of Integer Exponents",
       "description": "Know and apply properties of integer exponents (product, quotient, power, zero, and negative exponent rules) to generate equivalent numerical expressions (e.g., 3^2 3^{-5} = 3^{-3} = {27}).",
       "standard": "8.EE.A.1",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 20,
@@ -1602,7 +1602,7 @@
       "title": "Scientific Notation & Orders of Magnitude",
       "description": "Express very large and very small quantities in scientific notation. Choose units of appropriate size; compare magnitudes and perform operations (add, subtract, multiply, divide) with numbers in scientific notation.",
       "standard": "8.EE.A.3 / 8.EE.A.4",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 21,
@@ -1611,9 +1611,9 @@
       "domain": "Pythagorean Theorem & Irrational Numbers",
       "unit": "Unit 8: Pythagorean Theorem & Irrational Numbers",
       "title": "Square & Cube Roots",
-      "description": "Use square root and cube root symbols to represent solutions to x^2 = p and x^3 = p. Evaluate roots of perfect squares and cubes; recognize \u221a(2) as irrational and connect to the Pythagorean Theorem.",
+      "description": "Use square root and cube root symbols to represent solutions to x^2 = p and x^3 = p. Evaluate roots of perfect squares and cubes; recognize √(2) as irrational and connect to the Pythagorean Theorem.",
       "standard": "8.EE.A.2",
-      "questionCount": 10
+      "questionCount": 8
     },
     {
       "lessonNumber": 22,
@@ -1624,7 +1624,7 @@
       "title": "The Pythagorean Theorem",
       "description": "Explain a proof of the Pythagorean Theorem and its converse. Apply to determine unknown side lengths and classify triangles (right, acute, obtuse) in real-world and mathematical problems.",
       "standard": "8.G.B.7",
-      "questionCount": 9
+      "questionCount": 8
     },
     {
       "lessonNumber": 23,
@@ -1635,7 +1635,7 @@
       "title": "Distance in the Coordinate Plane",
       "description": "Apply the Pythagorean Theorem to find the distance between two points in the coordinate plane. Derive and use the distance formula in real-world contexts.",
       "standard": "8.G.B.8",
-      "questionCount": 1
+      "questionCount": 8
     },
     {
       "lessonNumber": 24,
@@ -1646,7 +1646,7 @@
       "title": "Rational & Irrational Numbers",
       "description": "Distinguish rational from irrational numbers. Understand that irrational numbers have non-repeating, non-terminating decimal expansions. Use rational approximations of irrationals to compare size and locate on a number line.",
       "standard": "8.NS.A.1 / 8.NS.A.2",
-      "questionCount": 1
+      "questionCount": 8
     },
     {
       "lessonNumber": 25,
@@ -1657,7 +1657,7 @@
       "title": "Cumulative Real-World Applications",
       "description": "Solve complex, multi-step real-world problems integrating all 8th grade domains: transformations, linear equations, systems, functions, volume, data analysis, exponents, and the Pythagorean Theorem. Communicate mathematical reasoning clearly and justify solutions.",
       "standard": "8.MP.1--8.MP.8",
-      "questionCount": 1
+      "questionCount": 8
     }
   ]
 }

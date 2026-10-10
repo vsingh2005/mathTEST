@@ -3,7 +3,7 @@
  * 
  * Features:
  * - Gated progressive unlocking (only up to placement test grade or consecutive completions)
- * - 3-tier progressive hint scaffolding drawer (Concept 💡 -> Formula 📐 -> Analogy 🤖)
+ * - 3-tier progressive hint scaffolding drawer (Concept -> Strategy -> Gizmo's Step)
  * - 3-star rating per lesson based on unassisted accuracy
  * - Audio cues & streak flame counter
  * - Interactive visual manipulatives (Fraction bars, Number line, Geoboard)
@@ -102,10 +102,7 @@ class PracticeEngine {
       const completion = progress.completedLessons[lesson.lessonId];
       const starsEarned = completion ? completion.stars : 0;
 
-      let starIcons = '';
-      for (let s = 1; s <= 3; s++) {
-        starIcons += s <= starsEarned ? '⭐' : '☆';
-      }
+      const starsText = starsEarned > 0 ? `${starsEarned} / 3 Stars` : 'Not Started';
 
       if (isUnlocked) {
         cardsHtml += `
@@ -113,7 +110,7 @@ class PracticeEngine {
             <div class="space-y-2">
               <div class="flex items-center justify-between">
                 <span class="px-3 py-1 bg-sky-50 text-sky-700 rounded-full font-extrabold text-xs">Lesson ${lesson.lessonNumber}</span>
-                <span class="text-sm font-bold text-amber-500">${starIcons}</span>
+                <span class="text-xs font-bold text-amber-600">${starsText}</span>
               </div>
               <h4 class="font-extrabold text-navy-dark text-lg">${lesson.title}</h4>
               <p class="text-slate-500 text-xs leading-relaxed line-clamp-2">${lesson.description}</p>
@@ -121,7 +118,7 @@ class PracticeEngine {
             </div>
             <button onclick="window.practiceEngine.startLesson('${lesson.lessonId}', ${lesson.lessonNumber})"
                     class="w-full py-3 rounded-xl btn-blue-gradient text-sm font-bold text-center">
-              ${completion ? 'Practice Again ↻' : 'Start Lesson 🚀'}
+              ${completion ? 'Practice Again' : 'Start Lesson'}
             </button>
           </div>
         `;
@@ -131,14 +128,14 @@ class PracticeEngine {
             <div class="space-y-2">
               <div class="flex items-center justify-between">
                 <span class="px-3 py-1 bg-slate-200 text-slate-500 rounded-full font-bold text-xs">Lesson ${lesson.lessonNumber}</span>
-                <span class="text-base">🔒</span>
+                <span class="text-xs font-bold text-slate-400">Locked</span>
               </div>
               <h4 class="font-bold text-slate-500 text-lg">${lesson.title}</h4>
               <p class="text-slate-400 text-xs leading-relaxed line-clamp-2">${lesson.description}</p>
             </div>
             <div class="p-2.5 bg-amber-50 border border-amber-200 rounded-xl text-center">
               <span class="text-xs font-bold text-amber-800">
-                🔒 Prerequisite: Complete Lesson ${lesson.lessonNumber - 1} with ≥80%
+                Prerequisite: Complete Lesson ${lesson.lessonNumber - 1} with at least 80%
               </span>
             </div>
           </div>
@@ -201,82 +198,92 @@ class PracticeEngine {
     const container = document.getElementById('practice-main-view');
     if (!container) return;
 
+    document.body.setAttribute('data-grade', String(this.activeGrade));
+
     const q = this.activeQuestions[this.currentQuestionIdx];
     const totalQ = this.activeQuestions.length;
     const progressPercent = ((this.currentQuestionIdx + 1) / totalQ) * 100;
     const currentHintsRevealed = this.hintsUsed[this.currentQuestionIdx] || 0;
 
-    // Determine star preview for this question
-    let starPreview = '⭐⭐⭐';
-    if (currentHintsRevealed === 1) starPreview = '⭐⭐☆ (1 Hint)';
-    else if (currentHintsRevealed >= 2) starPreview = '⭐☆☆ (Assisted)';
+    let starPreview = '3 Stars';
+    if (currentHintsRevealed === 1) starPreview = '2 Stars (Hint Used)';
+    else if (currentHintsRevealed >= 2) starPreview = '1 Star (Assisted)';
 
     container.innerHTML = `
-      <div class="max-w-4xl mx-auto space-y-6">
+      <div class="max-w-7xl mx-auto space-y-6">
         <!-- Navigation bar -->
-        <div class="flex items-center justify-between bg-white p-4 rounded-2xl border border-slate-100 shadow-sm">
-          <button onclick="window.practiceEngine.renderCurriculumBrowser()" class="text-slate-500 hover:text-navy-dark font-extrabold text-sm flex items-center gap-1">
-            ← Back to Lessons
+        <div class="flex items-center justify-between bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+          <button onclick="window.practiceEngine.renderCurriculumBrowser()" class="text-slate-600 hover:text-navy-dark font-extrabold text-sm flex items-center gap-1.5 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            Back to Lessons
           </button>
           <div class="flex items-center space-x-3">
-            <span id="practice-streak-badge" class="streak-badge">
-              <span>🔥</span>
-              <span>Streak: ${this.streak}</span>
+            <span id="practice-streak-badge" class="px-3 py-1 rounded-full bg-amber-50 text-amber-800 border border-amber-200 text-xs font-bold">
+              Streak: ${this.streak}
             </span>
-            <button onclick="window.scratchpad.open()" class="px-3.5 py-1.5 rounded-full bg-teal-50 text-teal-700 border border-teal-200 text-xs font-extrabold hover:bg-teal-100 transition-colors">
-              📝 Scratchpad
-            </button>
+            <button onclick="window.soundManager && window.soundManager.toggleMute()" class="sound-toggle-btn" title="Toggle Sound FX"></button>
           </div>
         </div>
 
-        <!-- Question Card -->
-        <div class="bg-white p-8 md:p-10 rounded-card card-shadow border border-slate-100 space-y-6">
-          <!-- Progress header -->
-          <div class="space-y-2">
-            <div class="flex items-center justify-between text-xs font-bold text-slate-400">
-              <span>Question ${this.currentQuestionIdx + 1} of ${totalQ}</span>
-              <span class="text-amber-500 font-extrabold">Star Potential: ${starPreview}</span>
+        <!-- Two-Column Side-by-Side Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+          <!-- Left Column: Question Card (7 cols) -->
+          <div class="lg:col-span-7 bg-white p-6 md:p-8 rounded-card card-shadow border border-slate-200 space-y-6">
+            <!-- Progress header -->
+            <div class="space-y-2">
+              <div class="flex items-center justify-between text-xs font-bold text-slate-400">
+                <span>Question ${this.currentQuestionIdx + 1} of ${totalQ}</span>
+                <span class="text-amber-600 font-extrabold">Rating: ${starPreview}</span>
+              </div>
+              <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
+                <div class="bg-sky-500 h-full transition-all duration-300" style="width: ${progressPercent}%"></div>
+              </div>
             </div>
-            <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
-              <div class="bg-sky-500 h-full transition-all duration-300" style="width: ${progressPercent}%"></div>
+
+            <!-- Prompt -->
+            <div class="space-y-3">
+              <div class="flex items-center space-x-2">
+                <span class="px-3 py-1 bg-sky-50 text-sky-700 rounded-full font-bold text-xs">${this.activeLesson.domain}</span>
+                <span class="text-xs font-bold text-slate-400">${this.activeLesson.standard}</span>
+              </div>
+              <h3 class="text-2xl font-black text-navy-dark leading-relaxed">${q.prompt}</h3>
             </div>
-          </div>
 
-          <!-- Prompt -->
-          <div class="space-y-3">
-            <div class="flex items-center space-x-2">
-              <span class="px-3 py-1 bg-sky-50 text-sky-700 rounded-full font-bold text-xs">${this.activeLesson.domain}</span>
-              <span class="text-xs font-bold text-slate-400">${this.activeLesson.standard}</span>
+            <!-- Interactive Manipulatives Widget -->
+            <div id="interactive-manipulative-slot"></div>
+
+            <!-- Inputs -->
+            <div id="practice-inputs-slot" class="pt-2"></div>
+
+            <!-- Feedback Alert Banner Slot -->
+            <div id="feedback-alert-slot"></div>
+
+            <!-- 3-Step Tiered Hint Drawer -->
+            <div class="pt-4 border-t border-slate-100 space-y-3">
+              <div class="flex items-center justify-between">
+                <button onclick="window.practiceEngine.revealHint()" class="px-4 py-2 rounded-xl bg-amber-50 text-amber-800 border border-amber-200 hover:bg-amber-100 text-xs font-extrabold transition-all">
+                  Need a Hint (${currentHintsRevealed}/3 Steps)
+                </button>
+                <span class="text-xs text-slate-400">Step-by-step guidance</span>
+              </div>
+
+              <div id="hint-drawer-content" class="space-y-2"></div>
             </div>
-            <h3 class="text-2xl font-black text-navy-dark leading-relaxed">${q.prompt}</h3>
-          </div>
 
-          <!-- Interactive Manipulatives Widget -->
-          <div id="interactive-manipulative-slot"></div>
-
-          <!-- Inputs -->
-          <div id="practice-inputs-slot" class="pt-2"></div>
-
-          <!-- 3-Step Tiered Hint Drawer -->
-          <div class="pt-4 border-t border-slate-100 space-y-3">
-            <div class="flex items-center justify-between">
-              <button onclick="window.practiceEngine.revealHint()" class="px-4 py-2 rounded-xl bg-amber-50 text-amber-800 border border-amber-200 hover:bg-amber-100 text-xs font-extrabold flex items-center gap-1.5 transition-all">
-                💡 Need a Hint? (${currentHintsRevealed}/3 Steps)
+            <!-- Bottom Action Buttons -->
+            <div class="pt-6 border-t border-slate-100 flex items-center justify-between">
+              <button onclick="window.practiceEngine.prevQuestion()" ${this.currentQuestionIdx === 0 ? 'disabled class="opacity-40 cursor-not-allowed px-5 py-2.5 rounded-xl border border-slate-200 font-bold text-slate-400"' : 'class="px-5 py-2.5 rounded-xl border border-slate-200 font-bold text-slate-600 hover:bg-slate-50"'}>
+                Previous
               </button>
-              <span class="text-xs text-slate-400">Using hints provides guidance while preserving practice!</span>
+              <button onclick="window.practiceEngine.checkAnswer()" class="px-8 py-3 rounded-xl btn-blue-gradient text-base font-bold shadow-md">
+                Check Answer
+              </button>
             </div>
-
-            <div id="hint-drawer-content" class="space-y-2"></div>
           </div>
 
-          <!-- Bottom Action Buttons -->
-          <div class="pt-6 border-t border-slate-100 flex items-center justify-between">
-            <button onclick="window.practiceEngine.prevQuestion()" ${this.currentQuestionIdx === 0 ? 'disabled class="opacity-40 cursor-not-allowed px-5 py-2.5 rounded-xl border border-slate-200 font-bold text-slate-400"' : 'class="px-5 py-2.5 rounded-xl border border-slate-200 font-bold text-slate-600 hover:bg-slate-50"'}>
-              Previous
-            </button>
-            <button onclick="window.practiceEngine.checkAnswer()" class="px-8 py-3 rounded-xl btn-blue-gradient text-base font-bold shadow-md">
-              Check Answer ✓
-            </button>
+          <!-- Right Column: Embedded Side-by-Side Scratchpad (5 cols) -->
+          <div class="lg:col-span-5 sticky top-24 space-y-2">
+            <div id="scratchpad-embedded-slot"></div>
           </div>
         </div>
       </div>
@@ -285,6 +292,13 @@ class PracticeEngine {
     this.renderInputs(q);
     this.renderHints(q, currentHintsRevealed);
     this.renderManipulativeIfApplicable(q);
+
+    if (window.scratchpad) {
+      window.scratchpad.mountEmbedded('scratchpad-embedded-slot');
+    }
+    if (window.soundManager) {
+      window.soundManager.updateSoundButtons();
+    }
   }
 
   renderInputs(q) {
@@ -299,8 +313,8 @@ class PracticeEngine {
           <button onclick="window.practiceEngine.selectOption(${idx})"
                   class="w-full text-left p-4 rounded-xl border-2 transition-all flex items-center justify-between ${isSelected ? 'border-sky-500 bg-sky-50' : 'border-slate-100 hover:bg-slate-50'}">
             <span class="font-bold text-slate-700">${opt.text}</span>
-            <span class="w-5 h-5 rounded-full border-2 flex items-center justify-center ${isSelected ? 'border-sky-500 bg-sky-500 text-white' : 'border-slate-300'}">
-              ${isSelected ? '✓' : ''}
+            <span class="w-5 h-5 rounded-full border-2 flex items-center justify-center text-xs font-bold ${isSelected ? 'border-sky-500 bg-sky-500 text-white' : 'border-slate-300 text-transparent'}">
+              <svg class="w-3 h-3 ${isSelected ? 'block' : 'hidden'}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
             </span>
           </button>
         `;
@@ -314,7 +328,7 @@ class PracticeEngine {
           <input type="text" id="practice-numeric-input"
                  value="${currentVal}"
                  oninput="window.practiceEngine.saveNumeric(this.value)"
-                 placeholder="Enter your math answer..."
+                 placeholder="Enter math answer..."
                  class="w-full p-4 rounded-xl border-2 border-slate-200 focus:border-sky-500 focus:outline-none text-xl font-black text-navy-dark">
           <div id="math-keypad-container"></div>
         </div>
@@ -405,13 +419,11 @@ class PracticeEngine {
       this.streak++;
       if (this.streak > this.maxStreak) this.maxStreak = this.streak;
 
-      // Calculate stars for this question
       let stars = 3;
       if (hintsCount === 1) stars = 2;
       else if (hintsCount >= 2) stars = 1;
       this.questionStars[this.currentQuestionIdx] = stars;
 
-      // Celebrate streak milestones
       if (this.streak >= 3) {
         this.sound.playStreak();
         if (typeof confetti === 'function') {
@@ -419,7 +431,6 @@ class PracticeEngine {
         }
       }
 
-      // Move to next question or complete lesson
       if (this.currentQuestionIdx + 1 < this.activeQuestions.length) {
         this.currentQuestionIdx++;
         this.renderQuestionView();
@@ -429,8 +440,16 @@ class PracticeEngine {
     } else {
       this.sound.playTryAgain();
       this.streak = 0;
-      alert(`Not quite! Review your work or click "Need a Hint?" 💡 to guide you through.`);
-      this.renderQuestionView();
+      const feedbackSlot = document.getElementById('feedback-alert-slot');
+      if (feedbackSlot) {
+        feedbackSlot.innerHTML = `
+          <div class="p-3.5 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold flex items-center justify-between">
+            <span>Review calculation or open hints below for step-by-step guidance.</span>
+            <button onclick="this.parentElement.remove()" class="text-amber-600 hover:text-amber-800 font-bold ml-2">x</button>
+          </div>
+        `;
+      }
+      this.renderHints(q, hintsCount);
     }
   }
 
@@ -443,10 +462,9 @@ class PracticeEngine {
     const totalQ = this.activeQuestions.length;
     let totalStars = 0;
     Object.values(this.questionStars).forEach(s => totalStars += s);
-    const scorePercent = 100; // All solved correctly to finish
+    const scorePercent = 100;
     const earnedStars = Math.max(1, Math.round(totalStars / totalQ));
 
-    // Save progress to local state
     const updatedProgress = StorageManager.recordLessonCompletion(
       this.activeGrade,
       this.activeLesson.lessonNumber,
@@ -454,30 +472,28 @@ class PracticeEngine {
       earnedStars
     );
 
-    // Persist to WordPress REST API!
     ApiClient.saveStudentProgress(updatedProgress);
 
     const container = document.getElementById('practice-main-view');
     container.innerHTML = `
-      <div class="max-w-xl mx-auto bg-white p-10 rounded-card card-shadow border border-slate-100 text-center space-y-6">
-        <span class="text-6xl block">🎉</span>
-        <h3 class="text-3xl font-black text-navy-dark">Lesson Mastered!</h3>
-        <p class="text-slate-500 font-semibold">You've successfully completed ${this.activeLesson.title}.</p>
+      <div class="max-w-xl mx-auto bg-white p-10 rounded-card card-shadow border border-slate-200 text-center space-y-6">
+        <h3 class="text-3xl font-black text-navy-dark">Lesson Mastered</h3>
+        <p class="text-slate-500 font-semibold">Completed: ${this.activeLesson.title}</p>
 
-        <div class="p-6 bg-amber-50 rounded-2xl border border-amber-200 space-y-2">
-          <span class="text-xs uppercase tracking-widest font-black text-amber-700">Stars Earned</span>
-          <div class="text-4xl">
-            ${'⭐'.repeat(earnedStars)}${'☆'.repeat(3 - earnedStars)}
+        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
+          <span class="text-xs uppercase tracking-widest font-black text-slate-500">Stars Earned</span>
+          <div class="text-xl font-black text-amber-600">
+            ${earnedStars} of 3 Stars
           </div>
-          <span class="text-xs text-amber-600 font-bold block">🔥 Best Streak: ${this.maxStreak} in a row</span>
+          <span class="text-xs text-slate-600 font-bold block">Best Streak: ${this.maxStreak} in a row</span>
         </div>
 
         <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-200 text-emerald-800 text-sm font-bold">
-          🔓 Next consecutive lesson has been unlocked!
+          Next consecutive lesson unlocked.
         </div>
 
         <button onclick="window.practiceEngine.renderCurriculumBrowser()" class="w-full py-4 rounded-xl btn-blue-gradient text-base font-extrabold shadow-md">
-          Continue to Next Quest →
+          Continue to Next Lesson
         </button>
       </div>
     `;

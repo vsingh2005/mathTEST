@@ -113,7 +113,31 @@ export class StorageManager {
       highestStreak: 0,
       badges: []
     };
-    return this.getItem(this.KEYS.STUDENT_PROGRESS, defaultProgress);
+    const progress = this.getItem(this.KEYS.STUDENT_PROGRESS, defaultProgress);
+
+    // If active user is student1, automatically unlock all modules/lessons across all grades
+    let sessionUser = '';
+    try {
+      const rawSession = localStorage.getItem(this.KEYS.SESSION) || sessionStorage.getItem(this.KEYS.SESSION);
+      if (rawSession) {
+        if (rawSession.startsWith('{')) {
+          const parsed = JSON.parse(rawSession);
+          sessionUser = parsed.username || (parsed.user && (parsed.user.username || parsed.user.display_name)) || parsed.studentName || '';
+        } else {
+          sessionUser = rawSession;
+        }
+      }
+    } catch (e) {}
+
+    if (String(sessionUser).toLowerCase() === 'student1') {
+      if (!progress.unlockedLessonIndex) progress.unlockedLessonIndex = {};
+      for (let g = 3; g <= 8; g++) {
+        progress.unlockedLessonIndex[String(g)] = 25;
+      }
+      if (!progress.testedGrade) progress.testedGrade = 6;
+    }
+
+    return progress;
   }
 
   static saveProgress(progress) {
@@ -126,6 +150,23 @@ export class StorageManager {
    * OR unlocked consecutively by completing previous lesson with >= 80%.
    */
   static isLessonUnlocked(grade, lessonNumber) {
+    let sessionUser = '';
+    try {
+      const rawSession = localStorage.getItem(this.KEYS.SESSION) || sessionStorage.getItem(this.KEYS.SESSION);
+      if (rawSession) {
+        if (rawSession.startsWith('{')) {
+          const parsed = JSON.parse(rawSession);
+          sessionUser = parsed.username || (parsed.user && (parsed.user.username || parsed.user.display_name)) || parsed.studentName || '';
+        } else {
+          sessionUser = rawSession;
+        }
+      }
+    } catch (e) {}
+
+    if (String(sessionUser).toLowerCase() === 'student1') {
+      return true; // All modules are unlocked for student1
+    }
+
     const progress = this.getProgress();
     const gradeStr = String(grade);
     const maxUnlocked = progress.unlockedLessonIndex[gradeStr] || 0;

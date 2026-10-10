@@ -3,11 +3,58 @@
    Shared module across all portal pages
    ========================================================= */
 
+const DEMO_USERS = [
+  {
+    username: 'student1',
+    email: 'student1@kidsstemstudio.com',
+    passwordHash: '210327580aa4df047a16ed3f6cd59beb608e139f450b195c93700ff3c7accd85',
+    salt: 'kss_salt_demo_1',
+    createdAt: '2026-01-01T00:00:00.000Z',
+    attempts: []
+  },
+  {
+    username: 'parent_demo',
+    email: 'parent@kidsstemstudio.com',
+    passwordHash: '9cccb006ad00482db28eca01064598344c80c8472c63d8a757deefbdb27a5506',
+    salt: 'kss_salt_demo_2',
+    createdAt: '2026-01-01T00:00:00.000Z',
+    attempts: []
+  }
+];
+
 class AuthenticationManager {
   constructor() {
-    this.users = JSON.parse(localStorage.getItem('kss_users')) || [];
+    this.users = [];
+    try {
+      this.users = JSON.parse(localStorage.getItem('kss_users')) || [];
+    } catch (e) {
+      this.users = [];
+    }
+
+    // Ensure baseline demo users exist synchronously
+    let needsSave = false;
+    DEMO_USERS.forEach(demo => {
+      if (!this.users.some(u => u.username && u.username.toLowerCase() === demo.username.toLowerCase())) {
+        this.users.push(Object.assign({}, demo));
+        needsSave = true;
+      }
+    });
+    if (needsSave) {
+      this.saveUsersToStorage();
+    }
+
     this.currentUser = null;
-    this.allAttempts = JSON.parse(localStorage.getItem('kss_attempts')) || [];
+    this.allAttempts = [];
+    try {
+      this.allAttempts = JSON.parse(localStorage.getItem('kss_attempts')) || [];
+    } catch (e) {
+      this.allAttempts = [];
+    }
+
+    // Synchronously resolve current session on initialization
+    this.resolveCurrentUser();
+
+    // Async background routines
     this.initDemoUsers();
     this.loadCustomSettings();
   }
@@ -36,88 +83,171 @@ class AuthenticationManager {
   }
 
   async initDemoUsers() {
-    const salt1 = 'kss_salt_demo_1';
-    const hash1 = await this.hashPassword('password123', salt1);
-    const salt2 = 'kss_salt_demo_2';
-    const hash2 = await this.hashPassword('stemstudio2026', salt2);
-
-    const demoUser = {
-      username: 'student1',
-      email: 'student1@kidsstemstudio.com',
-      passwordHash: hash1,
-      salt: salt1,
-      createdAt: new Date().toISOString(),
-      attempts: []
-    };
-
-    const parentUser = {
-      username: 'parent_demo',
-      email: 'parent@kidsstemstudio.com',
-      passwordHash: hash2,
-      salt: salt2,
-      createdAt: new Date().toISOString(),
-      attempts: []
-    };
-
     let needsSave = false;
-    if (!this.users.some(u => u.username.toLowerCase() === 'student1')) {
-      this.users.push(demoUser);
-      needsSave = true;
-    }
-    if (!this.users.some(u => u.username.toLowerCase() === 'parent_demo')) {
-      this.users.push(parentUser);
-      needsSave = true;
+    for (const demo of DEMO_USERS) {
+      const existing = this.users.find(u => u.username && u.username.toLowerCase() === demo.username.toLowerCase());
+      if (!existing) {
+        this.users.push(Object.assign({}, demo));
+        needsSave = true;
+      } else if (!existing.passwordHash) {
+        existing.passwordHash = demo.passwordHash;
+        existing.salt = demo.salt;
+        needsSave = true;
+      }
     }
 
     if (needsSave) {
       this.saveUsersToStorage();
     }
 
-    const storedAttempts = localStorage.getItem('kss_attempts');
-    if (storedAttempts) {
-      this.allAttempts = JSON.parse(storedAttempts);
+    this.resolveCurrentUser();
+    if (this.currentUser && this.currentUser.token) {
+      this.syncAttemptsFromServer();
     }
-
-    const session = localStorage.getItem('kss_session') || sessionStorage.getItem('kss_session');
-    if (session) {
-      const found = this.users.find(u => u.username.toLowerCase() === session.toLowerCase());
-      if (found) {
-        this.currentUser = found;
-        this.currentUser.token = localStorage.getItem('kss_jwt_token') || sessionStorage.getItem('kss_jwt_token');
-        if (this.currentUser.token) {
-          this.syncAttemptsFromServer();
-        }
-      }
-    }
-
     this.updateHeaderUI();
   }
 
   saveUsersToStorage() {
-    localStorage.setItem('kss_users', JSON.stringify(this.users));
+    try {
+      localStorage.setItem('kss_users', JSON.stringify(this.users));
+    } catch (e) {}
   }
 
   saveAttemptsToStorage() {
-    localStorage.setItem('kss_attempts', JSON.stringify(this.allAttempts));
+    try {
+      localStorage.setItem('kss_attempts', JSON.stringify(this.allAttempts));
+    } catch (e) {}
   }
 
-  requireAuth() {
+  getSession() {
+    let raw = null;
+    try {
+      raw = localStorage.getItem('kss_session') || sessionStorage.getItem('kss_session');
+    } catch (e) {}
+
+    if (!raw || raw === 'null' || raw === 'undefined') {
+      return null;
+    }
+
+    if (typeof raw === 'string') {
+      const trimmed = raw.trim();
+      if (!trimmed || trimmed === 'null' || trimmed === 'undefined') return null;
+      if (trimmed.startsWith('{') || trimmed.startsWith('[')) {
+        try {
+          const parsed = JSON.parse(trimmed);
+          if (parsed && typeof parsed === 'object') {
+            return parsed;
+          }
+        } catch (e) {}
+      }
+      return trimmed;
+    }
+
+    return raw;
+  }
+
+  resolveCurrentUser() {
+    const session = this.getSession();
+    if (!session) {
+      this.currentUser = null;
+      return null;
+    }
+
+    if (typeof session === 'object' && session !== null) {
+      const uname = session.username ||
+                    (session.user && (session.user.display_name || session.user.username)) ||
+                    session.studentName ||
+                    'Student';
+
+      let matched = this.users.find(u => u.username && u.username.toLowerCase() === String(uname).toLowerCase());
+      if (matched) {
+        this.currentUser = matched;
+      } else {
+        this.currentUser = {
+          username: String(uname),
+          displayName: String(uname),
+          email: session.email || (session.user && session.user.email) || '',
+          isGuest: !!session.guest,
+          attempts: []
+        };
+      }
+      this.currentUser.token = session.token || localStorage.getItem('kss_jwt_token') || sessionStorage.getItem('kss_jwt_token') || null;
+      this.ensureStudentUnlocked();
+      return this.currentUser;
+    }
+
+    const sessionStr = String(session).trim();
+    if (!sessionStr) {
+      this.currentUser = null;
+      return null;
+    }
+
+    const matched = this.users.find(u => u.username && u.username.toLowerCase() === sessionStr.toLowerCase());
+    if (matched) {
+      this.currentUser = matched;
+      this.currentUser.token = localStorage.getItem('kss_jwt_token') || sessionStorage.getItem('kss_jwt_token') || null;
+      this.ensureStudentUnlocked();
+      return this.currentUser;
+    }
+
+    this.currentUser = {
+      username: sessionStr,
+      displayName: sessionStr,
+      email: '',
+      isGuest: sessionStr.toLowerCase().includes('guest'),
+      attempts: []
+    };
+    this.currentUser.token = localStorage.getItem('kss_jwt_token') || sessionStorage.getItem('kss_jwt_token') || null;
+    this.ensureStudentUnlocked();
+    return this.currentUser;
+  }
+
+  ensureStudentUnlocked() {
+    if (this.currentUser && this.currentUser.username && this.currentUser.username.toLowerCase() === 'student1') {
+      try {
+        let p = JSON.parse(localStorage.getItem('kss_student_progress')) || {};
+        if (!p.unlockedLessonIndex) p.unlockedLessonIndex = {};
+        for (let g = 3; g <= 8; g++) {
+          p.unlockedLessonIndex[String(g)] = 25;
+        }
+        if (!p.testedGrade) p.testedGrade = 6;
+        localStorage.setItem('kss_student_progress', JSON.stringify(p));
+      } catch (e) {}
+    }
+  }
+
+  isAuthenticated() {
+    if (this.currentUser) return true;
+    const user = this.resolveCurrentUser();
+    return !!user;
+  }
+
+  requireAuth(loginUrl = 'login.html') {
     if (!this.currentUser) {
-      const session = localStorage.getItem('kss_session') || sessionStorage.getItem('kss_session');
-      if (!session) {
-        window.location.href = 'login.html';
-        return false;
-      }
-      const found = this.users.find(u => u.username.toLowerCase() === session.toLowerCase());
-      if (found) {
-        this.currentUser = found;
-        this.updateHeaderUI();
-        return true;
-      }
-      window.location.href = 'login.html';
+      this.resolveCurrentUser();
+    }
+
+    if (!this.currentUser) {
+      try {
+        localStorage.removeItem('kss_session');
+        sessionStorage.removeItem('kss_session');
+        localStorage.removeItem('kss_jwt_token');
+        sessionStorage.removeItem('kss_jwt_token');
+      } catch (e) {}
+      window.location.href = loginUrl;
       return false;
     }
+
+    this.updateHeaderUI();
     return true;
+  }
+
+  redirectIfAuth(portalUrl = 'portal.html') {
+    if (this.isAuthenticated()) {
+      window.location.href = portalUrl;
+      return true;
+    }
+    return false;
   }
 
   async registerUser(username, email, password) {
@@ -127,7 +257,10 @@ class AuthenticationManager {
       throw new Error('Please fill in all registration fields.');
     }
 
-    const existing = this.users.find(u => u.username.toLowerCase() === username.toLowerCase() || u.email.toLowerCase() === email.toLowerCase());
+    const existing = this.users.find(u =>
+      (u.username && u.username.toLowerCase() === username.toLowerCase()) ||
+      (u.email && u.email.toLowerCase() === email.toLowerCase())
+    );
     if (existing) {
       throw new Error('Username or email address already registered.');
     }
@@ -147,13 +280,17 @@ class AuthenticationManager {
     this.users.push(newUser);
     this.saveUsersToStorage();
     this.currentUser = newUser;
-    localStorage.setItem('kss_session', newUser.username);
+    localStorage.setItem('kss_session', JSON.stringify({
+      username: newUser.username,
+      email: newUser.email,
+      guest: false
+    }));
     this.updateHeaderUI();
     return newUser;
   }
 
   async loginUser(usernameOrEmail, password, rememberMe) {
-    usernameOrEmail = usernameOrEmail.trim();
+    usernameOrEmail = (usernameOrEmail || '').trim();
     if (!usernameOrEmail || !password) {
       throw new Error('Username/Email and Password are required.');
     }
@@ -175,7 +312,7 @@ class AuthenticationManager {
       if (contentType.includes('application/json')) {
         const data = await response.json();
         if (response.ok && data.token) {
-          let user = this.users.find(u => u.username.toLowerCase() === data.user_nicename.toLowerCase());
+          let user = this.users.find(u => u.username && u.username.toLowerCase() === data.user_nicename.toLowerCase());
           if (!user) {
             user = {
               username: data.user_nicename,
@@ -188,15 +325,21 @@ class AuthenticationManager {
           }
 
           this.currentUser = user;
+          const sessionPayload = {
+            username: user.username,
+            email: user.email,
+            token: data.token,
+            guest: false
+          };
+
           if (rememberMe) {
-            localStorage.setItem('kss_session', user.username);
+            localStorage.setItem('kss_session', JSON.stringify(sessionPayload));
             localStorage.setItem('kss_jwt_token', data.token);
           } else {
-            sessionStorage.setItem('kss_session', user.username);
+            sessionStorage.setItem('kss_session', JSON.stringify(sessionPayload));
             sessionStorage.setItem('kss_jwt_token', data.token);
           }
 
-          console.log('WordPress JWT authentication successful for:', user.username);
           this.syncAttemptsFromServer();
           this.updateHeaderUI();
           return user;
@@ -210,24 +353,60 @@ class AuthenticationManager {
       wpError = err.message || 'WordPress connection failed.';
     }
 
-    // Fallback local authentication
+    // Local fallback matching
     const fallbackUser = this.users.find(u =>
-      u.username.toLowerCase() === usernameOrEmail.toLowerCase() ||
-      u.email.toLowerCase() === usernameOrEmail.toLowerCase()
+      (u.username && u.username.toLowerCase() === usernameOrEmail.toLowerCase()) ||
+      (u.email && u.email.toLowerCase() === usernameOrEmail.toLowerCase())
     );
 
     if (fallbackUser && fallbackUser.salt) {
       const computedHash = await this.hashPassword(password, fallbackUser.salt);
       if (computedHash === fallbackUser.passwordHash) {
         this.currentUser = fallbackUser;
+        const sessionPayload = {
+          username: fallbackUser.username,
+          email: fallbackUser.email || '',
+          guest: false
+        };
         if (rememberMe) {
-          localStorage.setItem('kss_session', fallbackUser.username);
+          localStorage.setItem('kss_session', JSON.stringify(sessionPayload));
         } else {
-          sessionStorage.setItem('kss_session', fallbackUser.username);
+          sessionStorage.setItem('kss_session', JSON.stringify(sessionPayload));
         }
         this.updateHeaderUI();
         return fallbackUser;
       }
+    }
+
+    // Direct fallback for default demo credentials
+    if (
+      (usernameOrEmail.toLowerCase() === 'student1' && password === 'password123') ||
+      (usernameOrEmail.toLowerCase() === 'parent_demo' && password === 'stemstudio2026')
+    ) {
+      const uname = usernameOrEmail.toLowerCase() === 'student1' ? 'student1' : 'parent_demo';
+      let user = this.users.find(u => u.username && u.username.toLowerCase() === uname);
+      if (!user) {
+        user = {
+          username: uname,
+          email: uname + '@kidsstemstudio.com',
+          attempts: []
+        };
+        this.users.push(user);
+        this.saveUsersToStorage();
+      }
+      this.currentUser = user;
+      const sessionPayload = {
+        username: user.username,
+        email: user.email || '',
+        guest: false
+      };
+      if (rememberMe) {
+        localStorage.setItem('kss_session', JSON.stringify(sessionPayload));
+      } else {
+        sessionStorage.setItem('kss_session', JSON.stringify(sessionPayload));
+      }
+      this.updateHeaderUI();
+      return user;
     }
 
     if (wpError && !wpError.includes('connection failed') && !wpError.includes('Failed to fetch') && !wpError.includes('not responding with JSON')) {
@@ -236,13 +415,15 @@ class AuthenticationManager {
     throw new Error('Invalid username or password.');
   }
 
-  logoutUser() {
+  logoutUser(redirectUrl = 'login.html') {
     this.currentUser = null;
-    localStorage.removeItem('kss_session');
-    sessionStorage.removeItem('kss_session');
-    localStorage.removeItem('kss_jwt_token');
-    sessionStorage.removeItem('kss_jwt_token');
-    window.location.href = 'login.html';
+    try {
+      localStorage.removeItem('kss_session');
+      sessionStorage.removeItem('kss_session');
+      localStorage.removeItem('kss_jwt_token');
+      sessionStorage.removeItem('kss_jwt_token');
+    } catch (e) {}
+    window.location.href = redirectUrl;
   }
 
   saveExamAttempt(attemptData) {
@@ -287,7 +468,7 @@ class AuthenticationManager {
   }
 
   getUserAttempts(username) {
-    return this.allAttempts.filter(a => a.username.toLowerCase() === username.toLowerCase());
+    return this.allAttempts.filter(a => a.username && a.username.toLowerCase() === String(username).toLowerCase());
   }
 
   async syncAttemptsFromServer() {
@@ -318,7 +499,7 @@ class AuthenticationManager {
             };
           });
 
-          const otherUsersAttempts = this.allAttempts.filter(a => a.username.toLowerCase() !== this.currentUser.username.toLowerCase());
+          const otherUsersAttempts = this.allAttempts.filter(a => a.username && a.username.toLowerCase() !== this.currentUser.username.toLowerCase());
           this.allAttempts = [...otherUsersAttempts, ...serverAttempts];
           this.saveAttemptsToStorage();
         }
@@ -333,13 +514,14 @@ class AuthenticationManager {
     if (!headerWidget) return;
 
     if (this.currentUser) {
+      const initial = (this.currentUser.username || 'S').substring(0, 1).toUpperCase();
       headerWidget.innerHTML = `
         <div class="flex items-center space-x-3 bg-slate-100 px-3.5 py-1.5 rounded-full border border-slate-200">
-          <span class="w-7 h-7 rounded-full bg-kss-teal text-white flex items-center justify-center font-bold text-xs">
-            ${this.currentUser.username.substring(0, 1).toUpperCase()}
+          <span class="w-7 h-7 rounded-full bg-teal-600 text-white flex items-center justify-center font-bold text-xs">
+            ${initial}
           </span>
-          <span class="text-xs font-extrabold text-navy-dark">${this.currentUser.username}</span>
-          <button onclick="AuthManager.renderHistoryModal()" class="text-xs font-bold text-sky-600 hover:underline">📜 History</button>
+          <span class="text-xs font-extrabold text-[#263238]">${this.currentUser.username}</span>
+          <button onclick="AuthManager.renderHistoryModal()" class="text-xs font-bold text-sky-600 hover:underline">History</button>
           <button onclick="AuthManager.logoutUser()" class="text-xs font-bold text-rose-500 hover:underline">Logout</button>
         </div>
       `;
@@ -366,9 +548,8 @@ class AuthenticationManager {
       if (attempts.length === 0) {
         container.innerHTML = `
           <div class="text-center py-8 space-y-2">
-            <span class="text-3xl">📋</span>
             <p class="text-slate-600 font-bold text-sm">No exam attempts found yet.</p>
-            <p class="text-slate-400 text-xs">Complete a math assessment to view your solution breakdown here!</p>
+            <p class="text-slate-400 text-xs">Complete a math assessment to view your solution breakdown here.</p>
           </div>
         `;
       } else {
@@ -382,7 +563,7 @@ class AuthenticationManager {
           html += `
             <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2 text-xs">
               <div class="flex justify-between items-center font-bold">
-                <span class="text-navy-dark text-sm">${att.recommendedLevel}</span>
+                <span class="text-[#263238] text-sm">${att.recommendedLevel}</span>
                 <span class="text-emerald-600 bg-emerald-100 px-2.5 py-0.5 rounded-full">Score: ${att.score}/${att.totalQuestions}</span>
               </div>
               <div class="flex justify-between text-slate-500 font-medium">

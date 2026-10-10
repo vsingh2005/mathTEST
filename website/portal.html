@@ -17,6 +17,9 @@
   <link rel="stylesheet" id="dashicons-css" href="https://learn.kidsstemstudio.com/wp-includes/css/dashicons.min.css?ver=7.0.2" media="all" />
   <!-- Custom CSS -->
   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="shared/css/variables.css">
+  <link rel="stylesheet" href="shared/css/base.css">
+  <link rel="stylesheet" href="shared/css/components.css">
   <script>
     tailwind.config = {
       theme: {
@@ -105,17 +108,19 @@
               Discover Your <span class="text-sky-blue">Math Level</span>
             </h1>
             <p class="text-lg md:text-xl text-slate-500 font-medium max-w-xl leading-relaxed">
-              Complete a short 45–60 minute adaptive math placement assessment developed by Kids STEM Studio to evaluate baseline skills across Grade 3–8 math standards. <strong>Before starting, please make sure you have scratch paper and a pencil ready!</strong>
+              Complete a short 45-60 minute adaptive math placement assessment developed by Kids STEM Studio to evaluate baseline skills across Grade 3-8 math standards. <strong>Before starting, please make sure you have scratch paper and a pencil ready!</strong>
             </p>
             <div class="pt-4 flex flex-wrap items-center gap-4">
               <button onclick="showTrackSelection()" class="px-8 py-4 rounded-2xl btn-blue-gradient text-lg">
                 Begin Math Assessment
               </button>
-              <button onclick="AuthManager.renderHistoryModal()" class="px-6 py-4 rounded-2xl border-2 border-slate-200 text-slate-700 font-extrabold hover:bg-slate-100 transition-colors text-base">
-                📜 View Past Results
+              <button onclick="AuthManager.renderHistoryModal()" class="px-6 py-4 rounded-2xl border-2 border-slate-200 text-slate-700 font-extrabold hover:bg-slate-100 transition-colors text-base flex items-center gap-2">
+                <svg class="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                <span>View Past Results</span>
               </button>
-              <button onclick="window.location.href='practice.html'" class="px-6 py-4 rounded-2xl bg-emerald-50 text-emerald-700 border-2 border-emerald-200 font-extrabold hover:bg-emerald-100 transition-colors text-base">
-                📚 Practice Worksheets
+              <button onclick="window.location.href='practice.html'" class="px-6 py-4 rounded-2xl bg-emerald-50 text-emerald-700 border-2 border-emerald-200 font-extrabold hover:bg-emerald-100 transition-colors text-base flex items-center gap-2">
+                <svg class="w-4 h-4 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                <span>Practice Worksheets</span>
               </button>
             </div>
           </div>
@@ -129,17 +134,23 @@
         <!-- INFORMATION CARDS -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="bg-white p-8 rounded-card card-shadow border border-slate-100 hover-lift flex flex-col items-center text-center space-y-4">
-            <div class="w-16 h-16 rounded-2xl bg-sky-100 flex items-center justify-center text-3xl">📐</div>
+            <div class="w-16 h-16 rounded-2xl bg-sky-100 flex items-center justify-center">
+              <svg class="w-8 h-8 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+            </div>
             <h3 class="text-xl font-bold text-navy-dark">Adaptive Math Levels</h3>
             <p class="text-slate-500 leading-relaxed">Questions automatically adapt between Grade 3 and 8 difficulty to locate exact competency.</p>
           </div>
           <div class="bg-white p-8 rounded-card card-shadow border border-slate-100 hover-lift flex flex-col items-center text-center space-y-4">
-            <div class="w-16 h-16 rounded-2xl bg-emerald-100 flex items-center justify-center text-3xl">⏱</div>
-            <h3 class="text-xl font-bold text-navy-dark">45–60 Minutes</h3>
+            <div class="w-16 h-16 rounded-2xl bg-emerald-100 flex items-center justify-center">
+              <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-navy-dark">45-60 Minutes</h3>
             <p class="text-slate-500 leading-relaxed">Self-paced assessment so students can solve mathematical problems without stress.</p>
           </div>
           <div class="bg-white p-8 rounded-card card-shadow border border-slate-100 hover-lift flex flex-col items-center text-center space-y-4">
-            <div class="w-16 h-16 rounded-2xl bg-amber-100 flex items-center justify-center text-3xl">🏆</div>
+            <div class="w-16 h-16 rounded-2xl bg-amber-100 flex items-center justify-center">
+              <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+            </div>
             <h3 class="text-xl font-bold text-navy-dark">Personalized Placement</h3>
             <p class="text-slate-500 leading-relaxed">Receive a customized starting level recommended by experienced STEM & math educators.</p>
           </div>
@@ -156,24 +167,30 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Track 1: Grades 3-4 -->
           <button onclick="selectTrack('3-4')" class="bg-white p-8 rounded-card card-shadow border border-slate-100 hover-lift flex flex-col items-center text-center space-y-4 cursor-pointer focus:outline-none hover:bg-slate-50">
-            <div class="w-16 h-16 rounded-2xl bg-sky-100 flex items-center justify-center text-3xl">🎒</div>
-            <h3 class="text-xl font-bold text-navy-dark">Grades 3–4 Test</h3>
+            <div class="w-16 h-16 rounded-2xl bg-sky-100 flex items-center justify-center">
+              <svg class="w-8 h-8 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-navy-dark">Grades 3-4 Test</h3>
             <p class="text-slate-500 leading-relaxed text-sm">Elementary Track. Covers multiplication, division, fractions, rounding, and geometry basics.</p>
             <span class="text-sky-600 font-bold text-xs uppercase tracking-wider">Start Track &rarr;</span>
           </button>
 
           <!-- Track 2: Grades 5-6 -->
           <button onclick="selectTrack('5-6')" class="bg-white p-8 rounded-card card-shadow border border-slate-100 hover-lift flex flex-col items-center text-center space-y-4 cursor-pointer focus:outline-none hover:bg-slate-50">
-            <div class="w-16 h-16 rounded-2xl bg-emerald-100 flex items-center justify-center text-3xl">📐</div>
-            <h3 class="text-xl font-bold text-navy-dark">Grades 5–6 Test</h3>
+            <div class="w-16 h-16 rounded-2xl bg-emerald-100 flex items-center justify-center">
+              <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-navy-dark">Grades 5-6 Test</h3>
             <p class="text-slate-500 leading-relaxed text-sm">Intermediate Track. Covers decimals, fraction math, volume, measurements, and line plots.</p>
             <span class="text-emerald-600 font-bold text-xs uppercase tracking-wider">Start Track &rarr;</span>
           </button>
 
           <!-- Track 3: Grades 7-8 -->
           <button onclick="selectTrack('7-8')" class="bg-white p-8 rounded-card card-shadow border border-slate-100 hover-lift flex flex-col items-center text-center space-y-4 cursor-pointer focus:outline-none hover:bg-slate-50">
-            <div class="w-16 h-16 rounded-2xl bg-amber-100 flex items-center justify-center text-3xl">🎓</div>
-            <h3 class="text-xl font-bold text-navy-dark">Grades 7–8 Test</h3>
+            <div class="w-16 h-16 rounded-2xl bg-amber-100 flex items-center justify-center">
+              <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-navy-dark">Grades 7-8 Test</h3>
             <p class="text-slate-500 leading-relaxed text-sm">Middle School Track. Covers ratios, linear equations, functions, Pythagorean theorem, and spheres/cones.</p>
             <span class="text-amber-600 font-bold text-xs uppercase tracking-wider">Start Track &rarr;</span>
           </button>
@@ -193,22 +210,30 @@
   <section class="bg-white border-t border-slate-100 py-12 px-6">
     <div class="max-w-5xl w-full mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
       <div class="space-y-3 flex flex-col items-center">
-        <span class="text-4xl">🎓</span>
+        <div class="w-14 h-14 rounded-2xl bg-sky-100 flex items-center justify-center text-sky-600">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+        </div>
         <h4 class="font-bold text-navy-dark">Standards-Aligned Math</h4>
         <p class="text-sm text-slate-500 leading-relaxed">Covers fundamental core math domains from standard curricula.</p>
       </div>
       <div class="space-y-3 flex flex-col items-center">
-        <span class="text-4xl">🔒</span>
+        <div class="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center text-emerald-600">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+        </div>
         <h4 class="font-bold text-navy-dark">Secure Assessment</h4>
         <p class="text-sm text-slate-500 leading-relaxed">Encrypted student sessions, private math assessment, safe learning environment.</p>
       </div>
       <div class="space-y-3 flex flex-col items-center">
-        <span class="text-4xl">💡</span>
+        <div class="w-14 h-14 rounded-2xl bg-amber-100 flex items-center justify-center text-amber-600">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+        </div>
         <h4 class="font-bold text-navy-dark">Personalized Results</h4>
         <p class="text-sm text-slate-500 leading-relaxed">Instant level mapping with clear mathematical feedback for parents.</p>
       </div>
       <div class="space-y-3 flex flex-col items-center">
-        <span class="text-4xl">🏫</span>
+        <div class="w-14 h-14 rounded-2xl bg-purple-100 flex items-center justify-center text-purple-600">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+        </div>
         <h4 class="font-bold text-navy-dark">Educator Developed</h4>
         <p class="text-sm text-slate-500 leading-relaxed">Formulated by math teachers to yield accurate grade benchmarks.</p>
       </div>
@@ -281,8 +306,8 @@
       <div class="space-y-4 text-slate-600 font-medium">
         <p>If you have any questions or would like to learn more about our math, coding, and science enrichment classes, please reach out to us:</p>
         <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 space-y-2">
-          <p class="text-sm">📧 Email: info@kidsstemstudio.com</p>
-          <p class="text-sm">🌐 Website: <a href="https://kidsstemstudio.com/" target="_blank" class="text-sky-blue underline font-bold">kidsstemstudio.com</a></p>
+          <p class="text-sm font-semibold text-slate-700">Email: <span class="text-slate-600 font-normal">info@kidsstemstudio.com</span></p>
+          <p class="text-sm font-semibold text-slate-700">Website: <a href="https://kidsstemstudio.com/" target="_blank" class="text-sky-blue underline font-bold">kidsstemstudio.com</a></p>
         </div>
       </div>
     </div>
@@ -292,7 +317,7 @@
     <div class="bg-white max-w-2xl w-full rounded-2xl p-6 md:p-8 space-y-6 shadow-2xl relative">
       <button onclick="closeModal('history-modal')" class="absolute top-4 right-4 text-slate-400 hover:!text-slate-600 text-2xl font-bold">×</button>
       <h3 class="text-2xl font-extrabold text-navy-dark border-b pb-3 flex items-center gap-2">
-        <span>📜</span> Math Placement History
+        Math Placement History
       </h3>
       <div id="user-history-content" class="space-y-4 max-h-[420px] overflow-y-auto pr-2">
         <!-- Rendered by AuthManager.renderHistoryModal() -->
@@ -316,6 +341,10 @@
       const totalStars = progress.totalStars || 0;
       const completedCount = Object.keys(progress.completedLessons || {}).length;
 
+      if (placedGrade) {
+        document.body.setAttribute('data-grade', String(placedGrade));
+      }
+
       if (!placedGrade) {
         container.innerHTML = `
           <div class="bg-gradient-to-r from-emerald-50 to-sky-50 p-6 rounded-3xl border border-emerald-100 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
@@ -327,7 +356,7 @@
               </p>
             </div>
             <button onclick="showTrackSelection()" class="px-6 py-3.5 rounded-xl btn-blue-gradient text-sm font-extrabold whitespace-nowrap shadow-md">
-              Begin Assessment 🚀
+              Begin Assessment
             </button>
           </div>
         `;
@@ -337,7 +366,7 @@
           <div class="bg-gradient-to-r from-emerald-50 to-sky-50 p-6 rounded-3xl border border-emerald-100 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
             <div class="space-y-3">
               <div class="flex items-center space-x-2">
-                <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full font-extrabold text-xs uppercase">🎯 Recommended Practice</span>
+                <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full font-extrabold text-xs uppercase">Recommended Practice</span>
                 <span class="text-xs text-slate-500 font-bold">• Placed in Grade ${placedGrade}</span>
               </div>
               <h3 class="text-2xl font-black text-navy-dark">Grade ${placedGrade} Worksheet Path: Lesson ${highestUnlocked}</h3>
@@ -350,7 +379,7 @@
             </div>
             <div class="flex flex-col sm:flex-row items-center gap-3">
               <button onclick="window.location.href='practice.html'" class="px-8 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm whitespace-nowrap shadow-md transition-all">
-                Jump into Worksheets 🚀
+                Jump into Worksheets
               </button>
               <button onclick="showTrackSelection()" class="px-5 py-4 rounded-xl border border-slate-300 text-slate-700 hover:bg-slate-100 font-extrabold text-sm whitespace-nowrap transition-colors">
                 Retake Placement

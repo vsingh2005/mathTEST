@@ -70,7 +70,7 @@ This document tracks all completed tasks for restructuring the Kids STEM Studio 
   - [x] **Gated Practice Access:** Students cannot freely practice any lesson. Practice access is strictly limited to:
     - [x] Lessons **up to the grade/topic level the student tested into** on the placement exam.
     - [x] Subsequent advanced lessons **unlocked sequentially** by completing prerequisite lessons consecutively.
-  - [x] **Prerequisite Mastery Gate:** Subsequent lessons remain locked (🔒) until the student scores $\ge 80\%$ (or earns at least 2 stars) on the preceding lesson.
+  - [x] **Prerequisite Mastery Gate:** Subsequent lessons remain locked () until the student scores $\ge 80\%$ (or earns at least 2 stars) on the preceding lesson.
   - [x] **Curriculum Browser:** Displays locked vs. unlocked visual nodes; kids cannot skip ahead to unearned lessons.
 
 - [x] **Interactive Practice Page (`pages/practice/`)**
@@ -123,7 +123,7 @@ This document tracks all completed tasks for restructuring the Kids STEM Studio 
   - [x] *Area & Grid Unit Highlighter:* Clickable grid units for 3rd/4th grade geometry to count area and perimeter interactively.
 
 - [x] **Gamification & Micro-Reward Loops**
-  - [x] *Streak Counter:* Animated streak indicator (e.g., "🔥 3 in a row!") to encourage sustained focus during practice and exams.
+  - [x] *Streak Counter:* Animated streak indicator (e.g., " 3 in a row!") to encourage sustained focus during practice and exams.
   - [x] *Celebration Effects:* Confetti animations (`canvas-confetti`) and celebratory Web Audio chimes on lesson completion / level up.
   - [x] *Achievement Badges:* Visual unlocks for milestones (e.g., "Fraction Hero", "Geometry Detective", "5 Consecutive Lessons Unlocked").
   - [x] *Classroom-Friendly Sound Control:* Header-level instant mute toggle with `localStorage` persistence.

@@ -5,7 +5,7 @@
  * Generates pleasant educational UI sounds using native browser Web Audio API.
  * No external audio files or downloads required.
  */
-class SoundEffectManager {
+export class SoundEffectManager {
   constructor() {
     this.storageKey = 'kss_sound_muted';
     this.muted = localStorage.getItem(this.storageKey) === 'true';
@@ -54,22 +54,24 @@ class SoundEffectManager {
 
   updateSoundButtons() {
     const buttons = document.querySelectorAll('.sound-toggle-btn');
+    const speakerSvg = `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072M17.95 6.05a8 8 0 010 11.9M6 10H3a1 1 0 00-1 1v2a1 1 0 001 1h3l5 4V6l-5 4z"/></svg>`;
+    const muteSvg = `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H3a1 1 0 01-1-1v-2a1 1 0 011-1h2.586l4.707-4.707A1 1 0 0112 7v10a1 1 0 01-1.707.707L5.586 15zM17 14l4-4m0 4l-4-4"/></svg>`;
+
     buttons.forEach(btn => {
       if (this.muted) {
-        btn.innerHTML = '🔇 <span class="hidden sm:inline text-xs font-bold text-slate-400">Muted</span>';
+        btn.innerHTML = `${muteSvg} <span class="text-xs font-bold text-slate-500">Muted</span>`;
         btn.setAttribute('title', 'Sound Muted (Click to Unmute)');
-        btn.classList.add('opacity-75');
+        btn.classList.add('is-muted');
+        btn.classList.remove('is-active', 'opacity-75');
       } else {
-        btn.innerHTML = '🔊 <span class="hidden sm:inline text-xs font-bold text-sky-600">Sound ON</span>';
+        btn.innerHTML = `${speakerSvg} <span class="text-xs font-bold text-sky-700">Sound ON</span>`;
         btn.setAttribute('title', 'Sound Enabled (Click to Mute)');
-        btn.classList.remove('opacity-75');
+        btn.classList.add('is-active');
+        btn.classList.remove('is-muted', 'opacity-75');
       }
     });
   }
 
-  /**
-   * Helper to play synthesized tone with envelope
-   */
   playTone(freq, startTime, duration, type = 'sine', maxGain = 0.15) {
     if (this.muted) return;
     const ctx = this.ensureContext();
@@ -91,14 +93,9 @@ class SoundEffectManager {
 
       osc.start(startTime);
       osc.stop(startTime + duration);
-    } catch (e) {
-      // Audio context policy or unsupported
-    }
+    } catch (e) {}
   }
 
-  /**
-   * Subtle button / click pop
-   */
   playPop() {
     if (this.muted) return;
     const ctx = this.ensureContext();
@@ -124,9 +121,6 @@ class SoundEffectManager {
     } catch (e) {}
   }
 
-  /**
-   * Joyful two-tone chime on correct answer (E5 -> A5)
-   */
   playCorrect() {
     if (this.muted) return;
     const ctx = this.ensureContext();
@@ -137,9 +131,6 @@ class SoundEffectManager {
     this.playTone(880.00, now + 0.11, 0.35, 'sine', 0.15); // A5
   }
 
-  /**
-   * Encouraging, gentle soft tone on incorrect / retry (not harsh)
-   */
   playTryAgain() {
     if (this.muted) return;
     const ctx = this.ensureContext();
@@ -150,9 +141,6 @@ class SoundEffectManager {
     this.playTone(349.23, now + 0.10, 0.22, 'triangle', 0.08); // F4
   }
 
-  /**
-   * Sparkly ascending chime when revealing a hint
-   */
   playHint() {
     if (this.muted) return;
     const ctx = this.ensureContext();
@@ -164,9 +152,6 @@ class SoundEffectManager {
     this.playTone(783.99, now + 0.16, 0.2, 'sine', 0.10); // G5
   }
 
-  /**
-   * Energetic ascending arpeggio on streak milestones (3, 5, 10 in a row)
-   */
   playStreak() {
     if (this.muted) return;
     const ctx = this.ensureContext();
@@ -179,16 +164,12 @@ class SoundEffectManager {
     });
   }
 
-  /**
-   * Triumphant fanfare upon exam or practice completion
-   */
   playFanfare() {
     if (this.muted) return;
     const ctx = this.ensureContext();
     if (!ctx) return;
 
     const now = ctx.currentTime;
-    // Chords / notes sequence: C5 -> E5 -> G5 -> C6 held
     const notes = [
       { f: 523.25, t: 0.00, d: 0.18 },
       { f: 659.25, t: 0.15, d: 0.18 },
@@ -201,9 +182,12 @@ class SoundEffectManager {
   }
 }
 
-// Global singleton instance
-window.soundManager = new SoundEffectManager();
-
-document.addEventListener('DOMContentLoaded', () => {
-  window.soundManager.updateSoundButtons();
-});
+// Attach globally and export for ES Module or script tag usage
+if (typeof window !== 'undefined') {
+  if (!window.soundManager) {
+    window.soundManager = new SoundEffectManager();
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+    window.soundManager.updateSoundButtons();
+  });
+}

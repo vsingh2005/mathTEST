@@ -64,17 +64,17 @@
   <section class="max-w-4xl w-full mx-auto px-6 mt-8">
     <div class="bg-white rounded-2xl p-4 flex items-center justify-between shadow-sm border border-slate-100">
       <div class="flex items-center space-x-3">
-        <div id="timeline-step-1" class="timeline-step bg-emerald-500 text-white">✓</div>
+        <div id="timeline-step-1" class="timeline-step bg-emerald-500 text-white">1</div>
         <span class="text-xs md:text-sm font-bold text-slate-700">Student Info</span>
       </div>
       <div class="h-[2px] flex-1 bg-slate-200 mx-4"></div>
       <div class="flex items-center space-x-3">
-        <div id="timeline-step-2" class="timeline-step bg-emerald-500 text-white">✓</div>
+        <div id="timeline-step-2" class="timeline-step bg-emerald-500 text-white">2</div>
         <span class="text-xs md:text-sm font-bold text-slate-700">Instructions</span>
       </div>
       <div class="h-[2px] flex-1 bg-slate-200 mx-4"></div>
       <div class="flex items-center space-x-3">
-        <div id="timeline-step-3" class="timeline-step bg-emerald-500 text-white">✓</div>
+        <div id="timeline-step-3" class="timeline-step bg-emerald-500 text-white">3</div>
         <span class="text-xs md:text-sm font-bold text-slate-700">Placement Test</span>
       </div>
       <div class="h-[2px] flex-1 bg-slate-200 mx-4"></div>
@@ -99,7 +99,7 @@
         </div>
 
         <div class="space-y-3">
-          <h2 class="text-3xl md:text-4xl font-black text-navy-dark">Great Job! 🎉</h2>
+          <h2 class="text-3xl md:text-4xl font-black text-navy-dark">Great Job!</h2>
           <p class="text-lg text-slate-500 font-semibold">You've completed your math placement assessment.</p>
           <div id="user-save-status" class="text-sm font-semibold text-sky-700 bg-sky-50 py-2 px-4 rounded-full inline-block"></div>
         </div>
@@ -137,7 +137,7 @@
 
         <div class="pt-8 flex flex-col sm:flex-row items-center justify-center gap-4 border-t border-slate-100">
           <button onclick="window.location.href='practice.html'" class="w-full sm:w-auto px-10 py-4 rounded-2xl btn-blue-gradient text-lg font-black shadow-lg">
-            Jump into Recommended Worksheets 🚀
+            Jump into Recommended Worksheets
           </button>
           <button onclick="window.location.href='portal.html'" class="w-full sm:w-auto px-8 py-4 rounded-2xl border-2 border-slate-200 text-slate-700 font-extrabold hover:bg-slate-50 transition-colors text-base">
             Return to Dashboard
@@ -157,22 +157,30 @@
   <section class="bg-white border-t border-slate-100 py-12 px-6">
     <div class="max-w-5xl w-full mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
       <div class="space-y-3 flex flex-col items-center">
-        <span class="text-4xl">🎓</span>
+        <div class="w-14 h-14 rounded-2xl bg-sky-100 flex items-center justify-center text-sky-600">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+        </div>
         <h4 class="font-bold text-navy-dark">Standards-Aligned Math</h4>
         <p class="text-sm text-slate-500 leading-relaxed">Covers fundamental core math domains from standard curricula.</p>
       </div>
       <div class="space-y-3 flex flex-col items-center">
-        <span class="text-4xl">🔒</span>
+        <div class="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center text-emerald-600">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+        </div>
         <h4 class="font-bold text-navy-dark">Secure Assessment</h4>
         <p class="text-sm text-slate-500 leading-relaxed">Encrypted student sessions, private math assessment, safe learning environment.</p>
       </div>
       <div class="space-y-3 flex flex-col items-center">
-        <span class="text-4xl">💡</span>
+        <div class="w-14 h-14 rounded-2xl bg-amber-100 flex items-center justify-center text-amber-600">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+        </div>
         <h4 class="font-bold text-navy-dark">Personalized Results</h4>
         <p class="text-sm text-slate-500 leading-relaxed">Instant level mapping with clear mathematical feedback for parents.</p>
       </div>
       <div class="space-y-3 flex flex-col items-center">
-        <span class="text-4xl">🏫</span>
+        <div class="w-14 h-14 rounded-2xl bg-purple-100 flex items-center justify-center text-purple-600">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+        </div>
         <h4 class="font-bold text-navy-dark">Educator Developed</h4>
         <p class="text-sm text-slate-500 leading-relaxed">Formulated by math teachers to yield accurate grade benchmarks.</p>
       </div>
@@ -228,7 +236,7 @@
       <button onclick="closeModal('contact-modal')" class="absolute top-4 right-4 text-slate-400 hover:!text-slate-600 text-2xl font-bold">×</button>
       <h3 class="text-2xl font-extrabold text-navy-dark">Contact Kids STEM Studio</h3>
       <div class="space-y-4 text-slate-600 font-medium">
-        <p>📧 Email: info@kidsstemstudio.com</p>
+        <p class="text-sm font-semibold text-slate-700">Email: <span class="text-slate-600 font-normal">info@kidsstemstudio.com</span></p>
       </div>
     </div>
   </div>
@@ -237,7 +245,7 @@
     <div class="bg-white max-w-2xl w-full rounded-2xl p-6 md:p-8 space-y-6 shadow-2xl relative">
       <button onclick="closeModal('history-modal')" class="absolute top-4 right-4 text-slate-400 hover:!text-slate-600 text-2xl font-bold">×</button>
       <h3 class="text-2xl font-extrabold text-navy-dark border-b pb-3 flex items-center gap-2">
-        <span>📜</span> Math Placement History
+        Math Placement History
       </h3>
       <div id="user-history-content" class="space-y-4 max-h-[420px] overflow-y-auto pr-2">
         <!-- Rendered by AuthManager.renderHistoryModal() -->

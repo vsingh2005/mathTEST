@@ -54,15 +54,20 @@ export class SoundEffectManager {
 
   updateSoundButtons() {
     const buttons = document.querySelectorAll('.sound-toggle-btn');
+    const speakerSvg = `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072M17.95 6.05a8 8 0 010 11.9M6 10H3a1 1 0 00-1 1v2a1 1 0 001 1h3l5 4V6l-5 4z"/></svg>`;
+    const muteSvg = `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H3a1 1 0 01-1-1v-2a1 1 0 011-1h2.586l4.707-4.707A1 1 0 0112 7v10a1 1 0 01-1.707.707L5.586 15zM17 14l4-4m0 4l-4-4"/></svg>`;
+
     buttons.forEach(btn => {
       if (this.muted) {
-        btn.innerHTML = '🔇 <span class="hidden sm:inline text-xs font-bold text-slate-400">Muted</span>';
+        btn.innerHTML = `${muteSvg} <span class="text-xs font-bold text-slate-500">Muted</span>`;
         btn.setAttribute('title', 'Sound Muted (Click to Unmute)');
-        btn.classList.add('opacity-75');
+        btn.classList.add('is-muted');
+        btn.classList.remove('is-active', 'opacity-75');
       } else {
-        btn.innerHTML = '🔊 <span class="hidden sm:inline text-xs font-bold text-sky-600">Sound ON</span>';
+        btn.innerHTML = `${speakerSvg} <span class="text-xs font-bold text-sky-700">Sound ON</span>`;
         btn.setAttribute('title', 'Sound Enabled (Click to Mute)');
-        btn.classList.remove('opacity-75');
+        btn.classList.add('is-active');
+        btn.classList.remove('is-muted', 'opacity-75');
       }
     });
   }

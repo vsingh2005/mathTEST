@@ -98,7 +98,7 @@ export class DigitalScratchpad {
       <div class="scratchpad-box">
         <div class="flex items-center justify-between p-4 bg-slate-50 border-b border-slate-200">
           <div class="flex items-center space-x-2">
-            <span class="text-2xl">📝</span>
+            <svg class="w-5 h-5 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
             <h3 class="font-black text-slate-800 text-lg">Math Scratchpad & Whiteboard</h3>
           </div>
           <button onclick="window.scratchpad.close()" class="text-slate-400 hover:text-slate-600 text-2xl font-bold px-2">×</button>
@@ -108,27 +108,27 @@ export class DigitalScratchpad {
         <div class="flex flex-wrap items-center justify-between p-3 bg-white border-b border-slate-100 gap-2">
           <!-- Drawing tools -->
           <div class="flex items-center space-x-2">
-            <button onclick="window.scratchpad.setMode('pen')" id="sp-btn-pen" class="px-3 py-1.5 rounded-lg bg-sky-100 text-sky-700 font-bold text-xs">✏️ Pen</button>
-            <button onclick="window.scratchpad.setMode('highlighter')" id="sp-btn-hl" class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 font-bold text-xs">🖍️ Highlighter</button>
-            <button onclick="window.scratchpad.setMode('eraser')" id="sp-btn-eraser" class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 font-bold text-xs">🧹 Eraser</button>
-            <button onclick="window.scratchpad.clear()" class="px-3 py-1.5 rounded-lg bg-rose-50 text-rose-600 font-bold text-xs">🗑️ Clear</button>
+            <button onclick="window.scratchpad.setMode('pen')" id="sp-btn-pen" class="px-3 py-1.5 rounded-lg bg-sky-100 text-sky-700 font-bold text-xs">Pen</button>
+            <button onclick="window.scratchpad.setMode('highlighter')" id="sp-btn-hl" class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 font-bold text-xs">Highlighter</button>
+            <button onclick="window.scratchpad.setMode('eraser')" id="sp-btn-eraser" class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 font-bold text-xs">Eraser</button>
+            <button onclick="window.scratchpad.clear()" class="px-3 py-1.5 rounded-lg bg-rose-50 text-rose-600 font-bold text-xs">Clear</button>
           </div>
 
           <!-- Color palette -->
           <div class="flex items-center space-x-1.5">
-            <button onclick="window.scratchpad.setColor('#1e293b')" class="w-6 h-6 rounded-full bg-slate-800 border-2 border-white shadow-sm"></button>
-            <button onclick="window.scratchpad.setColor('#2563eb')" class="w-6 h-6 rounded-full bg-blue-600 border-2 border-white shadow-sm"></button>
-            <button onclick="window.scratchpad.setColor('#16a34a')" class="w-6 h-6 rounded-full bg-emerald-600 border-2 border-white shadow-sm"></button>
-            <button onclick="window.scratchpad.setColor('#ea580c')" class="w-6 h-6 rounded-full bg-amber-600 border-2 border-white shadow-sm"></button>
-            <button onclick="window.scratchpad.setColor('#dc2626')" class="w-6 h-6 rounded-full bg-rose-600 border-2 border-white shadow-sm"></button>
+            <button onclick="window.scratchpad.setColor('#1e293b')" class="w-6 h-6 rounded-full bg-slate-800 border-2 border-white shadow-sm" title="Black"></button>
+            <button onclick="window.scratchpad.setColor('#2563eb')" class="w-6 h-6 rounded-full bg-blue-600 border-2 border-white shadow-sm" title="Blue"></button>
+            <button onclick="window.scratchpad.setColor('#16a34a')" class="w-6 h-6 rounded-full bg-emerald-600 border-2 border-white shadow-sm" title="Green"></button>
+            <button onclick="window.scratchpad.setColor('#ea580c')" class="w-6 h-6 rounded-full bg-amber-600 border-2 border-white shadow-sm" title="Amber"></button>
+            <button onclick="window.scratchpad.setColor('#dc2626')" class="w-6 h-6 rounded-full bg-rose-600 border-2 border-white shadow-sm" title="Red"></button>
           </div>
 
           <!-- Math Stamps -->
           <div class="flex items-center space-x-1.5 border-l border-slate-200 pl-3">
             <span class="text-xs font-bold text-slate-400">Stamps:</span>
-            <button onclick="window.scratchpad.stamp('numberline')" class="px-2.5 py-1 bg-amber-50 text-amber-700 rounded-lg text-xs font-extrabold">📏 Number Line</button>
-            <button onclick="window.scratchpad.stamp('grid')" class="px-2.5 py-1 bg-teal-50 text-teal-700 rounded-lg text-xs font-extrabold">📐 Grid</button>
-            <button onclick="window.scratchpad.stamp('tenframe')" class="px-2.5 py-1 bg-purple-50 text-purple-700 rounded-lg text-xs font-extrabold">🔲 10-Frame</button>
+            <button onclick="window.scratchpad.stamp('numberline')" class="px-2.5 py-1 bg-amber-50 text-amber-700 rounded-lg text-xs font-extrabold">Number Line</button>
+            <button onclick="window.scratchpad.stamp('grid')" class="px-2.5 py-1 bg-teal-50 text-teal-700 rounded-lg text-xs font-extrabold">5x5 Grid</button>
+            <button onclick="window.scratchpad.stamp('tenframe')" class="px-2.5 py-1 bg-purple-50 text-purple-700 rounded-lg text-xs font-extrabold">10-Frame</button>
           </div>
         </div>
 
@@ -147,17 +147,106 @@ export class DigitalScratchpad {
     this.setupListeners();
   }
 
+  /**
+   * Mounts the scratchpad directly into an embedded side-by-side workspace container
+   */
+  mountEmbedded(containerId) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    let savedData = null;
+    if (this.canvas) {
+      try {
+        savedData = this.canvas.toDataURL();
+      } catch (e) {}
+    }
+
+    container.innerHTML = `
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-sm flex flex-col overflow-hidden h-[640px]">
+        <div class="flex items-center justify-between px-4 py-3 bg-slate-50 border-b border-slate-200">
+          <div class="flex items-center space-x-2">
+            <svg class="w-4 h-4 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-700">Scratchpad Workspace</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <button type="button" onclick="window.scratchpad.clear()" class="px-2.5 py-1 rounded-lg bg-rose-50 text-rose-600 hover:bg-rose-100 font-bold text-xs transition-colors">
+              Clear Canvas
+            </button>
+          </div>
+        </div>
+
+        <!-- Toolbar -->
+        <div class="p-2.5 bg-white border-b border-slate-100 flex flex-wrap items-center justify-between gap-2 text-xs">
+          <div class="flex items-center space-x-1">
+            <button type="button" onclick="window.scratchpad.setMode('pen')" id="sp-btn-pen" class="px-2.5 py-1 rounded-lg bg-sky-100 text-sky-700 font-bold">Pen</button>
+            <button type="button" onclick="window.scratchpad.setMode('highlighter')" id="sp-btn-hl" class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 font-bold">Highlighter</button>
+            <button type="button" onclick="window.scratchpad.setMode('eraser')" id="sp-btn-eraser" class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 font-bold">Eraser</button>
+          </div>
+
+          <!-- Color palette -->
+          <div class="flex items-center space-x-1.5">
+            <button type="button" onclick="window.scratchpad.setColor('#0f172a')" class="w-5 h-5 rounded-full bg-slate-900 border-2 border-white shadow-sm" title="Black"></button>
+            <button type="button" onclick="window.scratchpad.setColor('#2563eb')" class="w-5 h-5 rounded-full bg-blue-600 border-2 border-white shadow-sm" title="Blue"></button>
+            <button type="button" onclick="window.scratchpad.setColor('#059669')" class="w-5 h-5 rounded-full bg-emerald-600 border-2 border-white shadow-sm" title="Green"></button>
+            <button type="button" onclick="window.scratchpad.setColor('#d97706')" class="w-5 h-5 rounded-full bg-amber-600 border-2 border-white shadow-sm" title="Amber"></button>
+            <button type="button" onclick="window.scratchpad.setColor('#dc2626')" class="w-5 h-5 rounded-full bg-rose-600 border-2 border-white shadow-sm" title="Red"></button>
+          </div>
+
+          <!-- Math Stamps -->
+          <div class="flex items-center space-x-1 border-t sm:border-t-0 sm:border-l border-slate-200 pt-1 sm:pt-0 sm:pl-2 w-full sm:w-auto">
+            <span class="text-[11px] font-bold text-slate-400 mr-1">Stamps:</span>
+            <button type="button" onclick="window.scratchpad.stamp('numberline')" class="px-2 py-0.5 bg-amber-50 text-amber-700 hover:bg-amber-100 rounded text-xs font-bold">Number Line</button>
+            <button type="button" onclick="window.scratchpad.stamp('grid')" class="px-2 py-0.5 bg-teal-50 text-teal-700 hover:bg-teal-100 rounded text-xs font-bold">5x5 Grid</button>
+            <button type="button" onclick="window.scratchpad.stamp('tenframe')" class="px-2 py-0.5 bg-purple-50 text-purple-700 hover:bg-purple-100 rounded text-xs font-bold">10-Frame</button>
+          </div>
+        </div>
+
+        <!-- Canvas -->
+        <div class="flex-1 relative bg-white overflow-hidden cursor-crosshair">
+          <canvas id="scratchpad-canvas" class="w-full h-full block"></canvas>
+        </div>
+      </div>
+    `;
+
+    this.canvas = document.getElementById('scratchpad-canvas');
+    this.ctx = this.canvas.getContext('2d');
+
+    const parent = this.canvas.parentElement;
+    const rect = parent.getBoundingClientRect();
+    this.canvas.width = rect.width || 420;
+    this.canvas.height = rect.height || 500;
+
+    if (savedData) {
+      const img = new Image();
+      img.onload = () => {
+        this.ctx.drawImage(img, 0, 0);
+      };
+      img.src = savedData;
+    }
+
+    this.setupListeners();
+    this.setMode('pen');
+  }
+
   setupListeners() {
     const resizeCanvas = () => {
       if (!this.canvas) return;
       const rect = this.canvas.parentElement.getBoundingClientRect();
-      this.canvas.width = rect.width;
-      this.canvas.height = rect.height;
+      if (rect.width && rect.height) {
+        let prev = null;
+        try { prev = this.canvas.toDataURL(); } catch (e) {}
+        this.canvas.width = rect.width;
+        this.canvas.height = rect.height;
+        if (prev) {
+          const img = new Image();
+          img.onload = () => { this.ctx.drawImage(img, 0, 0); };
+          img.src = prev;
+        }
+      }
     };
 
     window.addEventListener('resize', resizeCanvas);
 
-    // Mouse & Touch events
     const start = (e) => {
       this.isDrawing = true;
       const pos = this.getPos(e);
@@ -226,27 +315,33 @@ export class DigitalScratchpad {
     ['sp-btn-pen', 'sp-btn-hl', 'sp-btn-eraser'].forEach(id => {
       const b = document.getElementById(id);
       if (b) {
-        b.className = 'px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 font-bold text-xs';
+        b.className = 'px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 font-bold text-xs';
       }
     });
 
     if (mode === 'pen') {
-      document.getElementById('sp-btn-pen')?.classList.replace('bg-slate-100', 'bg-sky-100');
-      document.getElementById('sp-btn-pen')?.classList.replace('text-slate-700', 'text-sky-700');
+      const pen = document.getElementById('sp-btn-pen');
+      if (pen) {
+        pen.className = 'px-2.5 py-1 rounded-lg bg-sky-100 text-sky-700 font-bold text-xs';
+      }
       this.ctx.globalAlpha = 1.0;
       this.ctx.strokeStyle = this.currentColor;
       this.ctx.lineWidth = 3;
       this.ctx.lineCap = 'round';
     } else if (mode === 'highlighter') {
-      document.getElementById('sp-btn-hl')?.classList.replace('bg-slate-100', 'bg-amber-100');
-      document.getElementById('sp-btn-hl')?.classList.replace('text-slate-700', 'text-amber-700');
+      const hl = document.getElementById('sp-btn-hl');
+      if (hl) {
+        hl.className = 'px-2.5 py-1 rounded-lg bg-amber-100 text-amber-700 font-bold text-xs';
+      }
       this.ctx.globalAlpha = 0.35;
       this.ctx.strokeStyle = '#facc15';
       this.ctx.lineWidth = 18;
       this.ctx.lineCap = 'square';
     } else if (mode === 'eraser') {
-      document.getElementById('sp-btn-eraser')?.classList.replace('bg-slate-100', 'bg-rose-100');
-      document.getElementById('sp-btn-eraser')?.classList.replace('text-slate-700', 'text-rose-700');
+      const er = document.getElementById('sp-btn-eraser');
+      if (er) {
+        er.className = 'px-2.5 py-1 rounded-lg bg-slate-300 text-slate-800 font-bold text-xs';
+      }
       this.ctx.globalAlpha = 1.0;
       this.ctx.strokeStyle = '#ffffff';
       this.ctx.lineWidth = 24;
@@ -254,17 +349,16 @@ export class DigitalScratchpad {
     }
   }
 
-  setColor(color) {
-    this.currentColor = color;
+  setColor(hex) {
+    this.currentColor = hex;
     if (this.mode === 'pen') {
-      this.ctx.strokeStyle = color;
+      this.ctx.strokeStyle = hex;
     }
   }
 
   clear() {
-    if (this.ctx && this.canvas) {
-      this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    }
+    if (!this.ctx || !this.canvas) return;
+    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
   }
 
   stamp(type) {
@@ -279,9 +373,8 @@ export class DigitalScratchpad {
     this.ctx.font = 'bold 12px Nunito, sans-serif';
 
     if (type === 'numberline') {
-      // Draw horizontal line with tick marks
-      const startX = Math.max(50, cx - 250);
-      const endX = Math.min(this.canvas.width - 50, cx + 250);
+      const startX = Math.max(30, cx - 180);
+      const endX = Math.min(this.canvas.width - 30, cx + 180);
       this.ctx.beginPath();
       this.ctx.moveTo(startX, cy);
       this.ctx.lineTo(endX, cy);
@@ -298,8 +391,7 @@ export class DigitalScratchpad {
         this.ctx.fillText(String(i), x - 4, cy + 24);
       }
     } else if (type === 'grid') {
-      // Draw 5x5 coordinate grid
-      const size = 200;
+      const size = 180;
       const x0 = cx - size / 2;
       const y0 = cy - size / 2;
       for (let i = 0; i <= 5; i++) {
@@ -313,9 +405,8 @@ export class DigitalScratchpad {
         this.ctx.stroke();
       }
     } else if (type === 'tenframe') {
-      // Draw 2x5 ten frame
-      const w = 260;
-      const h = 104;
+      const w = 220;
+      const h = 90;
       const x0 = cx - w / 2;
       const y0 = cy - h / 2;
       this.ctx.strokeRect(x0, y0, w, h);
@@ -352,12 +443,13 @@ window.closeGlobalModal = function(id) {
   }
 };
 
-// Register custom elements
+// Initialize elements
 if (typeof customElements !== 'undefined') {
   if (!customElements.get('kss-header')) customElements.define('kss-header', KSSHeader);
   if (!customElements.get('kss-footer')) customElements.define('kss-footer', KSSFooter);
 }
 
+// Initialize scratchpad on window
 if (typeof window !== 'undefined') {
   window.scratchpad = new DigitalScratchpad();
 }

@@ -176,7 +176,7 @@ class ExamEngine {
                   class="w-full text-left p-4 rounded-xl border-2 transition-all flex items-center justify-between ${isSelected ? 'border-sky-500 bg-sky-50' : 'border-slate-100 hover:bg-slate-50'}">
             <span class="font-bold text-slate-700">${opt.text}</span>
             <span class="w-5 h-5 rounded-full border-2 flex items-center justify-center ${isSelected ? 'border-sky-500 bg-sky-500 text-white' : 'border-slate-300'}">
-              ${isSelected ? '✓' : ''}
+              ${isSelected ? '<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>' : ''}
             </span>
           </button>
         `;

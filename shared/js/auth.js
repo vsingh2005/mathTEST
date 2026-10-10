@@ -111,9 +111,7 @@ export class AuthManager {
 
     container.innerHTML = `
       <div class="flex items-center space-x-3">
-        <button onclick="window.soundManager && window.soundManager.toggleMute()" class="sound-toggle-btn" title="Toggle Sound FX">
-          🔊 <span class="hidden sm:inline text-xs font-bold text-sky-600">Sound ON</span>
-        </button>
+        <button onclick="window.soundManager && window.soundManager.toggleMute()" class="sound-toggle-btn" title="Toggle Sound FX"></button>
         <div class="flex items-center space-x-2 bg-slate-100 py-1.5 px-3 rounded-full border border-slate-200">
           <span class="w-2.5 h-2.5 rounded-full ${isGuest ? 'bg-amber-400' : 'bg-emerald-500'}"></span>
           <span class="text-xs md:text-sm font-bold text-slate-700 max-w-[120px] truncate">${displayName}</span>
@@ -153,7 +151,7 @@ export class AuthManager {
             </p>
           </div>
           <div class="text-right">
-            <span class="text-2xl font-black text-sky-600">⭐ ${progress.totalStars || 0}</span>
+            <span class="text-2xl font-black text-sky-600">${progress.totalStars || 0}</span>
             <span class="text-xs text-slate-500 block font-bold">Stars Earned</span>
           </div>
         </div>
@@ -162,7 +160,7 @@ export class AuthManager {
     if (attempts.length === 0) {
       html += `
         <div class="text-center py-8 text-slate-400 font-semibold">
-          <p class="text-3xl mb-2">📋</p>
+          <p class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">History Empty</p>
           <p>No assessment attempts found on this browser yet.</p>
         </div>
       `;
@@ -178,7 +176,7 @@ export class AuthManager {
             </div>
             <div class="text-right">
               <span class="text-sm font-extrabold text-emerald-600">${att.score || 0}/15 Correct</span>
-              <span class="text-xs text-amber-500 block font-bold">🔥 Max Streak: ${att.maxStreak || 0}</span>
+              <span class="text-xs text-amber-600 block font-bold">Max Streak: ${att.maxStreak || 0}</span>
             </div>
           </div>
         `;

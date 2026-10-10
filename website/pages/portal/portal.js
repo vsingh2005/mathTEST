@@ -40,6 +40,10 @@ class PortalController {
     const totalStars = progress.totalStars || 0;
     const completedCount = Object.keys(progress.completedLessons || {}).length;
 
+    if (placedGrade) {
+      document.body.setAttribute('data-grade', String(placedGrade));
+    }
+
     if (!placedGrade) {
       container.innerHTML = `
         <div class="recommended-practice-banner flex flex-col md:flex-row items-center justify-between gap-6">
@@ -51,7 +55,7 @@ class PortalController {
             </p>
           </div>
           <button onclick="PortalController.showTrackSelection()" class="px-6 py-3.5 rounded-xl btn-blue-gradient text-sm font-extrabold whitespace-nowrap shadow-md">
-            Begin Assessment 🚀
+            Begin Assessment
           </button>
         </div>
       `;
@@ -61,7 +65,7 @@ class PortalController {
         <div class="recommended-practice-banner flex flex-col md:flex-row items-center justify-between gap-6">
           <div class="space-y-3">
             <div class="flex items-center space-x-2">
-              <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full font-extrabold text-xs uppercase">🎯 Recommended Practice</span>
+              <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full font-extrabold text-xs uppercase">Recommended Practice</span>
               <span class="text-xs text-slate-500 font-bold">• Placed in Grade ${placedGrade}</span>
             </div>
             <h3 class="text-2xl font-black text-navy-dark">Grade ${placedGrade} Worksheet Path: Lesson ${highestUnlocked}</h3>
@@ -74,7 +78,7 @@ class PortalController {
           </div>
           <div class="flex flex-col sm:flex-row items-center gap-3">
             <button onclick="window.location.href='../practice/index.html'" class="px-8 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm whitespace-nowrap shadow-md transition-all">
-              Jump into Worksheets 🚀
+              Jump into Worksheets
             </button>
             <button onclick="PortalController.showTrackSelection()" class="px-5 py-4 rounded-xl border border-slate-300 text-slate-700 hover:bg-slate-100 font-extrabold text-sm whitespace-nowrap transition-colors">
               Retake Placement

@@ -73,25 +73,47 @@
   animation: flamePulse 0.45s ease-out;
 }
 
-/* Classroom Sound Toggle Button */
+/* Sound Toggle Button: Stationary, Fixed-Dimension Pill */
 .sound-toggle-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.4rem;
-  padding: 0.4rem 0.8rem;
+  width: 108px !important;
+  min-width: 108px !important;
+  max-width: 108px !important;
+  height: 36px !important;
+  padding: 0 0.75rem;
   background-color: #ffffff;
-  border: 1.5px solid var(--border-subtle);
-  border-radius: var(--radius-full);
-  font-size: 0.85rem;
+  border: 1.5px solid var(--border-subtle, #e2e8f0);
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 700;
   cursor: pointer;
-  transition: all var(--transition-fast);
   user-select: none;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  transform: none !important;
+  flex-shrink: 0;
 }
 
 .sound-toggle-btn:hover {
   background-color: #f8fafc;
-  border-color: var(--sky-blue);
-  transform: translateY(-1px);
+  border-color: #38bdf8;
+  transform: none !important;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.sound-toggle-btn.is-muted {
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
+  color: #64748b;
+}
+
+.sound-toggle-btn.is-active {
+  background-color: #f0f9ff;
+  border-color: #0284c7;
+  color: #0369a1;
 }
 
 /* Star Rating Animation */

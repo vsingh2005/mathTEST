@@ -1465,7 +1465,7 @@ class AuthenticationManager {
               ${this.currentUser.username.substring(0, 1).toUpperCase()}
             </span>
             <span class="text-xs font-extrabold text-navy-dark">${this.currentUser.username}</span>
-            <button onclick="AuthManager.renderHistoryModal()" class="text-xs font-bold text-sky-600 hover:underline">📜 History</button>
+            <button onclick="AuthManager.renderHistoryModal()" class="text-xs font-bold text-sky-600 hover:underline">History</button>
             <button onclick="AuthManager.logoutUser()" class="text-xs font-bold text-rose-500 hover:underline">Logout</button>
           </div>
         `;
@@ -1486,7 +1486,7 @@ class AuthenticationManager {
       if (userAttempts.length === 0) {
         container.innerHTML = `
           <div class="text-center py-8 space-y-2">
-            <span class="text-3xl block">📋</span>
+            <span class="text-3xl block"></span>
             <p class="text-slate-600 font-bold">No math placement attempts recorded yet.</p>
             <p class="text-xs text-slate-400">Complete a math placement exam to track your recommended level and progress!</p>
           </div>
@@ -1738,7 +1738,7 @@ function renderQuestion() {
         ${_t('button')} onclick="selectOption(${idx})" class="w-full text-left p-4 rounded-xl border-2 ${optionClass} transition-all duration-200 focus:outline-none flex items-center justify-between">
           <span class="text-slate-700 font-semibold">${opt.text}</span>
           <span class="w-5 h-5 rounded-full border-2 flex items-center justify-center ${isSelected ? 'border-sky-500 bg-sky-500 text-white' : 'border-slate-300'}">
-            ${isSelected ? '✓' : ''}
+            ${isSelected ? '' : ''}
           </span>
         ${_c('button')}
       `;
@@ -2176,8 +2176,8 @@ function renderFluidBreakdown() {
     const isCorrect = item.isCorrect;
     const borderClass = isCorrect ? "correct-card" : "incorrect-card";
     const statusBadge = isCorrect
-      ? `<span class="px-2.5 py-1 text-xs font-extrabold rounded-full bg-emerald-100 text-emerald-800">Correct ✓</span>`
-      : `<span class="px-2.5 py-1 text-xs font-extrabold rounded-full bg-rose-100 text-rose-800">Incorrect ✗</span>`;
+      ? `<span class="px-2.5 py-1 text-xs font-extrabold rounded-full bg-emerald-100 text-emerald-800">Correct </span>`
+      : `<span class="px-2.5 py-1 text-xs font-extrabold rounded-full bg-rose-100 text-rose-800">Incorrect </span>`;
 
     html += `
       ${_t('div')} class="bg-white p-6 rounded-2xl review-card ${borderClass} space-y-4 shadow-sm">
@@ -2204,7 +2204,7 @@ function renderFluidBreakdown() {
 
         <div class="explanation-box">
           <span class="text-xs font-extrabold text-slate-500 uppercase tracking-wider block mb-1 flex items-center gap-1">
-            <span>💡</span> Step-by-Step Math Solution
+            <span></span> Step-by-Step Math Solution
           </span>
           <p class="text-xs md:text-sm text-slate-700 font-medium leading-relaxed">${item.explanation}</p>
         </div>
@@ -2231,7 +2231,7 @@ function updateStepView() {
     if (stepEl) {
       if (i <state.currentStep) {
         stepEl.className = "timeline-step bg-emerald-500 text-white";
-        stepEl.innerText = "✓";
+        stepEl.innerText = "";
       } else if (i === state.currentStep) {
         stepEl.className = "timeline-step bg-sky-500 text-white ring-4 ring-sky-500/20";
         stepEl.innerText = i;
@@ -2248,22 +2248,22 @@ function updateStepView() {
       confidenceSection.innerHTML = `
         ${_t('div')} class="max-w-5xl w-full mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
           <div class="space-y-3 flex flex-col items-center">
-            <span class="text-4xl">📝</span>
+            <span class="text-4xl"></span>
             <h4 class="font-bold text-navy-dark">Rule 1: Work Independently</h4>
             <p class="text-sm text-slate-500 leading-relaxed">Do not ask parents, siblings, or friends for help on any problem.</p>
           </div>
           <div class="space-y-3 flex flex-col items-center">
-            <span class="text-4xl">✏️</span>
+            <span class="text-4xl"></span>
             <h4 class="font-bold text-navy-dark">Rule 2: Paper & Pencil</h4>
             <p class="text-sm text-slate-500 leading-relaxed">Solve math questions on scratch paper before selecting your answer.</p>
           </div>
           <div class="space-y-3 flex flex-col items-center">
-            <span class="text-4xl">🚫</span>
+            <span class="text-4xl"></span>
             <h4 class="font-bold text-navy-dark">Rule 3: No Calculators</h4>
             <p class="text-sm text-slate-500 leading-relaxed">Work through arithmetic mentally or on scratch paper.</p>
           </div>
           <div class="space-y-3 flex flex-col items-center">
-            <span class="text-4xl">⭐</span>
+            <span class="text-4xl"></span>
             <h4 class="font-bold text-navy-dark">Rule 4: Try Your Best</h4>
             <p class="text-sm text-slate-500 leading-relaxed">Take your time and think through every question carefully.</p>
           </div>
@@ -2273,22 +2273,22 @@ function updateStepView() {
       confidenceSection.innerHTML = `
         ${_t('div')} class="max-w-5xl w-full mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
           <div class="space-y-3 flex flex-col items-center">
-            <span class="text-4xl">🎓</span>
+            <span class="text-4xl"></span>
             <h4 class="font-bold text-navy-dark">Standards-Aligned Math</h4>
             <p class="text-sm text-slate-500 leading-relaxed">Covers fundamental core math domains from standard curricula.</p>
           </div>
           <div class="space-y-3 flex flex-col items-center">
-            <span class="text-4xl">🔒</span>
+            <span class="text-4xl"></span>
             <h4 class="font-bold text-navy-dark">Secure Assessment</h4>
             <p class="text-sm text-slate-500 leading-relaxed">Encrypted student sessions, private math assessment, safe learning environment.</p>
           </div>
           <div class="space-y-3 flex flex-col items-center">
-            <span class="text-4xl">💡</span>
+            <span class="text-4xl"></span>
             <h4 class="font-bold text-navy-dark">Personalized Results</h4>
             <p class="text-sm text-slate-500 leading-relaxed">Instant level mapping with clear mathematical feedback for parents.</p>
           </div>
           <div class="space-y-3 flex flex-col items-center">
-            <span class="text-4xl">🏫</span>
+            <span class="text-4xl"></span>
             <h4 class="font-bold text-navy-dark">Educator Developed</h4>
             <p class="text-sm text-slate-500 leading-relaxed">Formulated by math teachers to yield accurate grade benchmarks.</p>
           </div>
@@ -2382,7 +2382,7 @@ const safeOpenModal = function(id) {
       ${_t('div')} id="answer-required-modal"
         class="fixed inset-0 bg-navy-dark/40 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
         ${_t('div')} class="bg-white max-w-md w-full rounded-2xl p-6 md:p-8 space-y-6 shadow-2xl text-center">
-          ${_t('span')} class="text-4xl">📝${_c('span')}
+          ${_t('span')} class="text-4xl">${_c('span')}
           ${_t('h3')} class="text-2xl font-extrabold text-navy-dark">Answer Required${_c('h3')}
           ${_t('p')} class="text-slate-500 font-semibold leading-relaxed">Please select or enter an answer for the math question before moving on.${_c('p')}
           ${_t('div')} class="flex items-center justify-center pt-2">

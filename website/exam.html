@@ -61,12 +61,12 @@
   <section class="max-w-4xl w-full mx-auto px-6 mt-8">
     <div class="bg-white rounded-2xl p-4 flex items-center justify-between shadow-sm border border-slate-100">
       <div class="flex items-center space-x-3">
-        <div id="timeline-step-1" class="timeline-step bg-emerald-500 text-white">✓</div>
+        <div id="timeline-step-1" class="timeline-step bg-emerald-500 text-white">1</div>
         <span class="text-xs md:text-sm font-bold text-slate-700">Student Info</span>
       </div>
       <div class="h-[2px] flex-1 bg-slate-200 mx-4"></div>
       <div class="flex items-center space-x-3">
-        <div id="timeline-step-2" class="timeline-step bg-emerald-500 text-white">✓</div>
+        <div id="timeline-step-2" class="timeline-step bg-emerald-500 text-white">2</div>
         <span class="text-xs md:text-sm font-bold text-slate-700">Instructions</span>
       </div>
       <div class="h-[2px] flex-1 bg-slate-200 mx-4"></div>
@@ -98,7 +98,7 @@
           <div class="pt-4 border-t border-slate-200 flex flex-col space-y-3">
             <span id="timer-display" class="font-bold text-slate-500 block">Time: 00:00</span>
             <button onclick="window.scratchpad && window.scratchpad.open()" class="w-full py-2.5 rounded-xl bg-teal-50 text-teal-700 border border-teal-200 text-xs font-extrabold hover:bg-teal-100 transition-colors">
-              📝 Open Scratchpad
+              Open Scratchpad
             </button>
             <img src="https://kidsstemstudio.com/wp-content/uploads/2020/05/KSS_Logo.png" alt="KSS"
               class="h-12 w-auto opacity-75 self-start">
@@ -118,13 +118,13 @@
             <div class="flex items-center space-x-3">
               <span id="question-number-display" class="font-bold text-slate-500">Question 1 of 15</span>
               <span id="exam-streak-badge" class="streak-badge">
-                <span>🔥</span>
                 <span>Streak: <span id="exam-streak-count">0</span></span>
               </span>
             </div>
             <div class="flex items-center space-x-2">
               <button onclick="window.soundManager && window.soundManager.toggleMute()" class="sound-toggle-btn" title="Toggle Sound">
-                🔊 <span class="hidden sm:inline text-xs font-bold text-sky-600">Sound ON</span>
+                <svg class="w-4 h-4 text-sky-600 sound-icon-on" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/></svg>
+                <span class="sound-label text-xs font-bold text-sky-700">Sound ON</span>
               </button>
               <button onclick="openModal('save-exit-confirm-modal')"
                 class="px-4 py-2 bg-rose-50 text-rose-600 rounded-full font-bold text-sm hover:bg-rose-100 transition-colors">
@@ -160,22 +160,22 @@
   <section id="parent-confidence-section" class="bg-white border-t border-slate-100 py-12 px-6">
     <div class="max-w-5xl w-full mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
       <div class="space-y-3 flex flex-col items-center">
-        <span class="text-4xl">📝</span>
+        <div class="w-10 h-10 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center font-bold text-sm">1</div>
         <h4 class="font-bold text-navy-dark">Rule 1: Work Independently</h4>
         <p class="text-sm text-slate-500 leading-relaxed">Do not ask parents, siblings, or friends for help on any problem.</p>
       </div>
       <div class="space-y-3 flex flex-col items-center">
-        <span class="text-4xl">✏️</span>
+        <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-sm">2</div>
         <h4 class="font-bold text-navy-dark">Rule 2: Paper & Pencil</h4>
         <p class="text-sm text-slate-500 leading-relaxed">Solve math questions on scratch paper before selecting your answer.</p>
       </div>
       <div class="space-y-3 flex flex-col items-center">
-        <span class="text-4xl">🚫</span>
+        <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center font-bold text-sm">3</div>
         <h4 class="font-bold text-navy-dark">Rule 3: No Calculators</h4>
         <p class="text-sm text-slate-500 leading-relaxed">Work through arithmetic mentally or on scratch paper.</p>
       </div>
       <div class="space-y-3 flex flex-col items-center">
-        <span class="text-4xl">⭐</span>
+        <div class="w-10 h-10 rounded-full bg-coral-orange/20 text-coral-orange flex items-center justify-center font-bold text-sm">4</div>
         <h4 class="font-bold text-navy-dark">Rule 4: Try Your Best</h4>
         <p class="text-sm text-slate-500 leading-relaxed">Take your time and think through every question carefully.</p>
       </div>
@@ -216,7 +216,6 @@
   <!-- MODALS -->
   <div id="exit-confirm-modal" class="fixed inset-0 bg-navy-dark/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
     <div class="bg-white max-w-md w-full rounded-2xl p-6 md:p-8 space-y-6 shadow-2xl text-center">
-      <span class="text-4xl">⚠️</span>
       <h3 class="text-2xl font-extrabold text-navy-dark">Are you sure you want to leave?</h3>
       <p class="text-slate-500 font-semibold leading-relaxed">Your placement test progress will be lost and you will need to restart from the beginning!</p>
       <div class="flex items-center justify-center space-x-4 pt-2">
@@ -232,7 +231,6 @@
 
   <div id="save-exit-confirm-modal" class="fixed inset-0 bg-navy-dark/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
     <div class="bg-white max-w-md w-full rounded-2xl p-6 md:p-8 space-y-6 shadow-2xl text-center">
-      <span class="text-4xl">💾</span>
       <h3 class="text-2xl font-extrabold text-navy-dark">Are you sure you want to Save & Exit?</h3>
       <p class="text-slate-500 font-semibold leading-relaxed">Your answers will be saved and your recommended math placement level will be calculated based on your answers so far.</p>
       <div class="flex items-center justify-center space-x-4 pt-2">
@@ -264,7 +262,7 @@
       <button onclick="closeModal('contact-modal')" class="absolute top-4 right-4 text-slate-400 hover:!text-slate-600 text-2xl font-bold">×</button>
       <h3 class="text-2xl font-extrabold text-navy-dark">Contact Kids STEM Studio</h3>
       <div class="space-y-4 text-slate-600 font-medium">
-        <p>📧 Email: info@kidsstemstudio.com</p>
+        <p class="text-sm font-semibold text-slate-700">Email: <span class="text-slate-600 font-normal">info@kidsstemstudio.com</span></p>
       </div>
     </div>
   </div>
@@ -273,7 +271,7 @@
     <div class="bg-white max-w-2xl w-full rounded-2xl p-6 md:p-8 space-y-6 shadow-2xl relative">
       <button onclick="closeModal('history-modal')" class="absolute top-4 right-4 text-slate-400 hover:!text-slate-600 text-2xl font-bold">×</button>
       <h3 class="text-2xl font-extrabold text-navy-dark border-b pb-3 flex items-center gap-2">
-        <span>📜</span> Math Placement History
+        Math Placement History
       </h3>
       <div id="user-history-content" class="space-y-4 max-h-[420px] overflow-y-auto pr-2">
         <!-- Rendered by AuthManager.renderHistoryModal() -->

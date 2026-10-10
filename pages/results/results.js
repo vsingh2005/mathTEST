@@ -44,7 +44,6 @@ class ResultsController {
     if (!this.results) {
       document.getElementById('results-content').innerHTML = `
         <div class="text-center py-16 space-y-4">
-          <p class="text-4xl">📋</p>
           <h3 class="text-2xl font-black text-navy-dark">No Recent Assessment Found</h3>
           <p class="text-slate-500 text-sm">Please take a placement test from your dashboard to view results.</p>
           <button onclick="window.location.href='../portal/index.html'" class="px-6 py-3 rounded-xl btn-blue-gradient font-bold text-sm">
@@ -61,7 +60,7 @@ class ResultsController {
 
     document.getElementById('placement-recommendation').innerText = recommendedGrade || 'Standard Level';
     document.getElementById('score-details').innerText = `You scored ${score || '10/15'} correct questions.`;
-    document.getElementById('time-details').innerText = `Completed in ${mins}m ${secs}s • 🔥 Highest Streak: ${maxStreak || 0} in a row`;
+    document.getElementById('time-details').innerText = `Completed in ${mins}m ${secs}s • Highest Streak: ${maxStreak || 0} in a row`;
 
     this.renderBreakdown();
   }
@@ -117,7 +116,7 @@ class ResultsController {
           <div class="flex items-center justify-between">
             <span class="text-xs font-black text-slate-400 uppercase">Question ${idx + 1} • ${q.domain || 'Math Core'}</span>
             <span class="px-3 py-1 rounded-full text-xs font-black ${badgeClass}">
-              ${isCorrect ? '✓ Correct' : '✗ Needs Review'}
+              ${isCorrect ? 'Correct' : 'Needs Review'}
             </span>
           </div>
 
