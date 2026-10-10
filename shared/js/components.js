@@ -112,6 +112,7 @@ export class DigitalScratchpad {
     this.currentWidth = 3;
     this.mode = 'pen'; // 'pen', 'highlighter', 'eraser'
     this.history = [];
+    this._cleanupListeners = null;
   }
 
   init() {
@@ -134,9 +135,9 @@ export class DigitalScratchpad {
         <div class="flex flex-wrap items-center justify-between p-3 bg-white border-b border-slate-100 gap-2">
           <!-- Drawing tools -->
           <div class="flex items-center space-x-2">
-            <button onclick="window.scratchpad.setMode('pen')" id="sp-btn-pen" class="px-3 py-1.5 rounded-lg bg-sky-100 text-sky-700 font-bold text-xs">Pen</button>
-            <button onclick="window.scratchpad.setMode('highlighter')" id="sp-btn-hl" class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 font-bold text-xs">Highlighter</button>
-            <button onclick="window.scratchpad.setMode('eraser')" id="sp-btn-eraser" class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 font-bold text-xs">Eraser</button>
+            <button onclick="window.scratchpad.setMode('pen')" id="sp-modal-btn-pen" class="px-3 py-1.5 rounded-lg bg-sky-100 text-sky-700 font-bold text-xs">Pen</button>
+            <button onclick="window.scratchpad.setMode('highlighter')" id="sp-modal-btn-hl" class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 font-bold text-xs">Highlighter</button>
+            <button onclick="window.scratchpad.setMode('eraser')" id="sp-modal-btn-eraser" class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 font-bold text-xs">Eraser</button>
             <button onclick="window.scratchpad.clear()" class="px-3 py-1.5 rounded-lg bg-rose-50 text-rose-600 font-bold text-xs">Clear</button>
           </div>
 
@@ -160,14 +161,14 @@ export class DigitalScratchpad {
 
         <!-- Canvas -->
         <div class="flex-1 relative overflow-hidden bg-white">
-          <canvas id="scratchpad-canvas" class="scratchpad-canvas"></canvas>
+          <canvas id="scratchpad-modal-canvas" class="scratchpad-canvas"></canvas>
         </div>
       </div>
     `;
 
     document.body.appendChild(root);
     this.modal = root;
-    this.canvas = document.getElementById('scratchpad-canvas');
+    this.canvas = root.querySelector('#scratchpad-modal-canvas');
     this.ctx = this.canvas.getContext('2d');
 
     this.setupListeners();
@@ -230,18 +231,18 @@ export class DigitalScratchpad {
 
         <!-- Canvas -->
         <div class="flex-1 relative bg-white overflow-hidden cursor-crosshair">
-          <canvas id="scratchpad-canvas" class="w-full h-full block"></canvas>
+          <canvas id="scratchpad-embedded-canvas" class="w-full h-full block touch-none"></canvas>
         </div>
       </div>
     `;
 
-    this.canvas = document.getElementById('scratchpad-canvas');
+    this.canvas = container.querySelector('#scratchpad-embedded-canvas');
     this.ctx = this.canvas.getContext('2d');
 
     const parent = this.canvas.parentElement;
     const rect = parent.getBoundingClientRect();
-    this.canvas.width = rect.width || 420;
-    this.canvas.height = rect.height || 500;
+    this.canvas.width = Math.round(rect.width) || 420;
+    this.canvas.height = Math.round(rect.height) || 500;
 
     if (savedData) {
       const img = new Image();
@@ -256,11 +257,31 @@ export class DigitalScratchpad {
   }
 
   setupListeners() {
+    if (!this.canvas) return;
+
+    if (this._cleanupListeners) {
+      this._cleanupListeners();
+      this._cleanupListeners = null;
+    }
+
     const resizeCanvas = () => {
-      if (!this.canvas) return;
+      if (!this.canvas || !this.canvas.parentElement) return;
       const rect = this.canvas.parentElement.getBoundingClientRect();
-      this.canvas.width = rect.width;
-      this.canvas.height = rect.height;
+      const newW = Math.round(rect.width);
+      const newH = Math.round(rect.height);
+      if (newW <= 0 || newH <= 0) return;
+      if (this.canvas.width === newW && this.canvas.height === newH) return;
+
+      const tempCanvas = document.createElement('canvas');
+      tempCanvas.width = this.canvas.width;
+      tempCanvas.height = this.canvas.height;
+      const tempCtx = tempCanvas.getContext('2d');
+      tempCtx.drawImage(this.canvas, 0, 0);
+
+      this.canvas.width = newW;
+      this.canvas.height = newH;
+      this.ctx.drawImage(tempCanvas, 0, 0);
+      this.setMode(this.mode);
     };
 
     window.addEventListener('resize', resizeCanvas);
@@ -271,6 +292,8 @@ export class DigitalScratchpad {
       const pos = this.getPos(e);
       this.ctx.beginPath();
       this.ctx.moveTo(pos.x, pos.y);
+      this.ctx.lineTo(pos.x, pos.y);
+      this.ctx.stroke();
     };
 
     const move = (e) => {
@@ -287,28 +310,55 @@ export class DigitalScratchpad {
       }
     };
 
-    this.canvas.addEventListener('mousedown', start);
-    this.canvas.addEventListener('mousemove', move);
-    window.addEventListener('mouseup', stop);
+    const onMouseDown = (e) => start(e);
+    const onMouseMove = (e) => move(e);
+    const onMouseUp = () => stop();
 
-    this.canvas.addEventListener('touchstart', (e) => {
+    const onTouchStart = (e) => {
       e.preventDefault();
-      start(e.touches[0]);
-    }, { passive: false });
+      if (e.touches && e.touches[0]) start(e.touches[0]);
+    };
 
-    this.canvas.addEventListener('touchmove', (e) => {
+    const onTouchMove = (e) => {
       e.preventDefault();
-      move(e.touches[0]);
-    }, { passive: false });
+      if (e.touches && e.touches[0]) move(e.touches[0]);
+    };
 
-    this.canvas.addEventListener('touchend', stop);
+    const onTouchEnd = (e) => {
+      stop();
+    };
+
+    this.canvas.addEventListener('mousedown', onMouseDown);
+    this.canvas.addEventListener('mousemove', onMouseMove);
+    window.addEventListener('mouseup', onMouseUp);
+
+    this.canvas.addEventListener('touchstart', onTouchStart, { passive: false });
+    this.canvas.addEventListener('touchmove', onTouchMove, { passive: false });
+    this.canvas.addEventListener('touchend', onTouchEnd);
+
+    this._cleanupListeners = () => {
+      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener('mouseup', onMouseUp);
+      if (this.canvas) {
+        this.canvas.removeEventListener('mousedown', onMouseDown);
+        this.canvas.removeEventListener('mousemove', onMouseMove);
+        this.canvas.removeEventListener('touchstart', onTouchStart);
+        this.canvas.removeEventListener('touchmove', onTouchMove);
+        this.canvas.removeEventListener('touchend', onTouchEnd);
+      }
+    };
   }
 
   getPos(e) {
+    if (!this.canvas) return { x: 0, y: 0 };
     const rect = this.canvas.getBoundingClientRect();
+    const clientX = e.clientX !== undefined ? e.clientX : (e.touches && e.touches[0] ? e.touches[0].clientX : 0);
+    const clientY = e.clientY !== undefined ? e.clientY : (e.touches && e.touches[0] ? e.touches[0].clientY : 0);
+    const scaleX = rect.width > 0 ? this.canvas.width / rect.width : 1;
+    const scaleY = rect.height > 0 ? this.canvas.height / rect.height : 1;
     return {
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top
+      x: (clientX - rect.left) * scaleX,
+      y: (clientY - rect.top) * scaleY
     };
   }
 
@@ -316,9 +366,14 @@ export class DigitalScratchpad {
     this.init();
     this.modal.classList.remove('hidden');
     this.modal.classList.add('flex');
+    this.canvas = this.modal.querySelector('canvas');
+    this.ctx = this.canvas.getContext('2d');
     const rect = this.canvas.parentElement.getBoundingClientRect();
-    this.canvas.width = rect.width;
-    this.canvas.height = rect.height;
+    if (rect.width > 0 && rect.height > 0) {
+      this.canvas.width = Math.round(rect.width);
+      this.canvas.height = Math.round(rect.height);
+    }
+    this.setupListeners();
     this.setMode('pen');
   }
 
@@ -327,44 +382,72 @@ export class DigitalScratchpad {
       this.modal.classList.add('hidden');
       this.modal.classList.remove('flex');
     }
+    // If embedded canvas exists, restore it as active canvas
+    const embedded = document.getElementById('scratchpad-embedded-canvas');
+    if (embedded) {
+      this.canvas = embedded;
+      this.ctx = embedded.getContext('2d');
+      this.setupListeners();
+      this.setMode(this.mode);
+    }
   }
 
   setMode(mode) {
     this.mode = mode;
-    ['sp-btn-pen', 'sp-btn-hl', 'sp-btn-eraser'].forEach(id => {
+    const allBtnIds = [
+      'sp-btn-pen', 'sp-btn-hl', 'sp-btn-eraser',
+      'sp-modal-btn-pen', 'sp-modal-btn-hl', 'sp-modal-btn-eraser'
+    ];
+    allBtnIds.forEach(id => {
       const b = document.getElementById(id);
       if (b) {
-        b.className = 'px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 font-bold text-xs';
+        b.classList.remove('bg-sky-100', 'text-sky-700', 'bg-amber-100', 'text-amber-700', 'bg-rose-100', 'text-rose-700');
+        b.classList.add('bg-slate-100', 'text-slate-700');
       }
     });
 
+    const activeMap = {
+      pen: { ids: ['sp-btn-pen', 'sp-modal-btn-pen'], bg: 'bg-sky-100', text: 'text-sky-700' },
+      highlighter: { ids: ['sp-btn-hl', 'sp-modal-btn-hl'], bg: 'bg-amber-100', text: 'text-amber-700' },
+      eraser: { ids: ['sp-btn-eraser', 'sp-modal-btn-eraser'], bg: 'bg-rose-100', text: 'text-rose-700' }
+    };
+
+    const active = activeMap[mode];
+    if (active) {
+      active.ids.forEach(id => {
+        const b = document.getElementById(id);
+        if (b) {
+          b.classList.remove('bg-slate-100', 'text-slate-700');
+          b.classList.add(active.bg, active.text);
+        }
+      });
+    }
+
+    if (!this.ctx) return;
     if (mode === 'pen') {
-      document.getElementById('sp-btn-pen')?.classList.replace('bg-slate-100', 'bg-sky-100');
-      document.getElementById('sp-btn-pen')?.classList.replace('text-slate-700', 'text-sky-700');
       this.ctx.globalAlpha = 1.0;
       this.ctx.strokeStyle = this.currentColor;
       this.ctx.lineWidth = 3;
       this.ctx.lineCap = 'round';
+      this.ctx.lineJoin = 'round';
     } else if (mode === 'highlighter') {
-      document.getElementById('sp-btn-hl')?.classList.replace('bg-slate-100', 'bg-amber-100');
-      document.getElementById('sp-btn-hl')?.classList.replace('text-slate-700', 'text-amber-700');
       this.ctx.globalAlpha = 0.35;
       this.ctx.strokeStyle = '#facc15';
       this.ctx.lineWidth = 18;
       this.ctx.lineCap = 'square';
+      this.ctx.lineJoin = 'miter';
     } else if (mode === 'eraser') {
-      document.getElementById('sp-btn-eraser')?.classList.replace('bg-slate-100', 'bg-rose-100');
-      document.getElementById('sp-btn-eraser')?.classList.replace('text-slate-700', 'text-rose-700');
       this.ctx.globalAlpha = 1.0;
       this.ctx.strokeStyle = '#ffffff';
       this.ctx.lineWidth = 24;
       this.ctx.lineCap = 'round';
+      this.ctx.lineJoin = 'round';
     }
   }
 
   setColor(color) {
     this.currentColor = color;
-    if (this.mode === 'pen') {
+    if (this.mode === 'pen' && this.ctx) {
       this.ctx.strokeStyle = color;
     }
   }
@@ -387,9 +470,9 @@ export class DigitalScratchpad {
     this.ctx.font = 'bold 12px Nunito, sans-serif';
 
     if (type === 'numberline') {
-      // Draw horizontal line with tick marks
-      const startX = Math.max(50, cx - 250);
-      const endX = Math.min(this.canvas.width - 50, cx + 250);
+      const halfWidth = Math.min(220, (this.canvas.width - 60) / 2);
+      const startX = Math.max(20, cx - halfWidth);
+      const endX = Math.min(this.canvas.width - 20, cx + halfWidth);
       this.ctx.beginPath();
       this.ctx.moveTo(startX, cy);
       this.ctx.lineTo(endX, cy);
@@ -406,8 +489,7 @@ export class DigitalScratchpad {
         this.ctx.fillText(String(i), x - 4, cy + 24);
       }
     } else if (type === 'grid') {
-      // Draw 5x5 coordinate grid
-      const size = 200;
+      const size = Math.min(200, Math.min(this.canvas.width, this.canvas.height) - 40);
       const x0 = cx - size / 2;
       const y0 = cy - size / 2;
       for (let i = 0; i <= 5; i++) {
@@ -421,9 +503,8 @@ export class DigitalScratchpad {
         this.ctx.stroke();
       }
     } else if (type === 'tenframe') {
-      // Draw 2x5 ten frame
-      const w = 260;
-      const h = 104;
+      const w = Math.min(260, this.canvas.width - 40);
+      const h = Math.round(w * 0.4);
       const x0 = cx - w / 2;
       const y0 = cy - h / 2;
       this.ctx.strokeRect(x0, y0, w, h);
