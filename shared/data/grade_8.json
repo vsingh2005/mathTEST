@@ -75,8 +75,8 @@
       "grade": 8,
       "domain": "Linear Relationships & Proportional Relationships",
       "unit": "Unit 3: Linear Relationships & Proportional Relationships",
-      "title": "Slope",
-      "description": "Graph proportional relationships; interpret the unit rate as the slope of the graph. Compare two proportional relationships represented in different ways (table, graph, equation, verbal).",
+      "title": "Slope & Proportional Relationships",
+      "description": "Graph proportional relationships, interpreting the unit rate as the slope of the graph, and compare different relationships.",
       "standard": "8.EE.B.5",
       "questionCount": 8
     },
@@ -164,7 +164,7 @@
       "domain": "Functions & Volume",
       "unit": "Unit 5: Functions & Volume",
       "title": "Volume of Cylinders, Cones & Spheres",
-      "description": "Know and apply the formulas for volumes of cylinders (V{=}\u03c0 r^2 h), cones (V{=}{3}\u03c0 r^2 h), and spheres (V{=}{3}\u03c0 r^3). Solve real-world and mathematical problems.",
+      "description": "Know and apply the formulas for volumes of cylinders (V{=}π r^2 h), cones (V{=}{3}π r^2 h), and spheres (V{=}{3}π r^3). Solve real-world and mathematical problems.",
       "standard": "8.G.C.9",
       "questionCount": 8
     },
@@ -174,8 +174,8 @@
       "grade": 8,
       "domain": "Associations in Data & Scatter Plots",
       "unit": "Unit 6: Associations in Data & Scatter Plots",
-      "title": "Patterns of Association",
-      "description": "Construct and interpret scatter plots for bivariate measurement data. Describe patterns of association including clustering, outliers, positive/negative correlation, and linear vs.\\ nonlinear trends.",
+      "title": "Patterns of Association in Scatter Plots",
+      "description": "Construct and interpret scatter plots for bivariate measurement data to investigate patterns of association.",
       "standard": "8.SP.A.1",
       "questionCount": 8
     },
@@ -185,8 +185,8 @@
       "grade": 8,
       "domain": "Associations in Data & Lines of Best Fit",
       "unit": "Unit 6: Associations in Data & Lines of Best Fit",
-      "title": "Predictions",
-      "description": "Informally fit a straight line to data suggesting a linear association. Interpret slope and intercept in context; use the line of best fit to make predictions and assess model fit.",
+      "title": "Predictions & Lines of Best Fit",
+      "description": "Know that straight lines are widely used to model relationships; use the equation of a linear model to solve problems.",
       "standard": "8.SP.A.2 / 8.SP.A.3",
       "questionCount": 8
     },
@@ -230,7 +230,7 @@
       "domain": "Pythagorean Theorem & Irrational Numbers",
       "unit": "Unit 8: Pythagorean Theorem & Irrational Numbers",
       "title": "Square & Cube Roots",
-      "description": "Use square root and cube root symbols to represent solutions to x^2 = p and x^3 = p. Evaluate roots of perfect squares and cubes; recognize \u221a(2) as irrational and connect to the Pythagorean Theorem.",
+      "description": "Use square root and cube root symbols to represent solutions to x^2 = p and x^3 = p. Evaluate roots of perfect squares and cubes; recognize √(2) as irrational and connect to the Pythagorean Theorem.",
       "standard": "8.EE.A.2",
       "questionCount": 8
     },
@@ -315,7 +315,7 @@
       "explanation": "(3+4, 5-2) = (7, 3).",
       "hints": [
         "Concept Rule: Translate right means add to x (3 + 4 = 7); down means subtract from y (5 - 2 = 3).",
-        "Strategy Clue: Apply the horizontal change to the x-coordinate and the vertical change to the y-coordinate.",
+        "Strategy Clue: (7, 3).",
         "Gizmo's Step: (3+4, 5-2) = (7, 3)."
       ]
     },
@@ -376,7 +376,7 @@
       "explanation": "4 becomes -4.",
       "hints": [
         "Concept Rule: Reflecting across the x-axis keeps the x-coordinate the same and negates y: (x, -y).",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Strategy Clue: -4.",
         "Gizmo's Step: Working through the calculation gives -4, verifying the solution step by step."
       ]
     },
@@ -415,7 +415,7 @@
       "explanation": "(-3, -5).",
       "hints": [
         "Concept Rule: Reflecting across the y-axis negates the x-coordinate while y stays the same: (-x, y).",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Strategy Clue: (-3, -5).",
         "Gizmo's Step: Working through the calculation gives (-3, -5), verifying the solution step by step."
       ]
     },
@@ -453,8 +453,8 @@
       ],
       "explanation": "(x, y) -> (-y, x) -> (-4, 2).",
       "hints": [
-        "Concept Rule: A 90\u00b0 counterclockwise rotation maps (x, y) to (-y, x). Here, (2, 4) becomes (-4, 2).",
-        "Strategy Clue: Apply the coordinate rule corresponding to the angle and direction of rotation about the origin.",
+        "Concept Rule: A 90° counterclockwise rotation maps (x, y) to (-y, x). Here, (2, 4) becomes (-4, 2).",
+        "Strategy Clue: (-4, 2).",
         "Gizmo's Step: Working through the calculation gives (-4, 2), verifying the solution step by step."
       ]
     },
@@ -475,8 +475,8 @@
       "options": null,
       "explanation": "x becomes -1.",
       "hints": [
-        "Concept Rule: A 180\u00b0 rotation about the origin maps (x, y) to (-x, -y). New x is -1.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: A 180° rotation about the origin maps (x, y) to (-x, -y). New x is -1.",
+        "Strategy Clue: -1.",
         "Gizmo's Step: Working through the calculation gives -1, verifying the solution step by step."
       ]
     },
@@ -515,7 +515,7 @@
       "explanation": "Rigid transformations preserve length: 8 cm.",
       "hints": [
         "Concept Rule: Rotations and translations are rigid motions and preserve segment length.",
-        "Strategy Clue: Apply the horizontal change to the x-coordinate and the vertical change to the y-coordinate.",
+        "Strategy Clue: 8 cm.",
         "Gizmo's Step: Working through the calculation gives 8 cm, verifying the solution step by step."
       ]
     },
@@ -537,7 +537,7 @@
       "explanation": "2 + (-5) = -3.",
       "hints": [
         "Concept Rule: New coordinates: x = -3 + 5 = 2; y = 2 - 7 = -5. Sum = 2 + (-5) = -3.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Strategy Clue: -3.",
         "Gizmo's Step: Working through the calculation gives -3, verifying the solution step by step."
       ]
     },
@@ -597,8 +597,8 @@
       "options": null,
       "explanation": "-1 + 3 = 2.",
       "hints": [
-        "Concept Rule: Reflection across y-axis gives x = -1. Then translate 3 units right: -1 + 3.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: Reflection across y-axis gives x = -1. Then translate 3 units right: -1 + 3 = 2.",
+        "Strategy Clue: 2.",
         "Gizmo's Step: Working through the calculation gives 2, verifying the solution step by step."
       ]
     },
@@ -611,19 +611,19 @@
       "standard": "8.G.A.2",
       "difficulty": 2,
       "type": "numeric-response",
-      "prompt": "Triangle ABC has angle measures 40\u00b0, 60\u00b0, and 80\u00b0. After a sequence of reflections and rotations to form Triangle A'B'C', what is the measure of angle A' in degrees?",
+      "prompt": "Triangle ABC has angle measures 40°, 60°, and 80°. After a sequence of reflections and rotations to form Triangle A'B'C', what is the measure of angle A' in degrees?",
       "correctAnswer": "40",
       "acceptedAnswers": [
         "40",
         "40 degrees",
-        "40\u00b0"
+        "40°"
       ],
       "options": null,
-      "explanation": "Angle measure is preserved: 40\u00b0.",
+      "explanation": "Angle measure is preserved: 40°.",
       "hints": [
         "Concept Rule: Rigid transformations preserve all angle measures.",
-        "Strategy Clue: Identify the line of reflection to determine which coordinate stays the same and which coordinate changes sign.",
-        "Gizmo's Step: Angle measure is preserved: 40\u00b0 Therefore, 40 is the mathematically correct answer."
+        "Strategy Clue: 40°.",
+        "Gizmo's Step: Angle measure is preserved: 40°."
       ]
     },
     {
@@ -643,8 +643,8 @@
       "options": null,
       "explanation": "1 + 5 = 6.",
       "hints": [
-        "Concept Rule: 180\u00b0 rotation negates coordinates: (4, -1) -> (-4, 1). Translate up 5: y = 1 + 5.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: 180° rotation negates coordinates: (4, -1) -> (-4, 1). Translate up 5: y = 1 + 5 = 6.",
+        "Strategy Clue: 6.",
         "Gizmo's Step: Working through the calculation gives 6, verifying the solution step by step."
       ]
     },
@@ -704,8 +704,8 @@
       "options": null,
       "explanation": "5 + 12 + 13 = 30.",
       "hints": [
-        "Concept Rule: Congruent triangles have identical side lengths: Perimeter = 5 + 12 + 13.",
-        "Strategy Clue: Add the lengths of all outer boundary sides together to find the perimeter.",
+        "Concept Rule: Congruent triangles have identical side lengths: Perimeter = 5 + 12 + 13 = 30.",
+        "Strategy Clue: 30.",
         "Gizmo's Step: Working through the calculation gives 30, verifying the solution step by step."
       ]
     },
@@ -762,13 +762,13 @@
       "acceptedAnswers": [
         "180",
         "180 degrees",
-        "180\u00b0"
+        "180°"
       ],
       "options": null,
-      "explanation": "Successive reflections across perpendicular axes equal 180\u00b0 rotation.",
+      "explanation": "Successive reflections across perpendicular axes equal 180° rotation.",
       "hints": [
-        "Concept Rule: (x, y) -> (x, -y) -> (-x, -y). This is identical to a 180\u00b0 rotation about the origin.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: (x, y) -> (x, -y) -> (-x, -y). This is identical to a 180° rotation about the origin.",
+        "Strategy Clue: 180°.",
         "Gizmo's Step: Working through the calculation gives 180, verifying the solution step by step."
       ]
     },
@@ -786,14 +786,14 @@
       "acceptedAnswers": [
         "180",
         "180 degrees",
-        "180\u00b0"
+        "180°"
       ],
       "options": null,
-      "explanation": "Sum of triangle interior angles is 180\u00b0.",
+      "explanation": "Sum of triangle interior angles is 180°.",
       "hints": [
-        "Concept Rule: The interior angles of any triangle always sum to 180\u00b0.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
-        "Gizmo's Step: Sum of triangle interior angles is 180\u00b0 Therefore, 180 is the mathematically correct answer."
+        "Concept Rule: The interior angles of any triangle always sum to 180°.",
+        "Strategy Clue: 180°.",
+        "Gizmo's Step: Sum of triangle interior angles is 180°."
       ]
     },
     {
@@ -805,18 +805,18 @@
       "standard": "8.G.A.5",
       "difficulty": 1,
       "type": "numeric-response",
-      "prompt": "In triangle ABC, angle A = 55\u00b0 and angle B = 65\u00b0. What is the measure of angle C in degrees?",
+      "prompt": "In triangle ABC, angle A = 55° and angle B = 65°. What is the measure of angle C in degrees?",
       "correctAnswer": "60",
       "acceptedAnswers": [
         "60",
         "60 degrees",
-        "60\u00b0"
+        "60°"
       ],
       "options": null,
-      "explanation": "180 - 120 = 60\u00b0.",
+      "explanation": "180 - 120 = 60°.",
       "hints": [
-        "Concept Rule: Angle C = 180 - (55 + 65) = 180 - 120.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: Angle C = 180 - (55 + 65) = 180 - 120 = 60°.",
+        "Strategy Clue: 60°.",
         "Gizmo's Step: Working through the calculation gives 60, verifying the solution step by step."
       ]
     },
@@ -829,18 +829,18 @@
       "standard": "8.G.A.5",
       "difficulty": 2,
       "type": "numeric-response",
-      "prompt": "Two parallel lines are cut by a transversal. If one alternate interior angle measures 72\u00b0, what is the measure of the other alternate interior angle in degrees?",
+      "prompt": "Two parallel lines are cut by a transversal. If one alternate interior angle measures 72°, what is the measure of the other alternate interior angle in degrees?",
       "correctAnswer": "72",
       "acceptedAnswers": [
         "72",
         "72 degrees",
-        "72\u00b0"
+        "72°"
       ],
       "options": null,
-      "explanation": "Alternate interior angles are equal: 72\u00b0.",
+      "explanation": "Alternate interior angles are equal: 72°.",
       "hints": [
         "Concept Rule: When parallel lines are intersected by a transversal, alternate interior angles are congruent (equal).",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: 72°.",
         "Gizmo's Step: Working through the calculation gives 72, verifying the solution step by step."
       ]
     },
@@ -853,18 +853,18 @@
       "standard": "8.G.A.5",
       "difficulty": 2,
       "type": "numeric-response",
-      "prompt": "Two parallel lines are cut by a transversal. If an interior angle measures 110\u00b0, what is the measure of its consecutive (same-side) interior angle in degrees?",
+      "prompt": "Two parallel lines are cut by a transversal. If an interior angle measures 110°, what is the measure of its consecutive (same-side) interior angle in degrees?",
       "correctAnswer": "70",
       "acceptedAnswers": [
         "70",
         "70 degrees",
-        "70\u00b0"
+        "70°"
       ],
       "options": null,
-      "explanation": "180 - 110 = 70\u00b0.",
+      "explanation": "180 - 110 = 70°.",
       "hints": [
-        "Concept Rule: Consecutive (same-side) interior angles are supplementary (sum to 180\u00b0): 180 - 110.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: Consecutive (same-side) interior angles are supplementary (sum to 180°): 180 - 110 = 70°.",
+        "Strategy Clue: 70°.",
         "Gizmo's Step: Working through the calculation gives 70, verifying the solution step by step."
       ]
     },
@@ -916,18 +916,18 @@
       "standard": "8.G.A.5",
       "difficulty": 3,
       "type": "numeric-response",
-      "prompt": "In triangle XYZ, two remote interior angles measure 48\u00b0 and 76\u00b0. What is the measure of the exterior angle at the third vertex in degrees?",
+      "prompt": "In triangle XYZ, two remote interior angles measure 48° and 76°. What is the measure of the exterior angle at the third vertex in degrees?",
       "correctAnswer": "124",
       "acceptedAnswers": [
         "124",
         "124 degrees",
-        "124\u00b0"
+        "124°"
       ],
       "options": null,
-      "explanation": "48 + 76 = 124\u00b0.",
+      "explanation": "48 + 76 = 124°.",
       "hints": [
-        "Concept Rule: Exterior angle = 48\u00b0 + 76\u00b0.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: Exterior angle = 48° + 76° = 124°.",
+        "Strategy Clue: 124°.",
         "Gizmo's Step: Working through the calculation gives 124, verifying the solution step by step."
       ]
     },
@@ -940,7 +940,7 @@
       "standard": "8.G.A.5",
       "difficulty": 3,
       "type": "multiple-choice",
-      "prompt": "If two lines are cut by a transversal and their corresponding angles are both 85\u00b0, what must be true?",
+      "prompt": "If two lines are cut by a transversal and their corresponding angles are both 85°, what must be true?",
       "correctAnswer": "The two lines are parallel",
       "acceptedAnswers": [
         "The two lines are parallel"
@@ -979,7 +979,7 @@
       "standard": "8.G.A.5",
       "difficulty": 3,
       "type": "numeric-response",
-      "prompt": "The angles of a triangle are (2x)\u00b0, (3x)\u00b0, and (5x)\u00b0. Find the value of x.",
+      "prompt": "The angles of a triangle are (2x)°, (3x)°, and (5x)°. Find the value of x.",
       "correctAnswer": "18",
       "acceptedAnswers": [
         "18"
@@ -987,8 +987,8 @@
       "options": null,
       "explanation": "10x = 180 -> x = 18.",
       "hints": [
-        "Concept Rule: 2x + 3x + 5x = 10x = 180\u00b0. x = 180 \u00f7 10 = 18.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: 2x + 3x + 5x = 10x = 180°. x = 180 ÷ 10 = 18.",
+        "Strategy Clue: 18.",
         "Gizmo's Step: 10x = 180 -> x = 18."
       ]
     },
@@ -1007,10 +1007,10 @@
         "12"
       ],
       "options": null,
-      "explanation": "4 \u00d7 3 = 12.",
+      "explanation": "4 × 3 = 12.",
       "hints": [
-        "Concept Rule: Multiply coordinates by scale factor: new y = 4 \u00d7 3.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: Multiply coordinates by scale factor: new y = 4 × 3 = 12.",
+        "Strategy Clue: 12.",
         "Gizmo's Step: Working through the calculation gives 12, verifying the solution step by step."
       ]
     },
@@ -1049,7 +1049,7 @@
       "explanation": "k < 1 produces a reduction.",
       "hints": [
         "Concept Rule: A scale factor between 0 and 1 produces a reduction.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Strategy Clue: A reduction.",
         "Gizmo's Step: Working through the calculation gives A reduction (smaller figure), verifying the solution step by step."
       ]
     },
@@ -1069,10 +1069,10 @@
         "25 cm"
       ],
       "options": null,
-      "explanation": "10 \u00d7 2.5 = 25 cm.",
+      "explanation": "10 × 2.5 = 25 cm.",
       "hints": [
-        "Concept Rule: New length = 10 \u00d7 2.5.",
-        "Strategy Clue: Find the scale factor between the known amounts, then multiply the other ingredient by that same factor.",
+        "Concept Rule: New length = 10 × 2.5 = 25 cm.",
+        "Strategy Clue: 25 cm.",
         "Gizmo's Step: Working through the calculation gives 25, verifying the solution step by step."
       ]
     },
@@ -1111,7 +1111,7 @@
       "explanation": "Rule is (kx, ky) = (2x, 2y).",
       "hints": [
         "Concept Rule: A dilation multiplies each coordinate by scale factor k: (kx, ky) -> (2x, 2y).",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Strategy Clue: (2x, 2y).",
         "Gizmo's Step: Rule is (kx, ky) = (2x, 2y)."
       ]
     },
@@ -1130,10 +1130,10 @@
         "10"
       ],
       "options": null,
-      "explanation": "15 \u00d7 2/3 = 10.",
+      "explanation": "15 × 2/3 = 10.",
       "hints": [
-        "Concept Rule: New length = 15 \u00d7 (2/3) = 30/3.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Concept Rule: New length = 15 × (2/3) = 30/3 = 10.",
+        "Strategy Clue: 10.",
         "Gizmo's Step: Working through the calculation gives 10, verifying the solution step by step."
       ]
     },
@@ -1153,11 +1153,11 @@
         "108 sq in"
       ],
       "options": null,
-      "explanation": "12 \u00d7 3\u00b2 = 108 sq in.",
+      "explanation": "12 × 3² = 108 sq in.",
       "hints": [
-        "Concept Rule: Area scales by k\u00b2: New Area = 12 \u00d7 3\u00b2 = 12 \u00d7 9.",
-        "Strategy Clue: Find the scale factor between the known amounts, then multiply the other ingredient by that same factor.",
-        "Gizmo's Step: 12 \u00d7 3\u00b2 = 108 sq in."
+        "Concept Rule: Area scales by k²: New Area = 12 × 3² = 12 × 9 = 108 square inches.",
+        "Strategy Clue: 108 sq in.",
+        "Gizmo's Step: 12 × 3² = 108 sq in."
       ]
     },
     {
@@ -1217,8 +1217,8 @@
       "options": null,
       "explanation": "2/8 = 1/4 = 0.25.",
       "hints": [
-        "Concept Rule: Scale factor k = 2/8 = 3/12 = 1/4.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: Scale factor k = 2/8 = 3/12 = 1/4 = 0.25.",
+        "Strategy Clue: 0.25 or 1/4.",
         "Gizmo's Step: Working through the calculation gives 0.25, verifying the solution step by step."
       ]
     },
@@ -1276,10 +1276,10 @@
         "15"
       ],
       "options": null,
-      "explanation": "5 \u00d7 (12/4) = 15.",
+      "explanation": "5 × (12/4) = 15.",
       "hints": [
-        "Concept Rule: Scale factor = 12 \u00f7 4 = 3. Side EF = 5 \u00d7 3.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: Scale factor = 12 ÷ 4 = 3. Side EF = 5 × 3 = 15.",
+        "Strategy Clue: 15.",
         "Gizmo's Step: Working through the calculation gives 15, verifying the solution step by step."
       ]
     },
@@ -1300,10 +1300,10 @@
         "27 feet"
       ],
       "options": null,
-      "explanation": "6/4 \u00d7 18 = 27 ft.",
+      "explanation": "6/4 × 18 = 27 ft.",
       "hints": [
-        "Concept Rule: Set up proportion: 6 / 4 = h / 18 -> 4h = 108 -> h.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: Set up proportion: 6 / 4 = h / 18 -> 4h = 108 -> h = 27 feet.",
+        "Strategy Clue: 27 ft.",
         "Gizmo's Step: Working through the calculation gives 27, verifying the solution step by step."
       ]
     },
@@ -1316,7 +1316,7 @@
       "standard": "8.G.A.4",
       "difficulty": 2,
       "type": "multiple-choice",
-      "prompt": "Triangle 1 has angles 50\u00b0 and 60\u00b0. Triangle 2 has angles 50\u00b0 and 70\u00b0. Are the two triangles similar?",
+      "prompt": "Triangle 1 has angles 50° and 60°. Triangle 2 has angles 50° and 70°. Are the two triangles similar?",
       "correctAnswer": "Yes, by the Angle-Angle (AA) similarity criterion",
       "acceptedAnswers": [
         "Yes, by the Angle-Angle (AA) similarity criterion"
@@ -1339,9 +1339,9 @@
           "correct": true
         }
       ],
-      "explanation": "Both triangles have angles 50\u00b0, 60\u00b0, and 70\u00b0.",
+      "explanation": "Both triangles have angles 50°, 60°, and 70°.",
       "hints": [
-        "Concept Rule: In Triangle 1, the third angle is 180 - 110 = 70\u00b0. Both have angles 50\u00b0, 60\u00b0, and 70\u00b0, so AA criterion holds.",
+        "Concept Rule: In Triangle 1, the third angle is 180 - 110 = 70°. Both have angles 50°, 60°, and 70°, so AA criterion holds.",
         "Strategy Clue: Yes, by AA similarity.",
         "Gizmo's Step: Yes, by AA similarity. Completing this step confirms the result is Yes, by the Angle-Angle (AA) similarity criterion."
       ]
@@ -1362,10 +1362,10 @@
         "20 cm"
       ],
       "options": null,
-      "explanation": "8 \u00d7 2.5 = 20 cm.",
+      "explanation": "8 × 2.5 = 20 cm.",
       "hints": [
-        "Concept Rule: Scale factor = 10 \u00f7 4 = 2.5. Longer side = 8 \u00d7 2.5.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: Scale factor = 10 ÷ 4 = 2.5. Longer side = 8 × 2.5 = 20 cm.",
+        "Strategy Clue: 20 cm.",
         "Gizmo's Step: Working through the calculation gives 20, verifying the solution step by step."
       ]
     },
@@ -1385,10 +1385,10 @@
         "72 cm"
       ],
       "options": null,
-      "explanation": "18 \u00d7 4 = 72 cm.",
+      "explanation": "18 × 4 = 72 cm.",
       "hints": [
-        "Concept Rule: Perimeter scales linearly with scale factor: 18 \u00d7 4.",
-        "Strategy Clue: Identify the count of each item and write them in the exact order requested by the prompt.",
+        "Concept Rule: Perimeter scales linearly with scale factor: 18 × 4 = 72 cm.",
+        "Strategy Clue: 72 cm.",
         "Gizmo's Step: Working through the calculation gives 72, verifying the solution step by step."
       ]
     },
@@ -1424,10 +1424,10 @@
           "correct": false
         }
       ],
-      "explanation": "2\u00b2:5\u00b2 = 4:25.",
+      "explanation": "2²:5² = 4:25.",
       "hints": [
-        "Concept Rule: Area ratio is the square of the side length ratio: 2\u00b2 : 5\u00b2.",
-        "Strategy Clue: Identify the count of each item and write them in the exact order requested by the prompt.",
+        "Concept Rule: Area ratio is the square of the side length ratio: 2² : 5² = 4:25.",
+        "Strategy Clue: 4:25.",
         "Gizmo's Step: Working through the calculation gives 4:25, verifying the solution step by step."
       ]
     },
@@ -1447,11 +1447,11 @@
         "75 sq cm"
       ],
       "options": null,
-      "explanation": "27 \u00d7 25/9 = 75 sq cm.",
+      "explanation": "27 × 25/9 = 75 sq cm.",
       "hints": [
-        "Concept Rule: Area ratio = (5/3)\u00b2 = 25/9. Larger area = 27 \u00d7 (25/9) = 3 \u00d7 25.",
-        "Strategy Clue: Identify the count of each item and write them in the exact order requested by the prompt.",
-        "Gizmo's Step: 27 \u00d7 25/9 = 75 sq cm."
+        "Concept Rule: Area ratio = (5/3)² = 25/9. Larger area = 27 × (25/9) = 3 × 25 = 75 sq cm.",
+        "Strategy Clue: 75 sq cm.",
+        "Gizmo's Step: 27 × 25/9 = 75 sq cm."
       ]
     },
     {
@@ -1490,7 +1490,7 @@
       "hints": [
         "Concept Rule: Right triangles formed along a straight line are similar, making rise/run identical everywhere.",
         "Strategy Clue: Slope triangles are similar.",
-        "Gizmo's Step: Similar triangles establish constant slope. This verifies that Slope triangles along the line are similar, so the ratio of vertical change to horizontal change is constant is correct Therefore, Slope triangles along the line are similar, so the ratio of vertical change to horizontal change is constant is the mathematically correct answer."
+        "Gizmo's Step: Similar triangles establish constant slope. This verifies that Slope triangles along the line are similar, so the ratio of vertical change to horizontal change is constant is correct."
       ]
     },
     {
@@ -1508,10 +1508,10 @@
         "3"
       ],
       "options": null,
-      "explanation": "6 \u00f7 2 = 3.",
+      "explanation": "6 ÷ 2 = 3.",
       "hints": [
-        "Concept Rule: Slope = rise \u00f7 run = 6 \u00f7 2.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: Slope = rise ÷ run = 6 ÷ 2 = 3.",
+        "Strategy Clue: 3.",
         "Gizmo's Step: Working through the calculation gives 3, verifying the solution step by step."
       ]
     },
@@ -1530,10 +1530,10 @@
         "15"
       ],
       "options": null,
-      "explanation": "3 \u00d7 5 = 15.",
+      "explanation": "3 × 5 = 15.",
       "hints": [
-        "Concept Rule: Rise = slope \u00d7 run = 3 \u00d7 5.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: Rise = slope × run = 3 × 5 = 15.",
+        "Strategy Clue: 15.",
         "Gizmo's Step: Working through the calculation gives 15, verifying the solution step by step."
       ]
     },
@@ -1572,7 +1572,7 @@
       "explanation": "Rise over run formula.",
       "hints": [
         "Concept Rule: Slope is the ratio of vertical change (delta y) to horizontal change (delta x).",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: m = (y2 - y1) / (x2 - x1).",
         "Gizmo's Step: Rise over run formula. This verifies that m = (y2 - y1) / (x2 - x1) is correct."
       ]
     },
@@ -1593,8 +1593,8 @@
       "options": null,
       "explanation": "(11 - 2)/(4 - 1) = 3.",
       "hints": [
-        "Concept Rule: m = (11 - 2) \u00f7 (4 - 1) = 9 \u00f7 3.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: m = (11 - 2) ÷ (4 - 1) = 9 ÷ 3 = 3.",
+        "Strategy Clue: 3.",
         "Gizmo's Step: (11 - 2)/(4 - 1) = 3."
       ]
     },
@@ -1615,8 +1615,8 @@
       "options": null,
       "explanation": "(13 - 5)/(6 - 2) = 2.",
       "hints": [
-        "Concept Rule: m = (13 - 5) \u00f7 (6 - 2) = 8 \u00f7 4.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: m = (13 - 5) ÷ (6 - 2) = 8 ÷ 4 = 2.",
+        "Strategy Clue: 2.",
         "Gizmo's Step: (13 - 5)/(6 - 2) = 2."
       ]
     },
@@ -1656,7 +1656,7 @@
       "hints": [
         "Concept Rule: Both simplify to 2/3, confirming a constant rate of change.",
         "Strategy Clue: Yes, both equal 2/3.",
-        "Gizmo's Step: Yes, because 4/6 simplifies to 2/3 and 6/9 simplifies to 2/3 Therefore, Yes, because 4/6 simplifies to 2/3 and 6/9 simplifies to 2/3 is the mathematically correct answer."
+        "Gizmo's Step: Yes, because 4/6 simplifies to 2/3 and 6/9 simplifies to 2/3."
       ]
     },
     {
@@ -1676,8 +1676,8 @@
       "options": null,
       "explanation": "3 + 4(3) = 15.",
       "hints": [
-        "Concept Rule: y - 3 = 4(4 - 1) = 12 -> y.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: y - 3 = 4(4 - 1) = 12 -> y = 15.",
+        "Strategy Clue: 15.",
         "Gizmo's Step: Working through the calculation gives 15, verifying the solution step by step."
       ]
     },
@@ -1696,10 +1696,10 @@
         "5"
       ],
       "options": null,
-      "explanation": "20 \u00f7 4 = 5.",
+      "explanation": "20 ÷ 4 = 5.",
       "hints": [
-        "Concept Rule: k = y \u00f7 x = 20 \u00f7 4 = 5.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Concept Rule: k = y ÷ x = 20 ÷ 4 = 5.",
+        "Strategy Clue: 5.",
         "Gizmo's Step: Working through the calculation gives 5, verifying the solution step by step."
       ]
     },
@@ -1738,7 +1738,7 @@
       "explanation": "Direct proportionality passes through the origin.",
       "hints": [
         "Concept Rule: Proportional graphs are straight lines passing through (0, 0).",
-        "Strategy Clue: Identify the quantities given in the problem, set up the required mathematical operation, and compute the result step-by-step.",
+        "Strategy Clue: Pass through (0, 0).",
         "Gizmo's Step: Pass through (0, 0). Completing this step confirms the result is Be a straight line that passes through the origin (0, 0)."
       ]
     },
@@ -1777,8 +1777,8 @@
       "explanation": "Higher slope equals higher speed.",
       "hints": [
         "Concept Rule: The slope represents unit rate of speed: 65 > 55.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
-        "Gizmo's Step: Car A, because its speed (slope) 65 mph is greater than 55 mph Therefore, Car A, because its speed (slope) 65 mph is greater than 55 mph is the mathematically correct answer."
+        "Strategy Clue: Car A is faster (65 mph).",
+        "Gizmo's Step: Car A, because its speed (slope) 65 mph is greater than 55 mph."
       ]
     },
     {
@@ -1797,10 +1797,10 @@
         "28 miles"
       ],
       "options": null,
-      "explanation": "8 \u00d7 3.5 = 28 miles.",
+      "explanation": "8 × 3.5 = 28 miles.",
       "hints": [
-        "Concept Rule: d = 8 \u00d7 3.5 = 28 miles.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Concept Rule: d = 8 × 3.5 = 28 miles.",
+        "Strategy Clue: 28 miles.",
         "Gizmo's Step: Working through the calculation gives 28, verifying the solution step by step."
       ]
     },
@@ -1820,10 +1820,10 @@
         "$3"
       ],
       "options": null,
-      "explanation": "15 \u00f7 5 = $3.",
+      "explanation": "15 ÷ 5 = $3.",
       "hints": [
-        "Concept Rule: Unit price = 15 \u00f7 5 = $3 per bottle.",
-        "Strategy Clue: Divide the total amount (or distance or cost) by the total units (or time) to find the unit rate.",
+        "Concept Rule: Unit price = 15 ÷ 5 = $3 per bottle.",
+        "Strategy Clue: $3.",
         "Gizmo's Step: Working through the calculation gives 3, verifying the solution step by step."
       ]
     },
@@ -1845,8 +1845,8 @@
       "options": null,
       "explanation": "15 - 12 = $3.",
       "hints": [
-        "Concept Rule: Company Y hourly rate = 45 \u00f7 3 = $15. Difference = 15 - 12 = $3 per hour.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Concept Rule: Company Y hourly rate = 45 ÷ 3 = $15. Difference = 15 - 12 = $3 per hour.",
+        "Strategy Clue: $3.",
         "Gizmo's Step: Working through the calculation gives 3, verifying the solution step by step."
       ]
     },
@@ -1882,11 +1882,11 @@
           "correct": false
         }
       ],
-      "explanation": "Distance \u00f7 time = speed.",
+      "explanation": "Distance ÷ time = speed.",
       "hints": [
         "Concept Rule: Rise (distance) divided by run (time) is speed (velocity).",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
-        "Gizmo's Step: Distance \u00f7 time = speed. This verifies that Speed (rate of motion) is correct."
+        "Strategy Clue: Speed.",
+        "Gizmo's Step: Distance ÷ time = speed. This verifies that Speed (rate of motion) is correct."
       ]
     },
     {
@@ -1904,10 +1904,10 @@
         "63"
       ],
       "options": null,
-      "explanation": "7 \u00d7 9 = 63.",
+      "explanation": "7 × 9 = 63.",
       "hints": [
-        "Concept Rule: k = 42 \u00f7 6 = 7. For x = 9: y = 7 \u00d7 9.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Concept Rule: k = 42 ÷ 6 = 7. For x = 9: y = 7 × 9 = 63.",
+        "Strategy Clue: 63.",
         "Gizmo's Step: Working through the calculation gives 63, verifying the solution step by step."
       ]
     },
@@ -1929,7 +1929,7 @@
       "explanation": "b = 7.",
       "hints": [
         "Concept Rule: In y = mx + b, b is the constant term: 7.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Strategy Clue: 7.",
         "Gizmo's Step: Working through the calculation gives 7, verifying the solution step by step."
       ]
     },
@@ -1951,7 +1951,7 @@
       "explanation": "m = -3.",
       "hints": [
         "Concept Rule: In y = mx + b, m is the coefficient of x: -3.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Strategy Clue: -3.",
         "Gizmo's Step: Working through the calculation gives -3, verifying the solution step by step."
       ]
     },
@@ -1990,8 +1990,8 @@
       "explanation": "y-intercept is where line meets y-axis.",
       "hints": [
         "Concept Rule: The y-intercept is the output value when x = 0, where the line crosses the vertical axis.",
-        "Strategy Clue: Substitute the given value into the expression and compute the result step-by-step.",
-        "Gizmo's Step: y-intercept is where line meets y-axis. This verifies that The coordinates (0, b) where the line crosses the y-axis is correct Therefore, The coordinates (0, b) where the line crosses the y-axis is the mathematically correct answer."
+        "Strategy Clue: (0, b) on the y-axis.",
+        "Gizmo's Step: y-intercept is where line meets y-axis. This verifies that The coordinates (0, b) where the line crosses the y-axis is correct."
       ]
     },
     {
@@ -2011,8 +2011,8 @@
       "options": null,
       "explanation": "2(6) - 5 = 7.",
       "hints": [
-        "Concept Rule: y = 2(6) - 5 = 12 - 5.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Concept Rule: y = 2(6) - 5 = 12 - 5 = 7.",
+        "Strategy Clue: 7.",
         "Gizmo's Step: Working through the calculation gives 7, verifying the solution step by step."
       ]
     },
@@ -2051,7 +2051,7 @@
       "explanation": "y = -1/2 x + 3.",
       "hints": [
         "Concept Rule: Substitute m = -1/2 and b = 3 into y = mx + b.",
-        "Strategy Clue: Substitute the given value into the expression and compute the result step-by-step.",
+        "Strategy Clue: y = -1/2 x + 3.",
         "Gizmo's Step: y = -1/2 x + 3. Completing this step confirms the result is y = -1/2 x + 3."
       ]
     },
@@ -2072,8 +2072,8 @@
       "options": null,
       "explanation": "11 - 6 = 5.",
       "hints": [
-        "Concept Rule: 11 = 3(2) + b -> 11 = 6 + b -> b.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: 11 = 3(2) + b -> 11 = 6 + b -> b = 5.",
+        "Strategy Clue: 5.",
         "Gizmo's Step: Working through the calculation gives 5, verifying the solution step by step."
       ]
     },
@@ -2112,7 +2112,7 @@
       "explanation": "m = 3, b = 4 -> y = 3x + 4.",
       "hints": [
         "Concept Rule: b = 4 (from (0, 4)). Slope m = (10 - 4)/(2 - 0) = 6/2 = 3. Equation: y = 3x + 4.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Strategy Clue: y = 3x + 4.",
         "Gizmo's Step: m = 3, b = 4 -> y = 3x + 4."
       ]
     },
@@ -2132,10 +2132,10 @@
         "$115"
       ],
       "options": null,
-      "explanation": "15 \u00d7 6 + 25 = $115.",
+      "explanation": "15 × 6 + 25 = $115.",
       "hints": [
         "Concept Rule: y = 15(6) + 25 = 90 + 25 = $115.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Strategy Clue: $115.",
         "Gizmo's Step: Working through the calculation gives 115, verifying the solution step by step."
       ]
     },
@@ -2174,7 +2174,7 @@
       "explanation": "Base fee at 0 miles.",
       "hints": [
         "Concept Rule: The constant term represents the starting value (y-intercept) when m = 0.",
-        "Strategy Clue: Line up the decimal points vertically before adding or subtracting place values.",
+        "Strategy Clue: Base fee.",
         "Gizmo's Step: Working through the calculation gives The initial base fee charged before driving any miles, verifying the solution step by step."
       ]
     },
@@ -2197,7 +2197,7 @@
       "explanation": "15 gallons per day.",
       "hints": [
         "Concept Rule: The rate of change is -15 gallons per day, meaning 15 gallons are lost daily.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Strategy Clue: 15 gallons.",
         "Gizmo's Step: Working through the calculation gives 15, verifying the solution step by step."
       ]
     },
@@ -2217,10 +2217,10 @@
         "8 hours"
       ],
       "options": null,
-      "explanation": "12 \u00f7 1.5 = 8 hours.",
+      "explanation": "12 ÷ 1.5 = 8 hours.",
       "hints": [
-        "Concept Rule: 0 = 12 - 1.5t -> 1.5t = 12 -> t = 12 \u00f7 1.5.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: 0 = 12 - 1.5t -> 1.5t = 12 -> t = 12 ÷ 1.5 = 8 hours.",
+        "Strategy Clue: 8 hours.",
         "Gizmo's Step: Working through the calculation gives 8, verifying the solution step by step."
       ]
     },
@@ -2279,10 +2279,10 @@
         "$240"
       ],
       "options": null,
-      "explanation": "45 \u00d7 4 + 60 = $240.",
+      "explanation": "45 × 4 + 60 = $240.",
       "hints": [
         "Concept Rule: C = 45(4) + 60 = 180 + 60 = $240.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: $240.",
         "Gizmo's Step: Working through the calculation gives 240, verifying the solution step by step."
       ]
     },
@@ -2302,11 +2302,11 @@
         "16 minutes"
       ],
       "options": null,
-      "explanation": "(500 - 100) \u00f7 25 = 16.",
+      "explanation": "(500 - 100) ÷ 25 = 16.",
       "hints": [
-        "Concept Rule: 500 - 25m = 100 -> 25m = 400 -> m = 400 \u00f7 25.",
-        "Strategy Clue: Divide the total amount (or distance or cost) by the total units (or time) to find the unit rate.",
-        "Gizmo's Step: (500 - 100) \u00f7 25 = 16."
+        "Concept Rule: 500 - 25m = 100 -> 25m = 400 -> m = 400 ÷ 25 = 16 minutes.",
+        "Strategy Clue: 16 minutes.",
+        "Gizmo's Step: (500 - 100) ÷ 25 = 16."
       ]
     },
     {
@@ -2344,8 +2344,8 @@
       "explanation": "Slope of zero is horizontal.",
       "hints": [
         "Concept Rule: When slope m = 0, y = b for all x, which graphs as a horizontal line.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
-        "Gizmo's Step: Slope of zero is horizontal. This verifies that A horizontal flat line is correct Therefore, A horizontal flat line is the mathematically correct answer."
+        "Strategy Clue: Horizontal line.",
+        "Gizmo's Step: Slope of zero is horizontal. This verifies that A horizontal flat line is correct."
       ]
     },
     {
@@ -2364,11 +2364,11 @@
         "90 miles"
       ],
       "options": null,
-      "explanation": "45 \u00f7 0.50 = 90 miles.",
+      "explanation": "45 ÷ 0.50 = 90 miles.",
       "hints": [
-        "Concept Rule: 20 + 0.50m = 65 -> 0.50m = 45 -> m = 45 \u00f7 0.50.",
-        "Strategy Clue: Line up the decimal points vertically before adding or subtracting place values.",
-        "Gizmo's Step: 45 \u00f7 0.50 = 90 miles."
+        "Concept Rule: 20 + 0.50m = 65 -> 0.50m = 45 -> m = 45 ÷ 0.50 = 90 miles.",
+        "Strategy Clue: 90 miles.",
+        "Gizmo's Step: 45 ÷ 0.50 = 90 miles."
       ]
     },
     {
@@ -2388,8 +2388,8 @@
       "options": null,
       "explanation": "3x = 15 -> x = 5.",
       "hints": [
-        "Concept Rule: Subtract 7: 3x = 15. Divide by 3: x.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Concept Rule: Subtract 7: 3x = 15. Divide by 3: x = 5.",
+        "Strategy Clue: 5.",
         "Gizmo's Step: Working through the calculation gives 5, verifying the solution step by step."
       ]
     },
@@ -2410,8 +2410,8 @@
       "options": null,
       "explanation": "3x = 21 -> x = 7.",
       "hints": [
-        "Concept Rule: Subtract 2x: 3x - 8 = 13. Add 8: 3x = 21. Divide by 3: x.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Concept Rule: Subtract 2x: 3x - 8 = 13. Add 8: 3x = 21. Divide by 3: x = 7.",
+        "Strategy Clue: 7.",
         "Gizmo's Step: Working through the calculation gives 7, verifying the solution step by step."
       ]
     },
@@ -2432,8 +2432,8 @@
       "options": null,
       "explanation": "6x = 36 -> x = 6.",
       "hints": [
-        "Concept Rule: Expand: 6x - 8 = 28. Add 8: 6x = 36. Divide by 6: x.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: Expand: 6x - 8 = 28. Add 8: 6x = 36. Divide by 6: x = 6.",
+        "Strategy Clue: 6.",
         "Gizmo's Step: Working through the calculation gives 6, verifying the solution step by step."
       ]
     },
@@ -2472,7 +2472,7 @@
       "explanation": "Identity equation has infinitely many solutions.",
       "hints": [
         "Concept Rule: Both sides are identical for all real values of x, so there are infinitely many solutions.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: Infinitely many solutions.",
         "Gizmo's Step: Infinitely many solutions. Completing this step confirms the result is Infinitely many solutions."
       ]
     },
@@ -2511,7 +2511,7 @@
       "explanation": "5 = 9 has no solution.",
       "hints": [
         "Concept Rule: Subtracting 2x gives 5 = 9, which is impossible (contradiction).",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: No solution.",
         "Gizmo's Step: 5 = 9 has no solution. This verifies that No solution is correct."
       ]
     },
@@ -2532,8 +2532,8 @@
       "options": null,
       "explanation": "2x = 10 -> x = 5.",
       "hints": [
-        "Concept Rule: Left: 4x + 8 - 3 = 4x + 5. Right: 2x + 14 + 1 = 2x + 15. 4x + 5 = 2x + 15 -> 2x = 10 -> x.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: Left: 4x + 8 - 3 = 4x + 5. Right: 2x + 14 + 1 = 2x + 15. 4x + 5 = 2x + 15 -> 2x = 10 -> x = 5.",
+        "Strategy Clue: 5.",
         "Gizmo's Step: Working through the calculation gives 5, verifying the solution step by step."
       ]
     },
@@ -2572,7 +2572,7 @@
       "explanation": "4 = -2 has no solution.",
       "hints": [
         "Concept Rule: 3x + 4 = 3x - 2 simplifies to 4 = -2, which is false.",
-        "Strategy Clue: Calculate 3x + 4 to find the final value.",
+        "Strategy Clue: 3x + 4 = 3x - 2.",
         "Gizmo's Step: 4 = -2 has no solution. This verifies that 3x + 4 = 3x - 2 is correct."
       ]
     },
@@ -2591,10 +2591,10 @@
         "12"
       ],
       "options": null,
-      "explanation": "x = 4 \u00d7 3 = 12.",
+      "explanation": "x = 4 × 3 = 12.",
       "hints": [
-        "Concept Rule: x / 3 = 9 - 5 = 4 -> x = 4 \u00d7 3.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: x / 3 = 9 - 5 = 4 -> x = 4 × 3 = 12.",
+        "Strategy Clue: 12.",
         "Gizmo's Step: Working through the calculation gives 12, verifying the solution step by step."
       ]
     },
@@ -2633,7 +2633,7 @@
       "explanation": "Intersection point solves both equations.",
       "hints": [
         "Concept Rule: The point where both lines intersect satisfies both equations simultaneously.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: Intersection point.",
         "Gizmo's Step: Intersection point. Completing this step confirms the result is The point of intersection of the two lines."
       ]
     },
@@ -2672,7 +2672,7 @@
       "explanation": "Parallel lines have no solution.",
       "hints": [
         "Concept Rule: Parallel lines have no common points, so there is no solution.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: No solution.",
         "Gizmo's Step: Working through the calculation gives No solution, verifying the solution step by step."
       ]
     },
@@ -2711,7 +2711,7 @@
       "explanation": "Coincident lines have infinitely many solutions.",
       "hints": [
         "Concept Rule: Every point on the coincident line is a solution.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: Infinitely many solutions.",
         "Gizmo's Step: Infinitely many solutions. Completing this step confirms the result is Infinitely many solutions."
       ]
     },
@@ -2732,8 +2732,8 @@
       "options": null,
       "explanation": "3x = 6 -> x = 2.",
       "hints": [
-        "Concept Rule: 2x + 1 = -x + 7 -> 3x = 6 -> x.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Concept Rule: 2x + 1 = -x + 7 -> 3x = 6 -> x = 2.",
+        "Strategy Clue: 2.",
         "Gizmo's Step: Working through the calculation gives 2, verifying the solution step by step."
       ]
     },
@@ -2754,8 +2754,8 @@
       "options": null,
       "explanation": "2(2) + 1 = 5.",
       "hints": [
-        "Concept Rule: Substitute x = 2: y = 2(2) + 1.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: Substitute x = 2: y = 2(2) + 1 = 5.",
+        "Strategy Clue: 5.",
         "Gizmo's Step: Working through the calculation gives 5, verifying the solution step by step."
       ]
     },
@@ -2815,8 +2815,8 @@
       "options": null,
       "explanation": "2x = 4 -> x = 2.",
       "hints": [
-        "Concept Rule: 3x = x + 4 -> 2x = 4 -> x.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Concept Rule: 3x = x + 4 -> 2x = 4 -> x = 2.",
+        "Strategy Clue: 2.",
         "Gizmo's Step: Working through the calculation gives 2, verifying the solution step by step."
       ]
     },
@@ -2837,8 +2837,8 @@
       "options": null,
       "explanation": "x = 4 -> y = 11.",
       "hints": [
-        "Concept Rule: 4x - 5 = 2x + 3 -> 2x = 8 -> x = 4. Then y = 4(4) - 5 = 16 - 5.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Concept Rule: 4x - 5 = 2x + 3 -> 2x = 8 -> x = 4. Then y = 4(4) - 5 = 16 - 5 = 11.",
+        "Strategy Clue: 11.",
         "Gizmo's Step: Working through the calculation gives 11, verifying the solution step by step."
       ]
     },
@@ -2859,8 +2859,8 @@
       "options": null,
       "explanation": "3x = 12 -> x = 4.",
       "hints": [
-        "Concept Rule: Substitute y = 2x into x + y = 12: x + 2x = 12 -> 3x = 12 -> x.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Concept Rule: Substitute y = 2x into x + y = 12: x + 2x = 12 -> 3x = 12 -> x = 4.",
+        "Strategy Clue: 4.",
         "Gizmo's Step: Working through the calculation gives 4, verifying the solution step by step."
       ]
     },
@@ -2879,10 +2879,10 @@
         "8"
       ],
       "options": null,
-      "explanation": "y = 2 \u00d7 4 = 8.",
+      "explanation": "y = 2 × 4 = 8.",
       "hints": [
-        "Concept Rule: Apply the foundational mathematical property to set up and solve the problem systematically.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Concept Rule: y = 2(4) = 8.",
+        "Strategy Clue: 8.",
         "Gizmo's Step: Working through the calculation gives 8, verifying the solution step by step."
       ]
     },
@@ -2903,8 +2903,8 @@
       "options": null,
       "explanation": "2x = 14 -> x = 7.",
       "hints": [
-        "Concept Rule: Add equations: 2x = 14 -> x.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Concept Rule: Add equations: 2x = 14 -> x = 7.",
+        "Strategy Clue: 7.",
         "Gizmo's Step: Working through the calculation gives 7, verifying the solution step by step."
       ]
     },
@@ -2926,7 +2926,7 @@
       "explanation": "10 - 7 = 3.",
       "hints": [
         "Concept Rule: y = 10 - 7 = 3.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Strategy Clue: 3.",
         "Gizmo's Step: Working through the calculation gives 3, verifying the solution step by step."
       ]
     },
@@ -2947,8 +2947,8 @@
       "options": null,
       "explanation": "3x = 12 -> x = 4.",
       "hints": [
-        "Concept Rule: 2x + (x + 1) = 13 -> 3x + 1 = 13 -> 3x = 12 -> x.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Concept Rule: 2x + (x + 1) = 13 -> 3x + 1 = 13 -> 3x = 12 -> x = 4.",
+        "Strategy Clue: 4.",
         "Gizmo's Step: Working through the calculation gives 4, verifying the solution step by step."
       ]
     },
@@ -2969,8 +2969,8 @@
       "options": null,
       "explanation": "4 adult tickets.",
       "hints": [
-        "Concept Rule: Let a = adult, c = child. a + c = 8, 10a + 6c = 64. 10a + 6(8 - a) = 64 -> 4a + 48 = 64 -> 4a = 16 -> a.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: Let a = adult, c = child. a + c = 8, 10a + 6c = 64. 10a + 6(8 - a) = 64 -> 4a + 48 = 64 -> 4a = 16 -> a = 4.",
+        "Strategy Clue: 4.",
         "Gizmo's Step: Working through the calculation gives 4, verifying the solution step by step."
       ]
     },
@@ -2991,8 +2991,8 @@
       "options": null,
       "explanation": "8 - 4 = 4 child tickets.",
       "hints": [
-        "Concept Rule: Child tickets c = 8 - 4.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: Child tickets c = 8 - 4 = 4.",
+        "Strategy Clue: 4.",
         "Gizmo's Step: 8 - 4 = 4 child tickets."
       ]
     },
@@ -3013,8 +3013,8 @@
       "options": null,
       "explanation": "6x = 24 -> x = 4.",
       "hints": [
-        "Concept Rule: Add the two equations: 6x = 24 -> x.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: Add the two equations: 6x = 24 -> x = 4.",
+        "Strategy Clue: 4.",
         "Gizmo's Step: Working through the calculation gives 4, verifying the solution step by step."
       ]
     },
@@ -3092,7 +3092,7 @@
       "explanation": "Every input maps to a unique output.",
       "hints": [
         "Concept Rule: In {(1, 2), (2, 4), (3, 6), (4, 8)}, every x-value is unique.",
-        "Strategy Clue: Test each option against the mathematical rule to identify the statement that holds true.",
+        "Strategy Clue: {(1, 2), (2, 4), (3, 6), (4, 8)}.",
         "Gizmo's Step: {(1, 2), (2, 4), (3, 6), (4, 8)}. Completing this step confirms the result is {(1, 2), (2, 4), (3, 6), (4, 8)}."
       ]
     },
@@ -3131,8 +3131,8 @@
       "explanation": "Input 2 has two outputs: not a function.",
       "hints": [
         "Concept Rule: An input value cannot map to multiple distinct outputs in a function.",
-        "Strategy Clue: Identify the quantities given in the problem, set up the required mathematical operation, and compute the result step-by-step.",
-        "Gizmo's Step: No, because the input 2 has two different outputs (5 and 9) Therefore, No, because the input 2 has two different outputs (5 and 9) is the mathematically correct answer."
+        "Strategy Clue: No, input 2 repeats with different outputs.",
+        "Gizmo's Step: No, because the input 2 has two different outputs (5 and 9)."
       ]
     },
     {
@@ -3145,9 +3145,9 @@
       "difficulty": 2,
       "type": "multiple-choice",
       "prompt": "Which of the following equations represents a NON-linear function?",
-      "correctAnswer": "y = x\u00b2 + 3",
+      "correctAnswer": "y = x² + 3",
       "acceptedAnswers": [
-        "y = x\u00b2 + 3"
+        "y = x² + 3"
       ],
       "options": [
         {
@@ -3159,7 +3159,7 @@
           "correct": false
         },
         {
-          "text": "y = x\u00b2 + 3",
+          "text": "y = x² + 3",
           "correct": true
         },
         {
@@ -3167,11 +3167,11 @@
           "correct": false
         }
       ],
-      "explanation": "x\u00b2 is non-linear.",
+      "explanation": "x² is non-linear.",
       "hints": [
-        "Concept Rule: Linear functions have exponent 1 for x; x\u00b2 is quadratic (non-linear).",
-        "Strategy Clue: Test each option against the mathematical rule to identify the statement that holds true.",
-        "Gizmo's Step: Working through the calculation gives y = x\u00b2 + 3, verifying the solution step by step."
+        "Concept Rule: Linear functions have exponent 1 for x; x² is quadratic (non-linear).",
+        "Strategy Clue: y = x² + 3.",
+        "Gizmo's Step: Working through the calculation gives y = x² + 3, verifying the solution step by step."
       ]
     },
     {
@@ -3191,8 +3191,8 @@
       "options": null,
       "explanation": "3(5) - 4 = 11.",
       "hints": [
-        "Concept Rule: f(5) = 3(5) - 4 = 15 - 4.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: f(5) = 3(5) - 4 = 15 - 4 = 11.",
+        "Strategy Clue: 11.",
         "Gizmo's Step: Working through the calculation gives 11, verifying the solution step by step."
       ]
     },
@@ -3213,8 +3213,8 @@
       "options": null,
       "explanation": "5 - 4 = 1.",
       "hints": [
-        "Concept Rule: Slope of B = (12 - 2) \u00f7 (2 - 0).",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: Slope of B = (12 - 2) ÷ (2 - 0) = 10 ÷ 2 = 5. Difference = 5 - 4 = 1.",
+        "Strategy Clue: 1.",
         "Gizmo's Step: Working through the calculation gives 1, verifying the solution step by step."
       ]
     },
@@ -3254,7 +3254,7 @@
       "hints": [
         "Concept Rule: A vertical line has one x-value mapped to multiple y-values, violating the function rule.",
         "Strategy Clue: No, fails vertical line test.",
-        "Gizmo's Step: No, because it fails the vertical line test by having infinitely many outputs for a single input Therefore, No, because it fails the vertical line test by having infinitely many outputs for a single input is the mathematically correct answer."
+        "Gizmo's Step: No, because it fails the vertical line test by having infinitely many outputs for a single input."
       ]
     },
     {
@@ -3274,8 +3274,8 @@
       "options": null,
       "explanation": "2x = 8 -> x = 4.",
       "hints": [
-        "Concept Rule: 7 = -2x + 15 -> 2x = 8 -> x.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Concept Rule: 7 = -2x + 15 -> 2x = 8 -> x = 4.",
+        "Strategy Clue: 4.",
         "Gizmo's Step: Working through the calculation gives 4, verifying the solution step by step."
       ]
     },
@@ -3315,7 +3315,7 @@
       "hints": [
         "Concept Rule: Accelerating means increasing speed, constant speed means horizontal flat line, slowing means decreasing speed.",
         "Strategy Clue: Rises, stays flat, then falls.",
-        "Gizmo's Step: Qualitative graph shows rise, plateau, fall. This verifies that A line rising from zero, a flat horizontal section, and a line falling back to zero is correct Therefore, A line rising from zero, a flat horizontal section, and a line falling back to zero is the mathematically correct answer."
+        "Gizmo's Step: Qualitative graph shows rise, plateau, fall. This verifies that A line rising from zero, a flat horizontal section, and a line falling back to zero is correct."
       ]
     },
     {
@@ -3354,7 +3354,7 @@
       "hints": [
         "Concept Rule: A horizontal distance-time graph means distance does not change over time, so the object is stopped.",
         "Strategy Clue: Stationary (stopped).",
-        "Gizmo's Step: Flat line on distance-time means stationary. This verifies that Remaining stationary (stopped) is correct Therefore, Remaining stationary (stopped) is the mathematically correct answer."
+        "Gizmo's Step: Flat line on distance-time means stationary. This verifies that Remaining stationary (stopped) is correct."
       ]
     },
     {
@@ -3431,7 +3431,7 @@
       "explanation": "Plunge causes speed to increase steeply.",
       "hints": [
         "Concept Rule: Going down the steep drop causes speed to increase dramatically (steep positive slope).",
-        "Strategy Clue: Divide the total amount (or distance or cost) by the total units (or time) to find the unit rate.",
+        "Strategy Clue: Steep upward line.",
         "Gizmo's Step: Steep upward line. Completing this step confirms the result is A steep upward line showing rapid acceleration."
       ]
     },
@@ -3453,8 +3453,8 @@
       "options": null,
       "explanation": "30 + 10 + 20 = 60 min.",
       "hints": [
-        "Concept Rule: Total time = 30 + 10 + 20.",
-        "Strategy Clue: Identify the count of each item and write them in the exact order requested by the prompt.",
+        "Concept Rule: Total time = 30 + 10 + 20 = 60 minutes.",
+        "Strategy Clue: 60 minutes.",
         "Gizmo's Step: 30 + 10 + 20 = 60 min."
       ]
     },
@@ -3533,7 +3533,7 @@
       "hints": [
         "Concept Rule: Decreasing distance from home creates a downward slope.",
         "Strategy Clue: Negative downward slope.",
-        "Gizmo's Step: Negative slope means returning home. This verifies that A section where the line has a negative slope (slopes downward) is correct Therefore, A section where the line has a negative slope (slopes downward) is the mathematically correct answer."
+        "Gizmo's Step: Negative slope means returning home. This verifies that A section where the line has a negative slope (slopes downward) is correct."
       ]
     },
     {
@@ -3554,8 +3554,8 @@
       "options": null,
       "explanation": "24 + 10 = 34 miles.",
       "hints": [
-        "Concept Rule: Leg 1: 12 \u00d7 2 = 24 miles. Rest: 0 miles. Leg 2: 10 \u00d7 1 = 10 miles. Total = 24 + 10.",
-        "Strategy Clue: Divide the total amount (or distance or cost) by the total units (or time) to find the unit rate.",
+        "Concept Rule: Leg 1: 12 × 2 = 24 miles. Rest: 0 miles. Leg 2: 10 × 1 = 10 miles. Total = 24 + 10 = 34 miles.",
+        "Strategy Clue: 34 miles.",
         "Gizmo's Step: Working through the calculation gives 34, verifying the solution step by step."
       ]
     },
@@ -3568,16 +3568,16 @@
       "standard": "8.G.C.9",
       "difficulty": 1,
       "type": "numeric-response",
-      "prompt": "Find the volume of a cylinder with radius 3 cm and height 10 cm in terms of \u03c0. Enter the coefficient of \u03c0. (V = \u03c0 \u00d7 r\u00b2 \u00d7 h)",
+      "prompt": "Find the volume of a cylinder with radius 3 cm and height 10 cm in terms of π. Enter the coefficient of π. (V = π × r² × h)",
       "correctAnswer": "90",
       "acceptedAnswers": [
         "90"
       ],
       "options": null,
-      "explanation": "3\u00b2 \u00d7 10 = 90.",
+      "explanation": "3² × 10 = 90.",
       "hints": [
-        "Concept Rule: V = \u03c0 \u00d7 3\u00b2 \u00d7 10 = \u03c0 \u00d7 9 \u00d7 10.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: V = π × 3² × 10 = π × 9 × 10 = 90π. Coefficient is 90.",
+        "Strategy Clue: 90.",
         "Gizmo's Step: Working through the calculation gives 90, verifying the solution step by step."
       ]
     },
@@ -3615,9 +3615,9 @@
       ],
       "explanation": "Cone volume is 1/3 of cylinder.",
       "hints": [
-        "Concept Rule: Volume of cone = 1/3 \u03c0 r\u00b2 h, which is exactly one-third the cylinder volume \u03c0 r\u00b2 h.",
-        "Strategy Clue: Multiply the area of the circular base (\u03c0r\u00b2) by the height of the cylinder.",
-        "Gizmo's Step: Cone volume is 1/3 of cylinder. This verifies that The cone has exactly 1/3 the volume of the cylinder is correct Therefore, The cone has exactly 1/3 the volume of the cylinder is the mathematically correct answer."
+        "Concept Rule: Volume of cone = 1/3 π r² h, which is exactly one-third the cylinder volume π r² h.",
+        "Strategy Clue: 1/3 the volume.",
+        "Gizmo's Step: Cone volume is 1/3 of cylinder. This verifies that The cone has exactly 1/3 the volume of the cylinder is correct."
       ]
     },
     {
@@ -3629,16 +3629,16 @@
       "standard": "8.G.C.9",
       "difficulty": 2,
       "type": "numeric-response",
-      "prompt": "Find the volume of a cone with radius 6 cm and height 7 cm in terms of \u03c0. Enter the coefficient of \u03c0. (V = 1/3 \u00d7 \u03c0 \u00d7 r\u00b2 \u00d7 h)",
+      "prompt": "Find the volume of a cone with radius 6 cm and height 7 cm in terms of π. Enter the coefficient of π. (V = 1/3 × π × r² × h)",
       "correctAnswer": "84",
       "acceptedAnswers": [
         "84"
       ],
       "options": null,
-      "explanation": "1/3 \u00d7 36 \u00d7 7 = 84.",
+      "explanation": "1/3 × 36 × 7 = 84.",
       "hints": [
-        "Concept Rule: V = (1/3) \u00d7 \u03c0 \u00d7 6\u00b2 \u00d7 7 = (1/3) \u00d7 \u03c0 \u00d7 36 \u00d7 7 = 12 \u00d7 7 \u00d7 \u03c0.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: V = (1/3) × π × 6² × 7 = (1/3) × π × 36 × 7 = 12 × 7 × π = 84π.",
+        "Strategy Clue: 84.",
         "Gizmo's Step: Working through the calculation gives 84, verifying the solution step by step."
       ]
     },
@@ -3651,16 +3651,16 @@
       "standard": "8.G.C.9",
       "difficulty": 2,
       "type": "numeric-response",
-      "prompt": "Find the volume of a sphere with radius 3 cm in terms of \u03c0. Enter the coefficient of \u03c0. (V = 4/3 \u00d7 \u03c0 \u00d7 r\u00b3)",
+      "prompt": "Find the volume of a sphere with radius 3 cm in terms of π. Enter the coefficient of π. (V = 4/3 × π × r³)",
       "correctAnswer": "36",
       "acceptedAnswers": [
         "36"
       ],
       "options": null,
-      "explanation": "4/3 \u00d7 27 = 36.",
+      "explanation": "4/3 × 27 = 36.",
       "hints": [
-        "Concept Rule: V = (4/3) \u00d7 \u03c0 \u00d7 3\u00b3 = (4/3) \u00d7 \u03c0 \u00d7 27 = 4 \u00d7 9 \u00d7 \u03c0.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: V = (4/3) × π × 3³ = (4/3) × π × 27 = 4 × 9 × π = 36π.",
+        "Strategy Clue: 36.",
         "Gizmo's Step: Working through the calculation gives 36, verifying the solution step by step."
       ]
     },
@@ -3673,18 +3673,18 @@
       "standard": "8.G.C.9",
       "difficulty": 2,
       "type": "numeric-response",
-      "prompt": "A cylinder has diameter 8 meters (radius 4 m) and height 5 meters. What is its volume in cubic meters using \u03c0 \u2248 3.14?",
+      "prompt": "A cylinder has diameter 8 meters (radius 4 m) and height 5 meters. What is its volume in cubic meters using π ≈ 3.14?",
       "correctAnswer": "251.2",
       "acceptedAnswers": [
         "251.2",
         "251.2 cu m"
       ],
       "options": null,
-      "explanation": "3.14 \u00d7 16 \u00d7 5 = 251.2.",
+      "explanation": "3.14 × 16 × 5 = 251.2.",
       "hints": [
-        "Concept Rule: V = 3.14 \u00d7 4\u00b2 \u00d7 5 = 3.14 \u00d7 16 \u00d7 5 = 3.14 \u00d7 80.",
-        "Strategy Clue: Multiply the area of the circular base (\u03c0r\u00b2) by the height of the cylinder.",
-        "Gizmo's Step: 3.14 \u00d7 16 \u00d7 5 = 251.2."
+        "Concept Rule: V = 3.14 × 4² × 5 = 3.14 × 16 × 5 = 3.14 × 80 = 251.2 cubic meters.",
+        "Strategy Clue: 251.2 cubic meters.",
+        "Gizmo's Step: 3.14 × 16 × 5 = 251.2."
       ]
     },
     {
@@ -3696,16 +3696,16 @@
       "standard": "8.G.C.9",
       "difficulty": 3,
       "type": "numeric-response",
-      "prompt": "A cone has volume 48\u03c0 cubic inches and height 9 inches. What is the value of its radius squared (r\u00b2)? (48\u03c0 = 1/3 \u00d7 \u03c0 \u00d7 r\u00b2 \u00d7 9)",
+      "prompt": "A cone has volume 48π cubic inches and height 9 inches. What is the value of its radius squared (r²)? (48π = 1/3 × π × r² × 9)",
       "correctAnswer": "16",
       "acceptedAnswers": [
         "16"
       ],
       "options": null,
-      "explanation": "48 \u00f7 3 = 16.",
+      "explanation": "48 ÷ 3 = 16.",
       "hints": [
-        "Concept Rule: 48\u03c0 = 3\u03c0 \u00d7 r\u00b2 -> r\u00b2 = 48 \u00f7 3.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: 48π = 3π × r² -> r² = 48 ÷ 3 = 16.",
+        "Strategy Clue: 16.",
         "Gizmo's Step: Working through the calculation gives 16, verifying the solution step by step."
       ]
     },
@@ -3718,16 +3718,16 @@
       "standard": "8.G.C.9",
       "difficulty": 3,
       "type": "numeric-response",
-      "prompt": "A sphere has radius 6 cm. What is its volume in terms of \u03c0? Enter the coefficient of \u03c0. (V = 4/3 \u00d7 \u03c0 \u00d7 r\u00b3)",
+      "prompt": "A sphere has radius 6 cm. What is its volume in terms of π? Enter the coefficient of π. (V = 4/3 × π × r³)",
       "correctAnswer": "288",
       "acceptedAnswers": [
         "288"
       ],
       "options": null,
-      "explanation": "4/3 \u00d7 216 = 288.",
+      "explanation": "4/3 × 216 = 288.",
       "hints": [
-        "Concept Rule: V = (4/3) \u00d7 \u03c0 \u00d7 6\u00b3 = (4/3) \u00d7 \u03c0 \u00d7 216 = 4 \u00d7 72 \u00d7 \u03c0.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: V = (4/3) × π × 6³ = (4/3) × π × 216 = 4 × 72 × π = 288π.",
+        "Strategy Clue: 288.",
         "Gizmo's Step: Working through the calculation gives 288, verifying the solution step by step."
       ]
     },
@@ -3765,8 +3765,8 @@
       ],
       "explanation": "Radius squared quadruples volume.",
       "hints": [
-        "Concept Rule: Volume is proportional to r\u00b2: (2r)\u00b2 = 4r\u00b2, so volume multiplies by 4.",
-        "Strategy Clue: Multiply the area of the circular base (\u03c0r\u00b2) by the height of the cylinder.",
+        "Concept Rule: Volume is proportional to r²: (2r)² = 4r², so volume multiplies by 4.",
+        "Strategy Clue: Factor of 4.",
         "Gizmo's Step: Working through the calculation gives Factor of 4, verifying the solution step by step."
       ]
     },
@@ -3845,7 +3845,7 @@
       "hints": [
         "Concept Rule: As x increases, y decreases, creating a downward trend (negative association).",
         "Strategy Clue: Negative association.",
-        "Gizmo's Step: Downward trend is negative association. This verifies that A negative association is correct Therefore, A negative association is the mathematically correct answer."
+        "Gizmo's Step: Downward trend is negative association. This verifies that A negative association is correct."
       ]
     },
     {
@@ -3883,7 +3883,7 @@
       "explanation": "Shoe size and test score are unrelated.",
       "hints": [
         "Concept Rule: Shoe size has no meaningful mathematical relationship to math performance.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: No association.",
         "Gizmo's Step: No association. Completing this step confirms the result is No association."
       ]
     },
@@ -3922,8 +3922,8 @@
       "explanation": "Distant point is an outlier.",
       "hints": [
         "Concept Rule: An outlier is an observation distinctly separated from the main body of data.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
-        "Gizmo's Step: Distant point is an outlier. This verifies that An outlier is correct Therefore, An outlier is the mathematically correct answer."
+        "Strategy Clue: An outlier.",
+        "Gizmo's Step: Distant point is an outlier. This verifies that An outlier is correct."
       ]
     },
     {
@@ -3961,7 +3961,7 @@
       "explanation": "Curved data indicates non-linear association.",
       "hints": [
         "Concept Rule: Curved patterns represent non-linear relationships.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: Non-linear association.",
         "Gizmo's Step: Non-linear association. Completing this step confirms the result is Non-linear association."
       ]
     },
@@ -4000,8 +4000,8 @@
       "explanation": "Isolated high score is an outlier.",
       "hints": [
         "Concept Rule: It deviates significantly from the typical trend of the group.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
-        "Gizmo's Step: Isolated high score is an outlier. This verifies that An outlier is correct Therefore, An outlier is the mathematically correct answer."
+        "Strategy Clue: An outlier.",
+        "Gizmo's Step: Isolated high score is an outlier. This verifies that An outlier is correct."
       ]
     },
     {
@@ -4061,7 +4061,7 @@
       "explanation": "2 outliers.",
       "hints": [
         "Concept Rule: The 2 points separated from the primary cluster are outliers.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: 2.",
         "Gizmo's Step: Working through the calculation gives 2, verifying the solution step by step."
       ]
     },
@@ -4101,7 +4101,7 @@
       "hints": [
         "Concept Rule: A trend line models the overall central trend of bivariate data.",
         "Strategy Clue: Balances points above and below.",
-        "Gizmo's Step: Best fit line minimizes overall distance to points. This verifies that Pass as close as possible to all data points, balancing points above and below the line is correct Therefore, Pass as close as possible to all data points, balancing points above and below the line is the mathematically correct answer."
+        "Gizmo's Step: Best fit line minimizes overall distance to points. This verifies that Pass as close as possible to all data points, balancing points above and below the line is correct."
       ]
     },
     {
@@ -4121,8 +4121,8 @@
       "options": null,
       "explanation": "8(5) + 40 = 80.",
       "hints": [
-        "Concept Rule: y = 8(5) + 40 = 40 + 40.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Concept Rule: y = 8(5) + 40 = 40 + 40 = 80.",
+        "Strategy Clue: 80.",
         "Gizmo's Step: Working through the calculation gives 80, verifying the solution step by step."
       ]
     },
@@ -4144,8 +4144,8 @@
       "options": null,
       "explanation": "0.5(14) + 3 = 10.",
       "hints": [
-        "Concept Rule: y = 0.5(14) + 3 = 7 + 3.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: y = 0.5(14) + 3 = 7 + 3 = 10 inches.",
+        "Strategy Clue: 10 inches.",
         "Gizmo's Step: Working through the calculation gives 10, verifying the solution step by step."
       ]
     },
@@ -4184,7 +4184,7 @@
       "explanation": "Slope indicates cost per ride.",
       "hints": [
         "Concept Rule: The slope represents the rate of change ($2.50 per ride).",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Strategy Clue: Cost per ride.",
         "Gizmo's Step: Working through the calculation gives The cost per ride, verifying the solution step by step."
       ]
     },
@@ -4204,10 +4204,10 @@
         "30 hours"
       ],
       "options": null,
-      "explanation": "90 \u00f7 3 = 30.",
+      "explanation": "90 ÷ 3 = 30.",
       "hints": [
-        "Concept Rule: 0 = -3x + 90 -> 3x = 90 -> x.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: 0 = -3x + 90 -> 3x = 90 -> x = 30 hours.",
+        "Strategy Clue: 30 hours.",
         "Gizmo's Step: Working through the calculation gives 30, verifying the solution step by step."
       ]
     },
@@ -4226,10 +4226,10 @@
         "50"
       ],
       "options": null,
-      "explanation": "60 \u00f7 1.2 = 50.",
+      "explanation": "60 ÷ 1.2 = 50.",
       "hints": [
-        "Concept Rule: 75 = 1.2x + 15 -> 1.2x = 60 -> x = 60 \u00f7 1.2.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Concept Rule: 75 = 1.2x + 15 -> 1.2x = 60 -> x = 60 ÷ 1.2 = 50.",
+        "Strategy Clue: 50.",
         "Gizmo's Step: Working through the calculation gives 50, verifying the solution step by step."
       ]
     },
@@ -4268,8 +4268,8 @@
       "explanation": "Predicting outside data range is extrapolation.",
       "hints": [
         "Concept Rule: Extrapolation predicts beyond measured data, carrying greater uncertainty.",
-        "Strategy Clue: Subtract the minimum data value from the maximum data value.",
-        "Gizmo's Step: Predicting outside data range is extrapolation. This verifies that Extrapolation (which is less reliable than interpolation) is correct Therefore, Extrapolation (which is less reliable than interpolation) is the mathematically correct answer."
+        "Strategy Clue: Extrapolation.",
+        "Gizmo's Step: Predicting outside data range is extrapolation. This verifies that Extrapolation (which is less reliable than interpolation) is correct."
       ]
     },
     {
@@ -4287,10 +4287,10 @@
         "170"
       ],
       "options": null,
-      "explanation": "15 \u00d7 8 + 50 = 170.",
+      "explanation": "15 × 8 + 50 = 170.",
       "hints": [
-        "Concept Rule: y = 15(8) + 50 = 120 + 50.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Concept Rule: y = 15(8) + 50 = 120 + 50 = 170.",
+        "Strategy Clue: 170.",
         "Gizmo's Step: Working through the calculation gives 170, verifying the solution step by step."
       ]
     },
@@ -4311,8 +4311,8 @@
       "options": null,
       "explanation": "45 + 25 = 70.",
       "hints": [
-        "Concept Rule: Total students playing sports = 45 + 25.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: Total students playing sports = 45 + 25 = 70.",
+        "Strategy Clue: 70.",
         "Gizmo's Step: Working through the calculation gives 70, verifying the solution step by step."
       ]
     },
@@ -4334,7 +4334,7 @@
       "explanation": "100 - 70 = 30.",
       "hints": [
         "Concept Rule: 100 - 70 = 30 students.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: 30.",
         "Gizmo's Step: Working through the calculation gives 30, verifying the solution step by step."
       ]
     },
@@ -4356,8 +4356,8 @@
       "options": null,
       "explanation": "48/80 = 60%.",
       "hints": [
-        "Concept Rule: Relative frequency = 48 \u00f7 80 = 0.60.",
-        "Strategy Clue: Convert the percentage to a decimal or fraction over one hundred, then multiply by the total amount.",
+        "Concept Rule: Relative frequency = 48 ÷ 80 = 0.60 = 60%.",
+        "Strategy Clue: 60%.",
         "Gizmo's Step: Working through the calculation gives 60, verifying the solution step by step."
       ]
     },
@@ -4418,8 +4418,8 @@
       "options": null,
       "explanation": "35/50 = 70%.",
       "hints": [
-        "Concept Rule: Conditional relative frequency = 35 \u00f7 50.",
-        "Strategy Clue: Convert the percentage to a decimal or fraction over one hundred, then multiply by the total amount.",
+        "Concept Rule: Conditional relative frequency = 35 ÷ 50 = 70%.",
+        "Strategy Clue: 70%.",
         "Gizmo's Step: Working through the calculation gives 70, verifying the solution step by step."
       ]
     },
@@ -4479,8 +4479,8 @@
       "options": null,
       "explanation": "40 + 60 = 100.",
       "hints": [
-        "Concept Rule: Grand total = 40 + 60.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: Grand total = 40 + 60 = 100 students.",
+        "Strategy Clue: 100.",
         "Gizmo's Step: Working through the calculation gives 100, verifying the solution step by step."
       ]
     },
@@ -4532,16 +4532,16 @@
       "standard": "8.EE.A.1",
       "difficulty": 1,
       "type": "numeric-response",
-      "prompt": "Evaluate: 2\u00b3 \u00d7 2\u2074. (Product of powers rule: 2^(3+4) = 2\u2077).",
+      "prompt": "Evaluate: 2³ × 2⁴. (Product of powers rule: 2^(3+4) = 2⁷).",
       "correctAnswer": "128",
       "acceptedAnswers": [
         "128"
       ],
       "options": null,
-      "explanation": "2\u2077 = 128.",
+      "explanation": "2⁷ = 128.",
       "hints": [
-        "Concept Rule: The order of operations (PEMDAS) establishes the sequence for evaluating expressions: parentheses first, then exponents, multiplication and division, then addition and subtraction.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: 2⁷ = 128.",
+        "Strategy Clue: 128.",
         "Gizmo's Step: Working through the calculation gives 128, verifying the solution step by step."
       ]
     },
@@ -4554,34 +4554,34 @@
       "standard": "8.EE.A.1",
       "difficulty": 1,
       "type": "multiple-choice",
-      "prompt": "Simplify the power of a power: (x\u2075)\u00b3.",
-      "correctAnswer": "x\u00b9\u2075",
+      "prompt": "Simplify the power of a power: (x⁵)³.",
+      "correctAnswer": "x¹⁵",
       "acceptedAnswers": [
-        "x\u00b9\u2075"
+        "x¹⁵"
       ],
       "options": [
         {
-          "text": "x\u2078",
+          "text": "x⁸",
           "correct": false
         },
         {
-          "text": "x\u00b2",
+          "text": "x²",
           "correct": false
         },
         {
-          "text": "x\u00b9\u2075",
+          "text": "x¹⁵",
           "correct": true
         },
         {
-          "text": "3x\u2075",
+          "text": "3x⁵",
           "correct": false
         }
       ],
-      "explanation": "(x\u2075)\u00b3 = x\u00b9\u2075.",
+      "explanation": "(x⁵)³ = x¹⁵.",
       "hints": [
-        "Concept Rule: Power of a power rule: multiply exponents (5 \u00d7 3 = 15): x\u00b9\u2075.",
-        "Strategy Clue: Multiply the base by itself repeatedly for the number of times indicated by the exponent.",
-        "Gizmo's Step: Working through the calculation gives x\u00b9\u2075, verifying the solution step by step."
+        "Concept Rule: Power of a power rule: multiply exponents (5 × 3 = 15): x¹⁵.",
+        "Strategy Clue: x¹⁵.",
+        "Gizmo's Step: Working through the calculation gives x¹⁵, verifying the solution step by step."
       ]
     },
     {
@@ -4593,16 +4593,16 @@
       "standard": "8.EE.A.1",
       "difficulty": 2,
       "type": "numeric-response",
-      "prompt": "Evaluate: 5\u2070. Any non-zero base raised to power 0 equals:",
+      "prompt": "Evaluate: 5⁰. Any non-zero base raised to power 0 equals:",
       "correctAnswer": "1",
       "acceptedAnswers": [
         "1"
       ],
       "options": null,
-      "explanation": "5\u2070 = 1.",
+      "explanation": "5⁰ = 1.",
       "hints": [
         "Concept Rule: Any non-zero number raised to the zero power equals 1.",
-        "Strategy Clue: Multiply the base by itself repeatedly for the number of times indicated by the exponent.",
+        "Strategy Clue: 1.",
         "Gizmo's Step: Working through the calculation gives 1, verifying the solution step by step."
       ]
     },
@@ -4615,18 +4615,18 @@
       "standard": "8.EE.A.1",
       "difficulty": 2,
       "type": "multiple-choice",
-      "prompt": "Which expression is equivalent to 3\u207b\u2074?",
-      "correctAnswer": "1 / 3\u2074 (or 1/81)",
+      "prompt": "Which expression is equivalent to 3⁻⁴?",
+      "correctAnswer": "1 / 3⁴ (or 1/81)",
       "acceptedAnswers": [
-        "1 / 3\u2074 (or 1/81)"
+        "1 / 3⁴ (or 1/81)"
       ],
       "options": [
         {
-          "text": "1 / 3\u2074 (or 1/81)",
+          "text": "1 / 3⁴ (or 1/81)",
           "correct": true
         },
         {
-          "text": "-3\u2074",
+          "text": "-3⁴",
           "correct": false
         },
         {
@@ -4640,9 +4640,9 @@
       ],
       "explanation": "Negative exponent moves base to denominator.",
       "hints": [
-        "Concept Rule: Negative exponent rule: a\u207b\u207f = 1 / a\u207f. Thus 3\u207b\u2074 = 1 / 3\u2074 = 1/81.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
-        "Gizmo's Step: Working through the calculation gives 1 / 3\u2074 (or 1/81), verifying the solution step by step."
+        "Concept Rule: Negative exponent rule: a⁻ⁿ = 1 / aⁿ. Thus 3⁻⁴ = 1 / 3⁴ = 1/81.",
+        "Strategy Clue: 1 / 3⁴.",
+        "Gizmo's Step: Working through the calculation gives 1 / 3⁴ (or 1/81), verifying the solution step by step."
       ]
     },
     {
@@ -4654,16 +4654,16 @@
       "standard": "8.EE.A.1",
       "difficulty": 2,
       "type": "numeric-response",
-      "prompt": "Simplify and evaluate: 4\u2076 \u00f7 4\u2074.",
+      "prompt": "Simplify and evaluate: 4⁶ ÷ 4⁴.",
       "correctAnswer": "16",
       "acceptedAnswers": [
         "16"
       ],
       "options": null,
-      "explanation": "4\u00b2 = 16.",
+      "explanation": "4² = 16.",
       "hints": [
-        "Concept Rule: Quotient rule: 4^(6 - 4) = 4\u00b2.",
-        "Strategy Clue: Divide the total dividend by the divisor using standard division.",
+        "Concept Rule: Quotient rule: 4^(6 - 4) = 4² = 16.",
+        "Strategy Clue: 16.",
         "Gizmo's Step: Working through the calculation gives 16, verifying the solution step by step."
       ]
     },
@@ -4676,16 +4676,16 @@
       "standard": "8.EE.A.1",
       "difficulty": 3,
       "type": "numeric-response",
-      "prompt": "Evaluate: (2\u207b\u00b3)\u207b\u00b2.",
+      "prompt": "Evaluate: (2⁻³)⁻².",
       "correctAnswer": "64",
       "acceptedAnswers": [
         "64"
       ],
       "options": null,
-      "explanation": "2\u2076 = 64.",
+      "explanation": "2⁶ = 64.",
       "hints": [
-        "Concept Rule: Multiply exponents: (-3) \u00d7 (-2) = 6. 2\u2076.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: Multiply exponents: (-3) × (-2) = 6. 2⁶ = 64.",
+        "Strategy Clue: 64.",
         "Gizmo's Step: Working through the calculation gives 64, verifying the solution step by step."
       ]
     },
@@ -4698,34 +4698,34 @@
       "standard": "8.EE.A.1",
       "difficulty": 3,
       "type": "multiple-choice",
-      "prompt": "Simplify: (2a\u00b3b\u2074)\u00b3.",
-      "correctAnswer": "8a\u2079b\u00b9\u00b2",
+      "prompt": "Simplify: (2a³b⁴)³.",
+      "correctAnswer": "8a⁹b¹²",
       "acceptedAnswers": [
-        "8a\u2079b\u00b9\u00b2"
+        "8a⁹b¹²"
       ],
       "options": [
         {
-          "text": "6a\u2079b\u00b9\u00b2",
+          "text": "6a⁹b¹²",
           "correct": false
         },
         {
-          "text": "8a\u2076b\u2077",
+          "text": "8a⁶b⁷",
           "correct": false
         },
         {
-          "text": "2a\u2079b\u00b9\u00b2",
+          "text": "2a⁹b¹²",
           "correct": false
         },
         {
-          "text": "8a\u2079b\u00b9\u00b2",
+          "text": "8a⁹b¹²",
           "correct": true
         }
       ],
-      "explanation": "2\u00b3 a\u2079 b\u00b9\u00b2 = 8a\u2079b\u00b9\u00b2.",
+      "explanation": "2³ a⁹ b¹² = 8a⁹b¹².",
       "hints": [
-        "Concept Rule: Apply power to each factor: 2\u00b3 \u00d7 a^(3\u00d73) \u00d7 b^(4\u00d73).",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
-        "Gizmo's Step: Working through the calculation gives 8a\u2079b\u00b9\u00b2, verifying the solution step by step."
+        "Concept Rule: Apply power to each factor: 2³ × a^(3×3) × b^(4×3) = 8a⁹b¹².",
+        "Strategy Clue: 8a⁹b¹².",
+        "Gizmo's Step: Working through the calculation gives 8a⁹b¹², verifying the solution step by step."
       ]
     },
     {
@@ -4737,16 +4737,16 @@
       "standard": "8.EE.A.1",
       "difficulty": 3,
       "type": "numeric-response",
-      "prompt": "Evaluate: (3\u2074 \u00d7 3\u207b\u00b2) \u00f7 3\u00b9.",
+      "prompt": "Evaluate: (3⁴ × 3⁻²) ÷ 3¹.",
       "correctAnswer": "3",
       "acceptedAnswers": [
         "3"
       ],
       "options": null,
-      "explanation": "3\u00b9 = 3.",
+      "explanation": "3¹ = 3.",
       "hints": [
-        "Concept Rule: Add and subtract exponents: 3^(4 + (-2) - 1).",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: Add and subtract exponents: 3^(4 + (-2) - 1) = 3¹ = 3.",
+        "Strategy Clue: 3.",
         "Gizmo's Step: Working through the calculation gives 3, verifying the solution step by step."
       ]
     },
@@ -4760,33 +4760,33 @@
       "difficulty": 1,
       "type": "multiple-choice",
       "prompt": "Write 450,000 in scientific notation.",
-      "correctAnswer": "4.5 \u00d7 10\u2075",
+      "correctAnswer": "4.5 × 10⁵",
       "acceptedAnswers": [
-        "4.5 \u00d7 10\u2075"
+        "4.5 × 10⁵"
       ],
       "options": [
         {
-          "text": "45 \u00d7 10\u2074",
+          "text": "45 × 10⁴",
           "correct": false
         },
         {
-          "text": "4.5 \u00d7 10\u2075",
+          "text": "4.5 × 10⁵",
           "correct": true
         },
         {
-          "text": "4.5 \u00d7 10\u2076",
+          "text": "4.5 × 10⁶",
           "correct": false
         },
         {
-          "text": "0.45 \u00d7 10\u2076",
+          "text": "0.45 × 10⁶",
           "correct": false
         }
       ],
-      "explanation": "4.5 \u00d7 10\u2075.",
+      "explanation": "4.5 × 10⁵.",
       "hints": [
-        "Concept Rule: Move decimal point 5 places left to obtain a coefficient between 1 and 10: 4.5 \u00d7 10\u2075.",
-        "Strategy Clue: Write the number as a factor between 1 and 10 multiplied by a power of 10.",
-        "Gizmo's Step: Working through the calculation gives 4.5 \u00d7 10\u2075, verifying the solution step by step."
+        "Concept Rule: Move decimal point 5 places left to obtain a coefficient between 1 and 10: 4.5 × 10⁵.",
+        "Strategy Clue: 4.5 × 10⁵.",
+        "Gizmo's Step: Working through the calculation gives 4.5 × 10⁵, verifying the solution step by step."
       ]
     },
     {
@@ -4799,33 +4799,33 @@
       "difficulty": 1,
       "type": "multiple-choice",
       "prompt": "Write 0.00032 in scientific notation.",
-      "correctAnswer": "3.2 \u00d7 10\u207b\u2074",
+      "correctAnswer": "3.2 × 10⁻⁴",
       "acceptedAnswers": [
-        "3.2 \u00d7 10\u207b\u2074"
+        "3.2 × 10⁻⁴"
       ],
       "options": [
         {
-          "text": "3.2 \u00d7 10\u2074",
+          "text": "3.2 × 10⁴",
           "correct": false
         },
         {
-          "text": "32 \u00d7 10\u207b\u2075",
+          "text": "32 × 10⁻⁵",
           "correct": false
         },
         {
-          "text": "3.2 \u00d7 10\u207b\u2074",
+          "text": "3.2 × 10⁻⁴",
           "correct": true
         },
         {
-          "text": "0.32 \u00d7 10\u207b\u00b3",
+          "text": "0.32 × 10⁻³",
           "correct": false
         }
       ],
-      "explanation": "3.2 \u00d7 10\u207b\u2074.",
+      "explanation": "3.2 × 10⁻⁴.",
       "hints": [
-        "Concept Rule: Move decimal 4 places right: 3.2 \u00d7 10\u207b\u2074.",
-        "Strategy Clue: Line up the decimal points vertically before adding or subtracting place values.",
-        "Gizmo's Step: Working through the calculation gives 3.2 \u00d7 10\u207b\u2074, verifying the solution step by step."
+        "Concept Rule: Move decimal 4 places right: 3.2 × 10⁻⁴.",
+        "Strategy Clue: 3.2 × 10⁻⁴.",
+        "Gizmo's Step: Working through the calculation gives 3.2 × 10⁻⁴, verifying the solution step by step."
       ]
     },
     {
@@ -4837,16 +4837,16 @@
       "standard": "8.EE.A.3 / 8.EE.A.4",
       "difficulty": 2,
       "type": "numeric-response",
-      "prompt": "How many times larger is 6 \u00d7 10\u2078 than 2 \u00d7 10\u2075?",
+      "prompt": "How many times larger is 6 × 10⁸ than 2 × 10⁵?",
       "correctAnswer": "3000",
       "acceptedAnswers": [
         "3000"
       ],
       "options": null,
-      "explanation": "3 \u00d7 10\u00b3 = 3000.",
+      "explanation": "3 × 10³ = 3000.",
       "hints": [
-        "Concept Rule: (6 \u00d7 10\u2078) \u00f7 (2 \u00d7 10\u2075) = (6/2) \u00d7 10^(8 - 5) = 3 \u00d7 10\u00b3.",
-        "Strategy Clue: Multiply the number of groups by the number of items in each group.",
+        "Concept Rule: (6 × 10⁸) ÷ (2 × 10⁵) = (6/2) × 10^(8 - 5) = 3 × 10³ = 3000.",
+        "Strategy Clue: 3000.",
         "Gizmo's Step: Working through the calculation gives 3000, verifying the solution step by step."
       ]
     },
@@ -4859,34 +4859,34 @@
       "standard": "8.EE.A.3 / 8.EE.A.4",
       "difficulty": 2,
       "type": "multiple-choice",
-      "prompt": "Compute: (2 \u00d7 10\u2074) \u00d7 (3 \u00d7 10\u2075).",
-      "correctAnswer": "6 \u00d7 10\u2079",
+      "prompt": "Compute: (2 × 10⁴) × (3 × 10⁵).",
+      "correctAnswer": "6 × 10⁹",
       "acceptedAnswers": [
-        "6 \u00d7 10\u2079"
+        "6 × 10⁹"
       ],
       "options": [
         {
-          "text": "6 \u00d7 10\u2079",
+          "text": "6 × 10⁹",
           "correct": true
         },
         {
-          "text": "6 \u00d7 10\u00b2\u2070",
+          "text": "6 × 10²⁰",
           "correct": false
         },
         {
-          "text": "5 \u00d7 10\u2079",
+          "text": "5 × 10⁹",
           "correct": false
         },
         {
-          "text": "6 \u00d7 10\u2074\u2075",
+          "text": "6 × 10⁴⁵",
           "correct": false
         }
       ],
-      "explanation": "(2\u00d73) \u00d7 10^(4+5) = 6 \u00d7 10\u2079.",
+      "explanation": "(2×3) × 10^(4+5) = 6 × 10⁹.",
       "hints": [
-        "Concept Rule: Multiply coefficients (2 \u00d7 3 = 6) and add exponents (4 + 5 = 9): 6 \u00d7 10\u2079.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
-        "Gizmo's Step: (2\u00d73) \u00d7 10^(4+5) = 6 \u00d7 10\u2079."
+        "Concept Rule: Multiply coefficients (2 × 3 = 6) and add exponents (4 + 5 = 9): 6 × 10⁹.",
+        "Strategy Clue: 6 × 10⁹.",
+        "Gizmo's Step: (2×3) × 10^(4+5) = 6 × 10⁹."
       ]
     },
     {
@@ -4898,17 +4898,17 @@
       "standard": "8.EE.A.3 / 8.EE.A.4",
       "difficulty": 2,
       "type": "numeric-response",
-      "prompt": "The distance to a star is 4 \u00d7 10\u00b9\u00b3 meters. A space probe travels 2 \u00d7 10\u00b9\u2070 meters per year. How many years will it take to reach the star?",
+      "prompt": "The distance to a star is 4 × 10¹³ meters. A space probe travels 2 × 10¹⁰ meters per year. How many years will it take to reach the star?",
       "correctAnswer": "2000",
       "acceptedAnswers": [
         "2000",
         "2000 years"
       ],
       "options": null,
-      "explanation": "2 \u00d7 10\u00b3 = 2000.",
+      "explanation": "2 × 10³ = 2000.",
       "hints": [
-        "Concept Rule: (4 \u00d7 10\u00b9\u00b3) \u00f7 (2 \u00d7 10\u00b9\u2070) = 2 \u00d7 10\u00b3.",
-        "Strategy Clue: Divide the total dividend by the divisor using standard division.",
+        "Concept Rule: (4 × 10¹³) ÷ (2 × 10¹⁰) = 2 × 10³ = 2000 years.",
+        "Strategy Clue: 2000 years.",
         "Gizmo's Step: Working through the calculation gives 2000, verifying the solution step by step."
       ]
     },
@@ -4921,34 +4921,34 @@
       "standard": "8.EE.A.3 / 8.EE.A.4",
       "difficulty": 3,
       "type": "multiple-choice",
-      "prompt": "Compute: (8 \u00d7 10\u2077) \u00f7 (4 \u00d7 10\u00b2).",
-      "correctAnswer": "2 \u00d7 10\u2075",
+      "prompt": "Compute: (8 × 10⁷) ÷ (4 × 10²).",
+      "correctAnswer": "2 × 10⁵",
       "acceptedAnswers": [
-        "2 \u00d7 10\u2075"
+        "2 × 10⁵"
       ],
       "options": [
         {
-          "text": "2 \u00d7 10\u2079",
+          "text": "2 × 10⁹",
           "correct": false
         },
         {
-          "text": "4 \u00d7 10\u2075",
+          "text": "4 × 10⁵",
           "correct": false
         },
         {
-          "text": "2 \u00d7 10\u2075",
+          "text": "2 × 10⁵",
           "correct": true
         },
         {
-          "text": "2 \u00d7 10\u00b3",
+          "text": "2 × 10³",
           "correct": false
         }
       ],
-      "explanation": "2 \u00d7 10\u2075.",
+      "explanation": "2 × 10⁵.",
       "hints": [
-        "Concept Rule: (8 \u00f7 4) \u00d7 10^(7 - 2).",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
-        "Gizmo's Step: Working through the calculation gives 2 \u00d7 10\u2075, verifying the solution step by step."
+        "Concept Rule: (8 ÷ 4) × 10^(7 - 2) = 2 × 10⁵.",
+        "Strategy Clue: 2 × 10⁵.",
+        "Gizmo's Step: Working through the calculation gives 2 × 10⁵, verifying the solution step by step."
       ]
     },
     {
@@ -4960,34 +4960,34 @@
       "standard": "8.EE.A.3 / 8.EE.A.4",
       "difficulty": 3,
       "type": "multiple-choice",
-      "prompt": "Add: (3 \u00d7 10\u2074) + (5 \u00d7 10\u00b3).",
-      "correctAnswer": "3.5 \u00d7 10\u2074",
+      "prompt": "Add: (3 × 10⁴) + (5 × 10³).",
+      "correctAnswer": "3.5 × 10⁴",
       "acceptedAnswers": [
-        "3.5 \u00d7 10\u2074"
+        "3.5 × 10⁴"
       ],
       "options": [
         {
-          "text": "8 \u00d7 10\u2077",
+          "text": "8 × 10⁷",
           "correct": false
         },
         {
-          "text": "8 \u00d7 10\u2074",
+          "text": "8 × 10⁴",
           "correct": false
         },
         {
-          "text": "15 \u00d7 10\u00b9\u00b2",
+          "text": "15 × 10¹²",
           "correct": false
         },
         {
-          "text": "3.5 \u00d7 10\u2074",
+          "text": "3.5 × 10⁴",
           "correct": true
         }
       ],
-      "explanation": "30,000 + 5,000 = 3.5 \u00d7 10\u2074.",
+      "explanation": "30,000 + 5,000 = 3.5 × 10⁴.",
       "hints": [
-        "Concept Rule: Convert to matching powers: 30,000 + 5,000 = 35,000.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
-        "Gizmo's Step: 30,000 + 5,000 = 3.5 \u00d7 10\u2074."
+        "Concept Rule: Convert to matching powers: 30,000 + 5,000 = 35,000 = 3.5 × 10⁴.",
+        "Strategy Clue: 3.5 × 10⁴.",
+        "Gizmo's Step: 30,000 + 5,000 = 3.5 × 10⁴."
       ]
     },
     {
@@ -4999,7 +4999,7 @@
       "standard": "8.EE.A.3 / 8.EE.A.4",
       "difficulty": 3,
       "type": "numeric-response",
-      "prompt": "Convert 7.8 \u00d7 10\u207b\u00b3 to standard decimal form.",
+      "prompt": "Convert 7.8 × 10⁻³ to standard decimal form.",
       "correctAnswer": "0.0078",
       "acceptedAnswers": [
         "0.0078"
@@ -5008,7 +5008,7 @@
       "explanation": "0.0078.",
       "hints": [
         "Concept Rule: Move decimal 3 places left: 0.0078.",
-        "Strategy Clue: Line up the decimal points vertically before adding or subtracting place values.",
+        "Strategy Clue: 0.0078.",
         "Gizmo's Step: Working through the calculation gives 0.0078, verifying the solution step by step."
       ]
     },
@@ -5021,16 +5021,16 @@
       "standard": "8.EE.A.2",
       "difficulty": 1,
       "type": "numeric-response",
-      "prompt": "Evaluate the square root: \u221a81.",
+      "prompt": "Evaluate the square root: √81.",
       "correctAnswer": "9",
       "acceptedAnswers": [
         "9"
       ],
       "options": null,
-      "explanation": "\u221a81 = 9.",
+      "explanation": "√81 = 9.",
       "hints": [
-        "Concept Rule: 9 \u00d7 9 = 81, so \u221a81 = 9.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: 9 × 9 = 81, so √81 = 9.",
+        "Strategy Clue: 9.",
         "Gizmo's Step: Working through the calculation gives 9, verifying the solution step by step."
       ]
     },
@@ -5043,16 +5043,16 @@
       "standard": "8.EE.A.2",
       "difficulty": 1,
       "type": "numeric-response",
-      "prompt": "Evaluate the cube root: \u221b64 (the cube root of 64).",
+      "prompt": "Evaluate the cube root: ∛64 (the cube root of 64).",
       "correctAnswer": "4",
       "acceptedAnswers": [
         "4"
       ],
       "options": null,
-      "explanation": "4\u00b3 = 64.",
+      "explanation": "4³ = 64.",
       "hints": [
-        "Concept Rule: 4 \u00d7 4 \u00d7 4 = 64, so \u221b64.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: 4 × 4 × 4 = 64, so ∛64 = 4.",
+        "Strategy Clue: 4.",
         "Gizmo's Step: Working through the calculation gives 4, verifying the solution step by step."
       ]
     },
@@ -5065,16 +5065,16 @@
       "standard": "8.EE.A.2",
       "difficulty": 2,
       "type": "numeric-response",
-      "prompt": "Solve for x (where x > 0): x\u00b2 = 144.",
+      "prompt": "Solve for x (where x > 0): x² = 144.",
       "correctAnswer": "12",
       "acceptedAnswers": [
         "12"
       ],
       "options": null,
-      "explanation": "12\u00b2 = 144.",
+      "explanation": "12² = 144.",
       "hints": [
-        "Concept Rule: The order of operations (PEMDAS) establishes the sequence for evaluating expressions: parentheses first, then exponents, multiplication and division, then addition and subtraction.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Concept Rule: x = √144 = 12.",
+        "Strategy Clue: 12.",
         "Gizmo's Step: Working through the calculation gives 12, verifying the solution step by step."
       ]
     },
@@ -5087,16 +5087,16 @@
       "standard": "8.EE.A.2",
       "difficulty": 2,
       "type": "numeric-response",
-      "prompt": "Solve for y: y\u00b3 = 125.",
+      "prompt": "Solve for y: y³ = 125.",
       "correctAnswer": "5",
       "acceptedAnswers": [
         "5"
       ],
       "options": null,
-      "explanation": "5\u00b3 = 125.",
+      "explanation": "5³ = 125.",
       "hints": [
-        "Concept Rule: Apply the foundational mathematical property to set up and solve the problem systematically.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Concept Rule: y = ∛125 = 5.",
+        "Strategy Clue: 5.",
         "Gizmo's Step: Working through the calculation gives 5, verifying the solution step by step."
       ]
     },
@@ -5109,7 +5109,7 @@
       "standard": "8.EE.A.2",
       "difficulty": 2,
       "type": "multiple-choice",
-      "prompt": "Between which two consecutive whole numbers does \u221a50 lie?",
+      "prompt": "Between which two consecutive whole numbers does √50 lie?",
       "correctAnswer": "Between 7 and 8",
       "acceptedAnswers": [
         "Between 7 and 8"
@@ -5132,11 +5132,11 @@
           "correct": false
         }
       ],
-      "explanation": "7\u00b2 = 49 < 50 < 64 = 8\u00b2.",
+      "explanation": "7² = 49 < 50 < 64 = 8².",
       "hints": [
-        "Concept Rule: 7\u00b2 = 49 and 8\u00b2 = 64. Since 49 < 50 < 64, \u221a50 lies between 7 and 8.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
-        "Gizmo's Step: 7\u00b2 = 49 < 50 < 64 = 8\u00b2. This verifies that Between 7 and 8 is correct."
+        "Concept Rule: 7² = 49 and 8² = 64. Since 49 < 50 < 64, √50 lies between 7 and 8.",
+        "Strategy Clue: Between 7 and 8.",
+        "Gizmo's Step: 7² = 49 < 50 < 64 = 8². This verifies that Between 7 and 8 is correct."
       ]
     },
     {
@@ -5148,16 +5148,16 @@
       "standard": "8.EE.A.2",
       "difficulty": 3,
       "type": "numeric-response",
-      "prompt": "Solve for x: x\u00b3 = 1000.",
+      "prompt": "Solve for x: x³ = 1000.",
       "correctAnswer": "10",
       "acceptedAnswers": [
         "10"
       ],
       "options": null,
-      "explanation": "10\u00b3 = 1000.",
+      "explanation": "10³ = 1000.",
       "hints": [
-        "Concept Rule: 10 \u00d7 10 \u00d7 10 = 1000, so x = 10.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Concept Rule: 10 × 10 × 10 = 1000, so x = 10.",
+        "Strategy Clue: 10.",
         "Gizmo's Step: Working through the calculation gives 10, verifying the solution step by step."
       ]
     },
@@ -5170,7 +5170,7 @@
       "standard": "8.EE.A.2",
       "difficulty": 3,
       "type": "multiple-choice",
-      "prompt": "Evaluate: \u221a0.25.",
+      "prompt": "Evaluate: √0.25.",
       "correctAnswer": "0.5",
       "acceptedAnswers": [
         "0.5"
@@ -5193,10 +5193,10 @@
           "correct": false
         }
       ],
-      "explanation": "0.5\u00b2 = 0.25.",
+      "explanation": "0.5² = 0.25.",
       "hints": [
-        "Concept Rule: 0.5 \u00d7 0.5 = 0.25, so \u221a0.25.",
-        "Strategy Clue: Line up the decimal points vertically before adding or subtracting place values.",
+        "Concept Rule: 0.5 × 0.5 = 0.25, so √0.25 = 0.5.",
+        "Strategy Clue: 0.5.",
         "Gizmo's Step: Working through the calculation gives 0.5, verifying the solution step by step."
       ]
     },
@@ -5209,17 +5209,17 @@
       "standard": "8.EE.A.2",
       "difficulty": 3,
       "type": "numeric-response",
-      "prompt": "What is the area of a square garden whose side length is \u221a49 meters in square meters?",
+      "prompt": "What is the area of a square garden whose side length is √49 meters in square meters?",
       "correctAnswer": "49",
       "acceptedAnswers": [
         "49",
         "49 sq m"
       ],
       "options": null,
-      "explanation": "(\u221a49)\u00b2 = 49.",
+      "explanation": "(√49)² = 49.",
       "hints": [
-        "Concept Rule: Area = (side)\u00b2 = (\u221a49)\u00b2.",
-        "Strategy Clue: Use the area formula: multiply the length (base) by the width (height).",
+        "Concept Rule: Area = (side)² = (√49)² = 49 square meters.",
+        "Strategy Clue: 49 sq m.",
         "Gizmo's Step: Working through the calculation gives 49, verifying the solution step by step."
       ]
     },
@@ -5232,16 +5232,16 @@
       "standard": "8.G.B.7",
       "difficulty": 1,
       "type": "numeric-response",
-      "prompt": "In a right triangle, the legs are a = 3 and b = 4. What is the length of the hypotenuse c? (a\u00b2 + b\u00b2 = c\u00b2)",
+      "prompt": "In a right triangle, the legs are a = 3 and b = 4. What is the length of the hypotenuse c? (a² + b² = c²)",
       "correctAnswer": "5",
       "acceptedAnswers": [
         "5"
       ],
       "options": null,
-      "explanation": "\u221a(9 + 16) = 5.",
+      "explanation": "√(9 + 16) = 5.",
       "hints": [
-        "Concept Rule: c\u00b2 = 3\u00b2 + 4\u00b2 = 9 + 16 = 25 -> c = \u221a25.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: c² = 3² + 4² = 9 + 16 = 25 -> c = √25 = 5.",
+        "Strategy Clue: 5.",
         "Gizmo's Step: Working through the calculation gives 5, verifying the solution step by step."
       ]
     },
@@ -5260,10 +5260,10 @@
         "10"
       ],
       "options": null,
-      "explanation": "\u221a(36 + 64) = 10.",
+      "explanation": "√(36 + 64) = 10.",
       "hints": [
-        "Concept Rule: c\u00b2 = 6\u00b2 + 8\u00b2 = 36 + 64.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Concept Rule: c² = 6² + 8² = 36 + 64 = 100 -> c = √100 = 10.",
+        "Strategy Clue: 10.",
         "Gizmo's Step: Working through the calculation gives 10, verifying the solution step by step."
       ]
     },
@@ -5282,10 +5282,10 @@
         "12"
       ],
       "options": null,
-      "explanation": "\u221a(169 - 25) = 12.",
+      "explanation": "√(169 - 25) = 12.",
       "hints": [
-        "Concept Rule: b\u00b2 = 13\u00b2 - 5\u00b2 = 169 - 25 = 144 -> b = \u221a144.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Concept Rule: b² = 13² - 5² = 169 - 25 = 144 -> b = √144 = 12.",
+        "Strategy Clue: 12.",
         "Gizmo's Step: Working through the calculation gives 12, verifying the solution step by step."
       ]
     },
@@ -5299,9 +5299,9 @@
       "difficulty": 2,
       "type": "multiple-choice",
       "prompt": "Do side lengths 9, 12, and 15 form a right triangle?",
-      "correctAnswer": "Yes, because 9\u00b2 + 12\u00b2 = 81 + 144 = 225 = 15\u00b2",
+      "correctAnswer": "Yes, because 9² + 12² = 81 + 144 = 225 = 15²",
       "acceptedAnswers": [
-        "Yes, because 9\u00b2 + 12\u00b2 = 81 + 144 = 225 = 15\u00b2"
+        "Yes, because 9² + 12² = 81 + 144 = 225 = 15²"
       ],
       "options": [
         {
@@ -5313,7 +5313,7 @@
           "correct": false
         },
         {
-          "text": "Yes, because 9\u00b2 + 12\u00b2 = 81 + 144 = 225 = 15\u00b2",
+          "text": "Yes, because 9² + 12² = 81 + 144 = 225 = 15²",
           "correct": true
         },
         {
@@ -5321,11 +5321,11 @@
           "correct": false
         }
       ],
-      "explanation": "9\u00b2 + 12\u00b2 = 15\u00b2.",
+      "explanation": "9² + 12² = 15².",
       "hints": [
-        "Concept Rule: By the converse of the Pythagorean theorem, 9\u00b2 + 12\u00b2 = 15\u00b2 proves it is a right triangle.",
-        "Strategy Clue: Identify the quantities given in the problem, set up the required mathematical operation, and compute the result step-by-step.",
-        "Gizmo's Step: Yes, because 9\u00b2 + 12\u00b2 = 81 + 144 = 225 = 15\u00b2."
+        "Concept Rule: By the converse of the Pythagorean theorem, 9² + 12² = 15² proves it is a right triangle.",
+        "Strategy Clue: Yes, 81 + 144 = 225.",
+        "Gizmo's Step: Yes, because 9² + 12² = 81 + 144 = 225 = 15²."
       ]
     },
     {
@@ -5345,10 +5345,10 @@
         "8 feet"
       ],
       "options": null,
-      "explanation": "\u221a(100 - 36) = 8 ft.",
+      "explanation": "√(100 - 36) = 8 ft.",
       "hints": [
-        "Concept Rule: h\u00b2 = 10\u00b2 - 6\u00b2 = 100 - 36 = 64 -> h = \u221a64.",
-        "Strategy Clue: Divide the total dividend by the divisor using standard division.",
+        "Concept Rule: h² = 10² - 6² = 100 - 36 = 64 -> h = √64 = 8 feet.",
+        "Strategy Clue: 8 ft.",
         "Gizmo's Step: Working through the calculation gives 8, verifying the solution step by step."
       ]
     },
@@ -5367,10 +5367,10 @@
         "17"
       ],
       "options": null,
-      "explanation": "\u221a(64 + 225) = 17.",
+      "explanation": "√(64 + 225) = 17.",
       "hints": [
-        "Concept Rule: c\u00b2 = 8\u00b2 + 15\u00b2 = 64 + 225 = 289 -> c = \u221a289.",
-        "Strategy Clue: Identify the quantities given in the problem, set up the required mathematical operation, and compute the result step-by-step.",
+        "Concept Rule: c² = 8² + 15² = 64 + 225 = 289 -> c = √289 = 17.",
+        "Strategy Clue: 17.",
         "Gizmo's Step: Working through the calculation gives 17, verifying the solution step by step."
       ]
     },
@@ -5406,10 +5406,10 @@
           "correct": false
         }
       ],
-      "explanation": "5\u00b2 + 10\u00b2 \u2260 15\u00b2.",
+      "explanation": "5² + 10² ≠ 15².",
       "hints": [
-        "Concept Rule: 5\u00b2 + 10\u00b2 = 25 + 100 = 125 \u2260 15\u00b2 (225).",
-        "Strategy Clue: Identify the quantities given in the problem, set up the required mathematical operation, and compute the result step-by-step.",
+        "Concept Rule: 5² + 10² = 25 + 100 = 125 ≠ 15² (225).",
+        "Strategy Clue: 5, 10, 15.",
         "Gizmo's Step: Working through the calculation gives 5, 10, 15, verifying the solution step by step."
       ]
     },
@@ -5429,10 +5429,10 @@
         "20 inches"
       ],
       "options": null,
-      "explanation": "\u221a(256 + 144) = 20.",
+      "explanation": "√(256 + 144) = 20.",
       "hints": [
-        "Concept Rule: d\u00b2 = 16\u00b2 + 12\u00b2 = 256 + 144 = 400 -> d = \u221a400.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: d² = 16² + 12² = 256 + 144 = 400 -> d = √400 = 20 inches.",
+        "Strategy Clue: 20 inches.",
         "Gizmo's Step: Working through the calculation gives 20, verifying the solution step by step."
       ]
     },
@@ -5452,10 +5452,10 @@
         "5 units"
       ],
       "options": null,
-      "explanation": "\u221a(9 + 16) = 5.",
+      "explanation": "√(9 + 16) = 5.",
       "hints": [
-        "Concept Rule: d = \u221a(3\u00b2 + 4\u00b2) = \u221a(9 + 16) = \u221a25.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: d = √(3² + 4²) = √(9 + 16) = √25 = 5 units.",
+        "Strategy Clue: 5 units.",
         "Gizmo's Step: Working through the calculation gives 5, verifying the solution step by step."
       ]
     },
@@ -5475,10 +5475,10 @@
         "10 units"
       ],
       "options": null,
-      "explanation": "\u221a(36 + 64) = 10.",
+      "explanation": "√(36 + 64) = 10.",
       "hints": [
-        "Concept Rule: dx = 7 - 1 = 6; dy = 10 - 2 = 8. d = \u221a(6\u00b2 + 8\u00b2) = \u221a(36 + 64) = \u221a100 = 10 units.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: dx = 7 - 1 = 6; dy = 10 - 2 = 8. d = √(6² + 8²) = √(36 + 64) = √100 = 10 units.",
+        "Strategy Clue: 10 units.",
         "Gizmo's Step: Working through the calculation gives 10, verifying the solution step by step."
       ]
     },
@@ -5498,10 +5498,10 @@
         "13 units"
       ],
       "options": null,
-      "explanation": "\u221a(25 + 144) = 13.",
+      "explanation": "√(25 + 144) = 13.",
       "hints": [
-        "Concept Rule: dx = 3 - (-2) = 5; dy = 15 - 3 = 12. d = \u221a(5\u00b2 + 12\u00b2) = \u221a(25 + 144) = \u221a169.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: dx = 3 - (-2) = 5; dy = 15 - 3 = 12. d = √(5² + 12²) = √(25 + 144) = √169 = 13 units.",
+        "Strategy Clue: 13 units.",
         "Gizmo's Step: Working through the calculation gives 13, verifying the solution step by step."
       ]
     },
@@ -5514,7 +5514,7 @@
       "standard": "8.G.B.8",
       "difficulty": 2,
       "type": "multiple-choice",
-      "prompt": "The coordinate distance formula d = \u221a((x2 - x1)\u00b2 + (y2 - y1)\u00b2) is a direct application of which theorem?",
+      "prompt": "The coordinate distance formula d = √((x2 - x1)² + (y2 - y1)²) is a direct application of which theorem?",
       "correctAnswer": "The Pythagorean Theorem",
       "acceptedAnswers": [
         "The Pythagorean Theorem"
@@ -5541,7 +5541,7 @@
       "hints": [
         "Concept Rule: The horizontal and vertical differences form the legs of a right triangle whose hypotenuse is the distance.",
         "Strategy Clue: Pythagorean Theorem.",
-        "Gizmo's Step: Distance formula comes from Pythagorean Theorem. This verifies that The Pythagorean Theorem is correct Therefore, The Pythagorean Theorem is the mathematically correct answer."
+        "Gizmo's Step: Distance formula comes from Pythagorean Theorem. This verifies that The Pythagorean Theorem is correct."
       ]
     },
     {
@@ -5560,10 +5560,10 @@
         "5 units"
       ],
       "options": null,
-      "explanation": "\u221a(16 + 9) = 5.",
+      "explanation": "√(16 + 9) = 5.",
       "hints": [
-        "Concept Rule: dx = 6 - 2 = 4; dy = 8 - 5 = 3. d = \u221a(4\u00b2 + 3\u00b2) = \u221a25.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: dx = 6 - 2 = 4; dy = 8 - 5 = 3. d = √(4² + 3²) = √25 = 5 units.",
+        "Strategy Clue: 5 units.",
         "Gizmo's Step: Working through the calculation gives 5, verifying the solution step by step."
       ]
     },
@@ -5583,10 +5583,10 @@
         "17 units"
       ],
       "options": null,
-      "explanation": "\u221a(64 + 225) = 17.",
+      "explanation": "√(64 + 225) = 17.",
       "hints": [
-        "Concept Rule: dx = 4 - (-4) = 8; dy = 14 - (-1) = 15. d = \u221a(8\u00b2 + 15\u00b2) = \u221a(64 + 225) = \u221a289.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: dx = 4 - (-4) = 8; dy = 14 - (-1) = 15. d = √(8² + 15²) = √(64 + 225) = √289 = 17 units.",
+        "Strategy Clue: 17 units.",
         "Gizmo's Step: Working through the calculation gives 17, verifying the solution step by step."
       ]
     },
@@ -5608,8 +5608,8 @@
       "options": null,
       "explanation": "|5 - (-3)| = 8.",
       "hints": [
-        "Concept Rule: Same y-coordinate: distance = |5 - (-3)|.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: Same y-coordinate: distance = |5 - (-3)| = 8 units.",
+        "Strategy Clue: 8 units.",
         "Gizmo's Step: Working through the calculation gives 8, verifying the solution step by step."
       ]
     },
@@ -5631,8 +5631,8 @@
       "options": null,
       "explanation": "9 + 12 + 15 = 36.",
       "hints": [
-        "Concept Rule: Leg 1 = 9; Leg 2 = 12. Hypotenuse = \u221a(9\u00b2 + 12\u00b2) = 15. Perimeter = 9 + 12 + 15.",
-        "Strategy Clue: Add the lengths of all outer boundary sides together to find the perimeter.",
+        "Concept Rule: Leg 1 = 9; Leg 2 = 12. Hypotenuse = √(9² + 12²) = 15. Perimeter = 9 + 12 + 15 = 36 units.",
+        "Strategy Clue: 36 units.",
         "Gizmo's Step: Working through the calculation gives 36, verifying the solution step by step."
       ]
     },
@@ -5646,9 +5646,9 @@
       "difficulty": 1,
       "type": "multiple-choice",
       "prompt": "Which of the following is an irrational number?",
-      "correctAnswer": "\u221a2",
+      "correctAnswer": "√2",
       "acceptedAnswers": [
-        "\u221a2"
+        "√2"
       ],
       "options": [
         {
@@ -5656,7 +5656,7 @@
           "correct": false
         },
         {
-          "text": "\u221a2",
+          "text": "√2",
           "correct": true
         },
         {
@@ -5664,15 +5664,15 @@
           "correct": false
         },
         {
-          "text": "\u221a16",
+          "text": "√16",
           "correct": false
         }
       ],
-      "explanation": "\u221a2 is irrational.",
+      "explanation": "√2 is irrational.",
       "hints": [
-        "Concept Rule: \u221a2 has a non-terminating, non-repeating decimal expansion and cannot be written as a fraction of integers.",
-        "Strategy Clue: Identify the count of each item and write them in the exact order requested by the prompt.",
-        "Gizmo's Step: Working through the calculation gives \u221a2, verifying the solution step by step."
+        "Concept Rule: √2 has a non-terminating, non-repeating decimal expansion and cannot be written as a fraction of integers.",
+        "Strategy Clue: √2.",
+        "Gizmo's Step: Working through the calculation gives √2, verifying the solution step by step."
       ]
     },
     {
@@ -5748,8 +5748,8 @@
       ],
       "explanation": "0.777... = 7/9.",
       "hints": [
-        "Concept Rule: Let x = 0.777... -> 10x = 7.777... -> 9x = 7 -> x.",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
+        "Concept Rule: Let x = 0.777... -> 10x = 7.777... -> 9x = 7 -> x = 7/9.",
+        "Strategy Clue: 7/9.",
         "Gizmo's Step: Working through the calculation gives 7/9, verifying the solution step by step."
       ]
     },
@@ -5763,13 +5763,13 @@
       "difficulty": 2,
       "type": "multiple-choice",
       "prompt": "Which statement is true for ALL rational numbers?",
-      "correctAnswer": "They can be expressed as a ratio of two integers a/b where b \u2260 0",
+      "correctAnswer": "They can be expressed as a ratio of two integers a/b where b ≠ 0",
       "acceptedAnswers": [
-        "They can be expressed as a ratio of two integers a/b where b \u2260 0"
+        "They can be expressed as a ratio of two integers a/b where b ≠ 0"
       ],
       "options": [
         {
-          "text": "They can be expressed as a ratio of two integers a/b where b \u2260 0",
+          "text": "They can be expressed as a ratio of two integers a/b where b ≠ 0",
           "correct": true
         },
         {
@@ -5789,7 +5789,7 @@
       "hints": [
         "Concept Rule: Definition of rational numbers is the quotient of two integers.",
         "Strategy Clue: Ratio of two integers a/b.",
-        "Gizmo's Step: Rational = ratio of integers. This verifies that They can be expressed as a ratio of two integers a/b where b \u2260 0 is correct."
+        "Gizmo's Step: Rational = ratio of integers. This verifies that They can be expressed as a ratio of two integers a/b where b ≠ 0 is correct."
       ]
     },
     {
@@ -5801,17 +5801,17 @@
       "standard": "8.NS.A.1 / 8.NS.A.2",
       "difficulty": 2,
       "type": "numeric-response",
-      "prompt": "What integer is \u221a75 closest to?",
+      "prompt": "What integer is √75 closest to?",
       "correctAnswer": "9",
       "acceptedAnswers": [
         "9"
       ],
       "options": null,
-      "explanation": "\u221a75 is closest to 9.",
+      "explanation": "√75 is closest to 9.",
       "hints": [
-        "Concept Rule: 8\u00b2 = 64 and 9\u00b2 = 81. 75 is closer to 81 (|81 - 75| = 6) than 64 (|75 - 64| = 11). Closest integer is 9.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
-        "Gizmo's Step: \u221a75 is closest to 9 Therefore, 9 is the mathematically correct answer."
+        "Concept Rule: 8² = 64 and 9² = 81. 75 is closer to 81 (|81 - 75| = 6) than 64 (|75 - 64| = 11). Closest integer is 9.",
+        "Strategy Clue: 9.",
+        "Gizmo's Step: √75 is closest to 9."
       ]
     },
     {
@@ -5848,8 +5848,8 @@
       ],
       "explanation": "45/99 = 5/11.",
       "hints": [
-        "Concept Rule: 100x - x = 99x = 45 -> x = 45/99.",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
+        "Concept Rule: 100x - x = 99x = 45 -> x = 45/99 = 5/11.",
+        "Strategy Clue: 5/11.",
         "Gizmo's Step: Working through the calculation gives 5/11, verifying the solution step by step."
       ]
     },
@@ -5862,10 +5862,10 @@
       "standard": "8.NS.A.1 / 8.NS.A.2",
       "difficulty": 3,
       "type": "multiple-choice",
-      "prompt": "Is \u221a100 a rational or irrational number?",
-      "correctAnswer": "Rational, because \u221a100 = 10, which is an integer",
+      "prompt": "Is √100 a rational or irrational number?",
+      "correctAnswer": "Rational, because √100 = 10, which is an integer",
       "acceptedAnswers": [
-        "Rational, because \u221a100 = 10, which is an integer"
+        "Rational, because √100 = 10, which is an integer"
       ],
       "options": [
         {
@@ -5881,15 +5881,15 @@
           "correct": false
         },
         {
-          "text": "Rational, because \u221a100 = 10, which is an integer",
+          "text": "Rational, because √100 = 10, which is an integer",
           "correct": true
         }
       ],
-      "explanation": "\u221a100 = 10 is rational.",
+      "explanation": "√100 = 10 is rational.",
       "hints": [
-        "Concept Rule: 100 is a perfect square: \u221a100 = 10 = 10/1, which is rational.",
+        "Concept Rule: 100 is a perfect square: √100 = 10 = 10/1, which is rational.",
         "Strategy Clue: Rational (equals 10).",
-        "Gizmo's Step: Rational, because \u221a100 = 10, which is an integer."
+        "Gizmo's Step: Rational, because √100 = 10, which is an integer."
       ]
     },
     {
@@ -5901,17 +5901,17 @@
       "standard": "8.NS.A.1 / 8.NS.A.2",
       "difficulty": 3,
       "type": "numeric-response",
-      "prompt": "Between which two consecutive whole numbers does \u221a20 lie? Enter the smaller whole number.",
+      "prompt": "Between which two consecutive whole numbers does √20 lie? Enter the smaller whole number.",
       "correctAnswer": "4",
       "acceptedAnswers": [
         "4"
       ],
       "options": null,
-      "explanation": "4\u00b2 = 16 < 20 < 25 = 5\u00b2.",
+      "explanation": "4² = 16 < 20 < 25 = 5².",
       "hints": [
-        "Concept Rule: 4\u00b2 = 16 and 5\u00b2 = 25. Since 16 < 20 < 25, \u221a20 lies between 4 and 5. Smaller whole number is 4.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
-        "Gizmo's Step: 4\u00b2 = 16 < 20 < 25 = 5\u00b2."
+        "Concept Rule: 4² = 16 and 5² = 25. Since 16 < 20 < 25, √20 lies between 4 and 5. Smaller whole number is 4.",
+        "Strategy Clue: 4.",
+        "Gizmo's Step: 4² = 16 < 20 < 25 = 5²."
       ]
     },
     {
@@ -5923,18 +5923,18 @@
       "standard": "8.MP.1--8.MP.8",
       "difficulty": 1,
       "type": "numeric-response",
-      "prompt": "A cone-shaped paper cup has radius 3 cm and height 10 cm. Find its volume in cubic cm using \u03c0 \u2248 3.14. (V = 1/3 \u00d7 \u03c0 \u00d7 r\u00b2 \u00d7 h)",
+      "prompt": "A cone-shaped paper cup has radius 3 cm and height 10 cm. Find its volume in cubic cm using π ≈ 3.14. (V = 1/3 × π × r² × h)",
       "correctAnswer": "94.2",
       "acceptedAnswers": [
         "94.2",
         "94.2 cu cm"
       ],
       "options": null,
-      "explanation": "3 \u00d7 3.14 \u00d7 10 = 94.2.",
+      "explanation": "3 × 3.14 × 10 = 94.2.",
       "hints": [
-        "Concept Rule: V = (1/3) \u00d7 3.14 \u00d7 3\u00b2 \u00d7 10 = (1/3) \u00d7 3.14 \u00d7 9 \u00d7 10 = 3 \u00d7 3.14 \u00d7 10.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
-        "Gizmo's Step: 3 \u00d7 3.14 \u00d7 10 = 94.2."
+        "Concept Rule: V = (1/3) × 3.14 × 3² × 10 = (1/3) × 3.14 × 9 × 10 = 3 × 3.14 × 10 = 94.2 cubic cm.",
+        "Strategy Clue: 94.2 cu cm.",
+        "Gizmo's Step: 3 × 3.14 × 10 = 94.2."
       ]
     },
     {
@@ -5954,8 +5954,8 @@
       "options": null,
       "explanation": "2x = 10 -> x = 5.",
       "hints": [
-        "Concept Rule: 2x - 3 = 35 \u00f7 5 = 7 -> 2x = 10 -> x.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: 2x - 3 = 35 ÷ 5 = 7 -> 2x = 10 -> x = 5.",
+        "Strategy Clue: 5.",
         "Gizmo's Step: Working through the calculation gives 5, verifying the solution step by step."
       ]
     },
@@ -5976,11 +5976,11 @@
         "50 meters"
       ],
       "options": null,
-      "explanation": "\u221a(900 + 1600) = 50 m.",
+      "explanation": "√(900 + 1600) = 50 m.",
       "hints": [
-        "Concept Rule: d = \u221a(30\u00b2 + 40\u00b2) = \u221a(900 + 1600) = \u221a2500.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
-        "Gizmo's Step: \u221a(900 + 1600) = 50 m."
+        "Concept Rule: d = √(30² + 40²) = √(900 + 1600) = √2500 = 50 meters.",
+        "Strategy Clue: 50 meters.",
+        "Gizmo's Step: √(900 + 1600) = 50 m."
       ]
     },
     {
@@ -6018,7 +6018,7 @@
       "explanation": "7 = -5 has no solution.",
       "hints": [
         "Concept Rule: Subtracting 2x gives 7 = -5 (false statement, contradiction).",
-        "Strategy Clue: Calculate 2x + 7 to find the final value.",
+        "Strategy Clue: 2x + 7 = 2x - 5.",
         "Gizmo's Step: 7 = -5 has no solution. This verifies that 2x + 7 = 2x - 5 is correct."
       ]
     },
@@ -6037,10 +6037,10 @@
         "120"
       ],
       "options": null,
-      "explanation": "12 \u00f7 0.10 = 120.",
+      "explanation": "12 ÷ 0.10 = 120.",
       "hints": [
-        "Concept Rule: 30 + 0.10t = 42 -> 0.10t = 12 -> t = 12 \u00f7 0.10.",
-        "Strategy Clue: Line up the decimal points vertically before adding or subtracting place values.",
+        "Concept Rule: 30 + 0.10t = 42 -> 0.10t = 12 -> t = 12 ÷ 0.10 = 120 messages.",
+        "Strategy Clue: 120.",
         "Gizmo's Step: Working through the calculation gives 120, verifying the solution step by step."
       ]
     },
@@ -6053,18 +6053,18 @@
       "standard": "8.MP.1--8.MP.8",
       "difficulty": 3,
       "type": "numeric-response",
-      "prompt": "Evaluate: (3 \u00d7 10\u2075) \u00d7 (2 \u00d7 10\u00b3). Enter your answer as a standard whole number.",
+      "prompt": "Evaluate: (3 × 10⁵) × (2 × 10³). Enter your answer as a standard whole number.",
       "correctAnswer": "600000000",
       "acceptedAnswers": [
         "600000000",
         "600,000,000"
       ],
       "options": null,
-      "explanation": "6 \u00d7 10\u2078 = 600000000.",
+      "explanation": "6 × 10⁸ = 600000000.",
       "hints": [
-        "Concept Rule: (3 \u00d7 2) \u00d7 10^(5 + 3) = 6 \u00d7 10\u2078 = 600,000,000.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
-        "Gizmo's Step: 6 \u00d7 10\u2078 = 600000000."
+        "Concept Rule: (3 × 2) × 10^(5 + 3) = 6 × 10⁸ = 600,000,000.",
+        "Strategy Clue: 600,000,000.",
+        "Gizmo's Step: 6 × 10⁸ = 600000000."
       ]
     },
     {
@@ -6101,8 +6101,8 @@
       ],
       "explanation": "(4, -3) -> (4, 3) -> (-4, -3).",
       "hints": [
-        "Concept Rule: Reflect across x-axis: (4, -3) -> (4, 3). Rotate 180\u00b0: (4, 3) -> (-4, -3).",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: Reflect across x-axis: (4, -3) -> (4, 3). Rotate 180°: (4, 3) -> (-4, -3).",
+        "Strategy Clue: (-4, -3).",
         "Gizmo's Step: Working through the calculation gives (-4, -3), verifying the solution step by step."
       ]
     },
@@ -6123,8 +6123,8 @@
       "options": null,
       "explanation": "2x = 8 -> x = 4.",
       "hints": [
-        "Concept Rule: 3x - 1 = x + 7 -> 2x = 8 -> x.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Concept Rule: 3x - 1 = x + 7 -> 2x = 8 -> x = 4.",
+        "Strategy Clue: 4.",
         "Gizmo's Step: Working through the calculation gives 4, verifying the solution step by step."
       ]
     }

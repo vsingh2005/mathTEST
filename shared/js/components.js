@@ -180,6 +180,7 @@ export class DigitalScratchpad {
     const container = document.getElementById(containerId);
     if (!container) return;
 
+    // Save existing canvas image if already mounted
     let savedData = null;
     if (this.canvas) {
       try {
@@ -258,21 +259,13 @@ export class DigitalScratchpad {
     const resizeCanvas = () => {
       if (!this.canvas) return;
       const rect = this.canvas.parentElement.getBoundingClientRect();
-      if (rect.width && rect.height) {
-        let prev = null;
-        try { prev = this.canvas.toDataURL(); } catch (e) {}
-        this.canvas.width = rect.width;
-        this.canvas.height = rect.height;
-        if (prev) {
-          const img = new Image();
-          img.onload = () => { this.ctx.drawImage(img, 0, 0); };
-          img.src = prev;
-        }
-      }
+      this.canvas.width = rect.width;
+      this.canvas.height = rect.height;
     };
 
     window.addEventListener('resize', resizeCanvas);
 
+    // Mouse & Touch events
     const start = (e) => {
       this.isDrawing = true;
       const pos = this.getPos(e);
@@ -341,33 +334,27 @@ export class DigitalScratchpad {
     ['sp-btn-pen', 'sp-btn-hl', 'sp-btn-eraser'].forEach(id => {
       const b = document.getElementById(id);
       if (b) {
-        b.className = 'px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 font-bold text-xs';
+        b.className = 'px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 font-bold text-xs';
       }
     });
 
     if (mode === 'pen') {
-      const pen = document.getElementById('sp-btn-pen');
-      if (pen) {
-        pen.className = 'px-2.5 py-1 rounded-lg bg-sky-100 text-sky-700 font-bold text-xs';
-      }
+      document.getElementById('sp-btn-pen')?.classList.replace('bg-slate-100', 'bg-sky-100');
+      document.getElementById('sp-btn-pen')?.classList.replace('text-slate-700', 'text-sky-700');
       this.ctx.globalAlpha = 1.0;
       this.ctx.strokeStyle = this.currentColor;
       this.ctx.lineWidth = 3;
       this.ctx.lineCap = 'round';
     } else if (mode === 'highlighter') {
-      const hl = document.getElementById('sp-btn-hl');
-      if (hl) {
-        hl.className = 'px-2.5 py-1 rounded-lg bg-amber-100 text-amber-700 font-bold text-xs';
-      }
+      document.getElementById('sp-btn-hl')?.classList.replace('bg-slate-100', 'bg-amber-100');
+      document.getElementById('sp-btn-hl')?.classList.replace('text-slate-700', 'text-amber-700');
       this.ctx.globalAlpha = 0.35;
       this.ctx.strokeStyle = '#facc15';
       this.ctx.lineWidth = 18;
       this.ctx.lineCap = 'square';
     } else if (mode === 'eraser') {
-      const er = document.getElementById('sp-btn-eraser');
-      if (er) {
-        er.className = 'px-2.5 py-1 rounded-lg bg-slate-300 text-slate-800 font-bold text-xs';
-      }
+      document.getElementById('sp-btn-eraser')?.classList.replace('bg-slate-100', 'bg-rose-100');
+      document.getElementById('sp-btn-eraser')?.classList.replace('text-slate-700', 'text-rose-700');
       this.ctx.globalAlpha = 1.0;
       this.ctx.strokeStyle = '#ffffff';
       this.ctx.lineWidth = 24;
@@ -375,16 +362,17 @@ export class DigitalScratchpad {
     }
   }
 
-  setColor(hex) {
-    this.currentColor = hex;
+  setColor(color) {
+    this.currentColor = color;
     if (this.mode === 'pen') {
-      this.ctx.strokeStyle = hex;
+      this.ctx.strokeStyle = color;
     }
   }
 
   clear() {
-    if (!this.ctx || !this.canvas) return;
-    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    if (this.ctx && this.canvas) {
+      this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    }
   }
 
   stamp(type) {
@@ -399,8 +387,9 @@ export class DigitalScratchpad {
     this.ctx.font = 'bold 12px Nunito, sans-serif';
 
     if (type === 'numberline') {
-      const startX = Math.max(30, cx - 180);
-      const endX = Math.min(this.canvas.width - 30, cx + 180);
+      // Draw horizontal line with tick marks
+      const startX = Math.max(50, cx - 250);
+      const endX = Math.min(this.canvas.width - 50, cx + 250);
       this.ctx.beginPath();
       this.ctx.moveTo(startX, cy);
       this.ctx.lineTo(endX, cy);
@@ -417,7 +406,8 @@ export class DigitalScratchpad {
         this.ctx.fillText(String(i), x - 4, cy + 24);
       }
     } else if (type === 'grid') {
-      const size = 180;
+      // Draw 5x5 coordinate grid
+      const size = 200;
       const x0 = cx - size / 2;
       const y0 = cy - size / 2;
       for (let i = 0; i <= 5; i++) {
@@ -431,8 +421,9 @@ export class DigitalScratchpad {
         this.ctx.stroke();
       }
     } else if (type === 'tenframe') {
-      const w = 220;
-      const h = 90;
+      // Draw 2x5 ten frame
+      const w = 260;
+      const h = 104;
       const x0 = cx - w / 2;
       const y0 = cy - h / 2;
       this.ctx.strokeRect(x0, y0, w, h);
@@ -469,13 +460,12 @@ window.closeGlobalModal = function(id) {
   }
 };
 
-// Initialize elements
+// Register custom elements
 if (typeof customElements !== 'undefined') {
   if (!customElements.get('kss-header')) customElements.define('kss-header', KSSHeader);
   if (!customElements.get('kss-footer')) customElements.define('kss-footer', KSSFooter);
 }
 
-// Initialize scratchpad on window
 if (typeof window !== 'undefined') {
   window.scratchpad = new DigitalScratchpad();
 }

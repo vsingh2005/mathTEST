@@ -10,7 +10,7 @@
       "domain": "Operations & Algebraic Thinking",
       "unit": "Unit 1: Multiplicative Comparison",
       "title": "Comparison Word Problems",
-      "description": "Interpret a multiplication equation as a comparison (e.g., 35 = 5 \u00d7 7 means 35 is 5 times as many as 7). Solve word problems using multiplicative comparisons.",
+      "description": "Interpret a multiplication equation as a comparison (e.g., 35 = 5 × 7 means 35 is 5 times as many as 7). Solve word problems using multiplicative comparisons.",
       "standard": "4.OA.A.1 / 4.OA.A.2",
       "questionCount": 8
     },
@@ -31,9 +31,9 @@
       "grade": 4,
       "domain": "Operations & Algebraic Thinking",
       "unit": "Unit 2: Factors, Multiples",
-      "title": "Patterns",
-      "description": "Factors & Multiples",
-      "standard": "Find all factor pairs for a whole number in the range 1--100. Recognize multiples of numbers and define prime vs.\\ composite numbers.",
+      "title": "Factors & Multiples",
+      "description": "Find all factor pairs for a whole number in the range 1-100; determine whether a number is a multiple or prime/composite.",
+      "standard": "4.OA.B.4",
       "questionCount": 8
     },
     {
@@ -42,9 +42,9 @@
       "grade": 4,
       "domain": "Operations & Algebraic Thinking",
       "unit": "Unit 2: Factors, Multiples",
-      "title": "Patterns",
-      "description": "Generating Patterns",
-      "standard": "Generate a number or shape pattern that follows a given rule (e.g., add 3). Analyze patterns to identify informal features.",
+      "title": "Generating Patterns",
+      "description": "Generate a number or shape pattern that follows a given rule, and identify apparent features of the pattern.",
+      "standard": "4.OA.C.5",
       "questionCount": 8
     },
     {
@@ -53,9 +53,9 @@
       "grade": 4,
       "domain": "Operations & Algebraic Thinking",
       "unit": "Unit 2: Factors, Multiples",
-      "title": "Patterns",
-      "description": "Equations & Unknowns",
-      "standard": "Solve equations with variables for unknown numbers in multiplication, division, addition, and subtraction word contexts.",
+      "title": "Equations & Unknowns",
+      "description": "Solve multi-step word problems with whole numbers using equations with a variable standing for the unknown quantity.",
+      "standard": "4.OA.A.3",
       "questionCount": 8
     },
     {
@@ -152,9 +152,9 @@
       "grade": 4,
       "domain": "Fractions & Decimals",
       "unit": "Unit 6: Fraction Arithmetic",
-      "title": "Decomposing",
-      "description": "Word Problems",
-      "standard": "Decompose a fraction into a sum of fractions with the same denominator in more than one way. Solve word problems with fraction addition/subtraction.",
+      "title": "Decomposing Fractions & Word Problems",
+      "description": "Decompose a fraction into a sum of fractions with the same denominator in more than one way, and solve addition/subtraction word problems.",
+      "standard": "4.NF.B.3c-d",
       "questionCount": 8
     },
     {
@@ -164,7 +164,7 @@
       "domain": "Fractions & Decimals",
       "unit": "Unit 6: Fraction Arithmetic",
       "title": "Multiplying Fractions by Whole Numbers",
-      "description": "Understand a fraction as a multiple of a unit fraction (e.g., 5/4 = 5 \u00d7 1/4). Multiply a fraction by a whole number in word problems.",
+      "description": "Understand a fraction as a multiple of a unit fraction (e.g., 5/4 = 5 × 1/4). Multiply a fraction by a whole number in word problems.",
       "standard": "4.NF.B.4",
       "questionCount": 8
     },
@@ -262,9 +262,9 @@
       "grade": 4,
       "domain": "Geometry & Financial Literacy",
       "unit": "Unit 10: Shape Lines",
-      "title": "Angles",
-      "description": "Lines, Angles & Shape Symmetry",
-      "standard": "Draw points, lines, line segments, rays, angles (right, acute, obtuse), and perpendicular and parallel lines. Identify line-symmetric shapes.",
+      "title": "Lines, Angles & Shape Symmetry",
+      "description": "Draw and identify points, lines, line segments, rays, angles, perpendicular and parallel lines, and recognize lines of symmetry.",
+      "standard": "4.G.A.1 / 4.G.A.3",
       "questionCount": 8
     },
     {
@@ -273,9 +273,9 @@
       "grade": 4,
       "domain": "Geometry & Financial Literacy",
       "unit": "Unit 10: Shape Lines",
-      "title": "Angles",
-      "description": "Classifying Shapes & Financial Literacy",
-      "standard": "Classify two-dimensional figures based on the presence or absence of parallel or perpendicular lines. Solve money problems including tax and change.",
+      "title": "Classifying Shapes & Financial Literacy",
+      "description": "Classify two-dimensional figures based on parallel or perpendicular lines and angle types, and apply math to practical situations.",
+      "standard": "4.G.A.2",
       "questionCount": 8
     }
   ],
@@ -296,11 +296,11 @@
         "24 books"
       ],
       "options": null,
-      "explanation": "Maya has 4 \u00d7 6 = 24 books.",
+      "explanation": "Maya has 4 × 6 = 24 books.",
       "hints": [
-        "Concept Rule: Multiplicative comparison means one quantity is a multiple of another: Maya = 4 \u00d7 Leo.",
+        "Concept Rule: Multiplicative comparison means one quantity is a multiple of another: Maya = 4 × Leo.",
         "Strategy Clue: Multiply Leo's 6 books by 4.",
-        "Gizmo's Step: Maya has 4 \u00d7 6 = 24 books."
+        "Gizmo's Step: Maya has 4 × 6 = 24 books."
       ]
     },
     {
@@ -312,7 +312,7 @@
       "standard": "4.OA.A.1 / 4.OA.A.2",
       "difficulty": 1,
       "type": "multiple-choice",
-      "prompt": "Which statement represents the equation 35 = 5 \u00d7 7?",
+      "prompt": "Which statement represents the equation 35 = 5 × 7?",
       "correctAnswer": "35 is 5 times as many as 7",
       "acceptedAnswers": [
         "35 is 5 times as many as 7"
@@ -335,11 +335,11 @@
           "correct": false
         }
       ],
-      "explanation": "35 = 5 \u00d7 7 expresses that 35 is 5 times as many as 7.",
+      "explanation": "35 = 5 × 7 expresses that 35 is 5 times as many as 7.",
       "hints": [
-        "Concept Rule: Multiplication compares two quantities: a = b \u00d7 c means a is b times as many as c.",
-        "Strategy Clue: Multiply the number of groups by the number of items in each group.",
-        "Gizmo's Step: 35 = 5 \u00d7 7 expresses that 35 is 5 times as many as 7."
+        "Concept Rule: Multiplication compares two quantities: a = b × c means a is b times as many as c.",
+        "Strategy Clue: 35 = 5 × 7 means 35 is 5 times as many as 7 (or 7 times as many as 5).",
+        "Gizmo's Step: 35 = 5 × 7 expresses that 35 is 5 times as many as 7."
       ]
     },
     {
@@ -358,11 +358,11 @@
         "9 cm"
       ],
       "options": null,
-      "explanation": "Blue ribbon = 45 \u00f7 5 = 9 cm.",
+      "explanation": "Blue ribbon = 45 ÷ 5 = 9 cm.",
       "hints": [
-        "Concept Rule: To find the smaller quantity, divide the larger quantity by the comparison factor: 45 \u00f7 5.",
-        "Strategy Clue: Multiply the number of groups by the number of items in each group.",
-        "Gizmo's Step: Blue ribbon = 45 \u00f7 5 = 9 cm."
+        "Concept Rule: To find the smaller quantity, divide the larger quantity by the comparison factor: 45 ÷ 5.",
+        "Strategy Clue: Calculate 45 ÷ 5.",
+        "Gizmo's Step: Blue ribbon = 45 ÷ 5 = 9 cm."
       ]
     },
     {
@@ -397,11 +397,11 @@
           "correct": true
         }
       ],
-      "explanation": "Rachel scored 8 \u00d7 3 = 24 points.",
+      "explanation": "Rachel scored 8 × 3 = 24 points.",
       "hints": [
-        "Concept Rule: Multiply Sam's score by 3: 8 \u00d7 3.",
-        "Strategy Clue: Multiply the number of groups by the number of items in each group.",
-        "Gizmo's Step: Rachel scored 8 \u00d7 3 = 24 points."
+        "Concept Rule: Multiply Sam's score by 3: 8 × 3.",
+        "Strategy Clue: 8 × 3 = 24.",
+        "Gizmo's Step: Rachel scored 8 × 3 = 24 points."
       ]
     },
     {
@@ -420,11 +420,11 @@
         "6 times"
       ],
       "options": null,
-      "explanation": "18 \u00f7 3 = 6 times taller.",
+      "explanation": "18 ÷ 3 = 6 times taller.",
       "hints": [
-        "Concept Rule: Divide the height of the giraffe by the height of the goat: 18 \u00f7 3.",
-        "Strategy Clue: Multiply the number of groups by the number of items in each group.",
-        "Gizmo's Step: 18 \u00f7 3 = 6 times taller."
+        "Concept Rule: Divide the height of the giraffe by the height of the goat: 18 ÷ 3.",
+        "Strategy Clue: 18 ÷ 3 = 6.",
+        "Gizmo's Step: 18 ÷ 3 = 6 times taller."
       ]
     },
     {
@@ -443,11 +443,11 @@
         "7 dogs"
       ],
       "options": null,
-      "explanation": "28 \u00f7 4 = 7 dogs.",
+      "explanation": "28 ÷ 4 = 7 dogs.",
       "hints": [
-        "Concept Rule: Divide the number of cats by 4: 28 \u00f7 4.",
-        "Strategy Clue: Multiply the number of groups by the number of items in each group.",
-        "Gizmo's Step: 28 \u00f7 4 = 7 dogs. Completing this step confirms the result is 7."
+        "Concept Rule: Divide the number of cats by 4: 28 ÷ 4.",
+        "Strategy Clue: 28 ÷ 4 = 7 dogs.",
+        "Gizmo's Step: 28 ÷ 4 = 7 dogs. Completing this step confirms the result is 7."
       ]
     },
     {
@@ -460,9 +460,9 @@
       "difficulty": 3,
       "type": "multiple-choice",
       "prompt": "An adult elephant weighs 6,000 pounds. A young elephant weighs 2,000 pounds. Which equation represents this comparison?",
-      "correctAnswer": "6,000 = 3 \u00d7 2,000",
+      "correctAnswer": "6,000 = 3 × 2,000",
       "acceptedAnswers": [
-        "6,000 = 3 \u00d7 2,000"
+        "6,000 = 3 × 2,000"
       ],
       "options": [
         {
@@ -470,23 +470,23 @@
           "correct": false
         },
         {
-          "text": "2,000 = 3 \u00d7 6,000",
+          "text": "2,000 = 3 × 6,000",
           "correct": false
         },
         {
-          "text": "6,000 = 3 \u00d7 2,000",
+          "text": "6,000 = 3 × 2,000",
           "correct": true
         },
         {
-          "text": "6,000 \u00f7 2 = 3,000",
+          "text": "6,000 ÷ 2 = 3,000",
           "correct": false
         }
       ],
-      "explanation": "6,000 = 3 \u00d7 2,000 models the multiplicative comparison.",
+      "explanation": "6,000 = 3 × 2,000 models the multiplicative comparison.",
       "hints": [
-        "Concept Rule: Divide to find the factor: 6,000 \u00f7 2,000 = 3.",
-        "Strategy Clue: Test each option against the mathematical rule to identify the statement that holds true.",
-        "Gizmo's Step: 6,000 = 3 \u00d7 2,000 models the multiplicative comparison."
+        "Concept Rule: Divide to find the factor: 6,000 ÷ 2,000 = 3.",
+        "Strategy Clue: The adult weighs 3 times as much: 6,000 = 3 × 2,000.",
+        "Gizmo's Step: 6,000 = 3 × 2,000 models the multiplicative comparison."
       ]
     },
     {
@@ -505,10 +505,10 @@
         "$56"
       ],
       "options": null,
-      "explanation": "7 \u00d7 8 = $56.",
+      "explanation": "7 × 8 = $56.",
       "hints": [
-        "Concept Rule: Multiply Kiran's savings by 8: 7 \u00d7 8.",
-        "Strategy Clue: Calculate 7 \u00d7 8 to find the final value.",
+        "Concept Rule: Multiply Kiran's savings by 8: 7 × 8.",
+        "Strategy Clue: 7 × 8 = 56.",
         "Gizmo's Step: Working through the calculation gives 56, verifying the solution step by step."
       ]
     },
@@ -528,11 +528,11 @@
         "45 cars"
       ],
       "options": null,
-      "explanation": "Total = 5 \u00d7 12 = 60. Left = 60 - 15 = 45 cars.",
+      "explanation": "Total = 5 × 12 = 60. Left = 60 - 15 = 45 cars.",
       "hints": [
-        "Concept Rule: Find total cars first (5 \u00d7 12), then subtract the sold cars (60 - 15).",
-        "Strategy Clue: Divide the total dividend by the divisor using standard division.",
-        "Gizmo's Step: Total = 5 \u00d7 12 = 60. Left = 60 - 15 = 45 cars."
+        "Concept Rule: Find total cars first (5 × 12), then subtract the sold cars (60 - 15).",
+        "Strategy Clue: 5 × 12 = 60 cars. 60 - 15 = ?",
+        "Gizmo's Step: Total = 5 × 12 = 60. Left = 60 - 15 = 45 cars."
       ]
     },
     {
@@ -567,11 +567,11 @@
           "correct": false
         }
       ],
-      "explanation": "85 \u00f7 6 = 14 with remainder 1. The farmer makes 14 full bags.",
+      "explanation": "85 ÷ 6 = 14 with remainder 1. The farmer makes 14 full bags.",
       "hints": [
         "Concept Rule: Divide 85 by 6 to find whole quotient (full bags).",
-        "Strategy Clue: Divide the total dividend by the divisor using standard division.",
-        "Gizmo's Step: 85 \u00f7 6 = 14 with remainder 1. The farmer makes 14 full bags. This verifies that 14 bags is correct."
+        "Strategy Clue: 85 ÷ 6 = 14 with a remainder of 1.",
+        "Gizmo's Step: 85 ÷ 6 = 14 with remainder 1. The farmer makes 14 full bags. This verifies that 14 bags is correct."
       ]
     },
     {
@@ -592,8 +592,8 @@
       "options": null,
       "explanation": "85 - 84 = 1 apple left over.",
       "hints": [
-        "Concept Rule: The leftover amount is the remainder of 85 \u00f7 6.",
-        "Strategy Clue: Divide the total dividend by the divisor using standard division.",
+        "Concept Rule: The leftover amount is the remainder of 85 ÷ 6.",
+        "Strategy Clue: 14 × 6 = 84. 85 - 84 = 1.",
         "Gizmo's Step: 85 - 84 = 1 apple left over."
       ]
     },
@@ -629,11 +629,11 @@
           "correct": false
         }
       ],
-      "explanation": "130 \u00f7 40 = 3 R10, so 4 buses are needed.",
+      "explanation": "130 ÷ 40 = 3 R10, so 4 buses are needed.",
       "hints": [
         "Concept Rule: When transporting people, any remainder requires an extra whole bus.",
-        "Strategy Clue: Identify the quantities given in the problem, set up the required mathematical operation, and compute the result step-by-step.",
-        "Gizmo's Step: 130 \u00f7 40 = 3 R10, so 4 buses are needed."
+        "Strategy Clue: 130 ÷ 40 = 3 with remainder 10. 3 buses hold 120 students; 10 more students need a 4th bus.",
+        "Gizmo's Step: 130 ÷ 40 = 3 R10, so 4 buses are needed."
       ]
     },
     {
@@ -652,11 +652,11 @@
         "$28"
       ],
       "options": null,
-      "explanation": "Cost = 4 \u00d7 18 = $72. Left = 100 - 72 = $28.",
+      "explanation": "Cost = 4 × 18 = $72. Left = 100 - 72 = $28.",
       "hints": [
-        "Concept Rule: Multiply shirt price by 4 (4 \u00d7 18), then subtract from $100.",
-        "Strategy Clue: Calculate the total cost of all items purchased, then subtract from the amount paid to find the remaining change.",
-        "Gizmo's Step: Cost = 4 \u00d7 18 = $72. Left = 100 - 72 = $28."
+        "Concept Rule: Multiply shirt price by 4 (4 × 18), then subtract from $100.",
+        "Strategy Clue: 4 × 18 = 72. 100 - 72 = ?",
+        "Gizmo's Step: Cost = 4 × 18 = $72. Left = 100 - 72 = $28."
       ]
     },
     {
@@ -675,11 +675,11 @@
         "13 bags"
       ],
       "options": null,
-      "explanation": "Total = 144. Remaining = 104. Bags = 104 \u00f7 8 = 13 bags.",
+      "explanation": "Total = 144. Remaining = 104. Bags = 104 ÷ 8 = 13 bags.",
       "hints": [
-        "Concept Rule: Step 1: Total cookies = 6 \u00d7 24 = 144. Step 2: Remaining = 144 - 40 = 104. Step 3: Bags = 104 \u00f7 8.",
-        "Strategy Clue: Calculate 104 \u00f7 8 to find the final value.",
-        "Gizmo's Step: Total = 144. Remaining = 104. Bags = 104 \u00f7 8 = 13 bags."
+        "Concept Rule: Step 1: Total cookies = 6 × 24 = 144. Step 2: Remaining = 144 - 40 = 104. Step 3: Bags = 104 ÷ 8.",
+        "Strategy Clue: 104 ÷ 8 = 13.",
+        "Gizmo's Step: Total = 144. Remaining = 104. Bags = 104 ÷ 8 = 13 bags."
       ]
     },
     {
@@ -702,11 +702,11 @@
           "correct": false
         },
         {
-          "text": "45 \u00d7 35 - 20",
+          "text": "45 × 35 - 20",
           "correct": false
         },
         {
-          "text": "(45 - 20) + 35 \u00d7 2",
+          "text": "(45 - 20) + 35 × 2",
           "correct": false
         },
         {
@@ -717,7 +717,7 @@
       "explanation": "(45 + 35) - 20 correctly represents the steps.",
       "hints": [
         "Concept Rule: First add total earnings (45 + 35), then subtract amount spent (- 20).",
-        "Strategy Clue: Calculate the total cost of all items purchased, then subtract from the amount paid to find the remaining change.",
+        "Strategy Clue: (45 + 35) - 20 = 80 - 20 = 60.",
         "Gizmo's Step: (45 + 35) - 20 = 80 - 20 = 60. Completing this step confirms the result is (45 + 35) - 20."
       ]
     },
@@ -737,11 +737,11 @@
         "65 notebooks"
       ],
       "options": null,
-      "explanation": "3 \u00d7 15 = 45. 45 + 20 = 65 notebooks.",
+      "explanation": "3 × 15 = 45. 45 + 20 = 65 notebooks.",
       "hints": [
-        "Concept Rule: Calculate teachers' notebooks: 3 \u00d7 15 = 45. Add principal's: 45 + 20.",
-        "Strategy Clue: Calculate 45 + 20 to find the final value.",
-        "Gizmo's Step: 3 \u00d7 15 = 45. 45 + 20 = 65 notebooks."
+        "Concept Rule: Calculate teachers' notebooks: 3 × 15 = 45. Add principal's: 45 + 20.",
+        "Strategy Clue: 45 + 20 = 65.",
+        "Gizmo's Step: 3 × 15 = 45. 45 + 20 = 65 notebooks."
       ]
     },
     {
@@ -761,8 +761,8 @@
       "options": null,
       "explanation": "12 has 6 factors: 1, 2, 3, 4, 6, 12.",
       "hints": [
-        "Concept Rule: Find all pairs of numbers that multiply to give 12: 1\u00d712, 2\u00d76, 3\u00d74.",
-        "Strategy Clue: Identify the quantities given in the problem, set up the required mathematical operation, and compute the result step-by-step.",
+        "Concept Rule: Find all pairs of numbers that multiply to give 12: 1×12, 2×6, 3×4.",
+        "Strategy Clue: The factors of 12 are 1, 2, 3, 4, 6, 12. Count them.",
         "Gizmo's Step: The factors of 12 are 1, 2, 3, 4, 6, 12. Count them. Completing this step confirms the result is 6."
       ]
     },
@@ -801,8 +801,8 @@
       "explanation": "13 is prime because its only factors are 1 and 13.",
       "hints": [
         "Concept Rule: A prime number has exactly two distinct factors: 1 and itself.",
-        "Strategy Clue: Test each option against the mathematical rule to identify the statement that holds true.",
-        "Gizmo's Step: 13 is prime because its only factors are 1 and 13 Therefore, 13 is the mathematically correct answer."
+        "Strategy Clue: 13 has only factors 1 and 13. (12, 15, and 21 have more factors).",
+        "Gizmo's Step: 13 is prime because its only factors are 1 and 13."
       ]
     },
     {
@@ -823,8 +823,8 @@
       "explanation": "12 is the largest proper factor of 24.",
       "hints": [
         "Concept Rule: List factors of 24: 1, 2, 3, 4, 6, 8, 12, 24.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
-        "Gizmo's Step: 12 is the largest proper factor of 24 Therefore, 12 is the mathematically correct answer."
+        "Strategy Clue: The largest factor before 24 is 12 (since 2 × 12 = 24).",
+        "Gizmo's Step: 12 is the largest proper factor of 24."
       ]
     },
     {
@@ -862,8 +862,8 @@
       "explanation": "18 has more than two factors, so it is composite.",
       "hints": [
         "Concept Rule: A composite number has more than two factors.",
-        "Strategy Clue: Test each option against the mathematical rule to identify the statement that holds true.",
-        "Gizmo's Step: 18 has more than two factors, so it is composite Therefore, 18 is the mathematically correct answer."
+        "Strategy Clue: 18 has factors 1, 2, 3, 6, 9, 18, so it is composite.",
+        "Gizmo's Step: 18 has more than two factors, so it is composite."
       ]
     },
     {
@@ -883,9 +883,9 @@
       "options": null,
       "explanation": "7 is the smallest non-zero multiple of 7.",
       "hints": [
-        "Concept Rule: Multiples of 7 are 7 \u00d7 1, 7 \u00d7 2, 7 \u00d7 3...",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
-        "Gizmo's Step: 7 is the smallest non-zero multiple of 7 Therefore, 7 is the mathematically correct answer."
+        "Concept Rule: Multiples of 7 are 7 × 1, 7 × 2, 7 × 3...",
+        "Strategy Clue: 7 × 1 = 7.",
+        "Gizmo's Step: 7 is the smallest non-zero multiple of 7."
       ]
     },
     {
@@ -898,9 +898,9 @@
       "difficulty": 3,
       "type": "multiple-choice",
       "prompt": "Is 49 prime or composite?",
-      "correctAnswer": "Composite, because 7 \u00d7 7 = 49",
+      "correctAnswer": "Composite, because 7 × 7 = 49",
       "acceptedAnswers": [
-        "Composite, because 7 \u00d7 7 = 49"
+        "Composite, because 7 × 7 = 49"
       ],
       "options": [
         {
@@ -916,15 +916,15 @@
           "correct": false
         },
         {
-          "text": "Composite, because 7 \u00d7 7 = 49",
+          "text": "Composite, because 7 × 7 = 49",
           "correct": true
         }
       ],
-      "explanation": "49 is composite because 7 \u00d7 7 = 49.",
+      "explanation": "49 is composite because 7 × 7 = 49.",
       "hints": [
-        "Concept Rule: Check divisibility: 49 is divisible by 7 (7 \u00d7 7 = 49).",
-        "Strategy Clue: Identify the quantities given in the problem, set up the required mathematical operation, and compute the result step-by-step.",
-        "Gizmo's Step: Composite, because 7 \u00d7 7 = 49."
+        "Concept Rule: Check divisibility: 49 is divisible by 7 (7 × 7 = 49).",
+        "Strategy Clue: Its factors are 1, 7, and 49 (3 factors).",
+        "Gizmo's Step: Composite, because 7 × 7 = 49."
       ]
     },
     {
@@ -961,8 +961,8 @@
       ],
       "explanation": "The factors of 16 are 1, 2, 4, 8, 16.",
       "hints": [
-        "Concept Rule: Pairs: 1 \u00d7 16 = 16, 2 \u00d7 8 = 16, 4 \u00d7 4 = 16.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: Pairs: 1 × 16 = 16, 2 × 8 = 16, 4 × 4 = 16.",
+        "Strategy Clue: All factors: 1, 2, 4, 8, 16.",
         "Gizmo's Step: All factors: 1, 2, 4, 8, 16. Completing this step confirms the result is 1, 2, 4, 8, 16."
       ]
     },
@@ -981,10 +981,10 @@
         "40"
       ],
       "options": null,
-      "explanation": "8 \u00d7 5 = 40.",
+      "explanation": "8 × 5 = 40.",
       "hints": [
-        "Concept Rule: Multiply 8 by 5: 8 \u00d7 5.",
-        "Strategy Clue: Calculate 8 \u00d7 5 to find the final value.",
+        "Concept Rule: Multiply 8 by 5: 8 × 5.",
+        "Strategy Clue: 8 × 5 = 40.",
         "Gizmo's Step: Working through the calculation gives 40, verifying the solution step by step."
       ]
     },
@@ -1005,9 +1005,9 @@
       "options": null,
       "explanation": "2, 7, 12, 17. The 4th term is 17.",
       "hints": [
-        "Concept Rule: Add 5 to each term: 2 + 5 = 7; 7 + 5 = 12; 12 + 5 = ?.",
-        "Strategy Clue: Calculate 12 + 5 to find the final value.",
-        "Gizmo's Step: 2, 7, 12, 17. The 4th term is 17 Therefore, 17 is the mathematically correct answer."
+        "Concept Rule: Add 5 to each term: 2 + 5 = 7; 7 + 5 = 12; 12 + 5 = ?",
+        "Strategy Clue: 12 + 5 = 17.",
+        "Gizmo's Step: 2, 7, 12, 17. The 4th term is 17."
       ]
     },
     {
@@ -1044,9 +1044,9 @@
       ],
       "explanation": "Each term is doubled, so the rule is multiply by 2.",
       "hints": [
-        "Concept Rule: Compare each term to the next: 3 \u00d7 2 = 6, 6 \u00d7 2 = 12, 12 \u00d7 2 = 24.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
-        "Gizmo's Step: Each term is doubled, so the rule is multiply by 2. This verifies that Multiply by 2 is correct Therefore, Multiply by 2 is the mathematically correct answer."
+        "Concept Rule: Compare each term to the next: 3 × 2 = 6, 6 × 2 = 12, 12 × 2 = 24.",
+        "Strategy Clue: The rule is multiply by 2.",
+        "Gizmo's Step: Each term is doubled, so the rule is multiply by 2. This verifies that Multiply by 2 is correct."
       ]
     },
     {
@@ -1064,10 +1064,10 @@
         "8"
       ],
       "options": null,
-      "explanation": "16 \u00f7 2 = 8.",
+      "explanation": "16 ÷ 2 = 8.",
       "hints": [
         "Concept Rule: Divide 16 by 2.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: 16 ÷ 2 = 8.",
         "Gizmo's Step: Working through the calculation gives 8, verifying the solution step by step."
       ]
     },
@@ -1106,7 +1106,7 @@
       "explanation": "Starting at 1 and repeatedly adding 4 always results in an odd number.",
       "hints": [
         "Concept Rule: Starting with an odd number and adding an even number (4) always produces an odd number.",
-        "Strategy Clue: Identify the quantities given in the problem, set up the required mathematical operation, and compute the result step-by-step.",
+        "Strategy Clue: Odd + Even = Odd. Every number is odd.",
         "Gizmo's Step: Odd + Even = Odd. Every number is odd. Completing this step confirms the result is All the numbers are odd."
       ]
     },
@@ -1128,7 +1128,7 @@
       "explanation": "11 + 6 = 17.",
       "hints": [
         "Concept Rule: Find the step: 11 - 5 = 6. The rule is Add 6.",
-        "Strategy Clue: Calculate 11 + 6 to find the final value.",
+        "Strategy Clue: 11 + 6 = 17. Check: 17 + 6 = 23.",
         "Gizmo's Step: 11 + 6 = 17. Check: 17 + 6 = 23. Completing this step confirms the result is 17."
       ]
     },
@@ -1147,10 +1147,10 @@
         "81"
       ],
       "options": null,
-      "explanation": "27 \u00d7 3 = 81.",
+      "explanation": "27 × 3 = 81.",
       "hints": [
         "Concept Rule: Multiply 27 by 3.",
-        "Strategy Clue: Calculate 27 \u00d7 3 to find the final value.",
+        "Strategy Clue: 27 × 3 = 81.",
         "Gizmo's Step: Working through the calculation gives 81, verifying the solution step by step."
       ]
     },
@@ -1186,11 +1186,11 @@
           "correct": false
         }
       ],
-      "explanation": "10 \u00f7 3 = 3 R1. The 1st shape in the cycle is Circle.",
+      "explanation": "10 ÷ 3 = 3 R1. The 1st shape in the cycle is Circle.",
       "hints": [
         "Concept Rule: The pattern repeats every 3 shapes: 1=Circle, 2=Square, 3=Triangle.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
-        "Gizmo's Step: 10 \u00f7 3 = 3 R1. The 1st shape in the cycle is Circle."
+        "Strategy Clue: 10 ÷ 3 has a remainder of 1. Remainder 1 corresponds to Circle.",
+        "Gizmo's Step: 10 ÷ 3 = 3 R1. The 1st shape in the cycle is Circle."
       ]
     },
     {
@@ -1211,7 +1211,7 @@
       "explanation": "76 - 8 = 68.",
       "hints": [
         "Concept Rule: Find difference: 100 - 92 = 8. The rule is subtract 8.",
-        "Strategy Clue: Calculate 76 - 8 to find the final value.",
+        "Strategy Clue: 76 - 8 = 68.",
         "Gizmo's Step: Working through the calculation gives 68, verifying the solution step by step."
       ]
     },
@@ -1233,7 +1233,7 @@
       "explanation": "n = 42 - 15 = 27.",
       "hints": [
         "Concept Rule: Subtract 15 from both sides: n = 42 - 15.",
-        "Strategy Clue: Calculate 42 - 15 to find the final value.",
+        "Strategy Clue: 42 - 15 = 27.",
         "Gizmo's Step: Working through the calculation gives 27, verifying the solution step by step."
       ]
     },
@@ -1246,7 +1246,7 @@
       "standard": "4.OA.A.3",
       "difficulty": 1,
       "type": "multiple-choice",
-      "prompt": "Solve for x: 7 \u00d7 x = 56.",
+      "prompt": "Solve for x: 7 × x = 56.",
       "correctAnswer": "8",
       "acceptedAnswers": [
         "8"
@@ -1269,10 +1269,10 @@
           "correct": false
         }
       ],
-      "explanation": "x = 56 \u00f7 7 = 8.",
+      "explanation": "x = 56 ÷ 7 = 8.",
       "hints": [
-        "Concept Rule: Divide both sides by 7: x = 56 \u00f7 7.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Concept Rule: Divide both sides by 7: x = 56 ÷ 7.",
+        "Strategy Clue: 56 ÷ 7 = 8.",
         "Gizmo's Step: Working through the calculation gives 8, verifying the solution step by step."
       ]
     },
@@ -1294,7 +1294,7 @@
       "explanation": "y = 35 + 28 = 63.",
       "hints": [
         "Concept Rule: Add 28 to both sides: y = 35 + 28.",
-        "Strategy Clue: Calculate 35 + 28 to find the final value.",
+        "Strategy Clue: 35 + 28 = 63.",
         "Gizmo's Step: Working through the calculation gives 63, verifying the solution step by step."
       ]
     },
@@ -1307,7 +1307,7 @@
       "standard": "4.OA.A.3",
       "difficulty": 2,
       "type": "multiple-choice",
-      "prompt": "Solve for m: m \u00f7 6 = 9.",
+      "prompt": "Solve for m: m ÷ 6 = 9.",
       "correctAnswer": "54",
       "acceptedAnswers": [
         "54"
@@ -1330,10 +1330,10 @@
           "correct": true
         }
       ],
-      "explanation": "m = 9 \u00d7 6 = 54.",
+      "explanation": "m = 9 × 6 = 54.",
       "hints": [
-        "Concept Rule: Multiply both sides by 6: m = 9 \u00d7 6.",
-        "Strategy Clue: Calculate 9 \u00d7 6 to find the final value.",
+        "Concept Rule: Multiply both sides by 6: m = 9 × 6.",
+        "Strategy Clue: 9 × 6 = 54.",
         "Gizmo's Step: Working through the calculation gives 54, verifying the solution step by step."
       ]
     },
@@ -1346,7 +1346,7 @@
       "standard": "4.OA.A.3",
       "difficulty": 2,
       "type": "numeric-response",
-      "prompt": "Find the value of p in: 3 \u00d7 p + 4 = 25.",
+      "prompt": "Find the value of p in: 3 × p + 4 = 25.",
       "correctAnswer": "7",
       "acceptedAnswers": [
         "7"
@@ -1354,8 +1354,8 @@
       "options": null,
       "explanation": "3p = 21 -> p = 7.",
       "hints": [
-        "Concept Rule: Step 1: Subtract 4 from 25: 3p = 21. Step 2: Divide by 3: p = 21 \u00f7 3.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Concept Rule: Step 1: Subtract 4 from 25: 3p = 21. Step 2: Divide by 3: p = 21 ÷ 3.",
+        "Strategy Clue: 21 ÷ 3 = 7.",
         "Gizmo's Step: Working through the calculation gives 7, verifying the solution step by step."
       ]
     },
@@ -1368,7 +1368,7 @@
       "standard": "4.OA.A.3",
       "difficulty": 3,
       "type": "numeric-response",
-      "prompt": "Solve for w: 4 \u00d7 w - 8 = 24.",
+      "prompt": "Solve for w: 4 × w - 8 = 24.",
       "correctAnswer": "8",
       "acceptedAnswers": [
         "8"
@@ -1376,8 +1376,8 @@
       "options": null,
       "explanation": "4w = 32 -> w = 8.",
       "hints": [
-        "Concept Rule: Add 8 to 24: 4w = 32. Divide by 4: w = 32 \u00f7 4.",
-        "Strategy Clue: Use inverse operations to isolate the variable on one side of the equation.",
+        "Concept Rule: Add 8 to 24: 4w = 32. Divide by 4: w = 32 ÷ 4.",
+        "Strategy Clue: 32 ÷ 4 = 8.",
         "Gizmo's Step: Working through the calculation gives 8, verifying the solution step by step."
       ]
     },
@@ -1401,7 +1401,7 @@
           "correct": false
         },
         {
-          "text": "k \u00f7 5 + 10 = 45",
+          "text": "k ÷ 5 + 10 = 45",
           "correct": false
         },
         {
@@ -1416,7 +1416,7 @@
       "explanation": "5k + 10 = 45 matches the sentence.",
       "hints": [
         "Concept Rule: Translate words to algebra: k multiplied by 5 is 5k; add 10 is + 10; equals 45 is = 45.",
-        "Strategy Clue: Calculate 5k + 10 to find the final value.",
+        "Strategy Clue: 5k + 10 = 45.",
         "Gizmo's Step: 5k + 10 = 45 matches the sentence."
       ]
     },
@@ -1437,8 +1437,8 @@
       "options": null,
       "explanation": "5k = 35 -> k = 7.",
       "hints": [
-        "Concept Rule: 5k = 45 - 10 = 35. k = 35 \u00f7 5.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: 5k = 45 - 10 = 35. k = 35 ÷ 5.",
+        "Strategy Clue: 35 ÷ 5 = 7.",
         "Gizmo's Step: Working through the calculation gives 7, verifying the solution step by step."
       ]
     },
@@ -1460,9 +1460,9 @@
       "options": null,
       "explanation": "The digit 5 is in the thousands place, with a value of 5,000.",
       "hints": [
-        "Concept Rule: The 5 is in the thousands place: 5 \u00d7 1,000 = 5,000.",
-        "Strategy Clue: Identify the quantities given in the problem, set up the required mathematical operation, and compute the result step-by-step.",
-        "Gizmo's Step: The digit 5 is in the thousands place, with a value of 5,000. This verifies that 5000 is correct Therefore, 5000 is the mathematically correct answer."
+        "Concept Rule: The 5 is in the thousands place: 5 × 1,000 = 5,000.",
+        "Strategy Clue: 5 thousands = 5,000.",
+        "Gizmo's Step: The digit 5 is in the thousands place, with a value of 5,000. This verifies that 5000 is correct."
       ]
     },
     {
@@ -1500,8 +1500,8 @@
       "explanation": "70,000 is 10 times 7,000.",
       "hints": [
         "Concept Rule: In base ten, each place to the left is 10 times the value of the place to its right.",
-        "Strategy Clue: Multiply the number of groups by the number of items in each group.",
-        "Gizmo's Step: 70,000 is 10 times 7,000. This verifies that 10 times greater is correct Therefore, 10 times greater is the mathematically correct answer."
+        "Strategy Clue: Ten-thousands is 10 times thousands: 70,000 ÷ 7,000 = 10.",
+        "Gizmo's Step: 70,000 is 10 times 7,000. This verifies that 10 times greater is correct."
       ]
     },
     {
@@ -1523,7 +1523,7 @@
       "explanation": "60,000 + 4,000 + 300 + 20 + 5 = 64,325.",
       "hints": [
         "Concept Rule: Combine the values in each place: 6 ten-thousands, 4 thousands, 3 hundreds, 2 tens, 5 ones.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: 64,325.",
         "Gizmo's Step: 60,000 + 4,000 + 300 + 20 + 5 = 64,325. This verifies that 64325 is correct."
       ]
     },
@@ -1562,8 +1562,8 @@
       "explanation": "308,045 is three hundred eight thousand, forty-five.",
       "hints": [
         "Concept Rule: Read by periods: 308 thousands (three hundred eight thousand), and 045 (forty-five).",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
-        "Gizmo's Step: 308,045 is three hundred eight thousand, forty-five. This verifies that Three hundred eight thousand, forty-five is correct Therefore, Three hundred eight thousand, forty-five is the mathematically correct answer."
+        "Strategy Clue: Three hundred eight thousand, forty-five.",
+        "Gizmo's Step: 308,045 is three hundred eight thousand, forty-five. This verifies that Three hundred eight thousand, forty-five is correct."
       ]
     },
     {
@@ -1584,9 +1584,9 @@
       "options": null,
       "explanation": "The value is 900,000.",
       "hints": [
-        "Concept Rule: The 9 is in the hundred-thousands place: 9 \u00d7 100,000.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
-        "Gizmo's Step: The value is 900,000. This verifies that 900000 is correct Therefore, 900000 is the mathematically correct answer."
+        "Concept Rule: The 9 is in the hundred-thousands place: 9 × 100,000.",
+        "Strategy Clue: 900,000.",
+        "Gizmo's Step: The value is 900,000. This verifies that 900000 is correct."
       ]
     },
     {
@@ -1604,11 +1604,11 @@
         "100"
       ],
       "options": null,
-      "explanation": "1,000 \u00f7 10 = 100 tens.",
+      "explanation": "1,000 ÷ 10 = 100 tens.",
       "hints": [
         "Concept Rule: Divide 1,000 by 10.",
-        "Strategy Clue: Calculate 1,000 \u00f7 10 to find the final value.",
-        "Gizmo's Step: 1,000 \u00f7 10 = 100 tens."
+        "Strategy Clue: 1,000 ÷ 10 = 100.",
+        "Gizmo's Step: 1,000 ÷ 10 = 100 tens."
       ]
     },
     {
@@ -1646,8 +1646,8 @@
       "explanation": "60,000 is 10 times 6,000.",
       "hints": [
         "Concept Rule: Ten-thousands (60,000) is 10 times thousands (6,000).",
-        "Strategy Clue: Identify the quantities given in the problem, set up the required mathematical operation, and compute the result step-by-step.",
-        "Gizmo's Step: 60,000 is 10 times 6,000. This verifies that The first 6 has 10 times the value of the second 6 is correct Therefore, The first 6 has 10 times the value of the second 6 is the mathematically correct answer."
+        "Strategy Clue: 60,000 ÷ 6,000 = 10.",
+        "Gizmo's Step: 60,000 is 10 times 6,000. This verifies that The first 6 has 10 times the value of the second 6 is correct."
       ]
     },
     {
@@ -1669,7 +1669,7 @@
       "explanation": "412,006.",
       "hints": [
         "Concept Rule: 412 thousands and 6 ones (with 0 hundreds and 0 tens).",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: 412,006.",
         "Gizmo's Step: Working through the calculation gives 412006, verifying the solution step by step."
       ]
     },
@@ -1692,7 +1692,7 @@
       "explanation": "54,321 rounds to 54,000 to the nearest thousand.",
       "hints": [
         "Concept Rule: Look at the hundreds digit (3). Since 3 < 5, round down to 54,000.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: 54,000.",
         "Gizmo's Step: Working through the calculation gives 54000, verifying the solution step by step."
       ]
     },
@@ -1731,8 +1731,8 @@
       "explanation": "74,520 > 74,250 because 5 hundreds is greater than 2 hundreds.",
       "hints": [
         "Concept Rule: Compare place by place from left to right: ten-thousands are equal (7), thousands equal (4), hundreds: 5 > 2.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
-        "Gizmo's Step: 74,520 > 74,250 because 5 hundreds is greater than 2 hundreds Therefore, > is the mathematically correct answer."
+        "Strategy Clue: 74,520 > 74,250.",
+        "Gizmo's Step: 74,520 > 74,250 because 5 hundreds is greater than 2 hundreds."
       ]
     },
     {
@@ -1754,7 +1754,7 @@
       "explanation": "368,490 rounds to 370,000.",
       "hints": [
         "Concept Rule: Look at the thousands digit (8). Since 8 >= 5, round up: 360,000 becomes 370,000.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: 370,000.",
         "Gizmo's Step: Working through the calculation gives 370000, verifying the solution step by step."
       ]
     },
@@ -1793,7 +1793,7 @@
       "explanation": "482,900 rounds to 500,000.",
       "hints": [
         "Concept Rule: Look at the ten-thousands digit: in 482,900, the ten-thousands digit is 8 (>= 5), so it rounds up to 500,000.",
-        "Strategy Clue: Test each option against the mathematical rule to identify the statement that holds true.",
+        "Strategy Clue: 482,900 rounds to 500,000.",
         "Gizmo's Step: 482,900 rounds to 500,000. Completing this step confirms the result is 482,900."
       ]
     },
@@ -1816,7 +1816,7 @@
       "explanation": "89,650 rounds to 89,700.",
       "hints": [
         "Concept Rule: Look at the tens digit (5). Since 5 >= 5, round up: 89,600 becomes 89,700.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: 89,700.",
         "Gizmo's Step: Working through the calculation gives 89700, verifying the solution step by step."
       ]
     },
@@ -1839,7 +1839,7 @@
       "explanation": "499,800 rounds up to 500,000.",
       "hints": [
         "Concept Rule: Hundreds digit is 8 (>= 5). Round 499 thousands up to 500 thousands.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: 500,000.",
         "Gizmo's Step: Working through the calculation gives 500000, verifying the solution step by step."
       ]
     },
@@ -1878,8 +1878,8 @@
       "explanation": "The correct order from least to greatest is 104,020 < 104,200 < 140,020.",
       "hints": [
         "Concept Rule: Compare: 104,020 has 0 hundreds, 104,200 has 2 hundreds, 140,020 has 4 ten-thousands.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
-        "Gizmo's Step: The correct order from least to greatest is 104,020 < 104,200 < 140,020 Therefore, 104,020 < 104,200 < 140,020 is the mathematically correct answer."
+        "Strategy Clue: 104,020 < 104,200 < 140,020.",
+        "Gizmo's Step: The correct order from least to greatest is 104,020 < 104,200 < 140,020."
       ]
     },
     {
@@ -1901,7 +1901,7 @@
       "explanation": "745,219 rounds to 700,000.",
       "hints": [
         "Concept Rule: The ten-thousands digit is 4 (< 5). Round down to 700,000.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: 700,000.",
         "Gizmo's Step: Working through the calculation gives 700000, verifying the solution step by step."
       ]
     },
@@ -1924,7 +1924,7 @@
       "explanation": "42,518 + 23,461 = 65,979.",
       "hints": [
         "Concept Rule: Add place by place: 8+1=9, 1+6=7, 5+4=9, 2+3=5, 4+2=6.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: 65,979.",
         "Gizmo's Step: 42,518 + 23,461 = 65,979. This verifies that 65979 is correct."
       ]
     },
@@ -1963,7 +1963,7 @@
       "explanation": "58,400 - 24,150 = 34,250.",
       "hints": [
         "Concept Rule: Subtract with regrouping: 0 - 0 = 0; regroup 10 - 5 = 5; 3 - 1 = 2; 8 - 4 = 4; 5 - 2 = 3.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: 34,250.",
         "Gizmo's Step: 58,400 - 24,150 = 34,250."
       ]
     },
@@ -1986,7 +1986,7 @@
       "explanation": "84,675 + 17,548 = 102,223.",
       "hints": [
         "Concept Rule: Add with regrouping across multiple places.",
-        "Strategy Clue: Identify the quantities given in the problem, set up the required mathematical operation, and compute the result step-by-step.",
+        "Strategy Clue: 84,675 + 17,548 = 102,223.",
         "Gizmo's Step: 84,675 + 17,548 = 102,223. This verifies that 102223 is correct."
       ]
     },
@@ -2025,7 +2025,7 @@
       "explanation": "100,000 - 45,678 = 54,322.",
       "hints": [
         "Concept Rule: Subtract across zeros: 10 - 8 = 2; 9 - 7 = 2; 9 - 6 = 3; 9 - 5 = 4; 9 - 4 = 5.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: 54,322.",
         "Gizmo's Step: 100,000 - 45,678 = 54,322."
       ]
     },
@@ -2048,7 +2048,7 @@
       "explanation": "63,412 - 28,655 = 34,757.",
       "hints": [
         "Concept Rule: Regroup ones, tens, and hundreds.",
-        "Strategy Clue: Identify the quantities given in the problem, set up the required mathematical operation, and compute the result step-by-step.",
+        "Strategy Clue: 63,412 - 28,655 = 34,757.",
         "Gizmo's Step: 63,412 - 28,655 = 34,757. This verifies that 34757 is correct."
       ]
     },
@@ -2071,7 +2071,7 @@
       "explanation": "45,680 - 38,945 = 6,735.",
       "hints": [
         "Concept Rule: Subtract tickets sold from total seats: 45,680 - 38,945.",
-        "Strategy Clue: Identify the quantities given in the problem, set up the required mathematical operation, and compute the result step-by-step.",
+        "Strategy Clue: 45,680 - 38,945 = 6,735.",
         "Gizmo's Step: 45,680 - 38,945 = 6,735. This verifies that 6735 is correct."
       ]
     },
@@ -2110,7 +2110,7 @@
       "explanation": "215,400 - 189,750 = 25,650 residents.",
       "hints": [
         "Concept Rule: Subtract: 215,400 - 189,750.",
-        "Strategy Clue: Calculate 215,400 - 189,750 to find the final value.",
+        "Strategy Clue: 215,400 - 189,750 = 25,650.",
         "Gizmo's Step: 215,400 - 189,750 = 25,650 residents."
       ]
     },
@@ -2133,7 +2133,7 @@
       "explanation": "348,291 + 156,849 = 505,140.",
       "hints": [
         "Concept Rule: 348,291 + 156,849 = 505,140.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: 505,140.",
         "Gizmo's Step: 348,291 + 156,849 = 505,140. This verifies that 505140 is correct."
       ]
     },
@@ -2146,16 +2146,16 @@
       "standard": "4.NBT.B.5",
       "difficulty": 1,
       "type": "numeric-response",
-      "prompt": "Solve: 324 \u00d7 3.",
+      "prompt": "Solve: 324 × 3.",
       "correctAnswer": "972",
       "acceptedAnswers": [
         "972"
       ],
       "options": null,
-      "explanation": "324 \u00d7 3 = 972.",
+      "explanation": "324 × 3 = 972.",
       "hints": [
-        "Concept Rule: Multiply each place: (300 \u00d7 3) + (20 \u00d7 3) + (4 \u00d7 3) = 900 + 60 + 12.",
-        "Strategy Clue: Calculate 900 + 60 + 12 to find the final value.",
+        "Concept Rule: Multiply each place: (300 × 3) + (20 × 3) + (4 × 3) = 900 + 60 + 12.",
+        "Strategy Clue: 900 + 60 + 12 = 972.",
         "Gizmo's Step: 900 + 60 + 12 = 972. Completing this step confirms the result is 972."
       ]
     },
@@ -2168,7 +2168,7 @@
       "standard": "4.NBT.B.5",
       "difficulty": 1,
       "type": "multiple-choice",
-      "prompt": "Solve: 45 \u00d7 12.",
+      "prompt": "Solve: 45 × 12.",
       "correctAnswer": "540",
       "acceptedAnswers": [
         "540"
@@ -2191,10 +2191,10 @@
           "correct": false
         }
       ],
-      "explanation": "45 \u00d7 12 = 540.",
+      "explanation": "45 × 12 = 540.",
       "hints": [
-        "Concept Rule: Use partial products: (45 \u00d7 10) + (45 \u00d7 2) = 450 + 90.",
-        "Strategy Clue: Calculate 450 + 90 to find the final value.",
+        "Concept Rule: Use partial products: (45 × 10) + (45 × 2) = 450 + 90.",
+        "Strategy Clue: 450 + 90 = 540.",
         "Gizmo's Step: 450 + 90 = 540. Completing this step confirms the result is 540."
       ]
     },
@@ -2207,17 +2207,17 @@
       "standard": "4.NBT.B.5",
       "difficulty": 2,
       "type": "numeric-response",
-      "prompt": "Calculate: 1,425 \u00d7 4.",
+      "prompt": "Calculate: 1,425 × 4.",
       "correctAnswer": "5700",
       "acceptedAnswers": [
         "5700",
         "5,700"
       ],
       "options": null,
-      "explanation": "1,425 \u00d7 4 = 5,700.",
+      "explanation": "1,425 × 4 = 5,700.",
       "hints": [
-        "Concept Rule: Multiply: (1000 \u00d7 4) + (400 \u00d7 4) + (25 \u00d7 4) = 4000 + 1600 + 100.",
-        "Strategy Clue: Multiply the number of groups by the number of items in each group.",
+        "Concept Rule: Multiply: (1000 × 4) + (400 × 4) + (25 × 4) = 4000 + 1600 + 100.",
+        "Strategy Clue: 4000 + 1600 + 100 = 5,700.",
         "Gizmo's Step: 4000 + 1600 + 100 = 5,700. Completing this step confirms the result is 5700."
       ]
     },
@@ -2230,7 +2230,7 @@
       "standard": "4.NBT.B.5",
       "difficulty": 2,
       "type": "multiple-choice",
-      "prompt": "Calculate: 28 \u00d7 34.",
+      "prompt": "Calculate: 28 × 34.",
       "correctAnswer": "952",
       "acceptedAnswers": [
         "952"
@@ -2253,10 +2253,10 @@
           "correct": true
         }
       ],
-      "explanation": "28 \u00d7 34 = 952.",
+      "explanation": "28 × 34 = 952.",
       "hints": [
-        "Concept Rule: Multiply partial products: 28 \u00d7 30 = 840; 28 \u00d7 4 = 112; 840 + 112.",
-        "Strategy Clue: Multiply the number of groups by the number of items in each group.",
+        "Concept Rule: Multiply partial products: 28 × 30 = 840; 28 × 4 = 112; 840 + 112 = 952.",
+        "Strategy Clue: 952.",
         "Gizmo's Step: Working through the calculation gives 952, verifying the solution step by step."
       ]
     },
@@ -2269,17 +2269,17 @@
       "standard": "4.NBT.B.5",
       "difficulty": 2,
       "type": "numeric-response",
-      "prompt": "Solve: 2,306 \u00d7 5.",
+      "prompt": "Solve: 2,306 × 5.",
       "correctAnswer": "11530",
       "acceptedAnswers": [
         "11530",
         "11,530"
       ],
       "options": null,
-      "explanation": "2,306 \u00d7 5 = 11,530.",
+      "explanation": "2,306 × 5 = 11,530.",
       "hints": [
-        "Concept Rule: Multiply: 2000 \u00d7 5 = 10,000; 300 \u00d7 5 = 1,500; 6 \u00d7 5 = 30. Total = 11,530.",
-        "Strategy Clue: Multiply the number of groups by the number of items in each group.",
+        "Concept Rule: Multiply: 2000 × 5 = 10,000; 300 × 5 = 1,500; 6 × 5 = 30. Total = 11,530.",
+        "Strategy Clue: 11,530.",
         "Gizmo's Step: Working through the calculation gives 11530, verifying the solution step by step."
       ]
     },
@@ -2292,17 +2292,17 @@
       "standard": "4.NBT.B.5",
       "difficulty": 3,
       "type": "numeric-response",
-      "prompt": "Solve: 63 \u00d7 47.",
+      "prompt": "Solve: 63 × 47.",
       "correctAnswer": "2961",
       "acceptedAnswers": [
         "2961",
         "2,961"
       ],
       "options": null,
-      "explanation": "63 \u00d7 47 = 2,961.",
+      "explanation": "63 × 47 = 2,961.",
       "hints": [
-        "Concept Rule: Multiply: 63 \u00d7 40 = 2520; 63 \u00d7 7 = 441; 2520 + 441.",
-        "Strategy Clue: Multiply the number of groups by the number of items in each group.",
+        "Concept Rule: Multiply: 63 × 40 = 2520; 63 × 7 = 441; 2520 + 441 = 2961.",
+        "Strategy Clue: 2,961.",
         "Gizmo's Step: Working through the calculation gives 2961, verifying the solution step by step."
       ]
     },
@@ -2338,11 +2338,11 @@
           "correct": false
         }
       ],
-      "explanation": "36 \u00d7 28 = 1,008 seats.",
+      "explanation": "36 × 28 = 1,008 seats.",
       "hints": [
-        "Concept Rule: Multiply rows by seats per row: 36 \u00d7 28.",
-        "Strategy Clue: Divide the total dividend by the divisor using standard division.",
-        "Gizmo's Step: 36 \u00d7 28 = 1,008 seats."
+        "Concept Rule: Multiply rows by seats per row: 36 × 28.",
+        "Strategy Clue: 36 × 28 = 1,008.",
+        "Gizmo's Step: 36 × 28 = 1,008 seats."
       ]
     },
     {
@@ -2354,18 +2354,18 @@
       "standard": "4.NBT.B.5",
       "difficulty": 3,
       "type": "numeric-response",
-      "prompt": "Solve: 3,842 \u00d7 6.",
+      "prompt": "Solve: 3,842 × 6.",
       "correctAnswer": "23052",
       "acceptedAnswers": [
         "23052",
         "23,052"
       ],
       "options": null,
-      "explanation": "3,842 \u00d7 6 = 23,052.",
+      "explanation": "3,842 × 6 = 23,052.",
       "hints": [
         "Concept Rule: Multiply 3,842 by 6.",
-        "Strategy Clue: Multiply the number of groups by the number of items in each group.",
-        "Gizmo's Step: 3,842 \u00d7 6 = 23,052. Completing this step confirms the result is 23052."
+        "Strategy Clue: 3,842 × 6 = 23,052.",
+        "Gizmo's Step: 3,842 × 6 = 23,052. Completing this step confirms the result is 23052."
       ]
     },
     {
@@ -2377,16 +2377,16 @@
       "standard": "4.NBT.B.6",
       "difficulty": 1,
       "type": "numeric-response",
-      "prompt": "Solve: 1,284 \u00f7 3.",
+      "prompt": "Solve: 1,284 ÷ 3.",
       "correctAnswer": "428",
       "acceptedAnswers": [
         "428"
       ],
       "options": null,
-      "explanation": "1,284 \u00f7 3 = 428.",
+      "explanation": "1,284 ÷ 3 = 428.",
       "hints": [
-        "Concept Rule: Divide place by place: 12 hundreds \u00f7 3 = 4 hundreds; 8 tens \u00f7 3 = 2 tens R2; 24 ones \u00f7 3 = 8 ones.",
-        "Strategy Clue: Divide the total dividend by the divisor using standard division.",
+        "Concept Rule: Divide place by place: 12 hundreds ÷ 3 = 4 hundreds; 8 tens ÷ 3 = 2 tens R2; 24 ones ÷ 3 = 8 ones.",
+        "Strategy Clue: 428.",
         "Gizmo's Step: Working through the calculation gives 428, verifying the solution step by step."
       ]
     },
@@ -2399,16 +2399,16 @@
       "standard": "4.NBT.B.6",
       "difficulty": 1,
       "type": "numeric-response",
-      "prompt": "Solve: 835 \u00f7 5.",
+      "prompt": "Solve: 835 ÷ 5.",
       "correctAnswer": "167",
       "acceptedAnswers": [
         "167"
       ],
       "options": null,
-      "explanation": "835 \u00f7 5 = 167.",
+      "explanation": "835 ÷ 5 = 167.",
       "hints": [
-        "Concept Rule: Divide: 8 hundreds \u00f7 5 = 1 hundred R3; 33 tens \u00f7 5 = 6 tens R3; 35 ones \u00f7 5 = 7 ones.",
-        "Strategy Clue: Divide the total dividend by the divisor using standard division.",
+        "Concept Rule: Divide: 8 hundreds ÷ 5 = 1 hundred R3; 33 tens ÷ 5 = 6 tens R3; 35 ones ÷ 5 = 7 ones.",
+        "Strategy Clue: 167.",
         "Gizmo's Step: Working through the calculation gives 167, verifying the solution step by step."
       ]
     },
@@ -2428,11 +2428,11 @@
         "21 boxes"
       ],
       "options": null,
-      "explanation": "130 \u00f7 6 = 21 R4. 21 full boxes.",
+      "explanation": "130 ÷ 6 = 21 R4. 21 full boxes.",
       "hints": [
         "Concept Rule: Divide 130 by 6 to find the whole quotient.",
-        "Strategy Clue: Calculate 130 \u00f7 6 to find the final value.",
-        "Gizmo's Step: 130 \u00f7 6 = 21 R4. 21 full boxes."
+        "Strategy Clue: 130 ÷ 6 = 21 with a remainder of 4.",
+        "Gizmo's Step: 130 ÷ 6 = 21 R4. 21 full boxes."
       ]
     },
     {
@@ -2453,9 +2453,9 @@
       "options": null,
       "explanation": "Remainder is 4 donuts.",
       "hints": [
-        "Concept Rule: The leftover donuts equal the remainder: 130 - (21 \u00d7 6) = 130 - 126.",
-        "Strategy Clue: Divide the total dividend by the divisor using standard division.",
-        "Gizmo's Step: Remainder is 4 donuts Therefore, 4 is the mathematically correct answer."
+        "Concept Rule: The leftover donuts equal the remainder: 130 - (21 × 6) = 130 - 126.",
+        "Strategy Clue: 4 donuts.",
+        "Gizmo's Step: Remainder is 4 donuts."
       ]
     },
     {
@@ -2467,7 +2467,7 @@
       "standard": "4.NBT.B.6",
       "difficulty": 2,
       "type": "multiple-choice",
-      "prompt": "Solve: 2,456 \u00f7 4.",
+      "prompt": "Solve: 2,456 ÷ 4.",
       "correctAnswer": "614",
       "acceptedAnswers": [
         "614"
@@ -2490,10 +2490,10 @@
           "correct": false
         }
       ],
-      "explanation": "2,456 \u00f7 4 = 614.",
+      "explanation": "2,456 ÷ 4 = 614.",
       "hints": [
-        "Concept Rule: 24 hundreds \u00f7 4 = 6 hundreds; 5 tens \u00f7 4 = 1 ten R1; 16 ones \u00f7 4 = 4 ones.",
-        "Strategy Clue: Divide the total dividend by the divisor using standard division.",
+        "Concept Rule: 24 hundreds ÷ 4 = 6 hundreds; 5 tens ÷ 4 = 1 ten R1; 16 ones ÷ 4 = 4 ones.",
+        "Strategy Clue: 614.",
         "Gizmo's Step: Working through the calculation gives 614, verifying the solution step by step."
       ]
     },
@@ -2506,16 +2506,16 @@
       "standard": "4.NBT.B.6",
       "difficulty": 3,
       "type": "numeric-response",
-      "prompt": "Solve: 3,745 \u00f7 7.",
+      "prompt": "Solve: 3,745 ÷ 7.",
       "correctAnswer": "535",
       "acceptedAnswers": [
         "535"
       ],
       "options": null,
-      "explanation": "3,745 \u00f7 7 = 535.",
+      "explanation": "3,745 ÷ 7 = 535.",
       "hints": [
-        "Concept Rule: 37 \u00f7 7 = 5 R2; 24 \u00f7 7 = 3 R3; 35 \u00f7 7 = 5.",
-        "Strategy Clue: Divide the total dividend by the divisor using standard division.",
+        "Concept Rule: 37 ÷ 7 = 5 R2; 24 ÷ 7 = 3 R3; 35 ÷ 7 = 5.",
+        "Strategy Clue: 535.",
         "Gizmo's Step: Working through the calculation gives 535, verifying the solution step by step."
       ]
     },
@@ -2528,7 +2528,7 @@
       "standard": "4.NBT.B.6",
       "difficulty": 3,
       "type": "multiple-choice",
-      "prompt": "What is the quotient and remainder of 427 \u00f7 8?",
+      "prompt": "What is the quotient and remainder of 427 ÷ 8?",
       "correctAnswer": "53 R3",
       "acceptedAnswers": [
         "53 R3"
@@ -2551,11 +2551,11 @@
           "correct": false
         }
       ],
-      "explanation": "427 \u00f7 8 = 53 with remainder 3.",
+      "explanation": "427 ÷ 8 = 53 with remainder 3.",
       "hints": [
-        "Concept Rule: 42 \u00f7 8 = 5 R2; 27 \u00f7 8 = 3 R3. Check: 53 \u00d7 8 = 424; 424 + 3 = 427.",
-        "Strategy Clue: Divide the total dividend by the divisor using standard division.",
-        "Gizmo's Step: 427 \u00f7 8 = 53 with remainder 3. This verifies that 53 R3 is correct."
+        "Concept Rule: 42 ÷ 8 = 5 R2; 27 ÷ 8 = 3 R3. Check: 53 × 8 = 424; 424 + 3 = 427.",
+        "Strategy Clue: 53 R3.",
+        "Gizmo's Step: 427 ÷ 8 = 53 with remainder 3. This verifies that 53 R3 is correct."
       ]
     },
     {
@@ -2567,16 +2567,16 @@
       "standard": "4.NBT.B.6",
       "difficulty": 3,
       "type": "numeric-response",
-      "prompt": "Solve: 5,616 \u00f7 9.",
+      "prompt": "Solve: 5,616 ÷ 9.",
       "correctAnswer": "624",
       "acceptedAnswers": [
         "624"
       ],
       "options": null,
-      "explanation": "5,616 \u00f7 9 = 624.",
+      "explanation": "5,616 ÷ 9 = 624.",
       "hints": [
-        "Concept Rule: 56 \u00f7 9 = 6 R2; 21 \u00f7 9 = 2 R3; 36 \u00f7 9 = 4.",
-        "Strategy Clue: Divide the total dividend by the divisor using standard division.",
+        "Concept Rule: 56 ÷ 9 = 6 R2; 21 ÷ 9 = 2 R3; 36 ÷ 9 = 4.",
+        "Strategy Clue: 624.",
         "Gizmo's Step: Working through the calculation gives 624, verifying the solution step by step."
       ]
     },
@@ -2597,8 +2597,8 @@
       "options": null,
       "explanation": "3/4 = 9/12.",
       "hints": [
-        "Concept Rule: Multiply numerator and denominator by 3 (since 4 \u00d7 3 = 12).",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
+        "Concept Rule: Multiply numerator and denominator by 3 (since 4 × 3 = 12).",
+        "Strategy Clue: 3 × 3 = 9.",
         "Gizmo's Step: Working through the calculation gives 9, verifying the solution step by step."
       ]
     },
@@ -2636,8 +2636,8 @@
       ],
       "explanation": "2/5 = 6/15.",
       "hints": [
-        "Concept Rule: Multiply numerator and denominator of 2/5 by 3: (2\u00d73)/(5\u00d73).",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
+        "Concept Rule: Multiply numerator and denominator of 2/5 by 3: (2×3)/(5×3) = 6/15.",
+        "Strategy Clue: 6/15 is equivalent.",
         "Gizmo's Step: 6/15 is equivalent. Completing this step confirms the result is 6/15."
       ]
     },
@@ -2658,8 +2658,8 @@
       "options": null,
       "explanation": "5/6 = 25/30.",
       "hints": [
-        "Concept Rule: The numerator was multiplied by 5 (5 \u00d7 5 = 25). Multiply denominator by 5: 6 \u00d7 5.",
-        "Strategy Clue: Calculate 6 \u00d7 5 to find the final value.",
+        "Concept Rule: The numerator was multiplied by 5 (5 × 5 = 25). Multiply denominator by 5: 6 × 5.",
+        "Strategy Clue: 6 × 5 = 30.",
         "Gizmo's Step: Working through the calculation gives 30, verifying the solution step by step."
       ]
     },
@@ -2697,8 +2697,8 @@
       ],
       "explanation": "8/12 = 2/3.",
       "hints": [
-        "Concept Rule: Divide both numerator and denominator by their greatest common factor, 4: (8\u00f74)/(12\u00f74).",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
+        "Concept Rule: Divide both numerator and denominator by their greatest common factor, 4: (8÷4)/(12÷4).",
+        "Strategy Clue: 2/3.",
         "Gizmo's Step: Working through the calculation gives 2/3, verifying the solution step by step."
       ]
     },
@@ -2719,8 +2719,8 @@
       "options": null,
       "explanation": "4/7 = 16/28.",
       "hints": [
-        "Concept Rule: 7 \u00d7 4 = 28. Multiply numerator by 4: 4 \u00d7 4.",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
+        "Concept Rule: 7 × 4 = 28. Multiply numerator by 4: 4 × 4 = 16.",
+        "Strategy Clue: 16.",
         "Gizmo's Step: Working through the calculation gives 16, verifying the solution step by step."
       ]
     },
@@ -2759,8 +2759,8 @@
       "explanation": "3/5 is not equal to 6/12.",
       "hints": [
         "Concept Rule: Check cross products or simplest forms: 3/5 = 0.6 while 6/12 = 1/2 = 0.5. They are not equal.",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
-        "Gizmo's Step: 3/5 is not equal to 6/12. This verifies that 3/5 and 6/12 is correct Therefore, 3/5 and 6/12 is the mathematically correct answer."
+        "Strategy Clue: 3/5 and 6/12 are not equivalent.",
+        "Gizmo's Step: 3/5 is not equal to 6/12. This verifies that 3/5 and 6/12 is correct."
       ]
     },
     {
@@ -2780,8 +2780,8 @@
       "options": null,
       "explanation": "15/20 = 3/4, numerator is 3.",
       "hints": [
-        "Concept Rule: Divide 15 and 20 by 5: 15 \u00f7 5.",
-        "Strategy Clue: Identify the top number in the fraction which counts how many equal parts are selected.",
+        "Concept Rule: Divide 15 and 20 by 5: 15 ÷ 5 = 3 and 20 ÷ 5 = 4.",
+        "Strategy Clue: The simplified fraction is 3/4. The numerator is 3.",
         "Gizmo's Step: 15/20 = 3/4, numerator is 3."
       ]
     },
@@ -2802,8 +2802,8 @@
       "options": null,
       "explanation": "7/8 = 21/24.",
       "hints": [
-        "Concept Rule: 7 \u00d7 3 = 21. Multiply 8 by 3: 8 \u00d7 3.",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
+        "Concept Rule: 7 × 3 = 21. Multiply 8 by 3: 8 × 3 = 24.",
+        "Strategy Clue: 24.",
         "Gizmo's Step: Working through the calculation gives 24, verifying the solution step by step."
       ]
     },
@@ -2842,7 +2842,7 @@
       "explanation": "3/4 = 6/8 > 5/8.",
       "hints": [
         "Concept Rule: Find a common denominator: 3/4 = 6/8. Compare 6/8 and 5/8: 6 > 5.",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
+        "Strategy Clue: 3/4 > 5/8.",
         "Gizmo's Step: Working through the calculation gives >, verifying the solution step by step."
       ]
     },
@@ -2855,7 +2855,7 @@
       "standard": "4.NF.A.2",
       "difficulty": 1,
       "type": "multiple-choice",
-      "prompt": "Compare 2/3 and 4/5 by cross-multiplying: (2 \u00d7 5) ___ (3 \u00d7 4). Which is greater?",
+      "prompt": "Compare 2/3 and 4/5 by cross-multiplying: (2 × 5) ___ (3 × 4). Which is greater?",
       "correctAnswer": "4/5 is greater",
       "acceptedAnswers": [
         "4/5 is greater"
@@ -2880,8 +2880,8 @@
       ],
       "explanation": "4/5 = 12/15 > 2/3 = 10/15.",
       "hints": [
-        "Concept Rule: Cross-multiply: 2 \u00d7 5 = 10; 3 \u00d7 4 = 12. Since 10 < 12, 2/3 < 4/5.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: Cross-multiply: 2 × 5 = 10; 3 × 4 = 12. Since 10 < 12, 2/3 < 4/5.",
+        "Strategy Clue: 4/5 is greater.",
         "Gizmo's Step: 4/5 = 12/15 > 2/3 = 10/15. This verifies that 4/5 is greater is correct."
       ]
     },
@@ -2920,7 +2920,7 @@
       "explanation": "Comparing to benchmark 1/2 shows 3/8 < 5/6.",
       "hints": [
         "Concept Rule: Half of 8 is 4 (so 3/8 < 1/2); half of 6 is 3 (so 5/6 > 1/2).",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
+        "Strategy Clue: 3/8 < 5/6.",
         "Gizmo's Step: Working through the calculation gives 3/8 < 1/2 and 5/6 > 1/2, so 3/8 < 5/6, verifying the solution step by step."
       ]
     },
@@ -2959,8 +2959,8 @@
       "explanation": "7/12 is greater than 5/12.",
       "hints": [
         "Concept Rule: Same denominator 12: compare numerators. 7 > 5.",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
-        "Gizmo's Step: 7/12 is greater than 5/12 Therefore, 7/12 is the mathematically correct answer."
+        "Strategy Clue: 7/12.",
+        "Gizmo's Step: 7/12 is greater than 5/12."
       ]
     },
     {
@@ -2997,8 +2997,8 @@
       ],
       "explanation": "3/5 and 6/10 are equivalent fractions.",
       "hints": [
-        "Concept Rule: Multiply numerator and denominator of 3/5 by 2: (3\u00d72)/(5\u00d72) = 6/10.",
-        "Strategy Clue: Calculate 3/5 to find the final value.",
+        "Concept Rule: Multiply numerator and denominator of 3/5 by 2: (3×2)/(5×2) = 6/10.",
+        "Strategy Clue: 3/5 = 6/10.",
         "Gizmo's Step: Working through the calculation gives 3/5 = 6/10, verifying the solution step by step."
       ]
     },
@@ -3036,9 +3036,9 @@
       ],
       "explanation": "5/8 is greatest (0.625).",
       "hints": [
-        "Concept Rule: Convert to decimals or benchmark: 1/3 \u2248 0.33, 2/5 = 0.40, 1/2 = 0.50, 5/8 = 0.625.",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
-        "Gizmo's Step: 5/8 is greatest (0.625) Therefore, 5/8 is the mathematically correct answer."
+        "Concept Rule: Convert to decimals or benchmark: 1/3 ≈ 0.33, 2/5 = 0.40, 1/2 = 0.50, 5/8 = 0.625.",
+        "Strategy Clue: 5/8 is the greatest.",
+        "Gizmo's Step: 5/8 is greatest (0.625)."
       ]
     },
     {
@@ -3076,7 +3076,7 @@
       "explanation": "3/4 = 15/20 > 7/10 = 14/20.",
       "hints": [
         "Concept Rule: 7/10 = 14/20; 3/4 = 15/20. 15/20 > 14/20.",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
+        "Strategy Clue: 3/4 is larger.",
         "Gizmo's Step: 3/4 = 15/20 > 7/10 = 14/20. This verifies that 3/4 is larger is correct."
       ]
     },
@@ -3114,8 +3114,8 @@
       ],
       "explanation": "4/9 > 5/12.",
       "hints": [
-        "Concept Rule: Cross-multiply: 4 \u00d7 12 = 48; 9 \u00d7 5 = 45. Since 48 > 45, 4/9 > 5/12.",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
+        "Concept Rule: Cross-multiply: 4 × 12 = 48; 9 × 5 = 45. Since 48 > 45, 4/9 > 5/12.",
+        "Strategy Clue: >.",
         "Gizmo's Step: Working through the calculation gives >, verifying the solution step by step."
       ]
     },
@@ -3154,7 +3154,7 @@
       "explanation": "3/8 + 2/8 = 5/8.",
       "hints": [
         "Concept Rule: When denominators are the same, add the numerators and keep the denominator: (3+2)/8.",
-        "Strategy Clue: Rewrite the fractions with a common denominator if needed, then add the numerators.",
+        "Strategy Clue: 5/8.",
         "Gizmo's Step: Working through the calculation gives 5/8, verifying the solution step by step."
       ]
     },
@@ -3193,7 +3193,7 @@
       "explanation": "7/10 - 4/10 = 3/10.",
       "hints": [
         "Concept Rule: Subtract numerators: (7 - 4)/10.",
-        "Strategy Clue: Rewrite the fractions with a common denominator if needed, then subtract the numerators.",
+        "Strategy Clue: 3/10.",
         "Gizmo's Step: Working through the calculation gives 3/10, verifying the solution step by step."
       ]
     },
@@ -3232,7 +3232,7 @@
       "explanation": "1 2/5 + 2 1/5 = 3 3/5.",
       "hints": [
         "Concept Rule: Add whole numbers (1 + 2 = 3) and add fractions (2/5 + 1/5 = 3/5).",
-        "Strategy Clue: Rewrite the fractions with a common denominator if needed, then add the numerators.",
+        "Strategy Clue: 3 and 3/5.",
         "Gizmo's Step: 1 2/5 + 2 1/5 = 3 3/5. This verifies that 3 and 3/5 is correct."
       ]
     },
@@ -3271,7 +3271,7 @@
       "explanation": "4 5/6 - 2 1/6 = 2 4/6.",
       "hints": [
         "Concept Rule: Subtract whole numbers (4 - 2 = 2) and subtract fractions (5/6 - 1/6 = 4/6).",
-        "Strategy Clue: Rewrite the fractions with a common denominator if needed, then subtract the numerators.",
+        "Strategy Clue: 2 and 4/6.",
         "Gizmo's Step: 4 5/6 - 2 1/6 = 2 4/6. This verifies that 2 and 4/6 is correct."
       ]
     },
@@ -3292,8 +3292,8 @@
       "options": null,
       "explanation": "4/9 + 3/9 = 7/9, numerator is 7.",
       "hints": [
-        "Concept Rule: Add the numerators: 4 + 3.",
-        "Strategy Clue: Rewrite the fractions with a common denominator if needed, then add the numerators.",
+        "Concept Rule: Add the numerators: 4 + 3 = 7. Denominator remains 9.",
+        "Strategy Clue: 7.",
         "Gizmo's Step: 4/9 + 3/9 = 7/9, numerator is 7."
       ]
     },
@@ -3331,8 +3331,8 @@
       ],
       "explanation": "3 1/4 - 1 3/4 = 2 5/4 - 1 3/4 = 1 2/4.",
       "hints": [
-        "Concept Rule: Regroup 3 and 1/4 as 2 and 5/4. Then: (2 - 1) + (5/4 - 3/4).",
-        "Strategy Clue: Rewrite the fractions with a common denominator if needed, then subtract the numerators.",
+        "Concept Rule: Regroup 3 and 1/4 as 2 and 5/4. Then: (2 - 1) + (5/4 - 3/4) = 1 and 2/4.",
+        "Strategy Clue: 1 and 2/4 (or 1 and 1/2).",
         "Gizmo's Step: 3 1/4 - 1 3/4 = 2 5/4 - 1 3/4 = 1 2/4. This verifies that 1 and 2/4 is correct."
       ]
     },
@@ -3370,8 +3370,8 @@
       ],
       "explanation": "12/8 = 1 4/8.",
       "hints": [
-        "Concept Rule: 5/8 + 7/8 = 12/8. Convert to mixed number: 12 \u00f7 8 = 1 with 4 left over -> 1 and 4/8.",
-        "Strategy Clue: Rewrite the fractions with a common denominator if needed, then add the numerators.",
+        "Concept Rule: 5/8 + 7/8 = 12/8. Convert to mixed number: 12 ÷ 8 = 1 with 4 left over -> 1 and 4/8.",
+        "Strategy Clue: 1 and 4/8 (or 1 and 1/2).",
         "Gizmo's Step: 1 and 4/8 (or 1 and 1/2). Completing this step confirms the result is 1 and 4/8."
       ]
     },
@@ -3393,7 +3393,7 @@
       "explanation": "11/12 - 5/12 = 6/12, numerator is 6.",
       "hints": [
         "Concept Rule: 11 - 5 = 6. (Result is 6/12).",
-        "Strategy Clue: Rewrite the fractions with a common denominator if needed, then subtract the numerators.",
+        "Strategy Clue: 6.",
         "Gizmo's Step: 11/12 - 5/12 = 6/12, numerator is 6."
       ]
     },
@@ -3471,7 +3471,7 @@
       "explanation": "2/8 + 3/8 = 5/8.",
       "hints": [
         "Concept Rule: Find fractions with denominator 8 whose numerators sum to 5: 2 + 3 = 5.",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
+        "Strategy Clue: 2/8 + 3/8 = 5/8.",
         "Gizmo's Step: 2/8 + 3/8 = 5/8. Completing this step confirms the result is 2/8 + 3/8."
       ]
     },
@@ -3510,7 +3510,7 @@
       "explanation": "3/10 + 4/10 = 7/10 mile.",
       "hints": [
         "Concept Rule: Add distances: 3/10 + 4/10 = 7/10.",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
+        "Strategy Clue: 7/10 mile.",
         "Gizmo's Step: 3/10 + 4/10 = 7/10 mile."
       ]
     },
@@ -3549,7 +3549,7 @@
       "explanation": "2 3/4 - 1 1/4 = 1 2/4 cups.",
       "hints": [
         "Concept Rule: Subtract: 2 3/4 - 1 1/4 = 1 2/4 cups.",
-        "Strategy Clue: Find the scale factor between the known amounts, then multiply the other ingredient by that same factor.",
+        "Strategy Clue: 1 and 2/4 cups (or 1 1/2 cups).",
         "Gizmo's Step: 2 3/4 - 1 1/4 = 1 2/4 cups. This verifies that 1 and 2/4 cups is correct."
       ]
     },
@@ -3571,7 +3571,7 @@
       "explanation": "3/8 + 5/8 = 8/8 = 1.",
       "hints": [
         "Concept Rule: 8/8 - 3/8 = 5/8, so 5 eighths are needed.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Strategy Clue: 5.",
         "Gizmo's Step: 3/8 + 5/8 = 8/8 = 1."
       ]
     },
@@ -3610,7 +3610,7 @@
       "explanation": "7/8 - 4/8 = 3/8 quart.",
       "hints": [
         "Concept Rule: Subtract: 7/8 - 4/8 = 3/8.",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
+        "Strategy Clue: 3/8 quart.",
         "Gizmo's Step: 7/8 - 4/8 = 3/8 quart."
       ]
     },
@@ -3649,7 +3649,7 @@
       "explanation": "3/10 + 4/10 = 7/10, not 6/10.",
       "hints": [
         "Concept Rule: 3/10 + 4/10 = 7/10 (which is not 6/10).",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
+        "Strategy Clue: 3/10 + 4/10.",
         "Gizmo's Step: 3/10 + 4/10 = 7/10, not 6/10."
       ]
     },
@@ -3671,7 +3671,7 @@
       "explanation": "2/6 + 3/6 = 5/6, numerator is 5.",
       "hints": [
         "Concept Rule: 2/6 + 3/6 = 5/6. The numerator is 5.",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
+        "Strategy Clue: 5.",
         "Gizmo's Step: 2/6 + 3/6 = 5/6, numerator is 5."
       ]
     },
@@ -3684,7 +3684,7 @@
       "standard": "4.NF.B.4",
       "difficulty": 1,
       "type": "multiple-choice",
-      "prompt": "Calculate: 3 \u00d7 (2/5).",
+      "prompt": "Calculate: 3 × (2/5).",
       "correctAnswer": "6/5",
       "acceptedAnswers": [
         "6/5"
@@ -3707,10 +3707,10 @@
           "correct": false
         }
       ],
-      "explanation": "3 \u00d7 2/5 = 6/5.",
+      "explanation": "3 × 2/5 = 6/5.",
       "hints": [
-        "Concept Rule: Multiply the whole number by the numerator: (3 \u00d7 2)/5.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: Multiply the whole number by the numerator: (3 × 2)/5.",
+        "Strategy Clue: 6/5.",
         "Gizmo's Step: Working through the calculation gives 6/5, verifying the solution step by step."
       ]
     },
@@ -3723,17 +3723,17 @@
       "standard": "4.NF.B.4",
       "difficulty": 1,
       "type": "numeric-response",
-      "prompt": "What is the numerator of 4 \u00d7 (3/7)?",
+      "prompt": "What is the numerator of 4 × (3/7)?",
       "correctAnswer": "12",
       "acceptedAnswers": [
         "12"
       ],
       "options": null,
-      "explanation": "4 \u00d7 3/7 = 12/7, numerator is 12.",
+      "explanation": "4 × 3/7 = 12/7, numerator is 12.",
       "hints": [
         "Concept Rule: Multiply 4 by 3 = 12. Result is 12/7.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
-        "Gizmo's Step: 4 \u00d7 3/7 = 12/7, numerator is 12."
+        "Strategy Clue: 12.",
+        "Gizmo's Step: 4 × 3/7 = 12/7, numerator is 12."
       ]
     },
     {
@@ -3768,11 +3768,11 @@
           "correct": true
         }
       ],
-      "explanation": "5 \u00d7 3/4 = 15/4 cups.",
+      "explanation": "5 × 3/4 = 15/4 cups.",
       "hints": [
-        "Concept Rule: Multiply 5 by 3/4: (5 \u00d7 3)/4.",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
-        "Gizmo's Step: 5 \u00d7 3/4 = 15/4 cups."
+        "Concept Rule: Multiply 5 by 3/4: (5 × 3)/4 = 15/4 cups.",
+        "Strategy Clue: 15/4 cups (or 3 and 3/4 cups).",
+        "Gizmo's Step: 5 × 3/4 = 15/4 cups."
       ]
     },
     {
@@ -3784,7 +3784,7 @@
       "standard": "4.NF.B.4",
       "difficulty": 2,
       "type": "multiple-choice",
-      "prompt": "Which product is equal to 6 \u00d7 (1/3)?",
+      "prompt": "Which product is equal to 6 × (1/3)?",
       "correctAnswer": "2",
       "acceptedAnswers": [
         "2"
@@ -3807,10 +3807,10 @@
           "correct": false
         }
       ],
-      "explanation": "6 \u00d7 1/3 = 6/3 = 2.",
+      "explanation": "6 × 1/3 = 6/3 = 2.",
       "hints": [
-        "Concept Rule: 6 \u00d7 (1/3) = 6/3 = 2 whole.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: 6 × (1/3) = 6/3 = 2 whole.",
+        "Strategy Clue: 6/3 = 2.",
         "Gizmo's Step: Working through the calculation gives 2, verifying the solution step by step."
       ]
     },
@@ -3823,16 +3823,16 @@
       "standard": "4.NF.B.4",
       "difficulty": 2,
       "type": "numeric-response",
-      "prompt": "Calculate: 8 \u00d7 (1/4). What whole number does this equal?",
+      "prompt": "Calculate: 8 × (1/4). What whole number does this equal?",
       "correctAnswer": "2",
       "acceptedAnswers": [
         "2"
       ],
       "options": null,
-      "explanation": "8 \u00d7 1/4 = 8/4 = 2.",
+      "explanation": "8 × 1/4 = 8/4 = 2.",
       "hints": [
-        "Concept Rule: 8 \u00d7 1/4 = 8/4 = 2.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: 8 × 1/4 = 8/4 = 2.",
+        "Strategy Clue: 2.",
         "Gizmo's Step: Working through the calculation gives 2, verifying the solution step by step."
       ]
     },
@@ -3868,11 +3868,11 @@
           "correct": false
         }
       ],
-      "explanation": "4 \u00d7 2/3 = 8/3 miles.",
+      "explanation": "4 × 2/3 = 8/3 miles.",
       "hints": [
-        "Concept Rule: Multiply 4 by 2/3: (4 \u00d7 2)/3.",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
-        "Gizmo's Step: 4 \u00d7 2/3 = 8/3 miles."
+        "Concept Rule: Multiply 4 by 2/3: (4 × 2)/3 = 8/3 miles.",
+        "Strategy Clue: 8/3 miles (or 2 and 2/3 miles).",
+        "Gizmo's Step: 4 × 2/3 = 8/3 miles."
       ]
     },
     {
@@ -3909,8 +3909,8 @@
       ],
       "explanation": "15/4 = 3 3/4.",
       "hints": [
-        "Concept Rule: Divide 15 by 4: 15 \u00f7 4 = 3 with remainder 3 -> 3 and 3/4.",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
+        "Concept Rule: Divide 15 by 4: 15 ÷ 4 = 3 with remainder 3 -> 3 and 3/4.",
+        "Strategy Clue: 3 and 3/4.",
         "Gizmo's Step: Working through the calculation gives 3 and 3/4, verifying the solution step by step."
       ]
     },
@@ -3923,17 +3923,17 @@
       "standard": "4.NF.B.4",
       "difficulty": 3,
       "type": "numeric-response",
-      "prompt": "Calculate: 10 \u00d7 (3/5). What whole number does this equal?",
+      "prompt": "Calculate: 10 × (3/5). What whole number does this equal?",
       "correctAnswer": "6",
       "acceptedAnswers": [
         "6"
       ],
       "options": null,
-      "explanation": "10 \u00d7 3/5 = 30/5 = 6.",
+      "explanation": "10 × 3/5 = 30/5 = 6.",
       "hints": [
-        "Concept Rule: 10 \u00d7 3/5 = 30/5 = 6.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
-        "Gizmo's Step: 10 \u00d7 3/5 = 30/5 = 6."
+        "Concept Rule: 10 × 3/5 = 30/5 = 6.",
+        "Strategy Clue: 6.",
+        "Gizmo's Step: 10 × 3/5 = 30/5 = 6."
       ]
     },
     {
@@ -3953,8 +3953,8 @@
       "options": null,
       "explanation": "3/10 = 30/100.",
       "hints": [
-        "Concept Rule: Multiply numerator and denominator by 10: 3 \u00d7 10.",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
+        "Concept Rule: Multiply numerator and denominator by 10: 3 × 10 = 30.",
+        "Strategy Clue: 30.",
         "Gizmo's Step: Working through the calculation gives 30, verifying the solution step by step."
       ]
     },
@@ -3992,8 +3992,8 @@
       ],
       "explanation": "4/10 + 25/100 = 40/100 + 25/100 = 65/100.",
       "hints": [
-        "Concept Rule: Convert 4/10 to 40/100. Then add: 40/100 + 25/100.",
-        "Strategy Clue: Rewrite the fractions with a common denominator if needed, then add the numerators.",
+        "Concept Rule: Convert 4/10 to 40/100. Then add: 40/100 + 25/100 = 65/100.",
+        "Strategy Clue: 65/100.",
         "Gizmo's Step: 4/10 + 25/100 = 40/100 + 25/100 = 65/100."
       ]
     },
@@ -4014,8 +4014,8 @@
       "options": null,
       "explanation": "7/10 + 18/100 = 70/100 + 18/100 = 88/100.",
       "hints": [
-        "Concept Rule: 7/10 = 70/100. 70 + 18.",
-        "Strategy Clue: Rewrite the fractions with a common denominator if needed, then add the numerators.",
+        "Concept Rule: 7/10 = 70/100. 70 + 18 = 88.",
+        "Strategy Clue: 88.",
         "Gizmo's Step: 7/10 + 18/100 = 70/100 + 18/100 = 88/100."
       ]
     },
@@ -4053,8 +4053,8 @@
       ],
       "explanation": "50/100 + 30/100 = 80/100.",
       "hints": [
-        "Concept Rule: 3/10 = 30/100. 50/100 + 30/100.",
-        "Strategy Clue: Rewrite the fractions with a common denominator if needed, then add the numerators.",
+        "Concept Rule: 3/10 = 30/100. 50/100 + 30/100 = 80/100.",
+        "Strategy Clue: 80/100 (which also equals 8/10).",
         "Gizmo's Step: 50/100 + 30/100 = 80/100."
       ]
     },
@@ -4076,7 +4076,7 @@
       "explanation": "9/10 = 90/100.",
       "hints": [
         "Concept Rule: Multiply 9 by 10: 90.",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
+        "Strategy Clue: 90.",
         "Gizmo's Step: Working through the calculation gives 90, verifying the solution step by step."
       ]
     },
@@ -4115,7 +4115,7 @@
       "explanation": "60/100 + 40/100 = 100/100 = 1.",
       "hints": [
         "Concept Rule: 6/10 = 60/100. 60/100 + 40/100 = 100/100 = 1.",
-        "Strategy Clue: Rewrite the fractions with a common denominator if needed, then add the numerators.",
+        "Strategy Clue: 100/100 (1 whole).",
         "Gizmo's Step: 60/100 + 40/100 = 100/100 = 1. This verifies that 100/100 (1 whole) is correct."
       ]
     },
@@ -4136,8 +4136,8 @@
       "options": null,
       "explanation": "20/100 + 73/100 = 93/100.",
       "hints": [
-        "Concept Rule: 2/10 = 20/100. 20 + 73.",
-        "Strategy Clue: Rewrite the fractions with a common denominator if needed, then add the numerators.",
+        "Concept Rule: 2/10 = 20/100. 20 + 73 = 93.",
+        "Strategy Clue: 93.",
         "Gizmo's Step: 20/100 + 73/100 = 93/100."
       ]
     },
@@ -4175,8 +4175,8 @@
       ],
       "explanation": "80/100 = 8/10.",
       "hints": [
-        "Concept Rule: Divide numerator and denominator by 10: (80\u00f710)/(100\u00f710).",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
+        "Concept Rule: Divide numerator and denominator by 10: (80÷10)/(100÷10) = 8/10.",
+        "Strategy Clue: 8/10.",
         "Gizmo's Step: Working through the calculation gives 8/10, verifying the solution step by step."
       ]
     },
@@ -4214,8 +4214,8 @@
       ],
       "explanation": "7/10 = 0.7.",
       "hints": [
-        "Concept Rule: Tenths have one digit after the decimal point: 7/10.",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
+        "Concept Rule: Tenths have one digit after the decimal point: 7/10 = 0.7.",
+        "Strategy Clue: 0.7.",
         "Gizmo's Step: Working through the calculation gives 0.7, verifying the solution step by step."
       ]
     },
@@ -4253,8 +4253,8 @@
       ],
       "explanation": "25/100 = 0.25.",
       "hints": [
-        "Concept Rule: Hundredths have two digits after the decimal point: 25/100.",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
+        "Concept Rule: Hundredths have two digits after the decimal point: 25/100 = 0.25.",
+        "Strategy Clue: 0.25.",
         "Gizmo's Step: Working through the calculation gives 0.25, verifying the solution step by step."
       ]
     },
@@ -4293,7 +4293,7 @@
       "explanation": "0.6 = 0.60 > 0.45.",
       "hints": [
         "Concept Rule: Line up decimals: 0.60 vs 0.45. 60 hundredths is greater than 45 hundredths.",
-        "Strategy Clue: Line up the decimal points vertically before adding or subtracting place values.",
+        "Strategy Clue: 0.6 > 0.45.",
         "Gizmo's Step: Working through the calculation gives >, verifying the solution step by step."
       ]
     },
@@ -4332,7 +4332,7 @@
       "explanation": "0.5 = 0.50.",
       "hints": [
         "Concept Rule: Trailing zeros after the last digit in a decimal do not change its value: 5 tenths = 50 hundredths.",
-        "Strategy Clue: Line up the decimal points vertically before adding or subtracting place values.",
+        "Strategy Clue: 0.50.",
         "Gizmo's Step: Working through the calculation gives 0.50, verifying the solution step by step."
       ]
     },
@@ -4371,7 +4371,7 @@
       "explanation": "3/100 = 0.03.",
       "hints": [
         "Concept Rule: 3 hundredths has a 0 in the tenths place and 3 in the hundredths place: 0.03.",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
+        "Strategy Clue: 0.03.",
         "Gizmo's Step: Working through the calculation gives 0.03, verifying the solution step by step."
       ]
     },
@@ -4410,7 +4410,7 @@
       "explanation": "0.08 < 0.32 < 0.40.",
       "hints": [
         "Concept Rule: Rewrite as hundredths: 0.08, 0.32, 0.40. Compare: 8 < 32 < 40.",
-        "Strategy Clue: Line up the decimal points vertically before adding or subtracting place values.",
+        "Strategy Clue: 0.08 < 0.32 < 0.4.",
         "Gizmo's Step: 0.08 < 0.32 < 0.4. Completing this step confirms the result is 0.08 < 0.32 < 0.4."
       ]
     },
@@ -4449,7 +4449,7 @@
       "explanation": "0.80 > 0.72.",
       "hints": [
         "Concept Rule: Compare tenths: 8 tenths is greater than 7 tenths (0.80 > 0.72).",
-        "Strategy Clue: Line up the decimal points vertically before adding or subtracting place values.",
+        "Strategy Clue: 0.8 > 0.72.",
         "Gizmo's Step: Working through the calculation gives 0.8 is greater than 0.72, verifying the solution step by step."
       ]
     },
@@ -4471,7 +4471,7 @@
       "explanation": "0.8 = 80 hundredths.",
       "hints": [
         "Concept Rule: 0.8 = 8 tenths = 80 hundredths.",
-        "Strategy Clue: Line up the decimal points vertically before adding or subtracting place values.",
+        "Strategy Clue: 80.",
         "Gizmo's Step: 0.8 = 80 hundredths."
       ]
     },
@@ -4494,7 +4494,7 @@
       "explanation": "1 km = 1,000 m.",
       "hints": [
         "Concept Rule: The prefix 'kilo-' means 1,000. 1 km = 1,000 m.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: 1,000.",
         "Gizmo's Step: Working through the calculation gives 1000, verifying the solution step by step."
       ]
     },
@@ -4514,10 +4514,10 @@
         "400 cm"
       ],
       "options": null,
-      "explanation": "4 \u00d7 100 = 400 cm.",
+      "explanation": "4 × 100 = 400 cm.",
       "hints": [
-        "Concept Rule: Multiply meters by 100: 4 \u00d7 100.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: Multiply meters by 100: 4 × 100.",
+        "Strategy Clue: 400 cm.",
         "Gizmo's Step: Working through the calculation gives 400, verifying the solution step by step."
       ]
     },
@@ -4537,11 +4537,11 @@
         "48 oz"
       ],
       "options": null,
-      "explanation": "3 \u00d7 16 = 48 ounces.",
+      "explanation": "3 × 16 = 48 ounces.",
       "hints": [
-        "Concept Rule: Multiply pounds by 16: 3 \u00d7 16.",
-        "Strategy Clue: Calculate 3 \u00d7 16 to find the final value.",
-        "Gizmo's Step: 3 \u00d7 16 = 48 ounces. Completing this step confirms the result is 48."
+        "Concept Rule: Multiply pounds by 16: 3 × 16.",
+        "Strategy Clue: 3 × 16 = 48 ounces.",
+        "Gizmo's Step: 3 × 16 = 48 ounces. Completing this step confirms the result is 48."
       ]
     },
     {
@@ -4576,11 +4576,11 @@
           "correct": true
         }
       ],
-      "explanation": "5 \u00d7 60 = 300 minutes.",
+      "explanation": "5 × 60 = 300 minutes.",
       "hints": [
-        "Concept Rule: Multiply hours by 60: 5 \u00d7 60.",
-        "Strategy Clue: Calculate 5 \u00d7 60 to find the final value.",
-        "Gizmo's Step: 5 \u00d7 60 = 300 minutes."
+        "Concept Rule: Multiply hours by 60: 5 × 60.",
+        "Strategy Clue: 5 × 60 = 300 minutes.",
+        "Gizmo's Step: 5 × 60 = 300 minutes."
       ]
     },
     {
@@ -4599,11 +4599,11 @@
         "6,000"
       ],
       "options": null,
-      "explanation": "6 \u00d7 1,000 = 6,000 mL.",
+      "explanation": "6 × 1,000 = 6,000 mL.",
       "hints": [
-        "Concept Rule: Multiply liters by 1,000: 6 \u00d7 1,000.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
-        "Gizmo's Step: 6 \u00d7 1,000 = 6,000 mL. This verifies that 6000 is correct."
+        "Concept Rule: Multiply liters by 1,000: 6 × 1,000.",
+        "Strategy Clue: 6,000 mL.",
+        "Gizmo's Step: 6 × 1,000 = 6,000 mL. This verifies that 6000 is correct."
       ]
     },
     {
@@ -4622,11 +4622,11 @@
         "21 feet"
       ],
       "options": null,
-      "explanation": "7 \u00d7 3 = 21 feet.",
+      "explanation": "7 × 3 = 21 feet.",
       "hints": [
-        "Concept Rule: Multiply yards by 3: 7 \u00d7 3.",
-        "Strategy Clue: Calculate 7 \u00d7 3 to find the final value.",
-        "Gizmo's Step: 7 \u00d7 3 = 21 feet. Completing this step confirms the result is 21."
+        "Concept Rule: Multiply yards by 3: 7 × 3.",
+        "Strategy Clue: 7 × 3 = 21 feet.",
+        "Gizmo's Step: 7 × 3 = 21 feet. Completing this step confirms the result is 21."
       ]
     },
     {
@@ -4661,11 +4661,11 @@
           "correct": false
         }
       ],
-      "explanation": "4 \u00d7 60 = 240 seconds.",
+      "explanation": "4 × 60 = 240 seconds.",
       "hints": [
-        "Concept Rule: Multiply minutes by 60: 4 \u00d7 60.",
-        "Strategy Clue: Calculate 4 \u00d7 60 to find the final value.",
-        "Gizmo's Step: 4 \u00d7 60 = 240 seconds."
+        "Concept Rule: Multiply minutes by 60: 4 × 60.",
+        "Strategy Clue: 4 × 60 = 240 seconds.",
+        "Gizmo's Step: 4 × 60 = 240 seconds."
       ]
     },
     {
@@ -4684,11 +4684,11 @@
         "8,000"
       ],
       "options": null,
-      "explanation": "8 \u00d7 1,000 = 8,000 g.",
+      "explanation": "8 × 1,000 = 8,000 g.",
       "hints": [
-        "Concept Rule: Multiply kilograms by 1,000: 8 \u00d7 1,000.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
-        "Gizmo's Step: 8 \u00d7 1,000 = 8,000 g. This verifies that 8000 is correct."
+        "Concept Rule: Multiply kilograms by 1,000: 8 × 1,000.",
+        "Strategy Clue: 8,000 grams.",
+        "Gizmo's Step: 8 × 1,000 = 8,000 g. This verifies that 8000 is correct."
       ]
     },
     {
@@ -4710,7 +4710,7 @@
       "explanation": "200 cm - 75 cm = 125 cm.",
       "hints": [
         "Concept Rule: Convert 2 m to 200 cm. Then subtract: 200 - 75.",
-        "Strategy Clue: Calculate 200 - 75 to find the final value.",
+        "Strategy Clue: 200 - 75 = 125 cm.",
         "Gizmo's Step: 200 cm - 75 cm = 125 cm."
       ]
     },
@@ -4749,7 +4749,7 @@
       "explanation": "6:45 + 1 hr 30 min = 8:15 PM.",
       "hints": [
         "Concept Rule: Add 1 hour to 6:45 -> 7:45 PM. Add 30 minutes to 7:45 -> 8:15 PM.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: 8:15 PM.",
         "Gizmo's Step: 6:45 + 1 hr 30 min = 8:15 PM."
       ]
     },
@@ -4773,7 +4773,7 @@
       "explanation": "5,000 - 1,800 = 3,200 grams.",
       "hints": [
         "Concept Rule: Convert 5 kg = 5,000 g. Subtract: 5,000 - 1,800.",
-        "Strategy Clue: Identify the quantities given in the problem, set up the required mathematical operation, and compute the result step-by-step.",
+        "Strategy Clue: 5,000 - 1,800 = 3,200 g.",
         "Gizmo's Step: 5,000 - 1,800 = 3,200 grams. This verifies that 3200 is correct."
       ]
     },
@@ -4811,8 +4811,8 @@
       ],
       "explanation": "$10.00 - $5.25 = $4.75.",
       "hints": [
-        "Concept Rule: Total spent = $3.75 + $1.50 = $5.25. Change = $10.00 - $5.25.",
-        "Strategy Clue: Line up the decimal points vertically before adding or subtracting place values.",
+        "Concept Rule: Total spent = $3.75 + $1.50 = $5.25. Change = $10.00 - $5.25 = $4.75.",
+        "Strategy Clue: $4.75.",
         "Gizmo's Step: $10.00 - $5.25 = $4.75."
       ]
     },
@@ -4836,7 +4836,7 @@
       "explanation": "2,000 - 650 = 1,350 mL.",
       "hints": [
         "Concept Rule: 2,000 mL - 650 mL = 1,350 mL.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: 1,350 mL.",
         "Gizmo's Step: 2,000 - 650 = 1,350 mL. This verifies that 1350 is correct."
       ]
     },
@@ -4860,7 +4860,7 @@
       "explanation": "3,000 + 2,400 = 5,400 meters.",
       "hints": [
         "Concept Rule: 3,000 m + 2,400 m = 5,400 m.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: 5,400 m.",
         "Gizmo's Step: 3,000 + 2,400 = 5,400 meters. This verifies that 5400 is correct."
       ]
     },
@@ -4896,10 +4896,10 @@
           "correct": true
         }
       ],
-      "explanation": "4 \u00d7 16 = 64 ounces.",
+      "explanation": "4 × 16 = 64 ounces.",
       "hints": [
-        "Concept Rule: Multiply pounds by 16: 4 \u00d7 16.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: Multiply pounds by 16: 4 × 16 = 64 ounces.",
+        "Strategy Clue: 64 ounces.",
         "Gizmo's Step: Working through the calculation gives 64 ounces, verifying the solution step by step."
       ]
     },
@@ -4921,8 +4921,8 @@
       "options": null,
       "explanation": "120 + 15 = 135 minutes.",
       "hints": [
-        "Concept Rule: 120 minutes + 15 minutes.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: 120 minutes + 15 minutes = 135 minutes.",
+        "Strategy Clue: 135 minutes.",
         "Gizmo's Step: 120 + 15 = 135 minutes."
       ]
     },
@@ -4942,11 +4942,11 @@
         "44 m"
       ],
       "options": null,
-      "explanation": "2 \u00d7 (14 + 8) = 44 m.",
+      "explanation": "2 × (14 + 8) = 44 m.",
       "hints": [
-        "Concept Rule: Perimeter = 2 \u00d7 (length + width) = 2 \u00d7 (14 + 8) = 2 \u00d7 22.",
-        "Strategy Clue: Add the lengths of all outer boundary sides together to find the perimeter.",
-        "Gizmo's Step: 2 \u00d7 (14 + 8) = 44 m."
+        "Concept Rule: Perimeter = 2 × (length + width) = 2 × (14 + 8) = 2 × 22.",
+        "Strategy Clue: 44 meters.",
+        "Gizmo's Step: 2 × (14 + 8) = 44 m."
       ]
     },
     {
@@ -4981,10 +4981,10 @@
           "correct": false
         }
       ],
-      "explanation": "12 \u00d7 7 = 84 sq ft.",
+      "explanation": "12 × 7 = 84 sq ft.",
       "hints": [
-        "Concept Rule: Area = length \u00d7 width = 12 \u00d7 7 = 84 sq ft.",
-        "Strategy Clue: Use the area formula: multiply the length (base) by the width (height).",
+        "Concept Rule: Area = length × width = 12 × 7 = 84 sq ft.",
+        "Strategy Clue: 84 sq ft.",
         "Gizmo's Step: Working through the calculation gives 84 square feet, verifying the solution step by step."
       ]
     },
@@ -5004,11 +5004,11 @@
         "8 feet"
       ],
       "options": null,
-      "explanation": "96 \u00f7 12 = 8 feet.",
+      "explanation": "96 ÷ 12 = 8 feet.",
       "hints": [
-        "Concept Rule: Width = Area \u00f7 length = 96 \u00f7 12.",
-        "Strategy Clue: Use the area formula: multiply the length (base) by the width (height).",
-        "Gizmo's Step: 96 \u00f7 12 = 8 feet. Completing this step confirms the result is 8."
+        "Concept Rule: Width = Area ÷ length = 96 ÷ 12.",
+        "Strategy Clue: 96 ÷ 12 = 8 feet.",
+        "Gizmo's Step: 96 ÷ 12 = 8 feet. Completing this step confirms the result is 8."
       ]
     },
     {
@@ -5043,11 +5043,11 @@
           "correct": false
         }
       ],
-      "explanation": "Side = 36/4 = 9. Area = 9 \u00d7 9 = 81 sq m.",
+      "explanation": "Side = 36/4 = 9. Area = 9 × 9 = 81 sq m.",
       "hints": [
-        "Concept Rule: Step 1: Side = 36 \u00f7 4 = 9 m. Step 2: Area = side \u00d7 side = 9 \u00d7 9 = 81 sq m.",
-        "Strategy Clue: Use the area formula: multiply the length (base) by the width (height).",
-        "Gizmo's Step: Side = 36/4 = 9. Area = 9 \u00d7 9 = 81 sq m. This verifies that 81 square meters is correct."
+        "Concept Rule: Step 1: Side = 36 ÷ 4 = 9 m. Step 2: Area = side × side = 9 × 9 = 81 sq m.",
+        "Strategy Clue: 81 sq m.",
+        "Gizmo's Step: Side = 36/4 = 9. Area = 9 × 9 = 81 sq m. This verifies that 81 square meters is correct."
       ]
     },
     {
@@ -5068,8 +5068,8 @@
       "options": null,
       "explanation": "20 - 14 = 6 cm.",
       "hints": [
-        "Concept Rule: Perimeter = 2 \u00d7 (length + width) = 40. Length + width = 20. Width = 20 - 14.",
-        "Strategy Clue: Add the lengths of all outer boundary sides together to find the perimeter.",
+        "Concept Rule: Perimeter = 2 × (length + width) = 40. Length + width = 20. Width = 20 - 14 = 6.",
+        "Strategy Clue: 6 cm.",
         "Gizmo's Step: Working through the calculation gives 6, verifying the solution step by step."
       ]
     },
@@ -5089,10 +5089,10 @@
         "400 sq m"
       ],
       "options": null,
-      "explanation": "25 \u00d7 16 = 400 sq m.",
+      "explanation": "25 × 16 = 400 sq m.",
       "hints": [
-        "Concept Rule: Area = 25 \u00d7 16. (25 \u00d7 4 \u00d7 4 = 100 \u00d7 4.",
-        "Strategy Clue: Use the area formula: multiply the length (base) by the width (height).",
+        "Concept Rule: Area = 25 × 16. (25 × 4 × 4 = 100 × 4 = 400).",
+        "Strategy Clue: 400 sq m.",
         "Gizmo's Step: Working through the calculation gives 400, verifying the solution step by step."
       ]
     },
@@ -5128,11 +5128,11 @@
           "correct": true
         }
       ],
-      "explanation": "8 \u00d7 4 = 32 and 2(8 + 4) = 24.",
+      "explanation": "8 × 4 = 32 and 2(8 + 4) = 24.",
       "hints": [
-        "Concept Rule: Check: P = 2 \u00d7 (8 + 4) = 24. Area = 8 \u00d7 4 = 32.",
-        "Strategy Clue: Use the area formula: multiply the length (base) by the width (height).",
-        "Gizmo's Step: 8 \u00d7 4 = 32 and 2(8 + 4) = 24. This verifies that Length 8 units, Width 4 units is correct."
+        "Concept Rule: Check: P = 2 × (8 + 4) = 24. Area = 8 × 4 = 32.",
+        "Strategy Clue: 8 by 4.",
+        "Gizmo's Step: 8 × 4 = 32 and 2(8 + 4) = 24. This verifies that Length 8 units, Width 4 units is correct."
       ]
     },
     {
@@ -5153,8 +5153,8 @@
       "options": null,
       "explanation": "Length = 9. P = 2(9 + 5) = 28 cm.",
       "hints": [
-        "Concept Rule: Length = 45 \u00f7 5 = 9 cm. Perimeter = 2 \u00d7 (9 + 5) = 2 \u00d7 14.",
-        "Strategy Clue: Use the area formula: multiply the length (base) by the width (height).",
+        "Concept Rule: Length = 45 ÷ 5 = 9 cm. Perimeter = 2 × (9 + 5) = 2 × 14 = 28 cm.",
+        "Strategy Clue: 28 cm.",
         "Gizmo's Step: Length = 9. P = 2(9 + 5) = 28 cm."
       ]
     },
@@ -5193,7 +5193,7 @@
       "explanation": "4 + 2 = 6 insects.",
       "hints": [
         "Concept Rule: Add the number of data points (X marks): 4 + 2 = 6.",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
+        "Strategy Clue: 6 insects.",
         "Gizmo's Step: Working through the calculation gives 6 insects, verifying the solution step by step."
       ]
     },
@@ -5231,8 +5231,8 @@
       ],
       "explanation": "5/8 - 3/8 = 2/8 inch.",
       "hints": [
-        "Concept Rule: Subtract lengths: 5/8 - 3/8.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: Subtract lengths: 5/8 - 3/8 = 2/8 inch.",
+        "Strategy Clue: 2/8 inch (or 1/4 inch).",
         "Gizmo's Step: 5/8 - 3/8 = 2/8 inch."
       ]
     },
@@ -5252,10 +5252,10 @@
         "1 inch"
       ],
       "options": null,
-      "explanation": "4 \u00d7 1/4 = 1 inch.",
+      "explanation": "4 × 1/4 = 1 inch.",
       "hints": [
-        "Concept Rule: 4 \u00d7 (1/4) = 4/4 = 1 whole inch.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: 4 × (1/4) = 4/4 = 1 whole inch.",
+        "Strategy Clue: 1 inch.",
         "Gizmo's Step: Working through the calculation gives 1, verifying the solution step by step."
       ]
     },
@@ -5294,7 +5294,7 @@
       "explanation": "2/8 = 1/4.",
       "hints": [
         "Concept Rule: Simplify 2/8: divide numerator and denominator by 2 -> 1/4.",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
+        "Strategy Clue: 1/4.",
         "Gizmo's Step: Working through the calculation gives 1/4, verifying the solution step by step."
       ]
     },
@@ -5313,11 +5313,11 @@
         "3"
       ],
       "options": null,
-      "explanation": "3 \u00d7 1/2 = 3/2, numerator is 3.",
+      "explanation": "3 × 1/2 = 3/2, numerator is 3.",
       "hints": [
-        "Concept Rule: 3 \u00d7 1/2 = 3/2. The numerator is 3.",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
-        "Gizmo's Step: 3 \u00d7 1/2 = 3/2, numerator is 3."
+        "Concept Rule: 3 × 1/2 = 3/2. The numerator is 3.",
+        "Strategy Clue: 3.",
+        "Gizmo's Step: 3 × 1/2 = 3/2, numerator is 3."
       ]
     },
     {
@@ -5354,8 +5354,8 @@
       ],
       "explanation": "6/8 - 1/8 = 5/8 inch.",
       "hints": [
-        "Concept Rule: Range = maximum - minimum: 6/8 - 1/8.",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
+        "Concept Rule: Range = maximum - minimum: 6/8 - 1/8 = 5/8 inch.",
+        "Strategy Clue: 5/8 inch.",
         "Gizmo's Step: 6/8 - 1/8 = 5/8 inch."
       ]
     },
@@ -5376,8 +5376,8 @@
       "options": null,
       "explanation": "3/4 + 2/4 = 5/4.",
       "hints": [
-        "Concept Rule: Convert 1/2 to 2/4. Add: 3/4 + 2/4.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: Convert 1/2 to 2/4. Add: 3/4 + 2/4 = 5/4.",
+        "Strategy Clue: 5/4, so numerator is 5.",
         "Gizmo's Step: 5/4, so numerator is 5. Completing this step confirms the result is 5."
       ]
     },
@@ -5413,10 +5413,10 @@
           "correct": false
         }
       ],
-      "explanation": "5 \u00d7 1/8 = 5/8 inch.",
+      "explanation": "5 × 1/8 = 5/8 inch.",
       "hints": [
-        "Concept Rule: 5 \u00d7 (1/8) = 5/8 inch.",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
+        "Concept Rule: 5 × (1/8) = 5/8 inch.",
+        "Strategy Clue: 5/8 inch.",
         "Gizmo's Step: Working through the calculation gives 5/8 inch, verifying the solution step by step."
       ]
     },
@@ -5434,14 +5434,14 @@
       "acceptedAnswers": [
         "360",
         "360 degrees",
-        "360\u00b0"
+        "360°"
       ],
       "options": null,
       "explanation": "A full rotation is 360 degrees.",
       "hints": [
         "Concept Rule: A full turn around a circle is 360 degrees.",
-        "Strategy Clue: Apply the coordinate rule corresponding to the angle and direction of rotation about the origin.",
-        "Gizmo's Step: A full rotation is 360 degrees Therefore, 360 is the mathematically correct answer."
+        "Strategy Clue: 360°.",
+        "Gizmo's Step: A full rotation is 360 degrees."
       ]
     },
     {
@@ -5458,13 +5458,13 @@
       "acceptedAnswers": [
         "90",
         "90 degrees",
-        "90\u00b0"
+        "90°"
       ],
       "options": null,
-      "explanation": "A right angle measures 90\u00b0.",
+      "explanation": "A right angle measures 90°.",
       "hints": [
-        "Concept Rule: A right angle is 1/4 of 360\u00b0: 360 \u00f7 4.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: A right angle is 1/4 of 360°: 360 ÷ 4 = 90°.",
+        "Strategy Clue: 90°.",
         "Gizmo's Step: Working through the calculation gives 90, verifying the solution step by step."
       ]
     },
@@ -5477,7 +5477,7 @@
       "standard": "4.MD.C.5",
       "difficulty": 2,
       "type": "multiple-choice",
-      "prompt": "An angle that measures less than 90\u00b0 is called what type of angle?",
+      "prompt": "An angle that measures less than 90° is called what type of angle?",
       "correctAnswer": "Acute angle",
       "acceptedAnswers": [
         "Acute angle"
@@ -5500,11 +5500,11 @@
           "correct": false
         }
       ],
-      "explanation": "An angle less than 90\u00b0 is acute.",
+      "explanation": "An angle less than 90° is acute.",
       "hints": [
-        "Concept Rule: Acute angles are greater than 0\u00b0 and less than 90\u00b0.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
-        "Gizmo's Step: An angle less than 90\u00b0 is acute. This verifies that Acute angle is correct Therefore, Acute angle is the mathematically correct answer."
+        "Concept Rule: Acute angles are greater than 0° and less than 90°.",
+        "Strategy Clue: Acute angle.",
+        "Gizmo's Step: An angle less than 90° is acute. This verifies that Acute angle is correct."
       ]
     },
     {
@@ -5516,7 +5516,7 @@
       "standard": "4.MD.C.5",
       "difficulty": 2,
       "type": "multiple-choice",
-      "prompt": "An angle that measures greater than 90\u00b0 and less than 180\u00b0 is called what?",
+      "prompt": "An angle that measures greater than 90° and less than 180° is called what?",
       "correctAnswer": "Obtuse angle",
       "acceptedAnswers": [
         "Obtuse angle"
@@ -5539,11 +5539,11 @@
           "correct": false
         }
       ],
-      "explanation": "An angle between 90\u00b0 and 180\u00b0 is obtuse.",
+      "explanation": "An angle between 90° and 180° is obtuse.",
       "hints": [
-        "Concept Rule: Obtuse angles are between 90\u00b0 and 180\u00b0.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
-        "Gizmo's Step: An angle between 90\u00b0 and 180\u00b0 is obtuse. This verifies that Obtuse angle is correct Therefore, Obtuse angle is the mathematically correct answer."
+        "Concept Rule: Obtuse angles are between 90° and 180°.",
+        "Strategy Clue: Obtuse angle.",
+        "Gizmo's Step: An angle between 90° and 180° is obtuse. This verifies that Obtuse angle is correct."
       ]
     },
     {
@@ -5560,13 +5560,13 @@
       "acceptedAnswers": [
         "180",
         "180 degrees",
-        "180\u00b0"
+        "180°"
       ],
       "options": null,
-      "explanation": "A straight angle measures 180\u00b0.",
+      "explanation": "A straight angle measures 180°.",
       "hints": [
-        "Concept Rule: A straight angle is half of a full turn: 360 \u00f7 2.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: A straight angle is half of a full turn: 360 ÷ 2 = 180°.",
+        "Strategy Clue: 180°.",
         "Gizmo's Step: Working through the calculation gives 180, verifying the solution step by step."
       ]
     },
@@ -5579,18 +5579,18 @@
       "standard": "4.MD.C.5",
       "difficulty": 3,
       "type": "numeric-response",
-      "prompt": "An angle turns through 1/6 of a circle. How many degrees does it measure? (360 \u00f7 6)",
+      "prompt": "An angle turns through 1/6 of a circle. How many degrees does it measure? (360 ÷ 6)",
       "correctAnswer": "60",
       "acceptedAnswers": [
         "60",
         "60 degrees",
-        "60\u00b0"
+        "60°"
       ],
       "options": null,
-      "explanation": "360 \u00f7 6 = 60\u00b0.",
+      "explanation": "360 ÷ 6 = 60°.",
       "hints": [
-        "Concept Rule: Calculate 360 \u00f7 6 = 60\u00b0.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: Calculate 360 ÷ 6 = 60°.",
+        "Strategy Clue: 60°.",
         "Gizmo's Step: Working through the calculation gives 60, verifying the solution step by step."
       ]
     },
@@ -5604,33 +5604,33 @@
       "difficulty": 3,
       "type": "multiple-choice",
       "prompt": "An angle turns through 3/4 of a circle. How many degrees is that?",
-      "correctAnswer": "270\u00b0",
+      "correctAnswer": "270°",
       "acceptedAnswers": [
-        "270\u00b0"
+        "270°"
       ],
       "options": [
         {
-          "text": "180\u00b0",
+          "text": "180°",
           "correct": false
         },
         {
-          "text": "270\u00b0",
+          "text": "270°",
           "correct": true
         },
         {
-          "text": "90\u00b0",
+          "text": "90°",
           "correct": false
         },
         {
-          "text": "300\u00b0",
+          "text": "300°",
           "correct": false
         }
       ],
-      "explanation": "3/4 \u00d7 360\u00b0 = 270\u00b0.",
+      "explanation": "3/4 × 360° = 270°.",
       "hints": [
-        "Concept Rule: 3 \u00d7 90\u00b0 = 270\u00b0 (or 3/4 \u00d7 360\u00b0 = 270\u00b0).",
-        "Strategy Clue: Set up the fraction operation and simplify the resulting fraction to lowest terms.",
-        "Gizmo's Step: Working through the calculation gives 270\u00b0, verifying the solution step by step."
+        "Concept Rule: 3 × 90° = 270° (or 3/4 × 360° = 270°).",
+        "Strategy Clue: 270°.",
+        "Gizmo's Step: Working through the calculation gives 270°, verifying the solution step by step."
       ]
     },
     {
@@ -5647,13 +5647,13 @@
       "acceptedAnswers": [
         "30",
         "30 degrees",
-        "30\u00b0"
+        "30°"
       ],
       "options": null,
-      "explanation": "360 \u00f7 12 = 30\u00b0.",
+      "explanation": "360 ÷ 12 = 30°.",
       "hints": [
-        "Concept Rule: 360 \u00f7 12 = 30\u00b0.",
-        "Strategy Clue: Follow PEMDAS: evaluate inside the parentheses first, then complete the outside operations.",
+        "Concept Rule: 360 ÷ 12 = 30°.",
+        "Strategy Clue: 30°.",
         "Gizmo's Step: Working through the calculation gives 30, verifying the solution step by step."
       ]
     },
@@ -5666,18 +5666,18 @@
       "standard": "4.MD.C.6 / 4.MD.C.7",
       "difficulty": 1,
       "type": "numeric-response",
-      "prompt": "Two adjacent angles form a right angle (90\u00b0). If one angle measures 35\u00b0, what is the measure of the other angle in degrees?",
+      "prompt": "Two adjacent angles form a right angle (90°). If one angle measures 35°, what is the measure of the other angle in degrees?",
       "correctAnswer": "55",
       "acceptedAnswers": [
         "55",
-        "55\u00b0",
+        "55°",
         "55 degrees"
       ],
       "options": null,
-      "explanation": "90\u00b0 - 35\u00b0 = 55\u00b0.",
+      "explanation": "90° - 35° = 55°.",
       "hints": [
-        "Concept Rule: Complementary angles sum to 90\u00b0: 90 - 35.",
-        "Strategy Clue: Calculate 90 - 35 to find the final value.",
+        "Concept Rule: Complementary angles sum to 90°: 90 - 35 = 55°.",
+        "Strategy Clue: 90 - 35 = 55°.",
         "Gizmo's Step: Working through the calculation gives 55, verifying the solution step by step."
       ]
     },
@@ -5690,19 +5690,19 @@
       "standard": "4.MD.C.6 / 4.MD.C.7",
       "difficulty": 1,
       "type": "numeric-response",
-      "prompt": "Two adjacent angles form a straight line (180\u00b0). If one angle is 110\u00b0, what is the other angle in degrees?",
+      "prompt": "Two adjacent angles form a straight line (180°). If one angle is 110°, what is the other angle in degrees?",
       "correctAnswer": "70",
       "acceptedAnswers": [
         "70",
-        "70\u00b0",
+        "70°",
         "70 degrees"
       ],
       "options": null,
-      "explanation": "180\u00b0 - 110\u00b0 = 70\u00b0.",
+      "explanation": "180° - 110° = 70°.",
       "hints": [
-        "Concept Rule: Supplementary angles sum to 180\u00b0: 180 - 110.",
-        "Strategy Clue: Calculate 180 - 110 to find the final value.",
-        "Gizmo's Step: 180 - 110 = 70\u00b0. Completing this step confirms the result is 70."
+        "Concept Rule: Supplementary angles sum to 180°: 180 - 110 = 70°.",
+        "Strategy Clue: 180 - 110 = 70°.",
+        "Gizmo's Step: 180 - 110 = 70°. Completing this step confirms the result is 70."
       ]
     },
     {
@@ -5714,18 +5714,18 @@
       "standard": "4.MD.C.6 / 4.MD.C.7",
       "difficulty": 2,
       "type": "numeric-response",
-      "prompt": "An angle is decomposed into two smaller angles measuring 42\u00b0 and 38\u00b0. What is the total angle measure in degrees?",
+      "prompt": "An angle is decomposed into two smaller angles measuring 42° and 38°. What is the total angle measure in degrees?",
       "correctAnswer": "80",
       "acceptedAnswers": [
         "80",
-        "80\u00b0",
+        "80°",
         "80 degrees"
       ],
       "options": null,
-      "explanation": "42\u00b0 + 38\u00b0 = 80\u00b0.",
+      "explanation": "42° + 38° = 80°.",
       "hints": [
-        "Concept Rule: Angle addition postulate: Add the parts together: 42 + 38.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: Angle addition postulate: Add the parts together: 42 + 38 = 80°.",
+        "Strategy Clue: 80°.",
         "Gizmo's Step: Working through the calculation gives 80, verifying the solution step by step."
       ]
     },
@@ -5738,34 +5738,34 @@
       "standard": "4.MD.C.6 / 4.MD.C.7",
       "difficulty": 2,
       "type": "multiple-choice",
-      "prompt": "A 125\u00b0 angle is split into two angles. One angle is 50\u00b0. What is the unknown angle?",
-      "correctAnswer": "75\u00b0",
+      "prompt": "A 125° angle is split into two angles. One angle is 50°. What is the unknown angle?",
+      "correctAnswer": "75°",
       "acceptedAnswers": [
-        "75\u00b0"
+        "75°"
       ],
       "options": [
         {
-          "text": "65\u00b0",
+          "text": "65°",
           "correct": false
         },
         {
-          "text": "85\u00b0",
+          "text": "85°",
           "correct": false
         },
         {
-          "text": "175\u00b0",
+          "text": "175°",
           "correct": false
         },
         {
-          "text": "75\u00b0",
+          "text": "75°",
           "correct": true
         }
       ],
-      "explanation": "125\u00b0 - 50\u00b0 = 75\u00b0.",
+      "explanation": "125° - 50° = 75°.",
       "hints": [
-        "Concept Rule: Subtract known angle from total: 125 - 50.",
-        "Strategy Clue: Divide the total dividend by the divisor using standard division.",
-        "Gizmo's Step: Working through the calculation gives 75\u00b0, verifying the solution step by step."
+        "Concept Rule: Subtract known angle from total: 125 - 50 = 75°.",
+        "Strategy Clue: 75°.",
+        "Gizmo's Step: Working through the calculation gives 75°, verifying the solution step by step."
       ]
     },
     {
@@ -5777,19 +5777,19 @@
       "standard": "4.MD.C.6 / 4.MD.C.7",
       "difficulty": 2,
       "type": "numeric-response",
-      "prompt": "Three angles meet at a point to form a straight line (180\u00b0). Two of the angles are 50\u00b0 and 65\u00b0. What is the third angle in degrees?",
+      "prompt": "Three angles meet at a point to form a straight line (180°). Two of the angles are 50° and 65°. What is the third angle in degrees?",
       "correctAnswer": "65",
       "acceptedAnswers": [
         "65",
-        "65\u00b0",
+        "65°",
         "65 degrees"
       ],
       "options": null,
-      "explanation": "180 - (50 + 65) = 65\u00b0.",
+      "explanation": "180 - (50 + 65) = 65°.",
       "hints": [
-        "Concept Rule: 50 + 65 = 115\u00b0. 180 - 115.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
-        "Gizmo's Step: 180 - (50 + 65) = 65\u00b0."
+        "Concept Rule: 50 + 65 = 115°. 180 - 115 = 65°.",
+        "Strategy Clue: 65°.",
+        "Gizmo's Step: 180 - (50 + 65) = 65°."
       ]
     },
     {
@@ -5826,8 +5826,8 @@
       ],
       "explanation": "A protractor measures angles in degrees.",
       "hints": [
-        "Concept Rule: A protractor has degree markings from 0\u00b0 to 180\u00b0 for measuring angles.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: A protractor has degree markings from 0° to 180° for measuring angles.",
+        "Strategy Clue: Protractor.",
         "Gizmo's Step: Working through the calculation gives Protractor, verifying the solution step by step."
       ]
     },
@@ -5844,14 +5844,14 @@
       "correctAnswer": "30",
       "acceptedAnswers": [
         "30",
-        "30\u00b0",
+        "30°",
         "30 degrees"
       ],
       "options": null,
-      "explanation": "90\u00b0 \u00f7 3 = 30\u00b0.",
+      "explanation": "90° ÷ 3 = 30°.",
       "hints": [
-        "Concept Rule: Apply the foundational mathematical property to set up and solve the problem systematically.",
-        "Strategy Clue: Divide the total dividend by the divisor using standard division.",
+        "Concept Rule: 90 ÷ 3 = 30°.",
+        "Strategy Clue: 30°.",
         "Gizmo's Step: Working through the calculation gives 30, verifying the solution step by step."
       ]
     },
@@ -5864,18 +5864,18 @@
       "standard": "4.MD.C.6 / 4.MD.C.7",
       "difficulty": 3,
       "type": "numeric-response",
-      "prompt": "Two angles form a straight angle. One angle measures 135\u00b0. What is the measure of the second angle in degrees?",
+      "prompt": "Two angles form a straight angle. One angle measures 135°. What is the measure of the second angle in degrees?",
       "correctAnswer": "45",
       "acceptedAnswers": [
         "45",
-        "45\u00b0",
+        "45°",
         "45 degrees"
       ],
       "options": null,
-      "explanation": "180\u00b0 - 135\u00b0 = 45\u00b0.",
+      "explanation": "180° - 135° = 45°.",
       "hints": [
-        "Concept Rule: 180 - 135 = 45\u00b0.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: 180 - 135 = 45°.",
+        "Strategy Clue: 45°.",
         "Gizmo's Step: Working through the calculation gives 45, verifying the solution step by step."
       ]
     },
@@ -5914,7 +5914,7 @@
       "explanation": "Parallel lines never intersect.",
       "hints": [
         "Concept Rule: Parallel lines run side-by-side forever without touching.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: Parallel lines.",
         "Gizmo's Step: Parallel lines. Completing this step confirms the result is Parallel lines."
       ]
     },
@@ -5927,7 +5927,7 @@
       "standard": "4.G.A.1 / 4.G.A.3",
       "difficulty": 1,
       "type": "multiple-choice",
-      "prompt": "Lines that intersect at a 90\u00b0 right angle are called what?",
+      "prompt": "Lines that intersect at a 90° right angle are called what?",
       "correctAnswer": "Perpendicular lines",
       "acceptedAnswers": [
         "Perpendicular lines"
@@ -5950,10 +5950,10 @@
           "correct": false
         }
       ],
-      "explanation": "Perpendicular lines meet at right angles (90\u00b0).",
+      "explanation": "Perpendicular lines meet at right angles (90°).",
       "hints": [
-        "Concept Rule: Perpendicular lines form square 90\u00b0 corners.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: Perpendicular lines form square 90° corners.",
+        "Strategy Clue: Perpendicular lines.",
         "Gizmo's Step: Perpendicular lines. Completing this step confirms the result is Perpendicular lines."
       ]
     },
@@ -5976,7 +5976,7 @@
       "explanation": "A square has 4 lines of symmetry.",
       "hints": [
         "Concept Rule: A square can be folded symmetrically along 2 diagonals and 2 midlines: 4 lines of symmetry.",
-        "Strategy Clue: Identify the quantities given in the problem, set up the required mathematical operation, and compute the result step-by-step.",
+        "Strategy Clue: 4 lines of symmetry.",
         "Gizmo's Step: 4 lines of symmetry. Completing this step confirms the result is 4."
       ]
     },
@@ -6015,7 +6015,7 @@
       "explanation": "A ray has one endpoint and extends infinitely in one direction.",
       "hints": [
         "Concept Rule: A ray has 1 endpoint and extends infinitely in 1 direction.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: Ray.",
         "Gizmo's Step: Working through the calculation gives Ray, verifying the solution step by step."
       ]
     },
@@ -6038,7 +6038,7 @@
       "explanation": "A rectangle has 2 lines of symmetry.",
       "hints": [
         "Concept Rule: A rectangle has 2 lines of symmetry (horizontal and vertical through centers of opposite sides).",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: 2 lines.",
         "Gizmo's Step: Working through the calculation gives 2, verifying the solution step by step."
       ]
     },
@@ -6076,8 +6076,8 @@
       ],
       "explanation": "An equilateral triangle has all 3 sides equal.",
       "hints": [
-        "Concept Rule: Equilateral triangles have 3 equal sides and 3 equal 60\u00b0 angles.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: Equilateral triangles have 3 equal sides and 3 equal 60° angles.",
+        "Strategy Clue: Equilateral triangle.",
         "Gizmo's Step: Equilateral triangle. Completing this step confirms the result is Equilateral triangle."
       ]
     },
@@ -6090,7 +6090,7 @@
       "standard": "4.G.A.1 / 4.G.A.3",
       "difficulty": 3,
       "type": "multiple-choice",
-      "prompt": "A triangle with one 90\u00b0 angle is called a:",
+      "prompt": "A triangle with one 90° angle is called a:",
       "correctAnswer": "Right triangle",
       "acceptedAnswers": [
         "Right triangle"
@@ -6113,11 +6113,11 @@
           "correct": true
         }
       ],
-      "explanation": "A triangle with a 90\u00b0 angle is a right triangle.",
+      "explanation": "A triangle with a 90° angle is a right triangle.",
       "hints": [
         "Concept Rule: A right triangle has exactly one right angle.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
-        "Gizmo's Step: A triangle with a 90\u00b0 angle is a right triangle. This verifies that Right triangle is correct Therefore, Right triangle is the mathematically correct answer."
+        "Strategy Clue: Right triangle.",
+        "Gizmo's Step: A triangle with a 90° angle is a right triangle. This verifies that Right triangle is correct."
       ]
     },
     {
@@ -6139,7 +6139,7 @@
       "explanation": "An equilateral triangle has 3 lines of symmetry.",
       "hints": [
         "Concept Rule: An equilateral triangle has 3 lines of symmetry (one through each vertex).",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: 3.",
         "Gizmo's Step: Working through the calculation gives 3, verifying the solution step by step."
       ]
     },
@@ -6178,7 +6178,7 @@
       "explanation": "A trapezoid has one pair of parallel sides.",
       "hints": [
         "Concept Rule: By the standard definition, a trapezoid has exactly one pair of parallel opposite sides.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: Trapezoid.",
         "Gizmo's Step: Working through the calculation gives Trapezoid, verifying the solution step by step."
       ]
     },
@@ -6191,7 +6191,7 @@
       "standard": "4.G.A.2",
       "difficulty": 1,
       "type": "multiple-choice",
-      "prompt": "Which quadrilateral has 4 equal sides but not necessarily 90\u00b0 angles?",
+      "prompt": "Which quadrilateral has 4 equal sides but not necessarily 90° angles?",
       "correctAnswer": "Rhombus",
       "acceptedAnswers": [
         "Rhombus"
@@ -6217,7 +6217,7 @@
       "explanation": "A rhombus has 4 equal sides.",
       "hints": [
         "Concept Rule: A rhombus is an equilateral parallelogram.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Strategy Clue: Rhombus.",
         "Gizmo's Step: Working through the calculation gives Rhombus, verifying the solution step by step."
       ]
     },
@@ -6241,7 +6241,7 @@
       "explanation": "$15.00 + $1.20 = $16.20.",
       "hints": [
         "Concept Rule: Add price and tax: $15.00 + $1.20 = $16.20.",
-        "Strategy Clue: Line up the decimal points vertically before adding or subtracting place values.",
+        "Strategy Clue: $16.20.",
         "Gizmo's Step: $15.00 + $1.20 = $16.20."
       ]
     },
@@ -6279,8 +6279,8 @@
       ],
       "explanation": "$40 - $15 = $25.",
       "hints": [
-        "Concept Rule: Subtract discount from original price: $40 - $15.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: Subtract discount from original price: $40 - $15 = $25.",
+        "Strategy Clue: $25.",
         "Gizmo's Step: Working through the calculation gives $25, verifying the solution step by step."
       ]
     },
@@ -6304,7 +6304,7 @@
       "explanation": "$20.00 - $13.50 = $6.50.",
       "hints": [
         "Concept Rule: Subtract: $20.00 - $13.50 = $6.50.",
-        "Strategy Clue: Line up the decimal points vertically before adding or subtracting place values.",
+        "Strategy Clue: $6.50.",
         "Gizmo's Step: $20.00 - $13.50 = $6.50."
       ]
     },
@@ -6343,8 +6343,8 @@
       "explanation": "A square is both a rectangle and a rhombus.",
       "hints": [
         "Concept Rule: A square has 4 right angles (rectangle) AND 4 equal sides (rhombus).",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
-        "Gizmo's Step: A square is both a rectangle and a rhombus. This verifies that Square is correct Therefore, Square is the mathematically correct answer."
+        "Strategy Clue: Square.",
+        "Gizmo's Step: A square is both a rectangle and a rhombus. This verifies that Square is correct."
       ]
     },
     {
@@ -6363,10 +6363,10 @@
         "$60"
       ],
       "options": null,
-      "explanation": "5 \u00d7 12 = $60.",
+      "explanation": "5 × 12 = $60.",
       "hints": [
-        "Concept Rule: Multiply savings per week by number of weeks: 5 \u00d7 12.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
+        "Concept Rule: Multiply savings per week by number of weeks: 5 × 12 = 60.",
+        "Strategy Clue: $60.",
         "Gizmo's Step: Working through the calculation gives 60, verifying the solution step by step."
       ]
     },
@@ -6405,8 +6405,8 @@
       "explanation": "Money earned is income.",
       "hints": [
         "Concept Rule: Income is money received or earned.",
-        "Strategy Clue: Set up the appropriate mathematical operation based on the given quantities and solve step-by-step.",
-        "Gizmo's Step: Money earned is income. This verifies that Income is correct Therefore, Income is the mathematically correct answer."
+        "Strategy Clue: Income.",
+        "Gizmo's Step: Money earned is income. This verifies that Income is correct."
       ]
     }
   ]

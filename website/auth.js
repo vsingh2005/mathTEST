@@ -608,7 +608,7 @@ class AuthenticationManager {
             <span class="w-6 h-6 rounded-full bg-[#287F78] text-white flex items-center justify-center font-black text-xs">
               ${initial}
             </span>
-            <span class="font-extrabold text-[#253238]">${cleanName}</span>
+            <span class="font-extrabold text-[#253238] max-w-[120px] truncate" title="${cleanName}">${cleanName}</span>
             <div class="h-3 w-px bg-slate-300 mx-0.5"></div>
             <button onclick="AuthManager.renderHistoryModal()" class="text-[11px] font-bold text-sky-600 hover:underline">History</button>
             <button onclick="AuthManager.logoutUser()" class="text-[11px] font-bold text-rose-500 hover:underline">Logout</button>

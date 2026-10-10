@@ -1,1 +1,5 @@
 wordpress/site-debugging/
+scratch/
+scratch_*.py
+__pycache__/
+*.pyc

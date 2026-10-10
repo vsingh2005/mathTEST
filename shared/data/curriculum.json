@@ -281,7 +281,7 @@
       "unit": "Unit 11: Shape Classes & Partitioning",
       "title": "Shape Classes & Financial Literacy",
       "description": "Classify shapes by attributes (e.g., quadrilaterals). Partition shapes into parts with equal areas. Understand money, coins, and bills.",
-      "standard": "3.G.A.1 / 3.G.A.2 / 3.MD.D.8 (applied)",
+      "standard": "3.G.A.1 / 3.G.A.2",
       "questionCount": 8
     },
     {
@@ -312,9 +312,9 @@
       "grade": 4,
       "domain": "Operations & Algebraic Thinking",
       "unit": "Unit 2: Factors, Multiples",
-      "title": "Patterns",
-      "description": "Factors & Multiples",
-      "standard": "Find all factor pairs for a whole number in the range 1--100. Recognize multiples of numbers and define prime vs.\\ composite numbers.",
+      "title": "Factors & Multiples",
+      "description": "Find all factor pairs for a whole number in the range 1-100; determine whether a number is a multiple or prime/composite.",
+      "standard": "4.OA.B.4",
       "questionCount": 8
     },
     {
@@ -323,9 +323,9 @@
       "grade": 4,
       "domain": "Operations & Algebraic Thinking",
       "unit": "Unit 2: Factors, Multiples",
-      "title": "Patterns",
-      "description": "Generating Patterns",
-      "standard": "Generate a number or shape pattern that follows a given rule (e.g., add 3). Analyze patterns to identify informal features.",
+      "title": "Generating Patterns",
+      "description": "Generate a number or shape pattern that follows a given rule, and identify apparent features of the pattern.",
+      "standard": "4.OA.C.5",
       "questionCount": 8
     },
     {
@@ -334,9 +334,9 @@
       "grade": 4,
       "domain": "Operations & Algebraic Thinking",
       "unit": "Unit 2: Factors, Multiples",
-      "title": "Patterns",
-      "description": "Equations & Unknowns",
-      "standard": "Solve equations with variables for unknown numbers in multiplication, division, addition, and subtraction word contexts.",
+      "title": "Equations & Unknowns",
+      "description": "Solve multi-step word problems with whole numbers using equations with a variable standing for the unknown quantity.",
+      "standard": "4.OA.A.3",
       "questionCount": 8
     },
     {
@@ -433,9 +433,9 @@
       "grade": 4,
       "domain": "Fractions & Decimals",
       "unit": "Unit 6: Fraction Arithmetic",
-      "title": "Decomposing",
-      "description": "Word Problems",
-      "standard": "Decompose a fraction into a sum of fractions with the same denominator in more than one way. Solve word problems with fraction addition/subtraction.",
+      "title": "Decomposing Fractions & Word Problems",
+      "description": "Decompose a fraction into a sum of fractions with the same denominator in more than one way, and solve addition/subtraction word problems.",
+      "standard": "4.NF.B.3c-d",
       "questionCount": 8
     },
     {
@@ -543,9 +543,9 @@
       "grade": 4,
       "domain": "Geometry & Financial Literacy",
       "unit": "Unit 10: Shape Lines",
-      "title": "Angles",
-      "description": "Lines, Angles & Shape Symmetry",
-      "standard": "Draw points, lines, line segments, rays, angles (right, acute, obtuse), and perpendicular and parallel lines. Identify line-symmetric shapes.",
+      "title": "Lines, Angles & Shape Symmetry",
+      "description": "Draw and identify points, lines, line segments, rays, angles, perpendicular and parallel lines, and recognize lines of symmetry.",
+      "standard": "4.G.A.1 / 4.G.A.3",
       "questionCount": 8
     },
     {
@@ -554,9 +554,9 @@
       "grade": 4,
       "domain": "Geometry & Financial Literacy",
       "unit": "Unit 10: Shape Lines",
-      "title": "Angles",
-      "description": "Classifying Shapes & Financial Literacy",
-      "standard": "Classify two-dimensional figures based on the presence or absence of parallel or perpendicular lines. Solve money problems including tax and change.",
+      "title": "Classifying Shapes & Financial Literacy",
+      "description": "Classify two-dimensional figures based on parallel or perpendicular lines and angle types, and apply math to practical situations.",
+      "standard": "4.G.A.2",
       "questionCount": 8
     },
     {
@@ -687,8 +687,8 @@
       "domain": "Fractions",
       "unit": "Unit 5: Multiplication & Division",
       "title": "Multiplying Fractions",
-      "description": "Mixed Numbers",
-      "standard": "Multiply fractions or mixed numbers. Find the area of a rectangle with fractional side lengths. Interpret products as scaling.",
+      "description": "Apply and extend previous understandings of multiplication to multiply a fraction or whole number by a fraction.",
+      "standard": "5.NF.B.4 / 5.NF.B.5",
       "questionCount": 8
     },
     {
@@ -840,9 +840,9 @@
       "grade": 6,
       "domain": "Ratios, Rates",
       "unit": "Proportions",
-      "title": "Unit 1: Ratios",
-      "description": "Rates",
-      "standard": "Introduction to Ratios",
+      "title": "Introduction to Ratios",
+      "description": "Understand the concept of a ratio and use ratio language to describe a relationship between two quantities.",
+      "standard": "6.RP.A.1",
       "questionCount": 8
     },
     {
@@ -851,9 +851,9 @@
       "grade": 6,
       "domain": "Ratios, Rates",
       "unit": "Proportions",
-      "title": "Unit 1: Ratios",
-      "description": "Rates",
-      "standard": "Unit Rates",
+      "title": "Unit Rates",
+      "description": "Understand unit rate a/b associated with a ratio a:b and solve real-world unit rate problems.",
+      "standard": "6.RP.A.2",
       "questionCount": 8
     },
     {
@@ -862,9 +862,9 @@
       "grade": 6,
       "domain": "Ratios, Rates",
       "unit": "Proportions",
-      "title": "Unit 1: Ratios",
-      "description": "Rates",
-      "standard": "Equivalent Ratios",
+      "title": "Equivalent Ratios & Ratio Tables",
+      "description": "Find equivalent ratios using ratio tables, tape diagrams, and double number line diagrams.",
+      "standard": "6.RP.A.3a",
       "questionCount": 8
     },
     {
@@ -873,9 +873,9 @@
       "grade": 6,
       "domain": "Ratios, Rates",
       "unit": "Proportions",
-      "title": "Unit 2: Percents",
-      "description": "Proportions",
-      "standard": "Percents as Rates per 100",
+      "title": "Percents as Rates per 100",
+      "description": "Find a percent of a quantity as a rate per 100 and solve problems involving parts, wholes, and percents.",
+      "standard": "6.RP.A.3c",
       "questionCount": 8
     },
     {
@@ -884,9 +884,9 @@
       "grade": 6,
       "domain": "Ratios, Rates",
       "unit": "Proportions",
-      "title": "Unit 2: Percents",
-      "description": "Proportions",
-      "standard": "Converting Measurement Units",
+      "title": "Converting Measurement Units",
+      "description": "Use ratio reasoning to convert measurement units across customary and metric systems.",
+      "standard": "6.RP.A.3d",
       "questionCount": 8
     },
     {
@@ -895,9 +895,9 @@
       "grade": 6,
       "domain": "The Number System",
       "unit": "Fractions",
-      "title": "Unit 3: Fractions",
-      "description": "Decimals",
-      "standard": "Dividing Fractions by Fractions",
+      "title": "Dividing Fractions by Fractions",
+      "description": "Interpret and compute quotients of fractions, and solve word problems involving division of fractions by fractions.",
+      "standard": "6.NS.A.1",
       "questionCount": 8
     },
     {
@@ -906,9 +906,9 @@
       "grade": 6,
       "domain": "The Number System",
       "unit": "Fractions",
-      "title": "Unit 3: Fractions",
-      "description": "Decimals",
-      "standard": "Multi-Digit Decimals",
+      "title": "Multi-Digit Decimals & Operations",
+      "description": "Fluently divide multi-digit numbers using standard algorithms, and perform operations on decimals.",
+      "standard": "6.NS.B.2 / 6.NS.B.3",
       "questionCount": 8
     },
     {
@@ -917,9 +917,9 @@
       "grade": 6,
       "domain": "The Number System",
       "unit": "Fractions",
-      "title": "Unit 4: Rational Numbers",
-      "description": "Positive",
-      "standard": "Negative Numbers",
+      "title": "Greatest Common Factor & Least Common Multiple",
+      "description": "Find greatest common factors up to 100 and least common multiples up to 12 using prime factorization.",
+      "standard": "6.NS.B.4",
       "questionCount": 8
     },
     {
@@ -928,9 +928,9 @@
       "grade": 6,
       "domain": "The Number System",
       "unit": "Fractions",
-      "title": "Unit 4: Rational Numbers",
-      "description": "Number Lines",
-      "standard": "Coordinate Plane",
+      "title": "Negative Numbers & Number Line",
+      "description": "Understand positive and negative integers to describe real-world quantities, and graph on number lines.",
+      "standard": "6.NS.C.5 / 6.NS.C.6",
       "questionCount": 8
     },
     {
@@ -939,9 +939,9 @@
       "grade": 6,
       "domain": "The Number System",
       "unit": "Fractions",
-      "title": "Unit 4: Rational Numbers",
-      "description": "Ordering",
-      "standard": "Absolute Value",
+      "title": "Absolute Value & Ordering",
+      "description": "Interpret absolute value as magnitude and distance from zero, and distinguish comparison from absolute value.",
+      "standard": "6.NS.C.7",
       "questionCount": 8
     },
     {
@@ -950,9 +950,9 @@
       "grade": 6,
       "domain": "Expressions",
       "unit": "Intro Algebra",
-      "title": "Unit 5: Algebraic Expressions",
-      "description": "Numerical Expressions",
-      "standard": "Exponents",
+      "title": "Exponents & Numerical Expressions",
+      "description": "Write and evaluate numerical expressions involving whole-number exponents.",
+      "standard": "6.EE.A.1",
       "questionCount": 8
     },
     {
@@ -961,9 +961,9 @@
       "grade": 6,
       "domain": "Expressions",
       "unit": "Intro Algebra",
-      "title": "Unit 5: Algebraic Expressions",
-      "description": "Writing",
-      "standard": "Evaluating Algebraic Expressions",
+      "title": "Evaluating Algebraic Expressions",
+      "description": "Evaluate algebraic expressions at specific values of their variables using the order of operations.",
+      "standard": "6.EE.A.2",
       "questionCount": 8
     },
     {
@@ -972,9 +972,9 @@
       "grade": 6,
       "domain": "Expressions",
       "unit": "Intro Algebra",
-      "title": "Unit 5: Algebraic Expressions",
-      "description": "Equivalent Expressions",
-      "standard": "Properties",
+      "title": "Properties & Equivalent Expressions",
+      "description": "Apply properties of operations such as the distributive property to generate equivalent expressions.",
+      "standard": "6.EE.A.3 / 6.EE.A.4",
       "questionCount": 8
     },
     {
@@ -983,9 +983,9 @@
       "grade": 6,
       "domain": "Expressions",
       "unit": "Intro Algebra",
-      "title": "Unit 6: Equations",
-      "description": "Inequalities",
-      "standard": "Solving One-Variable Equations",
+      "title": "Solving One-Variable Equations",
+      "description": "Solve one-variable linear equations using inverse operations and check solutions for reasonableness.",
+      "standard": "6.EE.B.5 / 6.EE.B.7",
       "questionCount": 8
     },
     {
@@ -994,9 +994,9 @@
       "grade": 6,
       "domain": "Expressions",
       "unit": "Intro Algebra",
-      "title": "Unit 6: Equations",
-      "description": "Inequalities",
-      "standard": "Inequalities",
+      "title": "Writing & Graphing Inequalities",
+      "description": "Write inequalities of the form x > c or x < c to represent constraints, and graph solutions on number lines.",
+      "standard": "6.EE.B.8",
       "questionCount": 8
     },
     {
@@ -1005,9 +1005,9 @@
       "grade": 6,
       "domain": "Geometry",
       "unit": "Measurement",
-      "title": "Unit 7: Area",
-      "description": "Polygons",
-      "standard": "Area of Triangles",
+      "title": "Area of Triangles & Quadrilaterals",
+      "description": "Calculate the area of right triangles, acute/obtuse triangles, and special quadrilaterals.",
+      "standard": "6.G.A.1",
       "questionCount": 8
     },
     {
@@ -1016,9 +1016,9 @@
       "grade": 6,
       "domain": "Geometry",
       "unit": "Measurement",
-      "title": "Unit 7: Area",
-      "description": "Polygons",
-      "standard": "Area of Irregular Polygons",
+      "title": "Area of Irregular Polygons",
+      "description": "Calculate area of irregular polygons by decomposing into triangles and rectangles.",
+      "standard": "6.G.A.1",
       "questionCount": 8
     },
     {
@@ -1027,9 +1027,9 @@
       "grade": 6,
       "domain": "Geometry",
       "unit": "Measurement",
-      "title": "Unit 8: Surface Area",
-      "description": "Volume",
-      "standard": "Volume of Rectangular Prisms",
+      "title": "Volume of Rectangular Prisms with Fractional Edges",
+      "description": "Find volume of rectangular prisms with fractional edge lengths using unit cube packing and V = lwh.",
+      "standard": "6.G.A.2",
       "questionCount": 8
     },
     {
@@ -1038,9 +1038,9 @@
       "grade": 6,
       "domain": "Geometry",
       "unit": "Measurement",
-      "title": "Unit 8: Surface Area",
-      "description": "Volume",
-      "standard": "Nets",
+      "title": "Surface Area & Nets",
+      "description": "Construct two-dimensional nets and calculate total surface area of prisms and pyramids.",
+      "standard": "6.G.A.4",
       "questionCount": 8
     },
     {
@@ -1049,9 +1049,9 @@
       "grade": 6,
       "domain": "Geometry",
       "unit": "Measurement",
-      "title": "Unit 8: Surface Area",
-      "description": "Volume",
-      "standard": "Coordinate Geometry",
+      "title": "Polygons in Coordinate Plane",
+      "description": "Plot polygons in the coordinate plane given coordinates and determine perimeter and side lengths.",
+      "standard": "6.G.A.3",
       "questionCount": 8
     },
     {
@@ -1060,9 +1060,9 @@
       "grade": 6,
       "domain": "Statistics, Data",
       "unit": "Money",
-      "title": "Unit 9: Statistics",
-      "description": "Data",
-      "standard": "Statistical Questions",
+      "title": "Statistical Questions & Variability",
+      "description": "Recognize statistical questions and describe data distributions by center, spread, and overall shape.",
+      "standard": "6.SP.A.1 / 6.SP.A.2",
       "questionCount": 8
     },
     {
@@ -1071,9 +1071,9 @@
       "grade": 6,
       "domain": "Statistics, Data",
       "unit": "Money",
-      "title": "Unit 9: Statistics",
-      "description": "Data",
-      "standard": "Measures of Center: Mean, Median",
+      "title": "Measures of Center: Mean, Median",
+      "description": "Calculate and interpret measures of center including mean and median in real-world contexts.",
+      "standard": "6.SP.B.5c",
       "questionCount": 8
     },
     {
@@ -1082,9 +1082,9 @@
       "grade": 6,
       "domain": "Statistics, Data",
       "unit": "Money",
-      "title": "Unit 9: Statistics",
-      "description": "Data",
-      "standard": "Displaying Data: Histograms",
+      "title": "Displaying Data: Histograms & Box Plots",
+      "description": "Display numerical data in plots on a number line, including dot plots, histograms, and box plots.",
+      "standard": "6.SP.B.4",
       "questionCount": 8
     },
     {
@@ -1093,9 +1093,9 @@
       "grade": 6,
       "domain": "Statistics, Data",
       "unit": "Money",
-      "title": "Unit 10: Financial Literacy",
-      "description": "Money",
-      "standard": "Managing Money: Budgets, Percents",
+      "title": "Financial Literacy: Managing Money",
+      "description": "Apply rates, ratios, and percentages to personal finance, budgeting, and unit price calculations.",
+      "standard": "6.RP / practical",
       "questionCount": 8
     },
     {
@@ -1104,64 +1104,64 @@
       "grade": 6,
       "domain": "Statistics, Data",
       "unit": "Money",
-      "title": "Unit 10: Financial Literacy",
-      "description": "Money",
-      "standard": "Cumulative Word Problems",
+      "title": "Cumulative Word Problems",
+      "description": "Solve multi-step cumulative review word problems synthesizing all Grade 6 mathematical standards.",
+      "standard": "6.MP",
       "questionCount": 8
     },
     {
       "lessonNumber": 1,
       "lessonId": "G7_L01",
       "grade": 7,
-      "domain": "Ratios",
+      "domain": "Ratios & Proportional Relationships",
       "unit": "Proportional Relationships",
-      "title": "Unit 1: Rates",
-      "description": "Proportions",
-      "standard": "Unit Rates with Fractions",
+      "title": "Unit Rates with Fractions",
+      "description": "Compute unit rates associated with ratios of fractions, including quantities measured in like or different units.",
+      "standard": "7.RP.A.1",
       "questionCount": 8
     },
     {
       "lessonNumber": 2,
       "lessonId": "G7_L02",
       "grade": 7,
-      "domain": "Ratios",
+      "domain": "Ratios & Proportional Relationships",
       "unit": "Proportional Relationships",
-      "title": "Unit 1: Rates",
-      "description": "Proportions",
-      "standard": "Proportional Relationships",
+      "title": "Proportional Relationships",
+      "description": "Decide whether two quantities are in a proportional relationship by testing equivalent ratios in tables and graphs.",
+      "standard": "7.RP.A.2a-b",
       "questionCount": 8
     },
     {
       "lessonNumber": 3,
       "lessonId": "G7_L03",
       "grade": 7,
-      "domain": "Ratios",
+      "domain": "Ratios & Proportional Relationships",
       "unit": "Proportional Relationships",
-      "title": "Unit 1: Rates",
-      "description": "Proportions",
-      "standard": "Equations of Proportional Relationships",
+      "title": "Equations of Proportional Relationships",
+      "description": "Identify the constant of proportionality in tables, graphs, equations, and diagrams, and write equations y = kx.",
+      "standard": "7.RP.A.2c-d",
       "questionCount": 8
     },
     {
       "lessonNumber": 4,
       "lessonId": "G7_L04",
       "grade": 7,
-      "domain": "Ratios",
+      "domain": "Ratios & Proportional Relationships",
       "unit": "Proportional Relationships",
-      "title": "Unit 2: Percents",
-      "description": "Applications",
-      "standard": "Percents: Increase, Decrease",
+      "title": "Percents: Increase, Decrease & Percent Change",
+      "description": "Use proportional relationships to solve multi-step ratio and percent problems involving markups and discounts.",
+      "standard": "7.RP.A.3",
       "questionCount": 8
     },
     {
       "lessonNumber": 5,
       "lessonId": "G7_L05",
       "grade": 7,
-      "domain": "Ratios",
+      "domain": "Ratios & Proportional Relationships",
       "unit": "Proportional Relationships",
-      "title": "Unit 2: Percents",
-      "description": "Applications",
-      "standard": "Financial Literacy: Tax, Tip",
+      "title": "Financial Literacy: Tax, Tip, Commission, Simple Interest",
+      "description": "Solve multi-step consumer math problems including sales tax, gratuity, commissions, fees, and simple interest.",
+      "standard": "7.RP.A.3",
       "questionCount": 8
     },
     {
@@ -1170,9 +1170,9 @@
       "grade": 7,
       "domain": "The Number System",
       "unit": "Unit 3: Rational Number Operations",
-      "title": "Adding",
-      "description": "Subtracting Rational Numbers",
-      "standard": "Apply and extend understanding of addition and subtraction to rational numbers. Represent on a number line; interpret sums and differences in real-world contexts (temperature, elevation, debt).",
+      "title": "Adding & Subtracting Rational Numbers",
+      "description": "Apply and extend addition and subtraction to rational numbers; model on a horizontal or vertical number line.",
+      "standard": "7.NS.A.1",
       "questionCount": 8
     },
     {
@@ -1181,9 +1181,9 @@
       "grade": 7,
       "domain": "The Number System",
       "unit": "Unit 3: Rational Number Operations",
-      "title": "Multiplying",
-      "description": "Dividing Rational Numbers",
-      "standard": "Apply and extend understanding of multiplication and division to rational numbers. Understand products and quotients of signed numbers; interpret rules for multiplying and dividing integers.",
+      "title": "Multiplying & Dividing Rational Numbers",
+      "description": "Multiply and divide signed rational numbers; understand rules for signs and convert fractions to decimals.",
+      "standard": "7.NS.A.2",
       "questionCount": 8
     },
     {
@@ -1193,7 +1193,7 @@
       "domain": "The Number System",
       "unit": "Unit 3: Rational Number Operations",
       "title": "Four Operations with Rational Numbers",
-      "description": "Solve real-world and mathematical problems involving all four operations with rational numbers, including complex fractions and multi-step situations.",
+      "description": "Solve real-world problems involving all four arithmetic operations with rational numbers and complex fractions.",
       "standard": "7.NS.A.3",
       "questionCount": 8
     },
@@ -1203,9 +1203,9 @@
       "grade": 7,
       "domain": "Expressions",
       "unit": "Equations",
-      "title": "Unit 4: Algebraic Expressions",
-      "description": "Linear Expressions with Rational Coefficients",
-      "standard": "Apply properties of operations to add, subtract, factor, and expand linear expressions with rational coefficients. Understand how rewriting expressions reveals relationships (e.g., a + 0.05a = 1.05a).",
+      "title": "Linear Expressions with Rational Coefficients",
+      "description": "Apply properties of operations as strategies to add, subtract, factor, and expand linear expressions.",
+      "standard": "7.EE.A.1 / 7.EE.A.2",
       "questionCount": 8
     },
     {
@@ -1214,9 +1214,9 @@
       "grade": 7,
       "domain": "Expressions",
       "unit": "Equations",
-      "title": "Unit 5: Equations",
-      "description": "Inequalities",
-      "standard": "Solving Two-Step Equations",
+      "title": "Solving Two-Step Equations",
+      "description": "Solve word problems leading to equations of the form px + q = r and p(x + q) = r with fluency.",
+      "standard": "7.EE.B.4a",
       "questionCount": 8
     },
     {
@@ -1225,9 +1225,9 @@
       "grade": 7,
       "domain": "Expressions",
       "unit": "Equations",
-      "title": "Unit 5: Equations",
-      "description": "Inequalities",
-      "standard": "Solving Two-Step Inequalities",
+      "title": "Solving Two-Step Inequalities",
+      "description": "Solve two-step inequalities and graph the solution set on a number line, interpreting context.",
+      "standard": "7.EE.B.4b",
       "questionCount": 8
     },
     {
@@ -1236,9 +1236,9 @@
       "grade": 7,
       "domain": "Geometry",
       "unit": "Unit 6: Scale",
-      "title": "Construction",
-      "description": "Scale Drawings",
-      "standard": "Solve problems involving scale drawings of geometric figures, including computing actual lengths and areas from a scale drawing and reproducing a drawing at a different scale.",
+      "title": "Scale Drawings",
+      "description": "Solve problems involving scale drawings of geometric figures, including computing actual dimensions from scales.",
+      "standard": "7.G.A.1",
       "questionCount": 8
     },
     {
@@ -1247,9 +1247,9 @@
       "grade": 7,
       "domain": "Geometry",
       "unit": "Unit 6: Scale",
-      "title": "Construction",
-      "description": "Drawing Geometric Figures",
-      "standard": "Draw geometric shapes with given conditions (triangles from three measures of angles or sides). Understand when conditions determine a unique triangle, more than one, or none.",
+      "title": "Drawing Geometric Figures",
+      "description": "Draw geometric shapes with given conditions, focusing on constructing triangles from three measures of angles or sides.",
+      "standard": "7.G.A.2",
       "questionCount": 8
     },
     {
@@ -1258,9 +1258,9 @@
       "grade": 7,
       "domain": "Geometry",
       "unit": "Unit 6: Scale",
-      "title": "Construction",
-      "description": "Slicing 3D Figures",
-      "standard": "Describe the two-dimensional figures that result from slicing three-dimensional figures (right rectangular prisms, right rectangular pyramids) parallel or perpendicular to the base.",
+      "title": "Slicing 3D Figures",
+      "description": "Describe the two-dimensional cross-sections that result from slicing three-dimensional figures.",
+      "standard": "7.G.A.3",
       "questionCount": 8
     },
     {
@@ -1269,9 +1269,9 @@
       "grade": 7,
       "domain": "Geometry",
       "unit": "Unit 7: Measurement",
-      "title": "Angles",
-      "description": "Circles: Circumference",
-      "standard": "Area",
+      "title": "Circles: Circumference & Area",
+      "description": "Understand formulas for area and circumference of a circle and use them to solve mathematical problems.",
+      "standard": "7.G.B.4",
       "questionCount": 8
     },
     {
@@ -1280,9 +1280,9 @@
       "grade": 7,
       "domain": "Geometry",
       "unit": "Unit 7: Measurement",
-      "title": "Angles",
-      "description": "Angle Relationships",
-      "standard": "Use facts about supplementary, complementary, vertical, and adjacent angles to set up and solve simple equations for an unknown angle in a figure.",
+      "title": "Angle Relationships",
+      "description": "Use facts about supplementary, complementary, vertical, and adjacent angles to solve for unknown angles.",
+      "standard": "7.G.B.5",
       "questionCount": 8
     },
     {
@@ -1291,9 +1291,9 @@
       "grade": 7,
       "domain": "Geometry",
       "unit": "Unit 7: Measurement",
-      "title": "Angles",
-      "description": "Area",
-      "standard": "Surface Area of Composite Figures",
+      "title": "Surface Area of Composite Figures",
+      "description": "Calculate area and surface area of two- and three-dimensional composite objects composed of polygons and prisms.",
+      "standard": "7.G.B.6",
       "questionCount": 8
     },
     {
@@ -1302,9 +1302,9 @@
       "grade": 7,
       "domain": "Geometry",
       "unit": "Unit 7: Measurement",
-      "title": "Angles",
-      "description": "Volume of Prisms",
-      "standard": "Find volume of right prisms with triangular, trapezoidal, and other polygonal bases. Connect to decomposing 3D figures and apply to real-world packing and capacity problems.",
+      "title": "Volume of Prisms & Pyramids",
+      "description": "Find volume of right prisms with polygonal bases and solve practical capacity and packing problems.",
+      "standard": "7.G.B.6",
       "questionCount": 8
     },
     {
@@ -1313,9 +1313,9 @@
       "grade": 7,
       "domain": "Statistics",
       "unit": "Probability",
-      "title": "Unit 8: Sampling",
-      "description": "Inference",
-      "standard": "Statistical Sampling",
+      "title": "Statistical Sampling",
+      "description": "Understand that random sampling produces representative samples to support valid inferences about a population.",
+      "standard": "7.SP.A.1 / 7.SP.A.2",
       "questionCount": 8
     },
     {
@@ -1324,9 +1324,9 @@
       "grade": 7,
       "domain": "Statistics",
       "unit": "Probability",
-      "title": "Unit 8: Sampling",
-      "description": "Inference",
-      "standard": "Comparing Two Populations",
+      "title": "Comparing Two Populations",
+      "description": "Use measures of center and measures of variability for numerical data to draw informal comparative inferences.",
+      "standard": "7.SP.B.3 / 7.SP.B.4",
       "questionCount": 8
     },
     {
@@ -1335,9 +1335,9 @@
       "grade": 7,
       "domain": "Statistics",
       "unit": "Probability",
-      "title": "Unit 9: Probability",
-      "description": "Introduction to Probability",
-      "standard": "Understand that the probability of a chance event is a number between 0 and 1. Approximate probability through experiments; compare experimental to theoretical probability.",
+      "title": "Introduction to Probability",
+      "description": "Understand that the probability of a chance event is a number between 0 and 1 indicating likelihood.",
+      "standard": "7.SP.C.5",
       "questionCount": 8
     },
     {
@@ -1346,9 +1346,9 @@
       "grade": 7,
       "domain": "Statistics",
       "unit": "Probability",
-      "title": "Unit 9: Probability",
-      "description": "Probability Models",
-      "standard": "Develop uniform and non-uniform probability models. Use models to find probabilities of events; compare predictions with observed frequencies and explain discrepancies.",
+      "title": "Probability Models",
+      "description": "Develop a probability model and use it to find probabilities of events, comparing model to observed frequencies.",
+      "standard": "7.SP.C.6 / 7.SP.C.7",
       "questionCount": 8
     },
     {
@@ -1357,20 +1357,20 @@
       "grade": 7,
       "domain": "Statistics",
       "unit": "Probability",
-      "title": "Unit 9: Probability",
-      "description": "Compound Events",
-      "standard": "Sample Spaces",
+      "title": "Compound Events & Sample Spaces",
+      "description": "Find probabilities of compound events using organized lists, tables, tree diagrams, and simulation.",
+      "standard": "7.SP.C.8",
       "questionCount": 8
     },
     {
       "lessonNumber": 24,
       "lessonId": "G7_L24",
       "grade": 7,
-      "domain": "Statistics",
+      "domain": "Geometry",
       "unit": "Probability",
-      "title": "Unit 10: Capstone",
-      "description": "Multi-Step Ratio",
-      "standard": "Geometry Word Problems",
+      "title": "Multi-Step Ratio & Geometry Word Problems",
+      "description": "Synthesize ratios, proportional reasoning, and geometry to solve complex multi-step real-world problems.",
+      "standard": "7.MP",
       "questionCount": 8
     },
     {
@@ -1379,9 +1379,9 @@
       "grade": 7,
       "domain": "Statistics",
       "unit": "Probability",
-      "title": "Unit 10: Capstone",
-      "description": "Cumulative Review",
-      "standard": "Real-World Math",
+      "title": "Cumulative Review",
+      "description": "Review all Grade 7 Common Core domains in a comprehensive mathematical capstone challenge.",
+      "standard": "7.MP",
       "questionCount": 8
     },
     {
@@ -1456,8 +1456,8 @@
       "grade": 8,
       "domain": "Linear Relationships & Proportional Relationships",
       "unit": "Unit 3: Linear Relationships & Proportional Relationships",
-      "title": "Slope",
-      "description": "Graph proportional relationships; interpret the unit rate as the slope of the graph. Compare two proportional relationships represented in different ways (table, graph, equation, verbal).",
+      "title": "Slope & Proportional Relationships",
+      "description": "Graph proportional relationships, interpreting the unit rate as the slope of the graph, and compare different relationships.",
       "standard": "8.EE.B.5",
       "questionCount": 8
     },
@@ -1555,8 +1555,8 @@
       "grade": 8,
       "domain": "Associations in Data & Scatter Plots",
       "unit": "Unit 6: Associations in Data & Scatter Plots",
-      "title": "Patterns of Association",
-      "description": "Construct and interpret scatter plots for bivariate measurement data. Describe patterns of association including clustering, outliers, positive/negative correlation, and linear vs.\\ nonlinear trends.",
+      "title": "Patterns of Association in Scatter Plots",
+      "description": "Construct and interpret scatter plots for bivariate measurement data to investigate patterns of association.",
       "standard": "8.SP.A.1",
       "questionCount": 8
     },
@@ -1566,8 +1566,8 @@
       "grade": 8,
       "domain": "Associations in Data & Lines of Best Fit",
       "unit": "Unit 6: Associations in Data & Lines of Best Fit",
-      "title": "Predictions",
-      "description": "Informally fit a straight line to data suggesting a linear association. Interpret slope and intercept in context; use the line of best fit to make predictions and assess model fit.",
+      "title": "Predictions & Lines of Best Fit",
+      "description": "Know that straight lines are widely used to model relationships; use the equation of a linear model to solve problems.",
       "standard": "8.SP.A.2 / 8.SP.A.3",
       "questionCount": 8
     },
